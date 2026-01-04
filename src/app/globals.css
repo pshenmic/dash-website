@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors from Figma */
+  --color-primary-blue: #4C7EFF;
+  --color-primary-white: #FFFFFF;
+  --color-primary-dark: #1A1A2E;
+  --color-secondary-half-white: rgba(255, 255, 255, 0.15);
+
+  /* Typography */
+  --font-family-sans: "Manrope", sans-serif;
+}
+
+body {
+  font-family: var(--font-family-sans);
+}

@@ -20,19 +20,12 @@ export function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="relative flex min-h-screen items-center justify-center">
-      {/* Light theme backgrounds */}
-      <Image
-        src="/images/hero-bg-mobile.png"
-        alt=""
-        fill
-        className="object-cover dark:hidden lg:hidden"
-        priority
-      />
+      {/* Light theme background */}
       <Image
         src="/images/hero-bg.png"
         alt=""
         fill
-        className="hidden object-cover dark:hidden lg:block"
+        className="object-cover dark:hidden"
         priority
       />
       {/* Dark theme background */}

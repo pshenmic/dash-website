@@ -5,5 +5,19 @@
     "subtitle": "Money without borders: moving it instantly, transparently, conveniently, and almost for free",
     "downloadWallet": "Download Wallet",
     "documentation": "Documentation"
+  },
+  "nav": {
+    "home": "Home",
+    "getStarted": "Get Started",
+    "institutions": "Institutions",
+    "developers": "Developers",
+    "community": "Community",
+    "buyDash": "Buy Dash"
+  },
+  "footer": {
+    "copyright": "All Rights Reserved @2025 Dash",
+    "termsOfUse": "Terms of Use",
+    "privacyStatement": "DCG Privacy Statement",
+    "privacyPolicy": "DashPay Privacy Policy"
   }
 }

@@ -5,5 +5,19 @@
     "subtitle": "Деньги без границ: мгновенно, прозрачно, удобно и почти бесплатно",
     "downloadWallet": "Скачать кошелёк",
     "documentation": "Документация"
+  },
+  "nav": {
+    "home": "Главная",
+    "getStarted": "Начать",
+    "institutions": "Бизнесу",
+    "developers": "Разработка",
+    "community": "Комьюнити",
+    "buyDash": "Купить"
+  },
+  "footer": {
+    "copyright": "Все права защищены @2025 Dash",
+    "termsOfUse": "Условия",
+    "privacyStatement": "Политика DCG",
+    "privacyPolicy": "Политика DashPay"
   }
 }

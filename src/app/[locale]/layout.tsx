@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, setRequestLocale } from 'next-intl/server'
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
+import { Header } from '../_components/Header'
+import { Footer } from '../_components/Footer'
+import { ThemeProvider } from '../_components/ThemeProvider'
 import '../globals.css'
 
 const manrope = Manrope({
@@ -30,13 +33,33 @@ export default async function LocaleLayout({
   const { locale } = await params
   setRequestLocale(locale)
   const messages = await getMessages({ locale })
+  const tFooter = await getTranslations('footer')
+  const tNav = await getTranslations('nav')
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${manrope.variable} font-sans antialiased`}>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Header
+              nav={{
+                home: tNav('home'),
+                getStarted: tNav('getStarted'),
+                institutions: tNav('institutions'),
+                developers: tNav('developers'),
+                community: tNav('community'),
+                buyDash: tNav('buyDash'),
+              }}
+            />
+            {children}
+            <Footer
+              copyright={tFooter('copyright')}
+              termsOfUse={tFooter('termsOfUse')}
+              privacyStatement={tFooter('privacyStatement')}
+              privacyPolicy={tFooter('privacyPolicy')}
+            />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -1,11 +1,55 @@
 @import "tailwindcss";
 
+/* Dark mode with class selector (for next-themes) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  /* Colors from Figma */
+  /* Primary Colors */
   --color-primary-blue: #4C7EFF;
+  --color-primary-dark: #0C1C33;
+  --color-primary-turquoise: #60F6D2;
   --color-primary-white: #FFFFFF;
-  --color-primary-dark: #1A1A2E;
+
+  /* Secondary Blue Variants */
+  --color-secondary-light-blue: #6B95FF;
+  --color-secondary-blue-75: rgba(76, 126, 255, 0.75);
+  --color-secondary-blue-15: rgba(76, 126, 255, 0.15);
+  --color-secondary-blue-5: rgba(76, 126, 255, 0.05);
+
+  /* Secondary Dark Variants */
+  --color-secondary-space-cadet: #142A4A;
+  --color-secondary-dark-75: rgba(12, 28, 51, 0.75);
+  --color-secondary-dark-15: rgba(12, 28, 51, 0.15);
+  --color-secondary-dark-5: rgba(12, 28, 51, 0.05);
+
+  /* Secondary Turquoise Variants */
+  --color-secondary-turquoise-75: rgba(96, 246, 210, 0.75);
+  --color-secondary-turquoise-15: rgba(96, 246, 210, 0.15);
+  --color-secondary-turquoise-5: rgba(96, 246, 210, 0.05);
+
+  /* Secondary White Variants */
+  --color-secondary-white-75: rgba(255, 255, 255, 0.75);
+  --color-secondary-white-15: rgba(255, 255, 255, 0.15);
+  --color-secondary-white-5: rgba(255, 255, 255, 0.05);
   --color-secondary-half-white: rgba(255, 255, 255, 0.15);
+
+  /* State Colors - Success */
+  --color-state-success: #40BF40;
+  --color-state-success-75: rgba(64, 191, 64, 0.75);
+  --color-state-success-15: rgba(64, 191, 64, 0.15);
+  --color-state-success-5: rgba(64, 191, 64, 0.05);
+
+  /* State Colors - Error */
+  --color-state-error: #CD2E00;
+  --color-state-error-75: rgba(205, 46, 0, 0.75);
+  --color-state-error-15: rgba(205, 46, 0, 0.15);
+  --color-state-error-5: rgba(205, 46, 0, 0.05);
+
+  /* State Colors - Warning */
+  --color-state-warning: #F98F12;
+  --color-state-warning-75: rgba(249, 143, 18, 0.75);
+  --color-state-warning-15: rgba(249, 143, 18, 0.15);
+  --color-state-warning-5: rgba(249, 143, 18, 0.05);
 
   /* Typography */
   --font-family-sans: "Manrope", sans-serif;
@@ -13,4 +57,18 @@
 
 body {
   font-family: var(--font-family-sans);
+  background-color: var(--color-primary-dark);
+}
+
+/* Интерактивные элементы: cursor pointer */
+@layer base {
+  button:not(:disabled),
+  a,
+  select:not(:disabled),
+  label,
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
 }

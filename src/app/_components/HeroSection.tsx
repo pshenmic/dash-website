@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { ArrowRight } from 'lucide-react'
 import { Chip } from '@/components/ui/Chip'
 import { Button } from '@/components/ui/Button'
 
@@ -19,20 +20,27 @@ export function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="relative flex min-h-screen items-center justify-center">
-      {/* Mobile background */}
+      {/* Light theme backgrounds */}
       <Image
         src="/images/hero-bg-mobile.png"
         alt=""
         fill
-        className="object-cover lg:hidden"
+        className="object-cover dark:hidden lg:hidden"
         priority
       />
-      {/* Desktop background */}
       <Image
         src="/images/hero-bg.png"
         alt=""
         fill
-        className="hidden object-cover lg:block"
+        className="hidden object-cover dark:hidden lg:block"
+        priority
+      />
+      {/* Dark theme background */}
+      <Image
+        src="/images/hero-bg-dark.jpg"
+        alt=""
+        fill
+        className="hidden object-cover dark:block"
         priority
       />
 
@@ -49,27 +57,15 @@ export function HeroSection({
 
         <div className="flex flex-col items-center gap-2.5 lg:flex-row lg:gap-[15px]">
           <Button variant="primary">{downloadWallet}</Button>
-          <Button variant="secondary" icon={<ArrowIcon />}>
+          <Button variant="secondary" icon={
+            <div className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-primary-white/20">
+              <ArrowRight className="h-[15px] w-[15px]" />
+            </div>
+          }>
             {documentation}
           </Button>
         </div>
       </div>
     </section>
-  )
-}
-
-function ArrowIcon() {
-  return (
-    <div className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-primary-white/20">
-      <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-        <path
-          d="M3 7.5h9m0 0L8.5 4m3.5 3.5L8.5 11"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </div>
   )
 }

@@ -38,7 +38,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${manrope.variable} font-sans antialiased`}>
+      <body className={`${manrope.variable} bg-primary-white font-sans antialiased dark:bg-primary-dark`}>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             <Header

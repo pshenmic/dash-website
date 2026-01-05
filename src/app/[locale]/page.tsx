@@ -3,6 +3,7 @@ import { routing } from '@/i18n/routing'
 import { HeroSection } from '../_components/HeroSection'
 import { VideosSlider } from '../_components/VideosSlider'
 import { FutureOfMoney } from '../_components/FutureOfMoney'
+import { BulletsGrid } from '../_components/BulletsGrid'
 import type { VideoCardData } from '../_components/VideosSlider/VideoCard'
 
 export function generateStaticParams() {
@@ -19,6 +20,7 @@ export default async function HomePage({
   const tHero = await getTranslations('hero')
   const tSlider = await getTranslations('videosSlider')
   const tFuture = await getTranslations('futureOfMoney')
+  const tBullets = await getTranslations('bullets')
 
   // Get videos data from translations
   const videosRaw = tSlider.raw('videos') as VideoCardData[]
@@ -48,6 +50,62 @@ export default async function HomePage({
         costPerTransactionValue={tFuture('costPerTransactionValue')}
         connectTestnet={tFuture('connectTestnet')}
         learnMore={tFuture('learnMore')}
+      />
+
+      <BulletsGrid
+        translations={{
+          stableOperation: {
+            line1: tBullets('stableOperation.line1'),
+            line2: tBullets('stableOperation.line2'),
+            highlight: tBullets('stableOperation.highlight'),
+          },
+          longestDao: {
+            line1: tBullets('longestDao.line1'),
+            highlight1: tBullets('longestDao.highlight1'),
+            line2: tBullets('longestDao.line2'),
+            highlight2: tBullets('longestDao.highlight2'),
+          },
+          optionalPrivacy: {
+            line1: tBullets('optionalPrivacy.line1'),
+            highlight: tBullets('optionalPrivacy.highlight'),
+          },
+          mainCard: {
+            chip: tBullets('mainCard.chip'),
+          },
+          priceChart: {
+            price: tBullets('priceChart.price'),
+            currency: tBullets('priceChart.currency'),
+            change: tBullets('priceChart.change'),
+            period: tBullets('priceChart.period'),
+          },
+          passiveIncome: {
+            highlight: tBullets('passiveIncome.highlight'),
+            text: tBullets('passiveIncome.text'),
+          },
+          selfFinancing: {
+            highlight: tBullets('selfFinancing.highlight'),
+            line1: tBullets('selfFinancing.line1'),
+            line2: tBullets('selfFinancing.line2'),
+          },
+          activeCommunity: {
+            highlight: tBullets('activeCommunity.highlight'),
+            text: tBullets('activeCommunity.text'),
+          },
+          instantSecure: {
+            line1: tBullets('instantSecure.line1'),
+            line2: tBullets('instantSecure.line2'),
+            text: tBullets('instantSecure.text'),
+          },
+          uniqueOpportunities: {
+            highlight: tBullets('uniqueOpportunities.highlight'),
+            text: tBullets('uniqueOpportunities.text'),
+          },
+          restrictedIssue: {
+            line1: tBullets('restrictedIssue.line1'),
+            line2: tBullets('restrictedIssue.line2'),
+            value: tBullets('restrictedIssue.value'),
+          },
+        }}
       />
     </main>
   )

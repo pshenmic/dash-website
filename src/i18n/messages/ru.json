@@ -63,5 +63,58 @@
     "costPerTransactionValue": "<$0.01",
     "connectTestnet": "Подключиться к Testnet",
     "learnMore": "Узнать больше"
+  },
+  "bullets": {
+    "stableOperation": {
+      "line1": "Работает",
+      "line2": "с января",
+      "highlight": "2014"
+    },
+    "longestDao": {
+      "line1": "Одна из",
+      "highlight1": "первых",
+      "line2": "и старейших",
+      "highlight2": "DAO"
+    },
+    "optionalPrivacy": {
+      "line1": "Опциональная",
+      "highlight": "приватность"
+    },
+    "mainCard": {
+      "chip": "Первый период DAO"
+    },
+    "priceChart": {
+      "price": "93.58",
+      "currency": "$",
+      "change": "5.95% (+$2.08)",
+      "period": "мес"
+    },
+    "passiveIncome": {
+      "highlight": "Доход",
+      "text": "для нод"
+    },
+    "selfFinancing": {
+      "highlight": "Само-",
+      "line1": "финанси-",
+      "line2": "рование"
+    },
+    "activeCommunity": {
+      "highlight": "Активное",
+      "text": "сообщество"
+    },
+    "instantSecure": {
+      "line1": "Мгновенные",
+      "line2": "и безопасные",
+      "text": "транзакции"
+    },
+    "uniqueOpportunities": {
+      "highlight": "Возможности",
+      "text": "для разработчиков"
+    },
+    "restrictedIssue": {
+      "line1": "Лимит",
+      "line2": "эмиссии:",
+      "value": "18 900 000"
+    }
   }
 }

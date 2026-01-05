@@ -63,5 +63,58 @@
     "costPerTransactionValue": "<$0.01",
     "connectTestnet": "Connect to Testnet",
     "learnMore": "Learn More"
+  },
+  "bullets": {
+    "stableOperation": {
+      "line1": "Stable operation",
+      "line2": "since January",
+      "highlight": "2014"
+    },
+    "longestDao": {
+      "line1": "One of the",
+      "highlight1": "1st",
+      "line2": "and longest running",
+      "highlight2": "DAOs"
+    },
+    "optionalPrivacy": {
+      "line1": "Optional",
+      "highlight": "privacy"
+    },
+    "mainCard": {
+      "chip": "The first DAO period"
+    },
+    "priceChart": {
+      "price": "93.58",
+      "currency": "$",
+      "change": "5.95% (+$2.08)",
+      "period": "month"
+    },
+    "passiveIncome": {
+      "highlight": "Passive income",
+      "text": "for node owners"
+    },
+    "selfFinancing": {
+      "highlight": "Self-financing",
+      "line1": "through Dash",
+      "line2": "DAO"
+    },
+    "activeCommunity": {
+      "highlight": "Active",
+      "text": "community"
+    },
+    "instantSecure": {
+      "line1": "Instant &",
+      "line2": "secure",
+      "text": "transactions"
+    },
+    "uniqueOpportunities": {
+      "highlight": "Unique opportunities",
+      "text": "for developers"
+    },
+    "restrictedIssue": {
+      "line1": "Restricted",
+      "line2": "issue:",
+      "value": "18,900,000"
+    }
   }
 }

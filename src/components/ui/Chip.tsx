@@ -1,10 +1,18 @@
 interface ChipProps {
   children: React.ReactNode
+  variant?: 'default' | 'outline'
 }
 
-export function Chip({ children }: ChipProps) {
+export function Chip({ children, variant = 'default' }: ChipProps) {
+  const baseClasses = 'inline-flex w-fit items-center justify-center rounded-[35px] border px-[35px] py-2.5 text-xs font-medium'
+
+  const variantClasses = {
+    default: 'border-primary-white/50 text-primary-white',
+    outline: 'border-primary-dark dark:border-primary-white/50 text-primary-dark dark:text-primary-white',
+  }
+
   return (
-    <span className="rounded-[35px] border border-primary-white/50 px-[35px] py-2.5 text-xs font-medium text-primary-white lg:py-[15px] lg:text-lg">
+    <span className={`${baseClasses} ${variantClasses[variant]}`}>
       {children}
     </span>
   )

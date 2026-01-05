@@ -19,5 +19,38 @@
     "termsOfUse": "Terms of Use",
     "privacyStatement": "DCG Privacy Statement",
     "privacyPolicy": "DashPay Privacy Policy"
+  },
+  "videosSlider": {
+    "videos": [
+      {
+        "id": "1",
+        "variant": "light",
+        "label": "The first DAO period",
+        "title": "The Protocol.\nThe Trust. The Core.",
+        "session": "Session 1"
+      },
+      {
+        "id": "2",
+        "variant": "dark",
+        "label": "News",
+        "title": "What's New\nWith Dash",
+        "image": "/images/slider/video-dark.jpg"
+      },
+      {
+        "id": "3",
+        "variant": "blue",
+        "label": "Spotlight",
+        "title": "John Doe",
+        "subtitle": "Learn More About Dash Pay",
+        "image": "/images/slider/video-blue-person.jpg"
+      },
+      {
+        "id": "4",
+        "variant": "coin",
+        "label": "The first DAO period",
+        "title": "More Than\nA Coin. A DAO.",
+        "image": "/images/slider/coin-3d.png"
+      }
+    ]
   }
 }

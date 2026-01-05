@@ -116,5 +116,19 @@
       "line2": "issue:",
       "value": "18,900,000"
     }
+  },
+  "forDevelopers": {
+    "label": "For Developers",
+    "title": "Get to know Dash ecosystem better",
+    "joinDiscord": "Join Discord",
+    "cards": {
+      "apiSdk": { "chip": "Python, JS, Go", "title": "API & SDK" },
+      "nodes": { "chip": "Docker, CLI", "title": "Nodes" },
+      "smartContracts": { "chip": "Dash Platform", "title": "Smart-Contracts" },
+      "testnet": { "chip": "Faucet, Explorer", "title": "Testnet" }
+    },
+    "codeExample": {
+      "language": "Java"
+    }
   }
 }

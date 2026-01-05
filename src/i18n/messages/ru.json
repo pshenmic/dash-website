@@ -116,5 +116,19 @@
       "line2": "эмиссии:",
       "value": "18 900 000"
     }
+  },
+  "forDevelopers": {
+    "label": "Разработчикам",
+    "title": "Познакомьтесь с экосистемой Dash",
+    "joinDiscord": "Discord",
+    "cards": {
+      "apiSdk": { "chip": "Python, JS, Go", "title": "API & SDK" },
+      "nodes": { "chip": "Docker, CLI", "title": "Ноды" },
+      "smartContracts": { "chip": "Dash Platform", "title": "Смарт-контракты" },
+      "testnet": { "chip": "Faucet, Explorer", "title": "Тестнет" }
+    },
+    "codeExample": {
+      "language": "Java"
+    }
   }
 }

@@ -52,5 +52,16 @@
         "image": "/images/slider/coin-3d.png"
       }
     ]
+  },
+  "futureOfMoney": {
+    "chip": "Build with Dash",
+    "title": "The Future of Money",
+    "description": "Marking a major milestone in the evolution of the Dash network, start experimenting with Dash Platform by connecting to testnet, our public testing environment.",
+    "transactionSpeed": "Transaction speed",
+    "transactionSpeedValue": "1 sec",
+    "costPerTransaction": "Cost per transaction",
+    "costPerTransactionValue": "<$0.01",
+    "connectTestnet": "Connect to Testnet",
+    "learnMore": "Learn More"
   }
 }

@@ -52,5 +52,16 @@
         "image": "/images/slider/coin-3d.png"
       }
     ]
+  },
+  "futureOfMoney": {
+    "chip": "Создавайте с Dash",
+    "title": "Будущее денег",
+    "description": "Важная веха в эволюции сети Dash. Начните экспериментировать с Dash Platform, подключившись к testnet — нашей публичной тестовой среде.",
+    "transactionSpeed": "Скорость транзакции",
+    "transactionSpeedValue": "1 сек",
+    "costPerTransaction": "Стоимость транзакции",
+    "costPerTransactionValue": "<$0.01",
+    "connectTestnet": "Подключиться к Testnet",
+    "learnMore": "Узнать больше"
   }
 }

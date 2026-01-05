@@ -4,6 +4,7 @@ import { HeroSection } from '../_components/HeroSection'
 import { VideosSlider } from '../_components/VideosSlider'
 import { FutureOfMoney } from '../_components/FutureOfMoney'
 import { BulletsGrid } from '../_components/BulletsGrid'
+import { ForDevelopers } from '../_components/ForDevelopers'
 import type { VideoCardData } from '../_components/VideosSlider/VideoCard'
 
 export function generateStaticParams() {
@@ -21,6 +22,7 @@ export default async function HomePage({
   const tSlider = await getTranslations('videosSlider')
   const tFuture = await getTranslations('futureOfMoney')
   const tBullets = await getTranslations('bullets')
+  const tDevelopers = await getTranslations('forDevelopers')
 
   // Get videos data from translations
   const videosRaw = tSlider.raw('videos') as VideoCardData[]
@@ -104,6 +106,35 @@ export default async function HomePage({
             line1: tBullets('restrictedIssue.line1'),
             line2: tBullets('restrictedIssue.line2'),
             value: tBullets('restrictedIssue.value'),
+          },
+        }}
+      />
+
+      <ForDevelopers
+        translations={{
+          label: tDevelopers('label'),
+          title: tDevelopers('title'),
+          joinDiscord: tDevelopers('joinDiscord'),
+          cards: {
+            apiSdk: {
+              chip: tDevelopers('cards.apiSdk.chip'),
+              title: tDevelopers('cards.apiSdk.title'),
+            },
+            nodes: {
+              chip: tDevelopers('cards.nodes.chip'),
+              title: tDevelopers('cards.nodes.title'),
+            },
+            smartContracts: {
+              chip: tDevelopers('cards.smartContracts.chip'),
+              title: tDevelopers('cards.smartContracts.title'),
+            },
+            testnet: {
+              chip: tDevelopers('cards.testnet.chip'),
+              title: tDevelopers('cards.testnet.title'),
+            },
+          },
+          codeExample: {
+            language: tDevelopers('codeExample.language'),
           },
         }}
       />

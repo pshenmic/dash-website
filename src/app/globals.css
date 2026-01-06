@@ -10,46 +10,19 @@
   --color-primary-turquoise: #60F6D2;
   --color-primary-white: #FFFFFF;
 
-  /* Secondary Blue Variants */
+  /* Secondary Colors */
   --color-secondary-light-blue: #6B95FF;
-  --color-secondary-blue-75: rgba(76, 126, 255, 0.75);
-  --color-secondary-blue-15: rgba(76, 126, 255, 0.15);
-  --color-secondary-blue-5: rgba(76, 126, 255, 0.05);
-
-  /* Secondary Dark Variants */
   --color-secondary-space-cadet: #142A4A;
-  --color-secondary-dark-75: rgba(12, 28, 51, 0.75);
-  --color-secondary-dark-15: rgba(12, 28, 51, 0.15);
-  --color-secondary-dark-5: rgba(12, 28, 51, 0.05);
 
-  /* Secondary Turquoise Variants */
-  --color-secondary-turquoise-75: rgba(96, 246, 210, 0.75);
-  --color-secondary-turquoise-15: rgba(96, 246, 210, 0.15);
-  --color-secondary-turquoise-5: rgba(96, 246, 210, 0.05);
-
-  /* Secondary White Variants */
-  --color-secondary-white-75: rgba(255, 255, 255, 0.75);
-  --color-secondary-white-15: rgba(255, 255, 255, 0.15);
-  --color-secondary-white-5: rgba(255, 255, 255, 0.05);
-  --color-secondary-half-white: rgba(255, 255, 255, 0.15);
-
-  /* State Colors - Success */
+  /* State Colors */
   --color-state-success: #40BF40;
-  --color-state-success-75: rgba(64, 191, 64, 0.75);
-  --color-state-success-15: rgba(64, 191, 64, 0.15);
-  --color-state-success-5: rgba(64, 191, 64, 0.05);
-
-  /* State Colors - Error */
   --color-state-error: #CD2E00;
-  --color-state-error-75: rgba(205, 46, 0, 0.75);
-  --color-state-error-15: rgba(205, 46, 0, 0.15);
-  --color-state-error-5: rgba(205, 46, 0, 0.05);
-
-  /* State Colors - Warning */
   --color-state-warning: #F98F12;
-  --color-state-warning-75: rgba(249, 143, 18, 0.75);
-  --color-state-warning-15: rgba(249, 143, 18, 0.15);
-  --color-state-warning-5: rgba(249, 143, 18, 0.05);
+
+  /* Code Syntax Highlighting */
+  --color-syntax-keyword: #b883c5;
+  --color-syntax-string: #72c1f5;
+  --color-syntax-punctuation: #bd9873;
 
   /* Typography */
   --font-family-sans: "Manrope", sans-serif;
@@ -57,6 +30,18 @@
 
 body {
   font-family: var(--font-family-sans);
+}
+
+/* Sugar-high syntax highlighting */
+:root {
+  --sh-keyword: var(--color-syntax-keyword);
+  --sh-string: var(--color-syntax-string);
+  --sh-sign: var(--color-syntax-punctuation);
+  --sh-identifier: #ffffff;
+  --sh-property: #60f6d2;
+  --sh-entity: #6b95ff;
+  --sh-class: #60f6d2;
+  --sh-comment: #6b7280;
 }
 
 /* Интерактивные элементы: cursor pointer */

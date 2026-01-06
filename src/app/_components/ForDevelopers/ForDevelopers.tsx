@@ -29,7 +29,7 @@ await dashPlatform.signAndBroadcast(doc)`
 
 export function ForDevelopers({ translations: t }: ForDevelopersProps) {
   return (
-    <section className="rounded-b-[50px] bg-primary-white py-8 dark:bg-primary-dark lg:py-16">
+    <section className="relative z-10 rounded-b-[50px] bg-primary-white py-8 dark:bg-primary-dark lg:py-16">
       <div className="mx-auto max-w-7xl px-4 lg:px-6">
         {/* Header */}
         <div className="mb-8 flex flex-col items-start justify-between gap-4 lg:mb-[20px] lg:flex-row lg:items-center">
@@ -102,9 +102,9 @@ interface DeveloperCardProps {
 
 function DeveloperCard({ title, chip, image }: DeveloperCardProps) {
   return (
-    <div className="relative h-[158px] overflow-hidden rounded-[25px] bg-primary-dark lg:h-[235px] lg:rounded-[35px]">
-      {/* Logo */}
-      <div className="absolute left-[20px] top-[20px] lg:left-[30px] lg:top-[30px]">
+    <div className="relative h-[158px] overflow-hidden rounded-[25px] bg-primary-dark dark:border dark:border-white/15 dark:bg-secondary-space-cadet lg:h-[235px] lg:rounded-[35px]">
+      {/* Левая часть - flex колонка */}
+      <div className="relative z-10 flex h-full max-w-[55%] flex-col items-start px-5 pb-4 pt-4 lg:max-w-[60%] lg:p-[30px]">
         <Image
           src="/images/developers/logo-dash-small.svg"
           alt=""
@@ -112,64 +112,50 @@ function DeveloperCard({ title, chip, image }: DeveloperCardProps) {
           height={24}
           className="h-[18px] w-auto lg:h-[24px]"
         />
+        <div className="mt-auto flex flex-col gap-2 lg:gap-3">
+          <span className="w-fit rounded-full border border-white/50 px-3 py-1.5 text-[10px] font-medium text-white lg:px-[35px] lg:py-[10px] lg:text-[12px]">
+            {chip}
+          </span>
+          <p className="text-[20px] font-extrabold leading-[22px] tracking-[-0.03em] text-white lg:text-[38px] lg:leading-[40px]">
+            {title}
+          </p>
+        </div>
       </div>
       {/* 3D Image */}
-      <div className="absolute right-[-40px] top-1/2 h-[217px] w-[225px] -translate-y-1/2 lg:right-0 lg:h-[283px] lg:w-[294px]">
-        <Image
-          src={image}
-          alt=""
-          fill
-          className="object-contain object-right"
-        />
+      <div className="absolute right-[-40px] top-1/2 h-[217px] w-[225px] -translate-y-1/2 lg:left-1/2 lg:right-auto lg:h-[283px] lg:w-[294px]">
+        <Image src={image} alt="" fill className="object-contain object-right" />
       </div>
-      {/* Chip */}
-      <div className="absolute left-[20px] top-[64px] lg:left-[30px] lg:top-[119px]">
-        <span className="inline-block rounded-[35px] border border-white/50 px-[35px] py-[10px] text-[12px] font-medium text-white">
-          {chip}
-        </span>
-      </div>
-      {/* Title */}
-      <p className="absolute bottom-[20px] left-[20px] max-w-[55%] text-[20px] font-extrabold leading-[22px] tracking-[-0.03em] text-white hyphens-auto lg:bottom-[30px] lg:left-[30px] lg:max-w-none lg:text-[38px] lg:leading-[40px]">
-        {title}
-      </p>
     </div>
   )
 }
 
 function CodeCard({ code }: { code: string }) {
   return (
-    <div className="relative h-[200px] overflow-hidden rounded-[35px] bg-primary-dark lg:h-[235px]">
+    <div className="flex h-[180px] flex-col overflow-hidden rounded-[25px] bg-primary-dark dark:border dark:border-white/15 dark:bg-secondary-space-cadet lg:h-[235px] lg:rounded-[35px]">
       {/* Header */}
-      <div className="flex items-center gap-2 px-[20px] py-[12px] lg:gap-3 lg:px-[30px] lg:py-[15px]">
-        <Image
-          src="/images/developers/logo-dash-small.svg"
-          alt="Dash"
-          width={30}
-          height={24}
-          className="h-[20px] w-auto lg:h-[24px]"
-        />
+      <div className="flex items-center justify-between px-5 py-3 lg:px-[30px] lg:py-4">
         <Image
           src="/images/developers/logo-typescript.svg"
           alt="TypeScript"
           width={24}
           height={24}
-          className="h-[20px] w-[20px] rounded-[4px] lg:h-[24px] lg:w-[24px]"
+          className="h-[18px] w-[18px] rounded lg:h-[24px] lg:w-[24px]"
         />
-      </div>
-      {/* Code area */}
-      <div className="relative h-[156px] bg-white/10 px-[20px] py-[12px] lg:h-[184px] lg:px-[30px] lg:py-[15px]">
-        <pre className="font-mono text-[11px] leading-[1.6] text-white lg:text-[14px]">
-          <code dangerouslySetInnerHTML={{ __html: highlight(code) }} />
-        </pre>
-        {/* Copy button */}
-        <button className="absolute right-[20px] top-[12px] flex h-[20px] w-[20px] items-center justify-center opacity-70 transition-opacity hover:opacity-100 lg:right-[30px] lg:top-[15px]">
+        <button className="opacity-70 transition-opacity hover:opacity-100">
           <Image
             src="/images/developers/icon-copy.svg"
             alt="Copy"
             width={20}
             height={20}
+            className="h-[16px] w-[16px] lg:h-[20px] lg:w-[20px]"
           />
         </button>
+      </div>
+      {/* Code area */}
+      <div className="flex-1 overflow-x-auto bg-white/10 px-5 py-3 lg:px-[30px] lg:py-4">
+        <pre className="font-mono text-[10px] leading-[1.6] text-white lg:text-[14px]">
+          <code dangerouslySetInnerHTML={{ __html: highlight(code) }} />
+        </pre>
       </div>
     </div>
   )

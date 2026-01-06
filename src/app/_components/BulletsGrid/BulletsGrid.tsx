@@ -81,15 +81,8 @@ export function BulletsGrid({ translations: t }: BulletsGridProps) {
 
           {/* 5. Main Card - Large dark card with chip, logo, 3D coin */}
           <div className="relative col-span-2 h-[180px] overflow-hidden rounded-[35px] bg-primary-dark lg:col-start-2 lg:col-span-2 lg:row-start-2 lg:row-span-2 lg:h-auto">
-            {/* Gradient background */}
-            <div className="absolute -left-[166px] -top-[117px] h-[417px] w-[417px] opacity-50">
-              <Image
-                src="/images/bullets/gradient-bg.png"
-                alt=""
-                fill
-                className="object-contain"
-              />
-            </div>
+            {/* Gradient background - CSS */}
+            <div className="absolute -left-[100px] -top-[100px] h-[400px] w-[400px] rounded-full bg-primary-blue/30 blur-[100px]" />
             {/* 3D Coin image */}
             <div className="absolute -right-[50px] -top-[90px] h-[491px] w-[444px] lg:-right-[50px] lg:-top-[90px]">
               <Image

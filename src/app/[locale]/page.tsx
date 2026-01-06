@@ -38,7 +38,7 @@ export default async function HomePage({
       />
 
       {/* Videos Slider - overlaps hero section */}
-      <section className="relative z-20 -mt-[108px] pb-16">
+      <section className="relative z-20 -mt-[108px] pb-10 lg:pb-16">
         <VideosSlider videos={videosRaw} />
       </section>
 

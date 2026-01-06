@@ -26,7 +26,7 @@ export function FutureOfMoney({
   learnMore,
 }: FutureOfMoneyProps) {
   return (
-    <section className="relative bg-primary-white py-16 dark:bg-primary-dark lg:py-24">
+    <section className="relative bg-primary-white py-10 dark:bg-primary-dark lg:py-16">
       <div className="mx-auto max-w-7xl px-4 lg:px-6">
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between">
           {/* Left content */}

@@ -19,7 +19,7 @@ interface BulletsGridProps {
 
 export function BulletsGrid({ translations: t }: BulletsGridProps) {
   return (
-    <section className="bg-primary-white py-8 dark:bg-primary-dark lg:py-16">
+    <section className="bg-primary-white pb-10 dark:bg-primary-dark lg:pb-16">
       <div className="mx-auto max-w-7xl px-4 lg:px-6">
         {/* Grid Container */}
         <div className="grid grid-cols-2 gap-[15px] lg:grid-cols-[304px_292px_292px_304px] lg:grid-rows-[180px_105px_180px_180px]">

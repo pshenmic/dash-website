@@ -29,7 +29,7 @@ await dashPlatform.signAndBroadcast(doc)`
 
 export function ForDevelopers({ translations: t }: ForDevelopersProps) {
   return (
-    <section className="relative z-10 rounded-b-[50px] bg-primary-white py-8 dark:bg-primary-dark lg:py-16">
+    <section className="relative z-10 rounded-b-[50px] bg-primary-white py-10 dark:bg-primary-dark lg:py-16">
       <div className="mx-auto max-w-7xl px-4 lg:px-6">
         {/* Header */}
         <div className="mb-8 flex flex-col items-start justify-between gap-4 lg:mb-[20px] lg:flex-row lg:items-center">

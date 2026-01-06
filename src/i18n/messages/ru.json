@@ -119,7 +119,8 @@
   },
   "forDevelopers": {
     "label": "Разработчикам",
-    "title": "Познакомьтесь с экосистемой Dash",
+    "title": "Познакомьтесь с экосистемой",
+    "titleHighlight": "Dash",
     "joinDiscord": "Discord",
     "cards": {
       "apiSdk": { "chip": "Python, JS, Go", "title": "API & SDK" },

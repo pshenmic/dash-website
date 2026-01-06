@@ -114,6 +114,7 @@ export default async function HomePage({
         translations={{
           label: tDevelopers('label'),
           title: tDevelopers('title'),
+          titleHighlight: tDevelopers('titleHighlight'),
           joinDiscord: tDevelopers('joinDiscord'),
           cards: {
             apiSdk: {

@@ -1,10 +1,12 @@
 import Image from 'next/image'
+import { highlight } from 'sugar-high'
 import { Button } from '@/components/ui/Button'
 
 interface ForDevelopersProps {
   translations: {
     label: string
     title: string
+    titleHighlight: string
     joinDiscord: string
     cards: {
       apiSdk: { chip: string; title: string }
@@ -18,14 +20,12 @@ interface ForDevelopersProps {
   }
 }
 
-const codeSnippet = `import pl.ludex.smartdashwallet.Constants;
-import pl.ludex.smartdashwallet.event.BalanceChangeEvent;
-
-public class DashKitService extends Service {
-  private static final String BIP39_WORDLIST_FILENAME = "bip39-wordlist.txt";
-
-  private static final Logger log = LoggerFactory.getLogger(DashKitService.class);
-}`
+const codeSnippet = `const { dashPlatform } = window
+const { identity } = await dashPlatform.connect()
+const doc = await dashPlatform.documents.create(
+  'note', { message: 'Hello Dash!' }
+)
+await dashPlatform.signAndBroadcast(doc)`
 
 export function ForDevelopers({ translations: t }: ForDevelopersProps) {
   return (
@@ -35,25 +35,28 @@ export function ForDevelopers({ translations: t }: ForDevelopersProps) {
         <div className="mb-8 flex flex-col items-start justify-between gap-4 lg:mb-[20px] lg:flex-row lg:items-center">
           <div className="flex flex-col gap-[5px]">
             <span className="text-[18px] font-extrabold text-primary-blue">{t.label}</span>
-            <h2 className="relative text-[24px] font-extrabold leading-[1.06] tracking-[-0.03em] text-primary-dark dark:text-white lg:text-[32px]">
-              {t.title}
-              {/* Decorative line */}
-              <Image
-                src="/images/developers/decoration-line.svg"
-                alt=""
-                width={113}
-                height={45}
-                className="absolute -top-[10px] right-0 hidden h-auto w-[80px] lg:right-[-20px] lg:block lg:w-[113px]"
-              />
+            <h2 className="max-w-[320px] text-[32px] font-extrabold leading-[34px] tracking-[-0.03em] text-primary-dark dark:text-white lg:max-w-none">
+              {t.title}{' '}
+              <span className="relative inline-block">
+                {t.titleHighlight}
+                {/* Decorative line wrapping the word */}
+                <Image
+                  src="/images/developers/decoration-line.svg"
+                  alt=""
+                  width={113}
+                  height={45}
+                  className="pointer-events-none absolute -bottom-[5px] left-1/2 h-[35px] w-[90px] -translate-x-1/2 lg:-bottom-[8px] lg:h-[45px] lg:w-[113px]"
+                />
+              </span>
             </h2>
           </div>
-          <Button variant="primary">{t.joinDiscord}</Button>
+          <Button variant="primary" className="hidden lg:inline-flex">{t.joinDiscord}</Button>
         </div>
 
         {/* Cards Grid */}
-        <div className="flex flex-col gap-[19px]">
+        <div className="flex flex-col gap-[10px] lg:gap-[19px]">
           {/* First Row - 3 cards */}
-          <div className="grid grid-cols-1 gap-[19px] md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-[10px] md:grid-cols-2 md:gap-[19px] lg:grid-cols-3">
             {/* API & SDK Card */}
             <DeveloperCard
               title={t.cards.apiSdk.title}
@@ -75,7 +78,7 @@ export function ForDevelopers({ translations: t }: ForDevelopersProps) {
           </div>
 
           {/* Second Row - Testnet + Code Example */}
-          <div className="grid grid-cols-1 gap-[19px] lg:grid-cols-[400px_1fr]">
+          <div className="grid grid-cols-1 gap-[10px] md:gap-[19px] lg:grid-cols-2">
             {/* Testnet Card */}
             <DeveloperCard
               title={t.cards.testnet.title}
@@ -83,7 +86,7 @@ export function ForDevelopers({ translations: t }: ForDevelopersProps) {
               image="/images/developers/card-testnet.png"
             />
             {/* Code Example Card */}
-            <CodeCard language={t.codeExample.language} code={codeSnippet} />
+            <CodeCard code={codeSnippet} />
           </div>
         </div>
       </div>
@@ -99,19 +102,19 @@ interface DeveloperCardProps {
 
 function DeveloperCard({ title, chip, image }: DeveloperCardProps) {
   return (
-    <div className="relative h-[200px] overflow-hidden rounded-[35px] bg-primary-dark lg:h-[235px]">
+    <div className="relative h-[158px] overflow-hidden rounded-[25px] bg-primary-dark lg:h-[235px] lg:rounded-[35px]">
       {/* Logo */}
-      <div className="absolute left-[30px] top-[30px]">
+      <div className="absolute left-[20px] top-[20px] lg:left-[30px] lg:top-[30px]">
         <Image
-          src="/images/developers/logo-dash.svg"
+          src="/images/developers/logo-dash-small.svg"
           alt=""
-          width={37}
-          height={10}
-          className="h-[10px] w-auto opacity-70"
+          width={30}
+          height={24}
+          className="h-[18px] w-auto lg:h-[24px]"
         />
       </div>
       {/* 3D Image */}
-      <div className="absolute right-0 top-1/2 h-[200px] w-[250px] -translate-y-1/2 lg:h-[283px] lg:w-[294px]">
+      <div className="absolute right-[-40px] top-1/2 h-[217px] w-[225px] -translate-y-1/2 lg:right-0 lg:h-[283px] lg:w-[294px]">
         <Image
           src={image}
           alt=""
@@ -120,45 +123,46 @@ function DeveloperCard({ title, chip, image }: DeveloperCardProps) {
         />
       </div>
       {/* Chip */}
-      <div className="absolute left-[30px] top-[119px]">
+      <div className="absolute left-[20px] top-[64px] lg:left-[30px] lg:top-[119px]">
         <span className="inline-block rounded-[35px] border border-white/50 px-[35px] py-[10px] text-[12px] font-medium text-white">
           {chip}
         </span>
       </div>
       {/* Title */}
-      <p className="absolute bottom-[30px] left-[30px] text-[28px] font-extrabold leading-[40px] tracking-[-0.03em] text-white lg:text-[38px]">
+      <p className="absolute bottom-[20px] left-[20px] max-w-[55%] text-[20px] font-extrabold leading-[22px] tracking-[-0.03em] text-white hyphens-auto lg:bottom-[30px] lg:left-[30px] lg:max-w-none lg:text-[38px] lg:leading-[40px]">
         {title}
       </p>
     </div>
   )
 }
 
-interface CodeCardProps {
-  language: string
-  code: string
-}
-
-function CodeCard({ language, code }: CodeCardProps) {
+function CodeCard({ code }: { code: string }) {
   return (
-    <div className="relative h-[235px] overflow-hidden rounded-[35px] bg-primary-dark">
+    <div className="relative h-[200px] overflow-hidden rounded-[35px] bg-primary-dark lg:h-[235px]">
       {/* Header */}
-      <div className="flex items-center gap-3 px-[30px] py-[15px]">
+      <div className="flex items-center gap-2 px-[20px] py-[12px] lg:gap-3 lg:px-[30px] lg:py-[15px]">
         <Image
           src="/images/developers/logo-dash-small.svg"
-          alt=""
-          width={26}
-          height={21}
-          className="h-[21px] w-auto"
+          alt="Dash"
+          width={30}
+          height={24}
+          className="h-[20px] w-auto lg:h-[24px]"
         />
-        <span className="text-[18px] font-extrabold text-white">{language}</span>
+        <Image
+          src="/images/developers/logo-typescript.svg"
+          alt="TypeScript"
+          width={24}
+          height={24}
+          className="h-[20px] w-[20px] rounded-[4px] lg:h-[24px] lg:w-[24px]"
+        />
       </div>
       {/* Code area */}
-      <div className="relative h-[184px] bg-white/10 px-[30px] py-[15px]">
-        <pre className="font-mono text-[12px] leading-[1.6] text-white lg:text-[14px]">
-          <code>{formatCode(code)}</code>
+      <div className="relative h-[156px] bg-white/10 px-[20px] py-[12px] lg:h-[184px] lg:px-[30px] lg:py-[15px]">
+        <pre className="font-mono text-[11px] leading-[1.6] text-white lg:text-[14px]">
+          <code dangerouslySetInnerHTML={{ __html: highlight(code) }} />
         </pre>
         {/* Copy button */}
-        <button className="absolute right-[30px] top-[15px] flex h-[20px] w-[20px] items-center justify-center opacity-70 transition-opacity hover:opacity-100">
+        <button className="absolute right-[20px] top-[12px] flex h-[20px] w-[20px] items-center justify-center opacity-70 transition-opacity hover:opacity-100 lg:right-[30px] lg:top-[15px]">
           <Image
             src="/images/developers/icon-copy.svg"
             alt="Copy"
@@ -171,24 +175,3 @@ function CodeCard({ language, code }: CodeCardProps) {
   )
 }
 
-function formatCode(code: string) {
-  // Simple syntax highlighting
-  return code.split('\n').map((line, i) => (
-    <span key={i} className="block">
-      {line
-        .replace(/(import|public|class|extends|private|static|final|String)/g, '<span class="text-[#b883c5]">$1</span>')
-        .replace(/(".*?")/g, '<span class="text-[#72c1f5]">$1</span>')
-        .replace(/(\{|\}|\(|\))/g, '<span class="text-[#bd9873]">$1</span>')
-        .split(/(<span.*?<\/span>)/)
-        .map((part, j) => {
-          if (part.startsWith('<span')) {
-            const match = part.match(/class="([^"]+)">(.*?)<\/span>/)
-            if (match) {
-              return <span key={j} className={match[1]}>{match[2]}</span>
-            }
-          }
-          return part
-        })}
-    </span>
-  ))
-}

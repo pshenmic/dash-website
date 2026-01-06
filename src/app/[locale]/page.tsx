@@ -64,6 +64,7 @@ export default async function HomePage({
           longestDao: {
             line1: tBullets('longestDao.line1'),
             highlight1: tBullets('longestDao.highlight1'),
+            line1End: tBullets('longestDao.line1End'),
             line2: tBullets('longestDao.line2'),
             highlight2: tBullets('longestDao.highlight2'),
           },

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { highlight } from 'sugar-high'
 import { Button } from '@/components/ui/Button'
+import { Card } from '@/components/ui/Card'
 
 interface ForDevelopersProps {
   translations: {
@@ -102,7 +103,7 @@ interface DeveloperCardProps {
 
 function DeveloperCard({ title, chip, image }: DeveloperCardProps) {
   return (
-    <div className="relative h-[158px] overflow-hidden rounded-[25px] bg-primary-dark dark:border dark:border-white/15 dark:bg-secondary-space-cadet lg:h-[235px] lg:rounded-[35px]">
+    <Card className="relative h-[158px] lg:h-[235px]">
       {/* Левая часть - flex колонка */}
       <div className="relative z-10 flex h-full max-w-[55%] flex-col items-start px-5 pb-4 pt-4 lg:max-w-[60%] lg:p-[30px]">
         <Image
@@ -125,13 +126,13 @@ function DeveloperCard({ title, chip, image }: DeveloperCardProps) {
       <div className="absolute right-[-40px] top-1/2 h-[217px] w-[225px] -translate-y-1/2 lg:left-1/2 lg:right-auto lg:h-[283px] lg:w-[294px]">
         <Image src={image} alt="" fill className="object-contain object-right" />
       </div>
-    </div>
+    </Card>
   )
 }
 
 function CodeCard({ code }: { code: string }) {
   return (
-    <div className="flex h-[180px] flex-col overflow-hidden rounded-[25px] bg-primary-dark dark:border dark:border-white/15 dark:bg-secondary-space-cadet lg:h-[235px] lg:rounded-[35px]">
+    <Card className="flex h-[180px] flex-col lg:h-[235px]">
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-3 lg:px-[30px] lg:py-4">
         <Image
@@ -157,7 +158,7 @@ function CodeCard({ code }: { code: string }) {
           <code dangerouslySetInnerHTML={{ __html: highlight(code) }} />
         </pre>
       </div>
-    </div>
+    </Card>
   )
 }
 

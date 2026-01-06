@@ -44,7 +44,7 @@ export function FutureOfMoney({
 
             {/* Stats */}
             <div className="flex gap-[15px]">
-              <div className="flex h-[143px] flex-1 flex-col justify-center rounded-[36px] border border-primary-blue px-[29px]">
+              <div className="flex h-[111px] flex-1 flex-col justify-center rounded-[36px] border border-primary-blue px-[29px] dark:border-0 dark:bg-primary-blue/15 lg:h-[143px]">
                 <span className="text-[13px] font-medium text-primary-blue">
                   {transactionSpeed}
                 </span>
@@ -52,7 +52,7 @@ export function FutureOfMoney({
                   {transactionSpeedValue}
                 </span>
               </div>
-              <div className="flex h-[143px] flex-1 flex-col justify-center rounded-[36px] border border-primary-blue px-[29px]">
+              <div className="flex h-[111px] flex-1 flex-col justify-center rounded-[36px] border border-primary-blue px-[29px] dark:border-0 dark:bg-primary-blue/15 lg:h-[143px]">
                 <span className="text-[13px] font-medium text-primary-blue">
                   {costPerTransaction}
                 </span>
@@ -63,14 +63,14 @@ export function FutureOfMoney({
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-[15px]">
-              <Button variant="primary">{connectTestnet}</Button>
-              <Button variant="outline">{learnMore}</Button>
+            <div className="flex w-full flex-col gap-[10px] lg:w-auto lg:flex-row lg:gap-[15px]">
+              <Button variant="primary" className="h-[50px] w-full lg:h-[65px] lg:w-auto">{connectTestnet}</Button>
+              <Button variant="outline" className="h-[50px] w-full lg:h-[65px] lg:w-auto">{learnMore}</Button>
             </div>
           </div>
 
-          {/* Right content - 3D Coin */}
-          <div className="relative h-[400px] w-full max-w-[596px] lg:h-[551px]">
+          {/* Right content - 3D Coin (hidden on mobile) */}
+          <div className="relative hidden w-full max-w-[596px] lg:block lg:h-[551px]">
             <Image
               src="/images/coin-3d-large.png"
               alt="Dash 3D Coin"

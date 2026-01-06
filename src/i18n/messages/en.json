@@ -73,7 +73,8 @@
     "longestDao": {
       "line1": "One of the",
       "highlight1": "1st",
-      "line2": "and longest running",
+      "line1End": "and",
+      "line2": "longest running",
       "highlight2": "DAOs"
     },
     "optionalPrivacy": {

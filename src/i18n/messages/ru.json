@@ -73,7 +73,8 @@
     "longestDao": {
       "line1": "Одна из",
       "highlight1": "первых",
-      "line2": "и старейших",
+      "line1End": "и",
+      "line2": "старейших",
       "highlight2": "DAO"
     },
     "optionalPrivacy": {

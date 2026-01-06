@@ -18,7 +18,7 @@ interface VideoCardProps {
 export function VideoCard({ video }: VideoCardProps) {
   const { variant, label, title, subtitle, session, image } = video
 
-  const baseClasses = 'relative h-[216px] w-full overflow-hidden rounded-[25px]'
+  const baseClasses = 'relative h-[216px] w-full overflow-hidden rounded-[25px] shadow-sm dark:border dark:border-white/15'
 
   if (variant === 'light') {
     return (

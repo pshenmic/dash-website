@@ -22,11 +22,32 @@ export function Header({ nav }: HeaderProps) {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   // Avoid hydration mismatch
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  // Smart header: hide on scroll down, show on scroll up
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      // Show header if scrolling up or at the top
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
@@ -34,7 +55,7 @@ export function Header({ nav }: HeaderProps) {
 
   return (
     <>
-      <header className="absolute left-0 right-0 top-0 z-50 p-4 lg:p-6">
+      <header className={`fixed left-0 right-0 top-0 z-50 p-4 transition-transform duration-300 lg:p-6 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="mx-auto flex max-w-7xl items-center justify-between rounded-[25px] bg-primary-white p-[15px]">
           {/* Mobile Header */}
           <div className="flex w-full items-center justify-between lg:hidden">

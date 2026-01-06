@@ -61,7 +61,7 @@ export function VideosSlider({ videos }: VideosSliderProps) {
           role="region"
           aria-label="Video carousel"
         >
-          <div className="flex gap-4 lg:gap-[39px]">
+          <div className="flex gap-4 pb-2 lg:gap-[39px]">
             {videos.map((video) => (
               <div
                 key={video.id}

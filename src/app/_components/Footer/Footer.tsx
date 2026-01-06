@@ -14,7 +14,7 @@ export function Footer({
   privacyPolicy,
 }: FooterProps) {
   return (
-    <footer className="bg-primary-dark px-6 py-8 lg:px-16 lg:py-12">
+    <footer className="-mt-[50px] bg-primary-dark px-6 pb-8 pt-[calc(2rem+50px)] lg:px-16 lg:pb-12 lg:pt-[calc(3rem+50px)]">
       <SubFooter
         copyright={copyright}
         termsOfUse={termsOfUse}

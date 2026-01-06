@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { CircleCheck, Lock, Users, MessageSquare } from 'lucide-react'
 import { Chip } from '@/components/ui/Chip'
 import { Card } from '@/components/ui/Card'
+import { DashPriceCard } from '@/components/ui/DashPriceCard'
 
 interface BulletsGridProps {
   translations: {
@@ -99,48 +100,9 @@ export function BulletsGrid({ translations: t }: BulletsGridProps) {
             </div>
           </Card>
 
-          {/* 6. Price Chart - Dark with chart */}
+          {/* 6. Price Chart - Dark with real-time data */}
           {/* Mobile: full width | Desktop: col 1, row 3 */}
-          <Card className="relative order-6 col-span-2 h-[100px] lg:col-span-1 lg:col-start-1 lg:row-start-3 lg:h-auto">
-            {/* Chart background */}
-            <div className="absolute bottom-0 left-[35px] h-full w-[234px]">
-              <Image
-                src="/images/bullets/price-chart-bg.svg"
-                alt=""
-                fill
-                className="object-contain object-bottom"
-              />
-            </div>
-            {/* Chart area */}
-            <div className="absolute bottom-0 left-0 h-[92px] w-full">
-              <Image
-                src="/images/bullets/price-chart-area.svg"
-                alt=""
-                fill
-                className="object-contain object-bottom"
-              />
-            </div>
-            {/* Logo icon */}
-            <div className="absolute left-[20px] top-[16px] lg:left-[35px] lg:top-[30px]">
-              <Image
-                src="/images/bullets/logo-dash-icon.svg"
-                alt=""
-                width={34}
-                height={28}
-                className="h-[20px] w-auto lg:h-[28px]"
-              />
-            </div>
-            {/* Price */}
-            <p className="absolute left-[50px] top-[12px] tracking-[-0.5px] text-white lg:left-[84px] lg:top-[30px] lg:tracking-[-0.84px]">
-              <span className="text-[18px] font-extrabold lg:text-[28px]">{t.priceChart.price}</span>
-              <span className="text-[12px] font-medium lg:text-[18px]">{t.priceChart.currency}</span>
-            </p>
-            {/* Change */}
-            <p className="absolute left-[20px] top-[36px] text-[10px] font-medium lg:left-[49px] lg:top-[72px] lg:text-[12px]">
-              <span className="text-primary-blue">{t.priceChart.change}</span>
-              <span className="text-white/50"> {t.priceChart.period}</span>
-            </p>
-          </Card>
+          <DashPriceCard className="relative order-6 col-span-2 h-[100px] lg:col-span-1 lg:col-start-1 lg:row-start-3 lg:h-auto" />
 
           {/* 7. Passive Income - Dark text only */}
           {/* Mobile: half width | Desktop: col 4, row 2 */}

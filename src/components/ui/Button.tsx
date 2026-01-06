@@ -19,7 +19,7 @@ export function Button({
         'flex h-[65px] items-center justify-center gap-[15px] rounded-[20px] px-[35px] text-lg font-semibold backdrop-blur-[5px]',
         variant === 'primary' && 'bg-primary-blue text-primary-white',
         variant === 'secondary' && 'bg-secondary-half-white text-primary-white',
-        variant === 'outline' && 'bg-secondary-blue-15 text-primary-blue',
+        variant === 'outline' && 'bg-primary-blue/15 text-primary-blue',
         className
       )}
     >

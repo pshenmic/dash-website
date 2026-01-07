@@ -4,7 +4,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: 'dark' | 'blue'
 }
 
-export function Card({ variant = 'dark', className, ...props }: CardProps) {
+export function Card ({ variant = 'dark', className, ...props }: CardProps) {
   return (
     <div
       className={cn(

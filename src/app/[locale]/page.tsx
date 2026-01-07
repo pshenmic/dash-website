@@ -7,12 +7,12 @@ import { BulletsGrid } from '../_components/BulletsGrid'
 import { ForDevelopers } from '../_components/ForDevelopers'
 import type { VideoCardData } from '../_components/VideosSlider/VideoCard'
 
-export function generateStaticParams() {
+export function generateStaticParams () {
   return routing.locales.map((locale) => ({ locale }))
 }
 
-export default async function HomePage({
-  params,
+export default async function HomePage ({
+  params
 }: {
   params: Promise<{ locale: string }>
 }) {
@@ -38,108 +38,117 @@ export default async function HomePage({
       />
 
       {/* Videos Slider - overlaps hero section */}
-      <section className="relative z-20 -mt-[108px] pb-10 lg:pb-16">
+      <section className='relative z-20 -mt-[108px] pb-10 lg:pb-16'>
         <VideosSlider videos={videosRaw} />
       </section>
 
-      <FutureOfMoney
-        chip={tFuture('chip')}
-        title={tFuture('title')}
-        description={tFuture('description')}
-        transactionSpeed={tFuture('transactionSpeed')}
-        transactionSpeedValue={tFuture('transactionSpeedValue')}
-        costPerTransaction={tFuture('costPerTransaction')}
-        costPerTransactionValue={tFuture('costPerTransactionValue')}
-        connectTestnet={tFuture('connectTestnet')}
-        learnMore={tFuture('learnMore')}
-      />
+      {/* FutureOfMoney section */}
+      <section className='py-10 lg:py-16'>
+        <FutureOfMoney
+          chip={tFuture('chip')}
+          title={tFuture('title')}
+          description={tFuture('description')}
+          transactionSpeed={tFuture('transactionSpeed')}
+          transactionSpeedValue={tFuture('transactionSpeedValue')}
+          costPerTransaction={tFuture('costPerTransaction')}
+          costPerTransactionValue={tFuture('costPerTransactionValue')}
+          connectTestnet={tFuture('connectTestnet')}
+          learnMore={tFuture('learnMore')}
+        />
+      </section>
 
-      <BulletsGrid
-        translations={{
-          stableOperation: {
-            line1: tBullets('stableOperation.line1'),
-            line2: tBullets('stableOperation.line2'),
-            highlight: tBullets('stableOperation.highlight'),
-          },
-          longestDao: {
-            line1: tBullets('longestDao.line1'),
-            highlight1: tBullets('longestDao.highlight1'),
-            line1End: tBullets('longestDao.line1End'),
-            line2: tBullets('longestDao.line2'),
-            highlight2: tBullets('longestDao.highlight2'),
-          },
-          optionalPrivacy: {
-            line1: tBullets('optionalPrivacy.line1'),
-            highlight: tBullets('optionalPrivacy.highlight'),
-          },
-          mainCard: {
-            chip: tBullets('mainCard.chip'),
-          },
-          priceChart: {
-            price: tBullets('priceChart.price'),
-            currency: tBullets('priceChart.currency'),
-            change: tBullets('priceChart.change'),
-            period: tBullets('priceChart.period'),
-          },
-          passiveIncome: {
-            highlight: tBullets('passiveIncome.highlight'),
-            text: tBullets('passiveIncome.text'),
-          },
-          selfFinancing: {
-            highlight: tBullets('selfFinancing.highlight'),
-            line1: tBullets('selfFinancing.line1'),
-            line2: tBullets('selfFinancing.line2'),
-          },
-          activeCommunity: {
-            highlight: tBullets('activeCommunity.highlight'),
-            text: tBullets('activeCommunity.text'),
-          },
-          instantSecure: {
-            line1: tBullets('instantSecure.line1'),
-            line2: tBullets('instantSecure.line2'),
-            text: tBullets('instantSecure.text'),
-          },
-          uniqueOpportunities: {
-            highlight: tBullets('uniqueOpportunities.highlight'),
-            text: tBullets('uniqueOpportunities.text'),
-          },
-          restrictedIssue: {
-            line1: tBullets('restrictedIssue.line1'),
-            line2: tBullets('restrictedIssue.line2'),
-            value: tBullets('restrictedIssue.value'),
-          },
-        }}
-      />
+      {/* BulletsGrid section */}
+      <section className='pb-6 lg:pb-10'>
+        <BulletsGrid
+          translations={{
+            stableOperation: {
+              line1: tBullets('stableOperation.line1'),
+              line2: tBullets('stableOperation.line2'),
+              highlight: tBullets('stableOperation.highlight')
+            },
+            longestDao: {
+              line1: tBullets('longestDao.line1'),
+              highlight1: tBullets('longestDao.highlight1'),
+              line1End: tBullets('longestDao.line1End'),
+              line2: tBullets('longestDao.line2'),
+              highlight2: tBullets('longestDao.highlight2')
+            },
+            optionalPrivacy: {
+              line1: tBullets('optionalPrivacy.line1'),
+              highlight: tBullets('optionalPrivacy.highlight')
+            },
+            mainCard: {
+              chip: tBullets('mainCard.chip')
+            },
+            priceChart: {
+              price: tBullets('priceChart.price'),
+              currency: tBullets('priceChart.currency'),
+              change: tBullets('priceChart.change'),
+              period: tBullets('priceChart.period')
+            },
+            passiveIncome: {
+              highlight: tBullets('passiveIncome.highlight'),
+              text: tBullets('passiveIncome.text')
+            },
+            selfFinancing: {
+              highlight: tBullets('selfFinancing.highlight'),
+              line1: tBullets('selfFinancing.line1'),
+              line2: tBullets('selfFinancing.line2')
+            },
+            activeCommunity: {
+              highlight: tBullets('activeCommunity.highlight'),
+              text: tBullets('activeCommunity.text')
+            },
+            instantSecure: {
+              line1: tBullets('instantSecure.line1'),
+              line2: tBullets('instantSecure.line2'),
+              text: tBullets('instantSecure.text')
+            },
+            uniqueOpportunities: {
+              highlight: tBullets('uniqueOpportunities.highlight'),
+              text: tBullets('uniqueOpportunities.text')
+            },
+            restrictedIssue: {
+              line1: tBullets('restrictedIssue.line1'),
+              line2: tBullets('restrictedIssue.line2'),
+              value: tBullets('restrictedIssue.value')
+            }
+          }}
+        />
+      </section>
 
-      <ForDevelopers
-        translations={{
-          label: tDevelopers('label'),
-          title: tDevelopers('title'),
-          titleHighlight: tDevelopers('titleHighlight'),
-          joinDiscord: tDevelopers('joinDiscord'),
-          cards: {
-            apiSdk: {
-              chip: tDevelopers('cards.apiSdk.chip'),
-              title: tDevelopers('cards.apiSdk.title'),
+      {/* ForDevelopers section */}
+      <section className='py-10 lg:py-16'>
+        <ForDevelopers
+          translations={{
+            label: tDevelopers('label'),
+            title: tDevelopers('title'),
+            titleHighlight: tDevelopers('titleHighlight'),
+            joinDiscord: tDevelopers('joinDiscord'),
+            cards: {
+              apiSdk: {
+                chip: tDevelopers('cards.apiSdk.chip'),
+                title: tDevelopers('cards.apiSdk.title')
+              },
+              nodes: {
+                chip: tDevelopers('cards.nodes.chip'),
+                title: tDevelopers('cards.nodes.title')
+              },
+              smartContracts: {
+                chip: tDevelopers('cards.smartContracts.chip'),
+                title: tDevelopers('cards.smartContracts.title')
+              },
+              testnet: {
+                chip: tDevelopers('cards.testnet.chip'),
+                title: tDevelopers('cards.testnet.title')
+              }
             },
-            nodes: {
-              chip: tDevelopers('cards.nodes.chip'),
-              title: tDevelopers('cards.nodes.title'),
-            },
-            smartContracts: {
-              chip: tDevelopers('cards.smartContracts.chip'),
-              title: tDevelopers('cards.smartContracts.title'),
-            },
-            testnet: {
-              chip: tDevelopers('cards.testnet.chip'),
-              title: tDevelopers('cards.testnet.title'),
-            },
-          },
-          codeExample: {
-            language: tDevelopers('codeExample.language'),
-          },
-        }}
-      />
+            codeExample: {
+              language: tDevelopers('codeExample.language')
+            }
+          }}
+        />
+      </section>
     </main>
   )
 }

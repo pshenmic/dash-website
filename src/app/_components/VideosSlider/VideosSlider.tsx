@@ -3,13 +3,12 @@
 import useEmblaCarousel from 'embla-carousel-react'
 import { useCallback, useEffect, useState } from 'react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { VideoCard, type VideoCardData } from './VideoCard'
 
-interface VideosSliderProps {
-  videos: VideoCardData[]
-}
-
-export function VideosSlider ({ videos }: VideosSliderProps) {
+export function VideosSlider () {
+  const t = useTranslations('videosSlider')
+  const videos = t.raw('videos') as VideoCardData[]
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     slidesToScroll: 1,

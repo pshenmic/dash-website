@@ -1,25 +1,8 @@
 import Image from 'next/image'
 import { highlight } from 'sugar-high'
+import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
-
-interface ForDevelopersProps {
-  translations: {
-    label: string
-    title: string
-    titleHighlight: string
-    joinDiscord: string
-    cards: {
-      apiSdk: { chip: string, title: string }
-      nodes: { chip: string, title: string }
-      smartContracts: { chip: string, title: string }
-      testnet: { chip: string, title: string }
-    }
-    codeExample: {
-      language: string
-    }
-  }
-}
 
 const codeSnippet = `const { dashPlatform } = window
 const { identity } = await dashPlatform.connect()
@@ -28,18 +11,19 @@ const doc = await dashPlatform.documents.create(
 )
 await dashPlatform.signAndBroadcast(doc)`
 
-export function ForDevelopers ({ translations: t }: ForDevelopersProps) {
+export function ForDevelopers () {
+  const t = useTranslations('forDevelopers')
   return (
     <div className='relative z-10 rounded-b-[50px] bg-primary-white dark:bg-primary-dark'>
       <div className='mx-auto max-w-7xl px-4 lg:px-6'>
         {/* Header */}
         <div className='mb-8 flex flex-col items-start justify-between gap-4 lg:mb-[20px] lg:flex-row lg:items-center'>
           <div className='flex flex-col gap-[5px]'>
-            <span className='text-[18px] font-extrabold text-primary-blue'>{t.label}</span>
+            <span className='text-[18px] font-extrabold text-primary-blue'>{t('label')}</span>
             <h2 className='max-w-[320px] text-[32px] font-extrabold leading-[34px] tracking-[-0.03em] text-primary-dark dark:text-white lg:max-w-none'>
-              {t.title}{' '}
+              {t('title')}{' '}
               <span className='relative inline-block'>
-                {t.titleHighlight}
+                {t('titleHighlight')}
                 {/* Decorative line wrapping the word */}
                 <Image
                   src='/images/developers/decoration-line.svg'
@@ -51,7 +35,7 @@ export function ForDevelopers ({ translations: t }: ForDevelopersProps) {
               </span>
             </h2>
           </div>
-          <Button variant='primary' className='hidden lg:inline-flex'>{t.joinDiscord}</Button>
+          <Button variant='primary' className='hidden lg:inline-flex'>{t('joinDiscord')}</Button>
         </div>
 
         {/* Cards Grid */}
@@ -60,20 +44,20 @@ export function ForDevelopers ({ translations: t }: ForDevelopersProps) {
           <div className='grid grid-cols-1 gap-[10px] md:grid-cols-2 md:gap-[19px] lg:grid-cols-3'>
             {/* API & SDK Card */}
             <DeveloperCard
-              title={t.cards.apiSdk.title}
-              chip={t.cards.apiSdk.chip}
+              title={t('cards.apiSdk.title')}
+              chip={t('cards.apiSdk.chip')}
               image='/images/developers/card-api-sdk.png'
             />
             {/* Nodes Card */}
             <DeveloperCard
-              title={t.cards.nodes.title}
-              chip={t.cards.nodes.chip}
+              title={t('cards.nodes.title')}
+              chip={t('cards.nodes.chip')}
               image='/images/developers/card-nodes.png'
             />
             {/* Smart-Contracts Card */}
             <DeveloperCard
-              title={t.cards.smartContracts.title}
-              chip={t.cards.smartContracts.chip}
+              title={t('cards.smartContracts.title')}
+              chip={t('cards.smartContracts.chip')}
               image='/images/developers/card-smart-contracts.png'
             />
           </div>
@@ -82,8 +66,8 @@ export function ForDevelopers ({ translations: t }: ForDevelopersProps) {
           <div className='grid grid-cols-1 gap-[10px] md:gap-[19px] lg:grid-cols-2'>
             {/* Testnet Card */}
             <DeveloperCard
-              title={t.cards.testnet.title}
-              chip={t.cards.testnet.chip}
+              title={t('cards.testnet.title')}
+              chip={t('cards.testnet.chip')}
               image='/images/developers/card-testnet.png'
             />
             {/* Code Example Card */}

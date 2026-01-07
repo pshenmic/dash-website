@@ -10,22 +10,22 @@ import '../globals.css'
 
 const manrope = Manrope({
   variable: '--font-manrope',
-  subsets: ['latin', 'cyrillic'],
+  subsets: ['latin', 'cyrillic']
 })
 
 export const metadata: Metadata = {
   title: 'Dash - Digital Cash',
   description:
-    'Money without borders: moving it instantly, transparently, conveniently, and almost for free',
+    'Money without borders: moving it instantly, transparently, conveniently, and almost for free'
 }
 
-export function generateStaticParams() {
+export function generateStaticParams () {
   return routing.locales.map((locale) => ({ locale }))
 }
 
-export default async function LocaleLayout({
+export default async function LocaleLayout ({
   children,
-  params,
+  params
 }: {
   children: React.ReactNode
   params: Promise<{ locale: string }>
@@ -48,7 +48,7 @@ export default async function LocaleLayout({
                 institutions: tNav('institutions'),
                 developers: tNav('developers'),
                 community: tNav('community'),
-                buyDash: tNav('buyDash'),
+                buyDash: tNav('buyDash')
               }}
             />
             {children}

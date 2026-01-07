@@ -15,7 +15,7 @@ interface VideoCardProps {
   video: VideoCardData
 }
 
-export function VideoCard({ video }: VideoCardProps) {
+export function VideoCard ({ video }: VideoCardProps) {
   const { variant, label, title, subtitle, session, image } = video
 
   const baseClasses = 'relative h-[216px] w-full overflow-hidden rounded-[25px] shadow-sm dark:border dark:border-white/15'
@@ -24,34 +24,34 @@ export function VideoCard({ video }: VideoCardProps) {
     return (
       <div className={`${baseClasses} bg-primary-white`}>
         {/* Dash pattern background */}
-        <div className="absolute inset-0 opacity-20">
+        <div className='absolute inset-0 opacity-20'>
           <DashPattern />
         </div>
 
         {/* Label */}
-        <div className="absolute left-[22px] top-[52px]">
-          <span className="rounded-full border border-primary-dark/30 px-3 py-1 text-[11px] text-primary-dark">
+        <div className='absolute left-[22px] top-[52px]'>
+          <span className='rounded-full border border-primary-dark/30 px-3 py-1 text-[11px] text-primary-dark'>
             {label}
           </span>
         </div>
 
         {/* Title */}
-        <div className="absolute left-[22px] top-[90px]">
-          <h3 className="text-[28px] font-extrabold leading-[34px] tracking-[-0.03em] text-primary-dark">
+        <div className='absolute left-[22px] top-[90px]'>
+          <h3 className='text-[28px] font-extrabold leading-[34px] tracking-[-0.03em] text-primary-dark'>
             {title.split('\n').map((line, i) => (
-              <span key={i} className="block">{line}</span>
+              <span key={i} className='block'>{line}</span>
             ))}
           </h3>
         </div>
 
         {/* Logo */}
-        <div className="absolute bottom-[16px] left-[22px]">
-          <Image src="/images/logo.svg" alt="Dash" width={60} height={16} />
+        <div className='absolute bottom-[16px] left-[22px]'>
+          <Image src='/images/logo.svg' alt='Dash' width={60} height={16} />
         </div>
 
         {/* Session */}
         {session && (
-          <p className="absolute bottom-[16px] right-[22px] text-xs text-primary-dark/75">
+          <p className='absolute bottom-[16px] right-[22px] text-xs text-primary-dark/75'>
             {session}
           </p>
         )}
@@ -67,34 +67,34 @@ export function VideoCard({ video }: VideoCardProps) {
       <div className={`${baseClasses} bg-primary-dark`}>
         {/* Background image */}
         {image && (
-          <div className="absolute inset-0">
+          <div className='absolute inset-0'>
             <Image
               src={image}
-              alt=""
+              alt=''
               fill
-              className="object-cover"
+              className='object-cover'
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary-dark/60 to-transparent" />
+            <div className='absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary-dark/60 to-transparent' />
           </div>
         )}
 
         {/* Logo */}
-        <div className="absolute left-[22px] top-[22px]">
-          <Image src="/images/logo.svg" alt="Dash" width={40} height={11} className="brightness-0 invert" />
+        <div className='absolute left-[22px] top-[22px]'>
+          <Image src='/images/logo.svg' alt='Dash' width={40} height={11} className='brightness-0 invert' />
         </div>
 
         {/* Label */}
-        <div className="absolute left-[22px] top-[102px]">
-          <span className="rounded-full border border-primary-turquoise/50 px-3 py-1 text-[10px] text-primary-turquoise">
+        <div className='absolute left-[22px] top-[102px]'>
+          <span className='rounded-full border border-primary-turquoise/50 px-3 py-1 text-[10px] text-primary-turquoise'>
             {label}
           </span>
         </div>
 
         {/* Title */}
-        <div className="absolute bottom-[22px] left-[22px]">
-          <h3 className="text-[29px] font-extrabold leading-[29px] tracking-[-0.03em] text-primary-white">
+        <div className='absolute bottom-[22px] left-[22px]'>
+          <h3 className='text-[29px] font-extrabold leading-[29px] tracking-[-0.03em] text-primary-white'>
             {title.split('\n').map((line, i) => (
-              <span key={i} className="block">{line}</span>
+              <span key={i} className='block'>{line}</span>
             ))}
           </h3>
         </div>
@@ -110,39 +110,39 @@ export function VideoCard({ video }: VideoCardProps) {
       <div className={`${baseClasses} bg-primary-blue`}>
         {/* Person image */}
         {image && (
-          <div className="absolute right-0 top-0 h-full w-[160px]">
-            <div className="absolute inset-0 rounded-[10px] bg-primary-white/10 backdrop-blur-sm" />
+          <div className='absolute right-0 top-0 h-full w-[160px]'>
+            <div className='absolute inset-0 rounded-[10px] bg-primary-white/10 backdrop-blur-sm' />
             <Image
               src={image}
-              alt=""
+              alt=''
               fill
-              className="object-cover object-top"
+              className='object-cover object-top'
             />
           </div>
         )}
 
         {/* Label */}
-        <div className="absolute left-[22px] top-[22px]">
-          <span className="rounded-full border border-primary-white/50 px-3 py-1 text-[10px] text-primary-white">
+        <div className='absolute left-[22px] top-[22px]'>
+          <span className='rounded-full border border-primary-white/50 px-3 py-1 text-[10px] text-primary-white'>
             {label}
           </span>
         </div>
 
         {/* Title & Subtitle */}
-        <div className="absolute left-[22px] top-1/2 w-[140px] -translate-y-1/2">
-          <h3 className="text-[29px] font-extrabold leading-[29px] tracking-[-0.03em] text-primary-white">
+        <div className='absolute left-[22px] top-1/2 w-[140px] -translate-y-1/2'>
+          <h3 className='text-[29px] font-extrabold leading-[29px] tracking-[-0.03em] text-primary-white'>
             {title}
           </h3>
           {subtitle && (
-            <p className="mt-1 text-[11px] leading-[15px] text-primary-white/75">
+            <p className='mt-1 text-[11px] leading-[15px] text-primary-white/75'>
               {subtitle}
             </p>
           )}
         </div>
 
         {/* Logo */}
-        <div className="absolute bottom-[16px] left-[22px]">
-          <Image src="/images/logo.svg" alt="Dash" width={60} height={16} className="brightness-0 invert" />
+        <div className='absolute bottom-[16px] left-[22px]'>
+          <Image src='/images/logo.svg' alt='Dash' width={60} height={16} className='brightness-0 invert' />
         </div>
 
         {/* Play button */}
@@ -155,34 +155,34 @@ export function VideoCard({ video }: VideoCardProps) {
   return (
     <div className={`${baseClasses} bg-primary-white`}>
       {/* Logo */}
-      <div className="absolute left-[22px] top-[22px]">
-        <Image src="/images/logo.svg" alt="Dash" width={60} height={16} />
+      <div className='absolute left-[22px] top-[22px]'>
+        <Image src='/images/logo.svg' alt='Dash' width={60} height={16} />
       </div>
 
       {/* 3D Coin */}
       {image && (
-        <div className="absolute -right-[50px] -top-[40px] h-[300px] w-[300px]">
+        <div className='absolute -right-[50px] -top-[40px] h-[300px] w-[300px]'>
           <Image
             src={image}
-            alt=""
+            alt=''
             fill
-            className="object-contain"
+            className='object-contain'
           />
         </div>
       )}
 
       {/* Label */}
-      <div className="absolute left-[22px] top-[102px]">
-        <span className="rounded-full border border-primary-dark/30 px-3 py-1 text-[10px] text-primary-dark">
+      <div className='absolute left-[22px] top-[102px]'>
+        <span className='rounded-full border border-primary-dark/30 px-3 py-1 text-[10px] text-primary-dark'>
           {label}
         </span>
       </div>
 
       {/* Title */}
-      <div className="absolute bottom-[22px] left-[22px]">
-        <h3 className="text-[29px] font-extrabold leading-[29px] tracking-[-0.03em] text-primary-dark">
+      <div className='absolute bottom-[22px] left-[22px]'>
+        <h3 className='text-[29px] font-extrabold leading-[29px] tracking-[-0.03em] text-primary-dark'>
           {title.split('\n').map((line, i) => (
-            <span key={i} className="block">{line}</span>
+            <span key={i} className='block'>{line}</span>
           ))}
         </h3>
       </div>
@@ -193,30 +193,30 @@ export function VideoCard({ video }: VideoCardProps) {
   )
 }
 
-function PlayButton() {
+function PlayButton () {
   return (
     <button
-      className="absolute right-[14px] top-[14px] flex h-[38px] w-[38px] items-center justify-center rounded-[10px] bg-primary-white shadow-lg"
-      aria-label="Play video"
+      className='absolute right-[14px] top-[14px] flex h-[38px] w-[38px] items-center justify-center rounded-[10px] bg-primary-white shadow-lg'
+      aria-label='Play video'
     >
-      <Play className="h-4 w-4 fill-primary-blue text-primary-blue" />
+      <Play className='h-4 w-4 fill-primary-blue text-primary-blue' />
     </button>
   )
 }
 
-function DashPattern() {
+function DashPattern () {
   return (
-    <svg className="h-full w-full" viewBox="0 0 400 250" fill="none">
+    <svg className='h-full w-full' viewBox='0 0 400 250' fill='none'>
       {[...Array(8)].map((_, row) =>
         [...Array(12)].map((_, col) => (
           <text
             key={`${row}-${col}`}
             x={col * 80 - 20 + (row % 2) * 40}
             y={row * 35 + 20}
-            fill="currentColor"
-            className="text-primary-dark/10"
-            fontSize="24"
-            fontWeight="800"
+            fill='currentColor'
+            className='text-primary-dark/10'
+            fontSize='24'
+            fontWeight='800'
             transform={`rotate(-30 ${col * 80 + 20} ${row * 35 + 20})`}
           >
             Dash

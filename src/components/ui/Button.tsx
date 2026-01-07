@@ -7,11 +7,11 @@ interface ButtonProps {
   className?: string
 }
 
-export function Button({
+export function Button ({
   children,
   variant = 'primary',
   icon,
-  className,
+  className
 }: ButtonProps) {
   return (
     <button

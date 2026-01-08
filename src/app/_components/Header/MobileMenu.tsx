@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { ChevronDown, Sun, Moon } from 'lucide-react'
+import { Sun, Moon } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useTranslations } from 'next-intl'
 import { LanguageSelector } from './LanguageSelector'
@@ -38,17 +38,19 @@ export function MobileMenu ({ onClose: _onClose, mounted: _mounted }: MobileMenu
 
   return (
     <div className='fixed inset-0 z-50'>
+      {/* Backdrop with fade animation */}
       <div
-        className='absolute inset-0 bg-primary-dark/50'
+        className='absolute inset-0 bg-primary-dark/50 backdrop-blur-sm animate-in fade-in duration-200'
         onClick={_onClose}
       />
 
-      <div className='absolute bottom-0 right-0 top-0 flex w-[300px] max-w-[85vw] flex-col bg-primary-white shadow-2xl dark:bg-primary-dark'>
-        <div className='flex items-center justify-between border-b border-primary-dark/10 p-4 dark:border-primary-white/10'>
+      {/* Slide-in drawer */}
+      <div className='absolute bottom-0 right-0 top-0 flex w-[300px] max-w-[85vw] flex-col rounded-l-[50px] bg-primary-white shadow-2xl animate-in slide-in-from-right duration-300 dark:bg-primary-dark'>
+        <div className='flex items-center justify-between p-6 pl-8'>
           <LanguageSelector />
           <button
             onClick={toggleTheme}
-            className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-primary-white/10'
+            className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10 transition-colors hover:bg-primary-dark/20 dark:bg-primary-white/10 dark:hover:bg-primary-white/20'
             aria-label='Toggle theme'
           >
             {_mounted && theme === 'dark'
@@ -61,45 +63,41 @@ export function MobileMenu ({ onClose: _onClose, mounted: _mounted }: MobileMenu
           </button>
         </div>
 
-        <nav className='flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6'>
+        <nav className='flex flex-1 flex-col gap-2 overflow-y-auto px-6 py-4'>
           <a
             href='#'
-            className='rounded-[12px] px-4 py-3 text-lg font-extrabold text-primary-dark dark:text-primary-white'
+            className='rounded-[12px] px-4 py-3 text-right text-lg font-extrabold text-primary-dark transition-colors hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5'
           >
             {t('home')}
           </a>
           <a
             href='#'
-            className='flex items-center justify-between rounded-[12px] px-4 py-3 text-lg font-semibold text-primary-blue'
+            className='rounded-[12px] px-4 py-3 text-right text-lg font-semibold text-primary-blue transition-colors hover:bg-primary-blue/10'
           >
             {t('getStarted')}
-            <ChevronDown className='h-4 w-4' />
           </a>
           <a
             href='#'
-            className='flex items-center justify-between rounded-[12px] px-4 py-3 text-lg font-semibold text-primary-blue'
+            className='rounded-[12px] px-4 py-3 text-right text-lg font-semibold text-primary-blue transition-colors hover:bg-primary-blue/10'
           >
             {t('institutions')}
-            <ChevronDown className='h-4 w-4' />
           </a>
           <a
             href='#'
-            className='flex items-center justify-between rounded-[12px] px-4 py-3 text-lg font-semibold text-primary-blue'
+            className='rounded-[12px] px-4 py-3 text-right text-lg font-semibold text-primary-blue transition-colors hover:bg-primary-blue/10'
           >
             {t('developers')}
-            <ChevronDown className='h-4 w-4' />
           </a>
           <a
             href='#'
-            className='flex items-center justify-between rounded-[12px] px-4 py-3 text-lg font-semibold text-primary-blue'
+            className='rounded-[12px] px-4 py-3 text-right text-lg font-semibold text-primary-blue transition-colors hover:bg-primary-blue/10'
           >
             {t('community')}
-            <ChevronDown className='h-4 w-4' />
           </a>
         </nav>
 
-        <div className='p-4'>
-          <button className='h-[50px] w-full rounded-[12px] bg-primary-turquoise text-base font-semibold text-primary-dark'>
+        <div className='p-6'>
+          <button className='h-[50px] w-full rounded-[12px] bg-primary-turquoise text-base font-semibold text-primary-dark transition-colors hover:bg-primary-turquoise/90'>
             {t('buyDash')}
           </button>
         </div>

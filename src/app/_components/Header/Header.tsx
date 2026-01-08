@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
-import { ChevronDown, Sun, Moon, Menu } from 'lucide-react'
+import { Sun, Moon, Menu } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { LanguageSelector } from './LanguageSelector'
 import { MobileMenu } from './MobileMenu'
@@ -80,33 +80,17 @@ export function Header () {
             <a href='#' className='whitespace-nowrap text-sm font-extrabold text-primary-dark'>
               {t('home')}
             </a>
-            <a
-              href='#'
-              className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
-            >
+            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue'>
               {t('getStarted')}
-              <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
-            <a
-              href='#'
-              className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
-            >
+            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue'>
               {t('institutions')}
-              <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
-            <a
-              href='#'
-              className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
-            >
+            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue'>
               {t('developers')}
-              <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
-            <a
-              href='#'
-              className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
-            >
+            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue'>
               {t('community')}
-              <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
           </nav>
 

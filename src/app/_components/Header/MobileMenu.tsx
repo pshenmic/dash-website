@@ -3,22 +3,16 @@
 import { useEffect } from 'react'
 import { ChevronDown, Sun, Moon } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import { useTranslations } from 'next-intl'
 import { LanguageSelector } from './LanguageSelector'
 
 interface MobileMenuProps {
-  nav: {
-    home: string
-    getStarted: string
-    institutions: string
-    developers: string
-    community: string
-    buyDash: string
-  }
   onClose: () => void
   mounted: boolean
 }
 
-export function MobileMenu ({ nav: _nav, onClose: _onClose, mounted: _mounted }: MobileMenuProps) {
+export function MobileMenu ({ onClose: _onClose, mounted: _mounted }: MobileMenuProps) {
+  const t = useTranslations('nav')
   const { theme, setTheme } = useTheme()
 
   // Prevent background scrolling while menu is open
@@ -72,41 +66,41 @@ export function MobileMenu ({ nav: _nav, onClose: _onClose, mounted: _mounted }:
             href='#'
             className='rounded-[12px] px-4 py-3 text-lg font-extrabold text-primary-dark dark:text-primary-white'
           >
-            {_nav.home}
+            {t('home')}
           </a>
           <a
             href='#'
             className='flex items-center justify-between rounded-[12px] px-4 py-3 text-lg font-semibold text-primary-blue'
           >
-            {_nav.getStarted}
+            {t('getStarted')}
             <ChevronDown className='h-4 w-4' />
           </a>
           <a
             href='#'
             className='flex items-center justify-between rounded-[12px] px-4 py-3 text-lg font-semibold text-primary-blue'
           >
-            {_nav.institutions}
+            {t('institutions')}
             <ChevronDown className='h-4 w-4' />
           </a>
           <a
             href='#'
             className='flex items-center justify-between rounded-[12px] px-4 py-3 text-lg font-semibold text-primary-blue'
           >
-            {_nav.developers}
+            {t('developers')}
             <ChevronDown className='h-4 w-4' />
           </a>
           <a
             href='#'
             className='flex items-center justify-between rounded-[12px] px-4 py-3 text-lg font-semibold text-primary-blue'
           >
-            {_nav.community}
+            {t('community')}
             <ChevronDown className='h-4 w-4' />
           </a>
         </nav>
 
         <div className='p-4'>
           <button className='h-[50px] w-full rounded-[12px] bg-primary-turquoise text-base font-semibold text-primary-dark'>
-            {_nav.buyDash}
+            {t('buyDash')}
           </button>
         </div>
       </div>

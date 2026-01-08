@@ -4,21 +4,12 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { ChevronDown, Sun, Moon, Menu } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { LanguageSelector } from './LanguageSelector'
 import { MobileMenu } from './MobileMenu'
 
-interface HeaderProps {
-  nav: {
-    home: string
-    getStarted: string
-    institutions: string
-    developers: string
-    community: string
-    buyDash: string
-  }
-}
-
-export function Header ({ nav: _nav }: HeaderProps) {
+export function Header () {
+  const t = useTranslations('nav')
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -87,34 +78,34 @@ export function Header ({ nav: _nav }: HeaderProps) {
 
           <nav className='hidden shrink-0 items-center gap-10 lg:flex'>
             <a href='#' className='whitespace-nowrap text-sm font-extrabold text-primary-dark'>
-              {_nav.home}
+              {t('home')}
             </a>
             <a
               href='#'
               className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
             >
-              {_nav.getStarted}
+              {t('getStarted')}
               <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
             <a
               href='#'
               className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
             >
-              {_nav.institutions}
+              {t('institutions')}
               <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
             <a
               href='#'
               className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
             >
-              {_nav.developers}
+              {t('developers')}
               <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
             <a
               href='#'
               className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
             >
-              {_nav.community}
+              {t('community')}
               <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
           </nav>
@@ -134,7 +125,7 @@ export function Header ({ nav: _nav }: HeaderProps) {
                   )}
             </button>
             <button className='h-[46px] min-w-[120px] shrink-0 whitespace-nowrap rounded-[12px] bg-primary-turquoise px-5 text-sm font-semibold text-primary-dark'>
-              {_nav.buyDash}
+              {t('buyDash')}
             </button>
           </div>
         </div>
@@ -142,7 +133,6 @@ export function Header ({ nav: _nav }: HeaderProps) {
 
       {isMobileMenuOpen && (
         <MobileMenu
-          nav={_nav}
           onClose={() => setIsMobileMenuOpen(false)}
           mounted={mounted}
         />

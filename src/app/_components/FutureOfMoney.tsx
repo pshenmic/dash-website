@@ -10,9 +10,7 @@ export function FutureOfMoney () {
     <div className='relative bg-primary-white dark:bg-primary-dark'>
       <div className='mx-auto max-w-7xl px-4 lg:px-6'>
         <div className='flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between'>
-          {/* Left content */}
           <div className='flex max-w-[469px] flex-col gap-[35px]'>
-            {/* Text block */}
             <div className='flex flex-col gap-[15px]'>
               <Chip variant='outline'>{t('chip')}</Chip>
               <h2 className='text-[32px] font-extrabold leading-[40px] tracking-[-0.03em] text-primary-dark dark:text-primary-white lg:text-[38px]'>
@@ -23,7 +21,6 @@ export function FutureOfMoney () {
               </p>
             </div>
 
-            {/* Stats */}
             <div className='flex gap-[15px]'>
               <div className='flex h-[111px] flex-1 flex-col justify-center rounded-[36px] border border-primary-blue px-[29px] dark:border-0 dark:bg-primary-blue/15 lg:h-[143px]'>
                 <span className='text-[13px] font-medium text-primary-blue'>
@@ -43,14 +40,12 @@ export function FutureOfMoney () {
               </div>
             </div>
 
-            {/* Buttons */}
             <div className='flex w-full flex-col gap-[10px] lg:w-auto lg:flex-row lg:gap-[15px]'>
               <Button variant='primary' className='h-[50px] w-full lg:h-[65px] lg:w-auto'>{t('connectTestnet')}</Button>
               <Button variant='outline' className='h-[50px] w-full lg:h-[65px] lg:w-auto'>{t('learnMore')}</Button>
             </div>
           </div>
 
-          {/* Right content - 3D Coin (hidden on mobile) */}
           <div className='relative hidden w-full max-w-[596px] lg:block lg:h-[551px]'>
             <Image
               src='/images/coin-3d-large.png'

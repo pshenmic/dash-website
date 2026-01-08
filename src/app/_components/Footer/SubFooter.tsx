@@ -6,22 +6,22 @@ interface SubFooterProps {
 }
 
 export function SubFooter ({
-  copyright,
-  termsOfUse,
-  privacyStatement,
-  privacyPolicy
+  copyright: _copyright,
+  termsOfUse: _termsOfUse,
+  privacyStatement: _privacyStatement,
+  privacyPolicy: _privacyPolicy
 }: SubFooterProps) {
   return (
     <div className='mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center lg:flex-row lg:text-left'>
       <span className='text-[13px] font-medium text-primary-white/50'>
-        {copyright}
+        {_copyright}
       </span>
       <div className='flex flex-wrap items-center justify-center gap-x-[15px] gap-y-1 text-[13px] font-medium text-primary-white/50'>
-        <a href='#'>{termsOfUse}</a>
+        <a href='#'>{_termsOfUse}</a>
         <span className='hidden sm:inline'>•</span>
-        <a href='#'>{privacyStatement}</a>
+        <a href='#'>{_privacyStatement}</a>
         <span className='hidden sm:inline'>•</span>
-        <a href='#'>{privacyPolicy}</a>
+        <a href='#'>{_privacyPolicy}</a>
       </div>
     </div>
   )

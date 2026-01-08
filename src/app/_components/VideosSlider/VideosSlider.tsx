@@ -33,7 +33,6 @@ export function VideosSlider () {
   return (
     <div className='relative mx-auto max-w-7xl px-4 lg:px-6'>
       <div className='flex gap-4'>
-        {/* Navigation Arrows - Desktop only, left side, near bottom */}
         <div className='mb-6 hidden shrink-0 items-center gap-2 self-end lg:flex'>
           <button
             onClick={() => emblaApi?.scrollPrev()}
@@ -53,7 +52,6 @@ export function VideosSlider () {
           </button>
         </div>
 
-        {/* Carousel */}
         <div
           ref={emblaRef}
           className='min-w-0 flex-1 overflow-hidden'
@@ -61,12 +59,12 @@ export function VideosSlider () {
           aria-label='Video carousel'
         >
           <div className='flex gap-4 pb-2 lg:gap-[39px]'>
-            {videos.map((video) => (
+            {videos.map((_video) => (
               <div
-                key={video.id}
+                key={_video.id}
                 className='min-w-0 flex-[0_0_85%] sm:flex-[0_0_45%] lg:flex-[0_0_384px]'
               >
-                <VideoCard video={video} />
+                <VideoCard video={_video} />
               </div>
             ))}
           </div>

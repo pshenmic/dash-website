@@ -18,24 +18,23 @@ interface HeaderProps {
   }
 }
 
-export function Header ({ nav }: HeaderProps) {
+export function Header ({ nav: _nav }: HeaderProps) {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
-  // Avoid hydration mismatch
+  // SSR renders without theme, causes hydration mismatch if we render theme-dependent UI immediately
   useEffect(() => {
     setMounted(true)
   }, [])
 
-  // Smart header: hide on scroll down, show on scroll up
+  // Smart header: hides on scroll down to maximize content space, reappears on scroll up
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
 
-      // Show header if scrolling up or at the top
       if (currentScrollY < lastScrollY || currentScrollY < 100) {
         setIsVisible(true)
       } else {
@@ -57,7 +56,6 @@ export function Header ({ nav }: HeaderProps) {
     <>
       <header className={`fixed left-0 right-0 top-0 z-50 p-4 transition-transform duration-300 lg:p-6 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className='mx-auto flex max-w-7xl items-center justify-between rounded-[25px] bg-primary-white p-[15px]'>
-          {/* Mobile Header */}
           <div className='flex w-full items-center justify-between lg:hidden'>
             <Image
               src='/images/logo.svg'
@@ -76,8 +74,6 @@ export function Header ({ nav }: HeaderProps) {
             </button>
           </div>
 
-          {/* Desktop Header */}
-          {/* Left Nav */}
           <div className='hidden shrink-0 items-center gap-[15px] pl-[13px] lg:flex'>
             <Image
               src='/images/logo.svg'
@@ -89,44 +85,41 @@ export function Header ({ nav }: HeaderProps) {
             <LanguageSelector />
           </div>
 
-          {/* Center Nav - Desktop only */}
           <nav className='hidden shrink-0 items-center gap-10 lg:flex'>
             <a href='#' className='whitespace-nowrap text-sm font-extrabold text-primary-dark'>
-              {nav.home}
+              {_nav.home}
             </a>
             <a
               href='#'
               className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
             >
-              {nav.getStarted}
+              {_nav.getStarted}
               <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
             <a
               href='#'
               className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
             >
-              {nav.institutions}
+              {_nav.institutions}
               <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
             <a
               href='#'
               className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
             >
-              {nav.developers}
+              {_nav.developers}
               <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
             <a
               href='#'
               className='flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-primary-blue'
             >
-              {nav.community}
+              {_nav.community}
               <ChevronDown className='h-3 w-3 text-primary-blue' />
             </a>
           </nav>
 
-          {/* Right Nav - Desktop only */}
           <div className='hidden shrink-0 items-center gap-3 lg:flex'>
-            {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
               className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10'
@@ -140,18 +133,16 @@ export function Header ({ nav }: HeaderProps) {
                   <Sun className='h-[18px] w-[18px] text-primary-dark' />
                   )}
             </button>
-            {/* Buy Dash Button */}
             <button className='h-[46px] min-w-[120px] shrink-0 whitespace-nowrap rounded-[12px] bg-primary-turquoise px-5 text-sm font-semibold text-primary-dark'>
-              {nav.buyDash}
+              {_nav.buyDash}
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <MobileMenu
-          nav={nav}
+          nav={_nav}
           onClose={() => setIsMobileMenuOpen(false)}
           mounted={mounted}
         />

@@ -10,12 +10,12 @@ interface PriceData {
   sparkline: number[]
 }
 
-export function DashPriceCard ({ className }: { className?: string }) {
+export function DashPriceCard ({ className: _className }: { className?: string }) {
   const [data, setData] = useState<PriceData | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    async function fetchPrice () {
+    async function fetchPriceAsync () {
       try {
         const res = await fetch(
           'https://api.coingecko.com/api/v3/coins/dash?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=true'
@@ -25,7 +25,7 @@ export function DashPriceCard ({ className }: { className?: string }) {
         setData({
           price: json.market_data.current_price.usd,
           change24h: json.market_data.price_change_percentage_24h,
-          sparkline: json.market_data.sparkline_7d.price.slice(-24) // последние 24 точки
+          sparkline: json.market_data.sparkline_7d.price.slice(-24)
         })
       } catch (error) {
         console.error('Failed to fetch Dash price:', error)
@@ -34,20 +34,19 @@ export function DashPriceCard ({ className }: { className?: string }) {
       }
     }
 
-    fetchPrice()
+    fetchPriceAsync()
   }, [])
 
-  // Генерация SVG path из данных
-  const generateChartPath = (prices: number[], width: number, height: number) => {
-    if (prices.length < 2) return { linePath: '', areaPath: '' }
+  const generateChartPath = (_prices: number[], _width: number, _height: number) => {
+    if (_prices.length < 2) return { linePath: '', areaPath: '' }
 
-    const min = Math.min(...prices)
-    const max = Math.max(...prices)
+    const min = Math.min(..._prices)
+    const max = Math.max(..._prices)
     const range = max - min || 1
 
-    const points = prices.map((price, i) => {
-      const x = (i / (prices.length - 1)) * width
-      const y = height - ((price - min) / range) * height
+    const points = _prices.map((price, i) => {
+      const x = (i / (_prices.length - 1)) * _width
+      const y = _height - ((price - min) / range) * _height
       return { x, y }
     })
 
@@ -55,8 +54,7 @@ export function DashPriceCard ({ className }: { className?: string }) {
       .map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)},${p.y.toFixed(1)}`)
       .join(' ')
 
-    // Area path (замкнутый для заливки)
-    const areaPath = `${linePath} L${width},${height} L0,${height} Z`
+    const areaPath = `${linePath} L${_width},${_height} L0,${_height} Z`
 
     return { linePath, areaPath }
   }
@@ -67,8 +65,7 @@ export function DashPriceCard ({ className }: { className?: string }) {
     : { linePath: '', areaPath: '' }
 
   return (
-    <Card className={className}>
-      {/* Chart SVG */}
+    <Card className={_className}>
       <svg
         className='absolute bottom-0 left-0 h-[60px] w-full lg:h-[92px]'
         viewBox='0 0 234 92'
@@ -88,7 +85,6 @@ export function DashPriceCard ({ className }: { className?: string }) {
         )}
       </svg>
 
-      {/* Logo icon */}
       <div className='absolute left-[20px] top-[16px] lg:left-[35px] lg:top-[30px]'>
         <Image
           src='/images/bullets/logo-dash-icon.svg'
@@ -99,7 +95,6 @@ export function DashPriceCard ({ className }: { className?: string }) {
         />
       </div>
 
-      {/* Price */}
       <p className='absolute left-[50px] top-[12px] tracking-[-0.5px] text-white lg:left-[84px] lg:top-[30px] lg:tracking-[-0.84px]'>
         {loading
           ? (
@@ -115,7 +110,6 @@ export function DashPriceCard ({ className }: { className?: string }) {
             )}
       </p>
 
-      {/* Change */}
       <p className='absolute left-[20px] top-[36px] text-[10px] font-medium lg:left-[35px] lg:top-[72px] lg:text-[12px]'>
         {loading
           ? (

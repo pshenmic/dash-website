@@ -10,10 +10,10 @@ export function HeroSection () {
   return (
     <section className='relative flex min-h-screen items-center justify-center overflow-hidden rounded-b-[50px] bg-primary-blue dark:bg-primary-dark'>
       <Image
-        src='/images/hero-bg.png'
+        src='/images/hero-decoration.webp'
         alt=''
         fill
-        className='object-cover dark:hidden'
+        className='pointer-events-none object-cover object-left dark:hidden'
         priority
       />
       <Image

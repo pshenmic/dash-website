@@ -9,7 +9,6 @@ export function HeroSection () {
 
   return (
     <section className='relative flex min-h-screen items-center justify-center overflow-hidden rounded-b-[50px] bg-primary-blue dark:bg-primary-dark'>
-      {/* Light theme background */}
       <Image
         src='/images/hero-bg.png'
         alt=''
@@ -17,7 +16,6 @@ export function HeroSection () {
         className='object-cover dark:hidden'
         priority
       />
-      {/* Dark theme background */}
       <Image
         src='/images/hero-bg-dark.jpg'
         alt=''

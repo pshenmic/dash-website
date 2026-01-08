@@ -41,7 +41,7 @@ export function FutureOfMoney () {
             </div>
 
             <div className='flex w-full flex-col gap-[10px] lg:w-auto lg:flex-row lg:gap-[15px]'>
-              <Button variant='primary' className='h-[50px] w-full lg:h-[65px] lg:w-auto'>{t('connectTestnet')}</Button>
+              <Button variant='primary' inverted className='h-[50px] w-full lg:h-[65px] lg:w-auto'>{t('connectTestnet')}</Button>
               <Button variant='outline' className='h-[50px] w-full lg:h-[65px] lg:w-auto'>{t('learnMore')}</Button>
             </div>
           </div>

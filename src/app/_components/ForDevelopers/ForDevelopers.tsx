@@ -115,7 +115,7 @@ function CodeCard ({ code: _code }: { code: string }) {
           height={24}
           className='h-[18px] w-[18px] rounded lg:h-[24px] lg:w-[24px]'
         />
-        <button className='opacity-70 transition-opacity hover:opacity-100'>
+        <button className='rounded opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50'>
           <Image
             src='/images/developers/icon-copy.svg'
             alt='Copy'

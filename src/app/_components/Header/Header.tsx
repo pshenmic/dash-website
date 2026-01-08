@@ -57,7 +57,7 @@ export function Header () {
             />
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10'
+              className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10 transition-colors hover:bg-primary-dark/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-dark/50'
               aria-label='Open menu'
               aria-expanded={isMobileMenuOpen}
             >
@@ -77,19 +77,19 @@ export function Header () {
           </div>
 
           <nav className='hidden shrink-0 items-center gap-10 lg:flex'>
-            <a href='#' className='whitespace-nowrap text-sm font-extrabold text-primary-dark'>
+            <a href='#' className='whitespace-nowrap text-sm font-extrabold text-primary-dark transition-colors hover:text-primary-dark/70 focus:outline-none focus-visible:underline'>
               {t('home')}
             </a>
-            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue'>
+            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue transition-colors hover:text-primary-blue/70 focus:outline-none focus-visible:underline'>
               {t('getStarted')}
             </a>
-            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue'>
+            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue transition-colors hover:text-primary-blue/70 focus:outline-none focus-visible:underline'>
               {t('institutions')}
             </a>
-            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue'>
+            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue transition-colors hover:text-primary-blue/70 focus:outline-none focus-visible:underline'>
               {t('developers')}
             </a>
-            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue'>
+            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue transition-colors hover:text-primary-blue/70 focus:outline-none focus-visible:underline'>
               {t('community')}
             </a>
           </nav>
@@ -97,7 +97,7 @@ export function Header () {
           <div className='hidden shrink-0 items-center gap-3 lg:flex'>
             <button
               onClick={toggleTheme}
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10'
+              className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10 transition-colors hover:bg-primary-dark/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-dark/50'
               aria-label='Toggle theme'
             >
               {mounted && theme === 'dark'
@@ -108,7 +108,7 @@ export function Header () {
                   <Sun className='h-[18px] w-[18px] text-primary-dark' />
                   )}
             </button>
-            <button className='h-[46px] min-w-[120px] shrink-0 whitespace-nowrap rounded-[12px] bg-primary-turquoise px-5 text-sm font-semibold text-primary-dark'>
+            <button className='h-[46px] min-w-[120px] shrink-0 whitespace-nowrap rounded-[12px] bg-primary-turquoise px-5 text-sm font-semibold text-primary-dark transition-colors hover:bg-primary-turquoise/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise focus-visible:ring-offset-2'>
               {t('buyDash')}
             </button>
           </div>

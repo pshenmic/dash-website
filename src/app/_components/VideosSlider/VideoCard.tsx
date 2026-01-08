@@ -176,7 +176,7 @@ export function VideoCard ({ video: _video }: VideoCardProps) {
 function PlayButton () {
   return (
     <button
-      className='absolute right-[14px] top-[14px] flex h-[38px] w-[38px] items-center justify-center rounded-[10px] bg-primary-white shadow-lg'
+      className='absolute right-[14px] top-[14px] flex h-[38px] w-[38px] items-center justify-center rounded-[10px] bg-primary-white shadow-lg transition-all hover:bg-primary-blue/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue'
       aria-label='Play video'
     >
       <Play className='h-4 w-4 fill-primary-blue text-primary-blue' />

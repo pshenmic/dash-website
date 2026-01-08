@@ -15,7 +15,7 @@ export function ForDevelopers () {
   const t = useTranslations('forDevelopers')
   return (
     <div className='relative z-10 rounded-b-[50px] bg-primary-white dark:bg-primary-dark'>
-      <div className='mx-auto max-w-7xl px-4 lg:px-6'>
+      <div className='mx-auto max-w-7xl px-4 pb-8 lg:px-6 lg:pb-12'>
         <div className='mb-8 flex flex-col items-start justify-between gap-4 lg:mb-[20px] lg:flex-row lg:items-center'>
           <div className='flex flex-col gap-[5px]'>
             <span className='text-[18px] font-extrabold text-primary-blue'>{t('label')}</span>

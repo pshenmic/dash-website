@@ -35,7 +35,7 @@ export default async function HomePage ({
         <BulletsGrid />
       </section>
 
-      <section className='py-10 lg:py-16'>
+      <section className='relative z-10 pt-10 lg:pt-16'>
         <ForDevelopers />
       </section>
     </main>

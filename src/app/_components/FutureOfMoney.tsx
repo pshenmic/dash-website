@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import { Chip } from '@/components/ui/Chip'
 import { Button } from '@/components/ui/Button'
 
-export function FutureOfMoney () {
+export function FutureOfMoney (): React.ReactNode {
   const t = useTranslations('futureOfMoney')
 
   return (

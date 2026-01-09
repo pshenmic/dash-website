@@ -11,7 +11,7 @@ const doc = await dashPlatform.documents.create(
 )
 await dashPlatform.signAndBroadcast(doc)`
 
-export function ForDevelopers () {
+export function ForDevelopers (): React.ReactNode {
   const t = useTranslations('forDevelopers')
   return (
     <div className='relative z-10 rounded-b-[50px] bg-primary-white dark:bg-primary-dark'>
@@ -75,7 +75,7 @@ interface DeveloperCardProps {
   image: string
 }
 
-function DeveloperCard ({ title: _title, chip: _chip, image: _image }: DeveloperCardProps) {
+function DeveloperCard ({ title: _title, chip: _chip, image: _image }: DeveloperCardProps): React.ReactNode {
   return (
     <Card className='relative h-[158px] lg:h-[235px]'>
       {/* Content limited to left side, image fills right */}
@@ -104,7 +104,7 @@ function DeveloperCard ({ title: _title, chip: _chip, image: _image }: Developer
   )
 }
 
-function CodeCard ({ code: _code }: { code: string }) {
+function CodeCard ({ code: _code }: { code: string }): React.ReactNode {
   return (
     <Card className='flex h-[180px] flex-col lg:h-[235px]'>
       <div className='flex items-center justify-between px-5 py-3 lg:px-[30px] lg:py-4'>

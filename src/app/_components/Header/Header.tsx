@@ -9,7 +9,7 @@ import { Link, usePathname } from '@/i18n/navigation'
 import { LanguageSelector } from './LanguageSelector'
 import { MobileMenu } from './MobileMenu'
 
-export function Header () {
+export function Header (): React.ReactNode {
   const t = useTranslations('nav')
   const pathname = usePathname()
   const { theme, setTheme } = useTheme()
@@ -25,7 +25,7 @@ export function Header () {
 
   // Smart header: hides on scroll down to maximize content space, reappears on scroll up
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       const currentScrollY = window.scrollY
 
       if (currentScrollY < lastScrollY || currentScrollY < 100) {
@@ -41,7 +41,7 @@ export function Header () {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY])
 
-  const toggleTheme = () => {
+  const toggleTheme = (): void => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 

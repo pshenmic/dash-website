@@ -5,7 +5,7 @@ import { Chip } from '@/components/ui/Chip'
 import { Card } from '@/components/ui/Card'
 import { DashPriceCard } from '@/components/ui/DashPriceCard'
 
-export function BulletsGrid () {
+export function BulletsGrid (): React.ReactNode {
   const t = useTranslations('bullets')
 
   return (

@@ -3,7 +3,7 @@ interface ChipProps {
   variant?: 'default' | 'outline'
 }
 
-export function Chip ({ children, variant = 'default' }: ChipProps) {
+export function Chip ({ children, variant = 'default' }: ChipProps): React.ReactNode {
   const baseClasses = 'inline-flex w-fit items-center justify-center rounded-[35px] border px-[35px] py-2.5 text-xs font-medium'
 
   const variantClasses = {

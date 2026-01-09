@@ -10,12 +10,12 @@ interface PriceData {
   sparkline: number[]
 }
 
-export function DashPriceCard ({ className: _className }: { className?: string }) {
+export function DashPriceCard ({ className: _className }: { className?: string }): React.ReactNode {
   const [data, setData] = useState<PriceData | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    async function fetchPriceAsync () {
+    async function fetchPriceAsync (): Promise<void> {
       try {
         const res = await fetch(
           'https://api.coingecko.com/api/v3/coins/dash?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=true'
@@ -34,15 +34,15 @@ export function DashPriceCard ({ className: _className }: { className?: string }
       }
     }
 
-    fetchPriceAsync()
+    void fetchPriceAsync()
   }, [])
 
-  const generateChartPath = (_prices: number[], _width: number, _height: number) => {
+  const generateChartPath = (_prices: number[], _width: number, _height: number): { linePath: string, areaPath: string } => {
     if (_prices.length < 2) return { linePath: '', areaPath: '' }
 
     const min = Math.min(..._prices)
     const max = Math.max(..._prices)
-    const range = max - min || 1
+    const range = (max - min) !== 0 ? (max - min) : 1
 
     const points = _prices.map((price, i) => {
       const x = (i / (_prices.length - 1)) * _width

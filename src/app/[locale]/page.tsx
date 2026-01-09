@@ -6,7 +6,7 @@ import { FutureOfMoney } from '../_components/FutureOfMoney'
 import { BulletsGrid } from '../_components/BulletsGrid'
 import { ForDevelopers } from '../_components/ForDevelopers'
 
-export function generateStaticParams () {
+export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((_locale) => ({ locale: _locale }))
 }
 
@@ -14,7 +14,7 @@ export default async function HomePage ({
   params: _params
 }: {
   params: Promise<{ locale: string }>
-}) {
+}): Promise<React.ReactNode> {
   const { locale } = await _params
   setRequestLocale(locale)
 

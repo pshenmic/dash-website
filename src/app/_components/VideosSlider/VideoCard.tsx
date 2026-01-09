@@ -15,7 +15,7 @@ interface VideoCardProps {
   video: VideoCardData
 }
 
-export function VideoCard ({ video: _video }: VideoCardProps) {
+export function VideoCard ({ video: _video }: VideoCardProps): React.ReactNode {
   const { variant, label, title, subtitle, session, image } = _video
 
   const baseClasses = 'relative h-[216px] w-full overflow-hidden rounded-[25px] shadow-sm dark:border dark:border-white/15'
@@ -45,7 +45,7 @@ export function VideoCard ({ video: _video }: VideoCardProps) {
           <Image src='/images/logo.svg' alt='Dash' width={60} height={16} />
         </div>
 
-        {session && (
+        {session != null && session !== '' && (
           <p className='absolute bottom-[16px] right-[22px] text-xs text-primary-dark/75'>
             {session}
           </p>
@@ -59,7 +59,7 @@ export function VideoCard ({ video: _video }: VideoCardProps) {
   if (variant === 'dark') {
     return (
       <div className={`${baseClasses} bg-primary-dark`}>
-        {image && (
+        {image != null && image !== '' && (
           <div className='absolute inset-0'>
             <Image
               src={image}
@@ -97,7 +97,7 @@ export function VideoCard ({ video: _video }: VideoCardProps) {
   if (variant === 'blue') {
     return (
       <div className={`${baseClasses} bg-primary-blue`}>
-        {image && (
+        {image != null && image !== '' && (
           <div className='absolute right-0 top-0 h-full w-[160px]'>
             <div className='absolute inset-0 rounded-[10px] bg-primary-white/10 backdrop-blur-sm' />
             <Image
@@ -119,7 +119,7 @@ export function VideoCard ({ video: _video }: VideoCardProps) {
           <h3 className='text-[29px] font-extrabold leading-[29px] tracking-[-0.03em] text-primary-white'>
             {title}
           </h3>
-          {subtitle && (
+          {subtitle != null && subtitle !== '' && (
             <p className='mt-1 text-[11px] leading-[15px] text-primary-white/75'>
               {subtitle}
             </p>
@@ -143,7 +143,7 @@ export function VideoCard ({ video: _video }: VideoCardProps) {
       </div>
 
       {/* Coin overflows card bounds by design */}
-      {image && (
+      {image != null && image !== '' && (
         <div className='absolute -right-[50px] -top-[40px] h-[300px] w-[300px]'>
           <Image
             src={image}
@@ -173,7 +173,7 @@ export function VideoCard ({ video: _video }: VideoCardProps) {
   )
 }
 
-function PlayButton () {
+function PlayButton (): React.ReactNode {
   return (
     <button
       className='absolute right-[14px] top-[14px] flex h-[38px] w-[38px] items-center justify-center rounded-[10px] bg-primary-white shadow-lg transition-all hover:bg-primary-blue/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue'
@@ -184,7 +184,7 @@ function PlayButton () {
   )
 }
 
-function DashPattern () {
+function DashPattern (): React.ReactNode {
   return (
     <svg className='h-full w-full' viewBox='0 0 400 250' fill='none'>
       {[...Array(8)].map((_, _row) =>

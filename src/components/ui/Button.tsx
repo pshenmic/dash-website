@@ -14,7 +14,7 @@ export function Button ({
   inverted: _inverted = false,
   icon: _icon,
   className: _className
-}: ButtonProps) {
+}: ButtonProps): React.ReactNode {
   return (
     <button
       className={cn(

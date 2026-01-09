@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 
-export function SubFooter () {
+export function SubFooter (): React.ReactNode {
   const t = useTranslations('footer')
 
   return (

@@ -12,7 +12,7 @@ interface MobileMenuProps {
   mounted: boolean
 }
 
-export function MobileMenu ({ onClose: _onClose, mounted: _mounted }: MobileMenuProps) {
+export function MobileMenu ({ onClose: _onClose, mounted: _mounted }: MobileMenuProps): React.ReactNode {
   const t = useTranslations('nav')
   const pathname = usePathname()
   const { theme, setTheme } = useTheme()
@@ -20,21 +20,21 @@ export function MobileMenu ({ onClose: _onClose, mounted: _mounted }: MobileMenu
   // Prevent background scrolling while menu is open
   useEffect(() => {
     document.body.style.overflow = 'hidden'
-    return () => {
+    return (): void => {
       document.body.style.overflow = ''
     }
   }, [])
 
   // Allow keyboard navigation for accessibility
   useEffect(() => {
-    const handleEscape = (_e: KeyboardEvent) => {
+    const handleEscape = (_e: KeyboardEvent): void => {
       if (_e.key === 'Escape') _onClose()
     }
     document.addEventListener('keydown', handleEscape)
     return () => document.removeEventListener('keydown', handleEscape)
   }, [_onClose])
 
-  const toggleTheme = () => {
+  const toggleTheme = (): void => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 

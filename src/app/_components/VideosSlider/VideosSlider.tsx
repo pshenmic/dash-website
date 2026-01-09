@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { VideoCard, type VideoCardData } from './VideoCard'
 
-export function VideosSlider () {
+export function VideosSlider (): React.ReactNode {
   const t = useTranslations('videosSlider')
   const videos = t.raw('videos') as VideoCardData[]
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -18,7 +18,7 @@ export function VideosSlider () {
   const [canScrollPrev, setCanScrollPrev] = useState(false)
   const [canScrollNext, setCanScrollNext] = useState(true)
 
-  const onSelect = useCallback(() => {
+  const onSelect = useCallback((): void => {
     if (emblaApi == null) return
     setCanScrollPrev(emblaApi.canScrollPrev())
     setCanScrollNext(emblaApi.canScrollNext())

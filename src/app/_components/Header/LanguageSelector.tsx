@@ -11,7 +11,7 @@ const LANGUAGES = [
   { code: 'ru', label: 'RU', flag: RU, title: 'Русский' }
 ]
 
-export function LanguageSelector () {
+export function LanguageSelector (): React.ReactNode {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
@@ -19,15 +19,16 @@ export function LanguageSelector () {
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   const currentLang = LANGUAGES.find((_l) => _l.code === locale) ?? LANGUAGES[0]
+  const CurrentFlag = currentLang.flag
 
-  const changeLocale = (_newLocale: string) => {
+  const changeLocale = (_newLocale: string): void => {
     router.replace(pathname, { locale: _newLocale as 'en' | 'ru' })
     setIsOpen(false)
   }
 
   // Close dropdown when clicking outside to prevent UI staying open unexpectedly
   useEffect(() => {
-    const handleClickOutside = (_event: MouseEvent) => {
+    const handleClickOutside = (_event: MouseEvent): void => {
       if ((dropdownRef.current != null) && !dropdownRef.current.contains(_event.target as Node)) {
         setIsOpen(false)
       }
@@ -45,7 +46,7 @@ export function LanguageSelector () {
         aria-haspopup='listbox'
       >
         <div className='h-5 w-5 overflow-hidden rounded'>
-          <currentLang.flag title={currentLang.title} className='h-full w-full object-cover' />
+          <CurrentFlag title={currentLang.title} className='h-full w-full object-cover' />
         </div>
         <span className='text-sm font-bold text-primary-blue'>
           {currentLang.label}
@@ -58,24 +59,27 @@ export function LanguageSelector () {
           className='absolute left-0 top-full z-50 mt-2 min-w-full overflow-hidden rounded-[12px] bg-primary-white shadow-lg'
           role='listbox'
         >
-          {LANGUAGES.map((_lang) => (
-            <button
-              key={_lang.code}
-              onClick={() => changeLocale(_lang.code)}
-              className={`flex w-full items-center gap-2 px-3 py-2 transition-colors hover:bg-primary-blue/10 focus:outline-none focus-visible:bg-primary-blue/15 ${
-                _lang.code === locale ? 'bg-primary-blue/15' : ''
-              }`}
-              role='option'
-              aria-selected={_lang.code === locale}
-            >
-              <div className='h-5 w-5 overflow-hidden rounded'>
-                <_lang.flag title={_lang.title} className='h-full w-full object-cover' />
-              </div>
-              <span className='text-sm font-bold text-primary-blue'>
-                {_lang.label}
-              </span>
-            </button>
-          ))}
+          {LANGUAGES.map((_lang) => {
+            const LangFlag = _lang.flag
+            return (
+              <button
+                key={_lang.code}
+                onClick={() => changeLocale(_lang.code)}
+                className={`flex w-full items-center gap-2 px-3 py-2 transition-colors hover:bg-primary-blue/10 focus:outline-none focus-visible:bg-primary-blue/15 ${
+                  _lang.code === locale ? 'bg-primary-blue/15' : ''
+                }`}
+                role='option'
+                aria-selected={_lang.code === locale}
+              >
+                <div className='h-5 w-5 overflow-hidden rounded'>
+                  <LangFlag title={_lang.title} className='h-full w-full object-cover' />
+                </div>
+                <span className='text-sm font-bold text-primary-blue'>
+                  {_lang.label}
+                </span>
+              </button>
+            )
+          })}
         </div>
       )}
     </div>

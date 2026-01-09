@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'Money without borders: moving it instantly, transparently, conveniently, and almost for free'
 }
 
-export function generateStaticParams () {
+export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((_locale) => ({ locale: _locale }))
 }
 
@@ -30,7 +30,7 @@ export default async function LocaleLayout ({
 }: {
   children: React.ReactNode
   params: Promise<{ locale: string }>
-}) {
+}): Promise<React.ReactNode> {
   const { locale } = await _params
   setRequestLocale(locale)
   const messages = await getMessages({ locale })

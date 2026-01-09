@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Chip } from '@/components/ui/Chip'
 import { Button } from '@/components/ui/Button'
 
-export function HeroSection () {
+export function HeroSection (): React.ReactNode {
   const t = useTranslations('hero')
 
   return (

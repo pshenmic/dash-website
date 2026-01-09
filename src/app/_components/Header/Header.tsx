@@ -47,7 +47,7 @@ export function Header () {
 
   return (
     <>
-      <header className={`fixed left-0 right-0 top-0 z-50 p-4 transition-transform duration-300 lg:p-6 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+      <header style={{ viewTransitionName: 'header' }} className={`fixed left-0 right-0 top-0 z-50 p-4 transition-transform duration-300 lg:p-6 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className='mx-auto flex max-w-7xl items-center justify-between rounded-[25px] bg-primary-white p-[15px]'>
           <div className='flex w-full items-center justify-between lg:hidden'>
             <Image

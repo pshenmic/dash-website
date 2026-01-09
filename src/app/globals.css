@@ -57,10 +57,60 @@ body {
   }
 }
 
+/* View Transitions - плавные переходы между страницами */
+
+/* Уходящая страница - быстрое затухание */
+::view-transition-old(root) {
+  animation: page-fade-out 150ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* Входящая страница - плавное появление */
+::view-transition-new(root) {
+  animation: page-fade-in 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Header остаётся на месте без анимации */
+::view-transition-old(header),
+::view-transition-new(header) {
+  animation: none;
+}
+
+@keyframes page-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Hero animations */
 @keyframes breathe {
   0%, 100% { transform: scaleX(-1) scale(1); }
   50% { transform: scaleX(-1) scale(1.05); }
+}
+
+@keyframes breathe-normal {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes breathe-half {
+  0%, 100% { transform: scale(0.5); }
+  50% { transform: scale(0.525); }
 }
 
 @keyframes fade-in-up {

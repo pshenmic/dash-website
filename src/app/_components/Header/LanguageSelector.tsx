@@ -29,7 +29,10 @@ export function LanguageSelector (): React.ReactNode {
   // Close dropdown when clicking outside to prevent UI staying open unexpectedly
   useEffect(() => {
     const handleClickOutside = (_event: MouseEvent): void => {
-      if ((dropdownRef.current != null) && !dropdownRef.current.contains(_event.target as Node)) {
+      if (
+        dropdownRef.current != null &&
+        !dropdownRef.current.contains(_event.target as Node)
+      ) {
         setIsOpen(false)
       }
     }
@@ -46,17 +49,22 @@ export function LanguageSelector (): React.ReactNode {
         aria-haspopup='listbox'
       >
         <div className='h-5 w-5 overflow-hidden rounded'>
-          <CurrentFlag title={currentLang.title} className='h-full w-full object-cover' />
+          <CurrentFlag
+            title={currentLang.title}
+            className='h-full w-full object-cover'
+          />
         </div>
         <span className='text-sm font-bold text-primary-blue'>
           {currentLang.label}
         </span>
-        <ChevronDown className={`h-3 w-3 text-primary-blue transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown
+          className={`h-3 w-3 text-primary-blue transition-transform ${isOpen ? 'rotate-180' : ''}`}
+        />
       </button>
 
       {isOpen && (
         <div
-          className='absolute left-0 top-full z-50 mt-2 min-w-full overflow-hidden rounded-[12px] bg-primary-white shadow-lg'
+          className='absolute top-full left-0 z-50 mt-2 min-w-full overflow-hidden rounded-[12px] bg-primary-white shadow-lg'
           role='listbox'
         >
           {LANGUAGES.map((_lang) => {
@@ -72,7 +80,10 @@ export function LanguageSelector (): React.ReactNode {
                 aria-selected={_lang.code === locale}
               >
                 <div className='h-5 w-5 overflow-hidden rounded'>
-                  <LangFlag title={_lang.title} className='h-full w-full object-cover' />
+                  <LangFlag
+                    title={_lang.title}
+                    className='h-full w-full object-cover'
+                  />
                 </div>
                 <span className='text-sm font-bold text-primary-blue'>
                   {_lang.label}

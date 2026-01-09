@@ -12,7 +12,10 @@ interface MobileMenuProps {
   mounted: boolean
 }
 
-export function MobileMenu ({ onClose: _onClose, mounted: _mounted }: MobileMenuProps): React.ReactNode {
+export function MobileMenu ({
+  onClose: _onClose,
+  mounted: _mounted
+}: MobileMenuProps): React.ReactNode {
   const t = useTranslations('nav')
   const pathname = usePathname()
   const { theme, setTheme } = useTheme()
@@ -42,12 +45,12 @@ export function MobileMenu ({ onClose: _onClose, mounted: _mounted }: MobileMenu
     <div className='fixed inset-0 z-50'>
       {/* Backdrop with fade animation */}
       <div
-        className='absolute inset-0 bg-primary-dark/50 backdrop-blur-sm animate-in fade-in duration-200'
+        className='animate-in fade-in absolute inset-0 bg-primary-dark/50 backdrop-blur-sm duration-200'
         onClick={_onClose}
       />
 
       {/* Slide-in drawer */}
-      <div className='absolute bottom-0 right-0 top-0 flex w-[300px] max-w-[85vw] flex-col rounded-l-[50px] bg-primary-white shadow-2xl animate-in slide-in-from-right duration-300 dark:bg-primary-dark'>
+      <div className='animate-in slide-in-from-right absolute top-0 right-0 bottom-0 flex w-[300px] max-w-[85vw] flex-col rounded-l-[50px] bg-primary-white shadow-2xl duration-300 dark:bg-primary-dark'>
         <div className='flex items-center justify-between p-6 pl-8'>
           <LanguageSelector />
           <button

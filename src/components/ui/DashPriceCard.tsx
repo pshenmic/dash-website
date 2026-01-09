@@ -10,7 +10,11 @@ interface PriceData {
   sparkline: number[]
 }
 
-export function DashPriceCard ({ className: _className }: { className?: string }): React.ReactNode {
+export function DashPriceCard ({
+  className: _className
+}: {
+  className?: string
+}): React.ReactNode {
   const [data, setData] = useState<PriceData | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -37,12 +41,16 @@ export function DashPriceCard ({ className: _className }: { className?: string }
     void fetchPriceAsync()
   }, [])
 
-  const generateChartPath = (_prices: number[], _width: number, _height: number): { linePath: string, areaPath: string } => {
+  const generateChartPath = (
+    _prices: number[],
+    _width: number,
+    _height: number
+  ): { linePath: string, areaPath: string } => {
     if (_prices.length < 2) return { linePath: '', areaPath: '' }
 
     const min = Math.min(..._prices)
     const max = Math.max(..._prices)
-    const range = (max - min) !== 0 ? (max - min) : 1
+    const range = max - min !== 0 ? max - min : 1
 
     const points = _prices.map((price, i) => {
       const x = (i / (_prices.length - 1)) * _width
@@ -51,7 +59,9 @@ export function DashPriceCard ({ className: _className }: { className?: string }
     })
 
     const linePath = points
-      .map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)},${p.y.toFixed(1)}`)
+      .map(
+        (p, i) => `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)},${p.y.toFixed(1)}`
+      )
       .join(' ')
 
     const areaPath = `${linePath} L${_width},${_height} L0,${_height} Z`
@@ -59,10 +69,11 @@ export function DashPriceCard ({ className: _className }: { className?: string }
     return { linePath, areaPath }
   }
 
-  const isPositive = (data != null) ? data.change24h >= 0 : true
-  const { linePath, areaPath } = ((data?.sparkline) != null)
-    ? generateChartPath(data.sparkline, 234, 92)
-    : { linePath: '', areaPath: '' }
+  const isPositive = data != null ? data.change24h >= 0 : true
+  const { linePath, areaPath } =
+    data?.sparkline != null
+      ? generateChartPath(data.sparkline, 234, 92)
+      : { linePath: '', areaPath: '' }
 
   return (
     <Card className={_className}>
@@ -77,7 +88,7 @@ export function DashPriceCard ({ className: _className }: { className?: string }
             <stop offset='100%' stopColor='#4C7EFF' stopOpacity='0' />
           </linearGradient>
         </defs>
-        {((data?.sparkline) != null) && (
+        {data?.sparkline != null && (
           <>
             <path d={areaPath} fill='url(#chartGradient)' />
             <path d={linePath} stroke='#4C7EFF' fill='none' strokeWidth='2' />
@@ -85,7 +96,7 @@ export function DashPriceCard ({ className: _className }: { className?: string }
         )}
       </svg>
 
-      <div className='absolute left-[20px] top-[16px] lg:left-[35px] lg:top-[30px]'>
+      <div className='absolute top-[16px] left-[20px] lg:top-[30px] lg:left-[35px]'>
         <Image
           src='/images/bullets/logo-dash-icon.svg'
           alt=''
@@ -95,7 +106,7 @@ export function DashPriceCard ({ className: _className }: { className?: string }
         />
       </div>
 
-      <p className='absolute left-[50px] top-[12px] tracking-[-0.5px] text-white lg:left-[84px] lg:top-[30px] lg:tracking-[-0.84px]'>
+      <p className='absolute top-[12px] left-[50px] tracking-[-0.5px] text-white lg:top-[30px] lg:left-[84px] lg:tracking-[-0.84px]'>
         {loading
           ? (
             <span className='inline-block h-[28px] w-[80px] animate-pulse rounded bg-white/10 lg:h-[36px] lg:w-[100px]' />
@@ -110,15 +121,18 @@ export function DashPriceCard ({ className: _className }: { className?: string }
             )}
       </p>
 
-      <p className='absolute left-[20px] top-[36px] text-[10px] font-medium lg:left-[35px] lg:top-[72px] lg:text-[12px]'>
+      <p className='absolute top-[36px] left-[20px] text-[10px] font-medium lg:top-[72px] lg:left-[35px] lg:text-[12px]'>
         {loading
           ? (
             <span className='inline-block h-[14px] w-[100px] animate-pulse rounded bg-white/10' />
             )
           : (
             <>
-              <span className={isPositive ? 'text-state-success' : 'text-state-error'}>
-                {isPositive ? '+' : ''}{data?.change24h.toFixed(2)}%
+              <span
+                className={isPositive ? 'text-state-success' : 'text-state-error'}
+              >
+                {isPositive ? '+' : ''}
+                {data?.change24h.toFixed(2)}%
               </span>
               <span className='text-white/50'> 24h</span>
             </>

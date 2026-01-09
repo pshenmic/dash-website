@@ -18,8 +18,10 @@ export function ForDevelopers (): React.ReactNode {
       <div className='mx-auto max-w-7xl px-4 pb-8 lg:px-6 lg:pb-12'>
         <div className='mb-8 flex flex-col items-start justify-between gap-4 lg:mb-[20px] lg:flex-row lg:items-center'>
           <div className='flex flex-col gap-[5px]'>
-            <span className='text-[18px] font-extrabold text-primary-blue'>{t('label')}</span>
-            <h2 className='max-w-[320px] text-[32px] font-extrabold leading-[34px] tracking-[-0.03em] text-primary-dark dark:text-white lg:max-w-none'>
+            <span className='text-[18px] font-extrabold text-primary-blue'>
+              {t('label')}
+            </span>
+            <h2 className='max-w-[320px] text-[32px] leading-[34px] font-extrabold tracking-[-0.03em] text-primary-dark lg:max-w-none dark:text-white'>
               {t('title')}{' '}
               <span className='relative inline-block'>
                 {t('titleHighlight')}
@@ -34,7 +36,9 @@ export function ForDevelopers (): React.ReactNode {
               </span>
             </h2>
           </div>
-          <Button variant='primary' className='hidden lg:inline-flex'>{t('joinDiscord')}</Button>
+          <Button variant='primary' className='hidden lg:inline-flex'>
+            {t('joinDiscord')}
+          </Button>
         </div>
 
         <div className='flex flex-col gap-[10px] lg:gap-[19px]'>
@@ -75,11 +79,15 @@ interface DeveloperCardProps {
   image: string
 }
 
-function DeveloperCard ({ title: _title, chip: _chip, image: _image }: DeveloperCardProps): React.ReactNode {
+function DeveloperCard ({
+  title: _title,
+  chip: _chip,
+  image: _image
+}: DeveloperCardProps): React.ReactNode {
   return (
     <Card className='relative h-[158px] lg:h-[235px]'>
       {/* Content limited to left side, image fills right */}
-      <div className='relative z-10 flex h-full max-w-[55%] flex-col items-start px-5 pb-4 pt-4 lg:max-w-[60%] lg:p-[30px]'>
+      <div className='relative z-10 flex h-full max-w-[55%] flex-col items-start px-5 pt-4 pb-4 lg:max-w-[60%] lg:p-[30px]'>
         <Image
           src='/images/developers/logo-dash-small.svg'
           alt=''
@@ -91,14 +99,19 @@ function DeveloperCard ({ title: _title, chip: _chip, image: _image }: Developer
           <span className='w-fit rounded-full border border-white/50 px-3 py-1.5 text-[10px] font-medium text-white lg:px-[35px] lg:py-[10px] lg:text-[12px]'>
             {_chip}
           </span>
-          <p className='text-[20px] font-extrabold leading-[22px] tracking-[-0.03em] text-white lg:text-[38px] lg:leading-[40px]'>
+          <p className='text-[20px] leading-[22px] font-extrabold tracking-[-0.03em] text-white lg:text-[38px] lg:leading-[40px]'>
             {_title}
           </p>
         </div>
       </div>
       {/* Image overflows card bounds by design */}
-      <div className='absolute right-[-40px] top-1/2 h-[217px] w-[225px] -translate-y-1/2 lg:left-1/2 lg:right-auto lg:h-[283px] lg:w-[294px]'>
-        <Image src={_image} alt='' fill className='object-contain object-right' />
+      <div className='absolute top-1/2 right-[-40px] h-[217px] w-[225px] -translate-y-1/2 lg:right-auto lg:left-1/2 lg:h-[283px] lg:w-[294px]'>
+        <Image
+          src={_image}
+          alt=''
+          fill
+          className='object-contain object-right'
+        />
       </div>
     </Card>
   )

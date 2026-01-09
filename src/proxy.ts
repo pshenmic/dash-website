@@ -4,7 +4,9 @@ import { routing } from './i18n/routing'
 
 const handleI18nRouting = createMiddleware(routing)
 
-export function proxy (request: NextRequest): ReturnType<typeof handleI18nRouting> {
+export function proxy (
+  request: NextRequest
+): ReturnType<typeof handleI18nRouting> {
   return handleI18nRouting(request)
 }
 

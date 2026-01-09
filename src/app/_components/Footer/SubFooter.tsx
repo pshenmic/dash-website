@@ -9,11 +9,26 @@ export function SubFooter (): React.ReactNode {
         {t('copyright')}
       </span>
       <div className='flex flex-wrap items-center justify-center gap-x-[15px] gap-y-1 text-[13px] font-medium text-primary-white/50'>
-        <a href='#' className='transition-colors hover:text-primary-white/70 focus:outline-none focus-visible:underline'>{t('termsOfUse')}</a>
+        <a
+          href='#'
+          className='transition-colors hover:text-primary-white/70 focus:outline-none focus-visible:underline'
+        >
+          {t('termsOfUse')}
+        </a>
         <span className='hidden sm:inline'>•</span>
-        <a href='#' className='transition-colors hover:text-primary-white/70 focus:outline-none focus-visible:underline'>{t('privacyStatement')}</a>
+        <a
+          href='#'
+          className='transition-colors hover:text-primary-white/70 focus:outline-none focus-visible:underline'
+        >
+          {t('privacyStatement')}
+        </a>
         <span className='hidden sm:inline'>•</span>
-        <a href='#' className='transition-colors hover:text-primary-white/70 focus:outline-none focus-visible:underline'>{t('privacyPolicy')}</a>
+        <a
+          href='#'
+          className='transition-colors hover:text-primary-white/70 focus:outline-none focus-visible:underline'
+        >
+          {t('privacyPolicy')}
+        </a>
       </div>
     </div>
   )

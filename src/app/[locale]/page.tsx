@@ -23,7 +23,7 @@ export default async function HomePage ({
       <HeroSection />
 
       {/* Negative margin creates overlap with hero section */}
-      <section className='relative z-20 -mt-[60px] lg:-mt-[108px] pb-10 lg:pb-16'>
+      <section className='relative z-20 -mt-[60px] pb-10 lg:-mt-[108px] lg:pb-16'>
         <VideosSlider />
       </section>
 

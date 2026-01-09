@@ -10,10 +10,10 @@ export function GetStartedHero () {
   return (
     <section className='relative flex min-h-screen min-h-[100svh] items-center justify-center overflow-hidden rounded-b-[50px] bg-primary-blue dark:bg-primary-dark'>
       <Image
-        src='/images/bg-get-started.webp'
+        src='/images/bg-get-started.png'
         alt=''
         fill
-        className='pointer-events-none object-cover object-center dark:brightness-50'
+        className='pointer-events-none object-cover object-center animate-[breathe-normal_8s_ease-in-out_infinite] dark:brightness-50'
         priority
       />
       <div className='absolute inset-0 bg-gradient-to-t from-primary-blue/30 to-transparent dark:from-primary-dark/50' />

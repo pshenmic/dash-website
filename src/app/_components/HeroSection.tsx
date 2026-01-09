@@ -8,7 +8,7 @@ export function HeroSection () {
   const t = useTranslations('hero')
 
   return (
-    <section className='relative flex min-h-screen items-center justify-center overflow-hidden rounded-b-[50px] bg-primary-blue dark:bg-primary-dark'>
+    <section className='relative flex min-h-screen min-h-[100svh] items-center justify-center overflow-hidden rounded-b-[50px] bg-primary-blue dark:bg-primary-dark'>
       <Image
         src='/images/bg-hero.webp'
         alt=''

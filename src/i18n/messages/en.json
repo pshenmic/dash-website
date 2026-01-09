@@ -6,6 +6,13 @@
     "downloadWallet": "Download Wallet",
     "documentation": "Documentation"
   },
+  "getStartedHero": {
+    "chip": "Dash Quick Start",
+    "title": "Digital Money That's\nBetter Than Cash.",
+    "subtitle": "Dash is instant, global, and easy to use.",
+    "whereToSpend": "Where to Spend",
+    "learnMore": "Learn More"
+  },
   "nav": {
     "home": "Home",
     "getStarted": "Get Started",

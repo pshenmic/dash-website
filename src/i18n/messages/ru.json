@@ -6,6 +6,13 @@
     "downloadWallet": "Скачать кошелёк",
     "documentation": "Документация"
   },
+  "getStartedHero": {
+    "chip": "Быстрый старт Dash",
+    "title": "Цифровые деньги,\nкоторые лучше наличных.",
+    "subtitle": "Dash — мгновенный, глобальный и простой в использовании.",
+    "whereToSpend": "Где потратить",
+    "learnMore": "Узнать больше"
+  },
   "nav": {
     "home": "Главная",
     "getStarted": "Начать",

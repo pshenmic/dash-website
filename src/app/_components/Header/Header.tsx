@@ -5,11 +5,13 @@ import Image from 'next/image'
 import { useTheme } from 'next-themes'
 import { Sun, Moon, Menu } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { Link, usePathname } from '@/i18n/navigation'
 import { LanguageSelector } from './LanguageSelector'
 import { MobileMenu } from './MobileMenu'
 
 export function Header () {
   const t = useTranslations('nav')
+  const pathname = usePathname()
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -77,12 +79,12 @@ export function Header () {
           </div>
 
           <nav className='hidden shrink-0 items-center gap-10 lg:flex'>
-            <a href='#' className='whitespace-nowrap text-sm font-extrabold text-primary-dark transition-colors hover:text-primary-dark/70 focus:outline-none focus-visible:underline'>
+            <Link href='/' className={`whitespace-nowrap text-sm transition-colors focus:outline-none focus-visible:underline ${pathname === '/' ? 'font-extrabold text-primary-dark hover:text-primary-dark/70' : 'font-semibold text-primary-blue hover:text-primary-blue/70'}`}>
               {t('home')}
-            </a>
-            <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue transition-colors hover:text-primary-blue/70 focus:outline-none focus-visible:underline'>
+            </Link>
+            <Link href='/get-started' className={`whitespace-nowrap text-sm transition-colors focus:outline-none focus-visible:underline ${pathname === '/get-started' ? 'font-extrabold text-primary-dark hover:text-primary-dark/70' : 'font-semibold text-primary-blue hover:text-primary-blue/70'}`}>
               {t('getStarted')}
-            </a>
+            </Link>
             <a href='#' className='whitespace-nowrap text-sm font-semibold text-primary-blue transition-colors hover:text-primary-blue/70 focus:outline-none focus-visible:underline'>
               {t('institutions')}
             </a>

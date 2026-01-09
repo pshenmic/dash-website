@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useTranslations } from 'next-intl'
+import { Link, usePathname } from '@/i18n/navigation'
 import { LanguageSelector } from './LanguageSelector'
 
 interface MobileMenuProps {
@@ -13,6 +14,7 @@ interface MobileMenuProps {
 
 export function MobileMenu ({ onClose: _onClose, mounted: _mounted }: MobileMenuProps) {
   const t = useTranslations('nav')
+  const pathname = usePathname()
   const { theme, setTheme } = useTheme()
 
   // Prevent background scrolling while menu is open
@@ -64,18 +66,20 @@ export function MobileMenu ({ onClose: _onClose, mounted: _mounted }: MobileMenu
         </div>
 
         <nav className='flex flex-1 flex-col gap-2 overflow-y-auto px-6 py-4'>
-          <a
-            href='#'
-            className='rounded-[12px] px-4 py-3 text-right text-lg font-extrabold text-primary-dark transition-colors hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5'
+          <Link
+            href='/'
+            className={`rounded-[12px] px-4 py-3 text-right text-lg transition-colors ${pathname === '/' ? 'font-extrabold text-primary-dark hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5' : 'font-semibold text-primary-blue hover:bg-primary-blue/10'}`}
+            onClick={_onClose}
           >
             {t('home')}
-          </a>
-          <a
-            href='#'
-            className='rounded-[12px] px-4 py-3 text-right text-lg font-semibold text-primary-blue transition-colors hover:bg-primary-blue/10'
+          </Link>
+          <Link
+            href='/get-started'
+            className={`rounded-[12px] px-4 py-3 text-right text-lg transition-colors ${pathname === '/get-started' ? 'font-extrabold text-primary-dark hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5' : 'font-semibold text-primary-blue hover:bg-primary-blue/10'}`}
+            onClick={_onClose}
           >
             {t('getStarted')}
-          </a>
+          </Link>
           <a
             href='#'
             className='rounded-[12px] px-4 py-3 text-right text-lg font-semibold text-primary-blue transition-colors hover:bg-primary-blue/10'

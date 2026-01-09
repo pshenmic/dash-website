@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { US, RU } from 'country-flag-icons/react/3x2'
 import { useLocale } from 'next-intl'
-import { useRouter, usePathname } from 'next/navigation'
+import { useRouter, usePathname } from '@/i18n/navigation'
 import { ChevronDown } from 'lucide-react'
 
 const LANGUAGES = [
@@ -21,8 +21,7 @@ export function LanguageSelector () {
   const currentLang = LANGUAGES.find((_l) => _l.code === locale) ?? LANGUAGES[0]
 
   const changeLocale = (_newLocale: string) => {
-    const newPath = pathname.replace(`/${locale}`, `/${_newLocale}`)
-    router.push(newPath)
+    router.replace(pathname, { locale: _newLocale as 'en' | 'ru' })
     setIsOpen(false)
   }
 

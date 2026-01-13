@@ -197,5 +197,43 @@
   "walletIntegrations": {
     "chip": "Get Along With Us",
     "title": "Wallet Integrations"
+  },
+  "reviews": {
+    "chip": "Our Reviews",
+    "title": "Here's what people are saying about us",
+    "subtitle": "You can read all reviews at our page on",
+    "trustpilotLink": "Trustpilot",
+    "reviews": [
+      {
+        "title": "Very personalized and timely",
+        "text": "Very personalized and timely",
+        "author": "Clarence Gardner",
+        "date": "Dec 22, 2025"
+      },
+      {
+        "title": "Best fork of BTC",
+        "text": "Best fork of BTC dunno why people buying MEME coins trash coins unlimited coins and other scam coins but avoid one of the best Fork of BTC which is Dash.",
+        "author": "max friman",
+        "date": "Dec 11, 2025"
+      },
+      {
+        "title": "Very Kind Team",
+        "text": "Very Kind Team. I am small Creator and Struggling in my Field still they replied with kindness and Professionalism.",
+        "author": "Aisha Ali",
+        "date": "Dec 5, 2025"
+      },
+      {
+        "title": "Great team, Good support, Great project",
+        "text": "Great team, Good support, Great project. Come on Dash!",
+        "author": "Wang Jun",
+        "date": "Nov 29, 2025"
+      },
+      {
+        "title": "The Dash team was fantastic!",
+        "text": "The Dash team was fantastic with helping me with my issue. They were communicative, polite, and helpful.",
+        "author": "Thomas Quinlan",
+        "date": "Oct 28, 2025"
+      }
+    ]
   }
 }

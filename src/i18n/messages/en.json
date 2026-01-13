@@ -139,5 +139,38 @@
     "codeExample": {
       "language": "Java"
     }
+  },
+  "getStartedActions": {
+    "getTheApp": {
+      "title": "Get The App",
+      "description": "Download today and start moving money in minutes."
+    },
+    "getDash": {
+      "title": "Get Dash",
+      "description": "Buy Dash online or at an ATM near you."
+    },
+    "getGoing": {
+      "title": "Get Going",
+      "description": "Receive Dash, send some to friends, shop online or in store."
+    },
+    "platform": {
+      "title": "Get the app",
+      "description": "Get started today — download the app and begin transferring money with a secure, reliable platform you can trust.",
+      "viewAll": "View All Apps"
+    },
+    "features": {
+      "instant": {
+        "title": "Instant",
+        "description": "Transactions in less than a second"
+      },
+      "secure": {
+        "title": "Secure",
+        "description": "Fully Private and Anonymous"
+      },
+      "microFees": {
+        "title": "Micro Fees",
+        "description": "Very low fees for every transaction"
+      }
+    }
   }
 }

@@ -286,5 +286,19 @@
         "date": "Oct 28, 2025"
       }
     ]
+  },
+  "platformBlocks": {
+    "providers": {
+      "title": "Providers and Tools",
+      "description": "Many software development kits and tools already work with Dash. A large ecosystem of partners also provides APIs, custody solutions or payment processing. Getting started is easy!",
+      "button": "Learn More"
+    },
+    "libraries": {
+      "title": "Client Libraries that",
+      "titleLine2": "Speak Your Language",
+      "description": "SDKs are available for the languages you love and use most. Get started building apps using our easy-to-follow guides.",
+      "quickStart": "Quick Start",
+      "jsSdk": "JS SDK"
+    }
   }
 }

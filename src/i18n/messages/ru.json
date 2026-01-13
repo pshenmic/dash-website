@@ -300,5 +300,48 @@
       "quickStart": "Быстрый старт",
       "jsSdk": "JS SDK"
     }
+  },
+  "latestNews": {
+    "chip": "Свяжитесь с нашей командой",
+    "title": "Последние новости от Dash",
+    "joinDiscord": "Discord",
+    "cards": {
+      "video": {
+        "tag": "Видео",
+        "title": "Последние новости от команды Dash",
+        "description": "Узнайте, что наша команда сделала за последнюю неделю."
+      },
+      "post1": {
+        "tagPost": "X Пост",
+        "tagAuthor": "@Dashpay",
+        "text": "Dash — старейшая в мире децентрализованная автономная организация (DAO).\n\nСеть самофинансируется уже более десяти лет: без венчурного капитала, без премайна, без внешних грантов или инвестиций..."
+      },
+      "post2": {
+        "tagPost": "X Пост",
+        "tagAuthor": "@Dashpay",
+        "text": "Lightning Network мертва?\n\nИли она достигнет новых высот внедрения?\n\nПриходите спорить с нами на Crypto Quorum, завтра в 17:00 UTC. Принесите..."
+      }
+    },
+    "roadmap": {
+      "comingSoon": "Скоро",
+      "title": "Что дальше\nдля Dash?",
+      "description": "Много поводов для волнения уже совсем скоро. Читайте и готовьтесь.",
+      "features": ["ChainLocks", "Long Living Masternode Quorums", "Evolution Initial Design Document"],
+      "seeFullRoadmap": "Полная дорожная карта",
+      "viewReleaseNotes": "Заметки о релизах",
+      "releases": {
+        "q1_2025": {
+          "tag": "Q1 2025",
+          "title": "Dash Core v0.2",
+          "items": ["Бэкпорты для Bitcoin v0.2.2", "Обновление UI QT Wallet", "Улучшения после стресс-тестов"]
+        },
+        "2024": {
+          "tag": "2024",
+          "complete": "Завершено",
+          "title": "Запуск Dash Platform",
+          "items": ["Кредитная система", "Улучшенная идентификация и оптимизация данных", "Улучшения после стресс-тестов"]
+        }
+      }
+    }
   }
 }

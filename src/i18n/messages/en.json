@@ -300,5 +300,48 @@
       "quickStart": "Quick Start",
       "jsSdk": "JS SDK"
     }
+  },
+  "latestNews": {
+    "chip": "Connect with our team",
+    "title": "Check Out Latest News From Dash",
+    "joinDiscord": "Join Discord",
+    "cards": {
+      "video": {
+        "tag": "Video",
+        "title": "Latest news from the Dash team",
+        "description": "Check out what our team has done in the last week."
+      },
+      "post1": {
+        "tagPost": "X Post",
+        "tagAuthor": "@Dashpay",
+        "text": "Dash is the world's oldest decentralized autonomous organization (DAO).\n\nThe network has self-funded for over a decade: no VCs, no premine, no outside grants or investment..."
+      },
+      "post2": {
+        "tagPost": "X Post",
+        "tagAuthor": "@Dashpay",
+        "text": "Is the Lightning Network dead?\n\nOr is it going to rise to new adoption heights?\n\nCome argue with us on the Crypto Quorum, tomorrow at 5pm UTC. Bring..."
+      }
+    },
+    "roadmap": {
+      "comingSoon": "Coming Soon",
+      "title": "So what's next\nfor Dash?",
+      "description": "Plenty of reasons to get excited just around the corner. Read and get prepared.",
+      "features": ["ChainLocks", "Long Living Masternode Quorums", "Evolution Initial Design Document"],
+      "seeFullRoadmap": "See Full Roadmap",
+      "viewReleaseNotes": "View release notes",
+      "releases": {
+        "q1_2025": {
+          "tag": "Q1 2025",
+          "title": "Dash Core v0.2",
+          "items": ["Backports for Bitcoin v0.2.2", "Basic QT Wallet UI update", "Post stress test enhancements"]
+        },
+        "2024": {
+          "tag": "2024",
+          "complete": "Complete",
+          "title": "Dash Platform Rollout",
+          "items": ["Credit system", "Improved identity and data optimizations", "Post stress test enhancements"]
+        }
+      }
+    }
   }
 }

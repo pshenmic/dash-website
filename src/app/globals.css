@@ -44,7 +44,7 @@ body {
   --sh-comment: #6b7280;
 }
 
-/* Интерактивные элементы: cursor pointer */
+/* Interactive elements: cursor pointer */
 @layer base {
   button:not(:disabled),
   a,
@@ -57,19 +57,19 @@ body {
   }
 }
 
-/* View Transitions - плавные переходы между страницами */
+/* View Transitions - smooth page transitions */
 
-/* Уходящая страница - быстрое затухание */
+/* Old page - quick fade out */
 ::view-transition-old(root) {
   animation: page-fade-out 150ms cubic-bezier(0.4, 0, 1, 1);
 }
 
-/* Входящая страница - плавное появление */
+/* New page - smooth fade in */
 ::view-transition-new(root) {
   animation: page-fade-in 200ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-/* Header остаётся на месте без анимации */
+/* Header stays in place without animation */
 ::view-transition-old(header),
 ::view-transition-new(header) {
   animation: none;

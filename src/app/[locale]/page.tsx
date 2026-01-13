@@ -8,6 +8,7 @@ import { ForDevelopers } from '../_components/ForDevelopers'
 import { FirstSteps } from '../_components/FirstSteps'
 import { Reviews } from '../_components/Reviews'
 import { PlatformBlocks } from '../_components/PlatformBlocks'
+import { LatestNews } from '../_components/LatestNews'
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((_locale) => ({ locale: _locale }))
@@ -53,6 +54,10 @@ export default async function HomePage ({
 
       <section className='bg-primary-dark pb-[60px] lg:pb-[100px]'>
         <PlatformBlocks />
+      </section>
+
+      <section className='bg-primary-dark py-[60px] lg:py-[100px]'>
+        <LatestNews />
       </section>
     </main>
   )

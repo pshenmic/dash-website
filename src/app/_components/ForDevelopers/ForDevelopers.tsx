@@ -14,8 +14,8 @@ await dashPlatform.signAndBroadcast(doc)`
 export function ForDevelopers (): React.ReactNode {
   const t = useTranslations('forDevelopers')
   return (
-    <div className='relative z-10 rounded-b-[50px] bg-primary-white dark:bg-primary-dark'>
-      <div className='mx-auto max-w-7xl px-4 pb-8 lg:px-6 lg:pb-12'>
+    <div className='relative z-10 rounded-b-[50px] bg-primary-white pb-[60px] lg:pb-[108px] dark:bg-primary-dark'>
+      <div className='mx-auto max-w-7xl px-4 lg:px-6'>
         <div className='mb-8 flex flex-col items-start justify-between gap-4 lg:mb-[20px] lg:flex-row lg:items-center'>
           <div className='flex flex-col gap-[5px]'>
             <span className='text-[18px] font-extrabold text-primary-blue'>
@@ -27,7 +27,7 @@ export function ForDevelopers (): React.ReactNode {
                 {t('titleHighlight')}
                 {/* SVG positioned to wrap text like hand-drawn underline */}
                 <Image
-                  src='/images/developers/decoration-line.svg'
+                  src='/images/home/developers/decoration-line.svg'
                   alt=''
                   width={113}
                   height={45}
@@ -46,24 +46,24 @@ export function ForDevelopers (): React.ReactNode {
             <DeveloperCard
               title={t('cards.apiSdk.title')}
               chip={t('cards.apiSdk.chip')}
-              image='/images/developers/card-api-sdk.png'
+              image='/images/home/developers/card-api-sdk.png'
             />
             <DeveloperCard
               title={t('cards.nodes.title')}
               chip={t('cards.nodes.chip')}
-              image='/images/developers/card-nodes.png'
+              image='/images/home/developers/card-nodes.png'
             />
             <DeveloperCard
               title={t('cards.smartContracts.title')}
               chip={t('cards.smartContracts.chip')}
-              image='/images/developers/card-smart-contracts.png'
+              image='/images/home/developers/card-smart-contracts.png'
             />
           </div>
           <div className='grid grid-cols-1 gap-[10px] md:gap-[19px] lg:grid-cols-2'>
             <DeveloperCard
               title={t('cards.testnet.title')}
               chip={t('cards.testnet.chip')}
-              image='/images/developers/card-testnet.png'
+              image='/images/home/developers/card-testnet.png'
             />
             <CodeCard code={CODE_SNIPPET} />
           </div>
@@ -89,7 +89,7 @@ function DeveloperCard ({
       {/* Content limited to left side, image fills right */}
       <div className='relative z-10 flex h-full max-w-[55%] flex-col items-start px-5 pt-4 pb-4 lg:max-w-[60%] lg:p-[30px]'>
         <Image
-          src='/images/developers/logo-dash-small.svg'
+          src='/images/home/developers/logo-dash-small.svg'
           alt=''
           width={30}
           height={24}
@@ -122,7 +122,7 @@ function CodeCard ({ code: _code }: { code: string }): React.ReactNode {
     <Card className='flex h-[180px] flex-col lg:h-[235px]'>
       <div className='flex items-center justify-between px-5 py-3 lg:px-[30px] lg:py-4'>
         <Image
-          src='/images/developers/logo-typescript.svg'
+          src='/images/home/developers/logo-typescript.svg'
           alt='TypeScript'
           width={24}
           height={24}
@@ -130,7 +130,7 @@ function CodeCard ({ code: _code }: { code: string }): React.ReactNode {
         />
         <button className='rounded opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50'>
           <Image
-            src='/images/developers/icon-copy.svg'
+            src='/images/home/developers/icon-copy.svg'
             alt='Copy'
             width={20}
             height={20}

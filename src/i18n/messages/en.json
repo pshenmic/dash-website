@@ -22,6 +22,57 @@
     "buyDash": "Buy Dash"
   },
   "footer": {
+    "socials": {
+      "title": "Join in the discussion",
+      "subtitle": "Here you can find information about Dash and talk with our Dashers community:"
+    },
+    "newsletter": {
+      "title": "Subscribe to our Newsletter",
+      "subtitle": "Get every bit of important information straight from us",
+      "placeholder": "Your Email",
+      "send": "Send"
+    },
+    "brand": {
+      "slogan": "Instant transactions and micro-fees. Any amount, anytime, anywhere.",
+      "description": "We have a full service support desk with humans on call, plus extensive learning resources, tools and wikis.",
+      "support": "Get Support"
+    },
+    "links": {
+      "home": {
+        "title": "Home",
+        "individuals": "Individuals",
+        "businesses": "Businesses",
+        "downloads": "Downloads",
+        "buyOnline": "Buy Online",
+        "whereToSpend": "Where to Spend",
+        "newMerchantKit": "New Merchant Kit"
+      },
+      "institutions": {
+        "title": "Institutions",
+        "traders": "Traders",
+        "financialServices": "Financial Services",
+        "regulatory": "Regulatory",
+        "fastPass": "FastPass"
+      },
+      "developers": {
+        "title": "Developers",
+        "platform": "Platform",
+        "documentation": "Documentation",
+        "contributing": "Contributing",
+        "providersAndTools": "Providers and Tools",
+        "roadmap": "Roadmap"
+      },
+      "community": {
+        "title": "Community",
+        "bugBountyProgram": "Bug Bounty Program",
+        "learningResources": "Learning Resources",
+        "connectWithUs": "Connect With Us",
+        "forum": "Forum",
+        "masternodes": "Masternodes",
+        "mining": "Mining",
+        "blog": "Blog"
+      }
+    },
     "copyright": "All Rights Reserved @2025 Dash",
     "termsOfUse": "Terms of Use",
     "privacyStatement": "DCG Privacy Statement",

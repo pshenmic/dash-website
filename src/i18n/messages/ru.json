@@ -22,6 +22,57 @@
     "buyDash": "Купить"
   },
   "footer": {
+    "socials": {
+      "title": "Присоединяйтесь к обсуждению",
+      "subtitle": "Здесь вы найдёте информацию о Dash и сможете пообщаться с сообществом:"
+    },
+    "newsletter": {
+      "title": "Подпишитесь на рассылку",
+      "subtitle": "Получайте всю важную информацию напрямую от нас",
+      "placeholder": "Ваш Email",
+      "send": "Отправить"
+    },
+    "brand": {
+      "slogan": "Мгновенные транзакции и микро-комиссии. Любая сумма, в любое время, в любом месте.",
+      "description": "У нас есть полноценная служба поддержки с живыми людьми, а также обширные обучающие ресурсы, инструменты и вики.",
+      "support": "Поддержка"
+    },
+    "links": {
+      "home": {
+        "title": "Главная",
+        "individuals": "Частным лицам",
+        "businesses": "Бизнесу",
+        "downloads": "Загрузки",
+        "buyOnline": "Купить онлайн",
+        "whereToSpend": "Где потратить",
+        "newMerchantKit": "Комплект для продавцов"
+      },
+      "institutions": {
+        "title": "Институции",
+        "traders": "Трейдерам",
+        "financialServices": "Финансовые услуги",
+        "regulatory": "Регулирование",
+        "fastPass": "FastPass"
+      },
+      "developers": {
+        "title": "Разработчикам",
+        "platform": "Платформа",
+        "documentation": "Документация",
+        "contributing": "Вклад в проект",
+        "providersAndTools": "Провайдеры и инструменты",
+        "roadmap": "Дорожная карта"
+      },
+      "community": {
+        "title": "Сообщество",
+        "bugBountyProgram": "Программа Bug Bounty",
+        "learningResources": "Обучающие ресурсы",
+        "connectWithUs": "Связаться с нами",
+        "forum": "Форум",
+        "masternodes": "Мастерноды",
+        "mining": "Майнинг",
+        "blog": "Блог"
+      }
+    },
     "copyright": "Все права защищены @2025 Dash",
     "termsOfUse": "Условия",
     "privacyStatement": "Политика DCG",

@@ -24,7 +24,20 @@ export function DashPriceCard ({
         const res = await fetch(
           'https://api.coingecko.com/api/v3/coins/dash?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=true'
         )
+
+        if (!res.ok) {
+          throw new Error(`API error: ${res.status}`)
+        }
+
         const json = await res.json()
+
+        if (
+          json?.market_data?.current_price?.usd == null ||
+          json?.market_data?.price_change_percentage_24h == null ||
+          json?.market_data?.sparkline_7d?.price == null
+        ) {
+          throw new Error('Invalid API response structure')
+        }
 
         setData({
           price: json.market_data.current_price.usd,

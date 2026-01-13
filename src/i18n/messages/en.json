@@ -172,5 +172,30 @@
         "description": "Very low fees for every transaction"
       }
     }
+  },
+  "firstSteps": {
+    "chip": "First Steps",
+    "title": "Choose Dash for your next Web3 project",
+    "cards": {
+      "identities": {
+        "title": "Identities & Names",
+        "description": "Replace public addresses with your Dash username and never worry about sending money to the wrong person again.",
+        "button": "Choose your identity"
+      },
+      "storage": {
+        "title": "Application Data Storage",
+        "description": "Platform consensus will verify and validate any application data stored on the network.",
+        "button": "Read More"
+      },
+      "developer": {
+        "title": "Frictionless Developer Experience",
+        "description": "Use our SDKs to easily develop applications without worrying about the lower level details.",
+        "button": "Read More"
+      }
+    }
+  },
+  "walletIntegrations": {
+    "chip": "Get Along With Us",
+    "title": "Wallet Integrations"
   }
 }

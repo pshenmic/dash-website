@@ -129,11 +129,11 @@ export function FirstSteps (): React.ReactNode {
           </div>
 
           {/* Partners Logos */}
-          <div className='flex items-center justify-center gap-[20px] opacity-50 sm:gap-[30px] lg:gap-[50px]'>
+          <div className='flex flex-wrap items-center justify-center gap-x-[20px] gap-y-[15px] opacity-50 sm:gap-x-[30px] lg:gap-x-[50px]'>
             {partners.map((partner) => (
               <div
                 key={partner.alt}
-                className='relative h-[16px] shrink-0 sm:h-[20px] md:h-[30px] lg:h-[40px]'
+                className='relative h-[16px] sm:h-[20px] md:h-[30px] lg:h-[40px]'
                 style={{ aspectRatio: partner.width / partner.height }}
               >
                 <Image

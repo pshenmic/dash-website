@@ -6,6 +6,7 @@ import { FutureOfMoney } from '../_components/FutureOfMoney'
 import { BulletsGrid } from '../_components/BulletsGrid'
 import { ForDevelopers } from '../_components/ForDevelopers'
 import { FirstSteps } from '../_components/FirstSteps'
+import { Reviews } from '../_components/Reviews'
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((_locale) => ({ locale: _locale }))
@@ -43,6 +44,10 @@ export default async function HomePage ({
       {/* Negative margin creates overlap with ForDevelopers section */}
       <section className='relative z-0 -mt-[60px] lg:-mt-[108px]'>
         <FirstSteps />
+      </section>
+
+      <section className='bg-primary-dark py-[60px] lg:py-[100px]'>
+        <Reviews />
       </section>
     </main>
   )

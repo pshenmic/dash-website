@@ -20,7 +20,7 @@ export function BulletsGrid (): React.ReactNode {
             {/* Coin overflows card by design */}
             <div className='absolute -top-[60px] -right-[30px] h-[300px] w-[280px] lg:-top-[90px] lg:-right-[50px] lg:h-[491px] lg:w-[444px]'>
               <Image
-                src='/images/bullets/main-3d-coin.png'
+                src='/images/home/bullets/main-3d-coin.png'
                 alt='Dash 3D Coin'
                 fill
                 className='object-contain object-right'
@@ -28,7 +28,7 @@ export function BulletsGrid (): React.ReactNode {
             </div>
             <div className='absolute bottom-[16px] left-[16px] lg:bottom-[35px] lg:left-[35px]'>
               <Image
-                src='/images/bullets/logo-dash-white.svg'
+                src='/images/home/bullets/logo-dash-white.svg'
                 alt='Dash'
                 width={191}
                 height={51}
@@ -88,7 +88,7 @@ export function BulletsGrid (): React.ReactNode {
           <Card className='order-5 col-span-1 flex h-[100px] items-center justify-center lg:order-4 lg:col-start-4 lg:row-start-1 lg:h-auto'>
             <div className='relative h-full w-full'>
               <Image
-                src='/images/bullets/coin-3d-small.png'
+                src='/images/home/bullets/coin-3d-small.png'
                 alt='Dash Coin'
                 fill
                 className='object-cover'
@@ -111,7 +111,7 @@ export function BulletsGrid (): React.ReactNode {
           >
             <div className='absolute top-[16px] right-[16px] lg:top-[35px] lg:right-[35px]'>
               <Image
-                src='/images/bullets/logo-dash-blue.svg'
+                src='/images/home/bullets/logo-dash-blue.svg'
                 alt=''
                 width={135}
                 height={110}
@@ -132,7 +132,7 @@ export function BulletsGrid (): React.ReactNode {
             {/* Image rotated and scaled to create decorative overflow effect */}
             <div className='absolute top-1/2 right-[-50px] flex h-[100px] w-[300px] -translate-y-1/2 items-center justify-center lg:right-[-80px] lg:h-[144px] lg:w-[500px]'>
               <Image
-                src='/images/bullets/coins-stack.png'
+                src='/images/home/bullets/coins-stack.png'
                 alt=''
                 width={735}
                 height={144}

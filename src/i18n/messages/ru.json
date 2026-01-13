@@ -41,7 +41,7 @@
         "variant": "dark",
         "label": "Новости",
         "title": "Что нового\nв Dash",
-        "image": "/images/slider/video-dark.jpg"
+        "image": "/images/home/slider/video-dark.jpg"
       },
       {
         "id": "3",
@@ -49,14 +49,14 @@
         "label": "В центре внимания",
         "title": "Джон Доу",
         "subtitle": "Узнайте больше о Dash Pay",
-        "image": "/images/slider/video-blue-person.jpg"
+        "image": "/images/home/slider/video-blue-person.jpg"
       },
       {
         "id": "4",
         "variant": "coin",
         "label": "Первый период DAO",
         "title": "Больше чем\nмонета. DAO.",
-        "image": "/images/slider/coin-3d.png"
+        "image": "/images/home/slider/coin-3d.png"
       }
     ]
   },

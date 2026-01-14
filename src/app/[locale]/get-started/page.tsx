@@ -2,6 +2,7 @@ import { setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import { GetStartedHero } from '../../_components/GetStartedHero'
 import { GetStartedActions } from '../../_components/GetStartedActions'
+import { GetDash } from '../../_components/GetDash'
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((_locale) => ({ locale: _locale }))
@@ -22,6 +23,10 @@ export default async function GetStartedPage ({
       {/* Negative margin creates overlap with hero section */}
       <section className='relative z-20 -mt-[60px] pb-10 lg:-mt-[108px] lg:pb-16'>
         <GetStartedActions />
+      </section>
+
+      <section>
+        <GetDash />
       </section>
     </main>
   )

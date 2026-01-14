@@ -343,5 +343,25 @@
         }
       }
     }
+  },
+  "howNodesWork": {
+    "chip": "Interesting Facts",
+    "title": "How Nodes Are Working",
+    "cards": {
+      "masternodes": {
+        "title": "Masternodes in General:",
+        "description": "Dash is best known as the first cryptocurrency with a focus on user-friendly payments and transaction speed.",
+        "highlight": "What many people do not know is that these features are implemented on top of a network of dedicated servers known as masternodes",
+        "descriptionEnd": ", which gives rise to many exciting features not available on conventional blockchains.",
+        "number": "01"
+      },
+      "hosted": {
+        "title": "Option 1: Hosted masternode",
+        "description": "Since operating your own server requires a certain level knowledge of blockchains and Linux server operating systems, several community members offer",
+        "highlight": "dedicated hosting solutions for a fee.",
+        "descriptionEnd": " Taking advantage of these services means the user only needs to provide the masternode collateral and pay the hosting fee in order to receive payment from the block reward.",
+        "number": "02"
+      }
+    }
   }
 }

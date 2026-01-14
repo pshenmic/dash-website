@@ -6,9 +6,9 @@ import { SubFooter } from './SubFooter'
 
 export function Footer (): React.ReactNode {
   return (
-    <footer className='relative z-0'>
+    <footer className='relative z-10 -mt-[30px] lg:-mt-[50px]'>
       {/* Main Footer Card Section */}
-      <div className='bg-primary-white pt-[60px] dark:bg-primary-dark lg:pt-[100px]'>
+      <div className='rounded-t-[25px] bg-primary-white pt-[60px] dark:bg-primary-dark lg:rounded-t-[35px] lg:pt-[100px]'>
         {/* Footer Card - Blue in light mode, Dark in dark mode */}
         <div className='mx-auto max-w-[1240px] rounded-[35px] bg-primary-blue px-6 py-[60px] dark:bg-secondary-space-cadet lg:px-[54px] lg:py-[100px]'>
           {/* Top Section: Socials + Newsletter */}

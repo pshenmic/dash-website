@@ -11,6 +11,7 @@ import { PlatformBlocks } from '../_components/PlatformBlocks'
 import { LatestNews } from '../_components/LatestNews'
 import { HowNodesWork } from '../_components/HowNodesWork'
 import { FAQ } from '../_components/FAQ'
+import { BugBounty } from '../_components/BugBounty'
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((_locale) => ({ locale: _locale }))
@@ -68,6 +69,10 @@ export default async function HomePage ({
 
       <section className='relative z-10 bg-primary-dark pb-[60px] lg:pb-[100px]'>
         <FAQ />
+      </section>
+
+      <section className='bg-primary-dark pb-[60px] lg:pb-[100px]'>
+        <BugBounty />
       </section>
     </main>
   )

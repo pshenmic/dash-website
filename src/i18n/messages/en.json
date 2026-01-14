@@ -385,5 +385,10 @@
         "answer": "No single entity controls Dash. It operates as one of the world's oldest Decentralized Autonomous Organizations (DAO). Decisions are made collectively by masternode operators who vote on proposals for network changes, marketing, and development. The network self-funds through a treasury system that allocates 10% of block rewards to approved projects."
       }
     }
+  },
+  "bugBounty": {
+    "title": "Bug Bounty Program",
+    "description": "The Dash Core Group Bug Bounty Program allows developers to discover and resolve bugs before the general public is aware of such bugs, preventing incidents of widespread abuse.",
+    "button": "Quick Start"
   }
 }

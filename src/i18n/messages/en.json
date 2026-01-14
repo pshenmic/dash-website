@@ -402,5 +402,9 @@
       "exchanges": { "label": "Exchanges and Brokers", "value": "265 +" },
       "speed": { "label": "Transaction Speed", "value": "1 Second" }
     }
+  },
+  "buyDashOnline": {
+    "title": "Places to Buy Dash Online",
+    "seeAll": "See All"
   }
 }

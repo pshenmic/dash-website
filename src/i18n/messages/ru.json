@@ -402,5 +402,9 @@
       "exchanges": { "label": "Биржи и брокеры", "value": "265 +" },
       "speed": { "label": "Скорость транзакции", "value": "1 секунда" }
     }
+  },
+  "buyDashOnline": {
+    "title": "Где купить Dash онлайн",
+    "seeAll": "Смотреть все"
   }
 }

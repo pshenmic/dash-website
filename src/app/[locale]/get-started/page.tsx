@@ -3,6 +3,7 @@ import { routing } from '@/i18n/routing'
 import { GetStartedHero } from '../../_components/GetStartedHero'
 import { GetStartedActions } from '../../_components/GetStartedActions'
 import { GetDash } from '../../_components/GetDash'
+import { BuyDashOnline } from '../../_components/BuyDashOnline'
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((_locale) => ({ locale: _locale }))
@@ -27,6 +28,10 @@ export default async function GetStartedPage ({
 
       <section>
         <GetDash />
+      </section>
+
+      <section>
+        <BuyDashOnline />
       </section>
     </main>
   )

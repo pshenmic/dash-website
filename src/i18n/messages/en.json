@@ -363,5 +363,27 @@
         "number": "02"
       }
     }
+  },
+  "faq": {
+    "chip": "From Our Community",
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "whatIsDash": {
+        "question": "What is Dash?",
+        "answer": "Dash is an open-source cryptocurrency that was forked from Bitcoin in January 2014. The name \"Dash\" comes from \"Digital Cash.\" It focuses on being a fast, cheap global payments network with features like InstantSend (transactions confirm in 1-2 seconds), optional privacy through PrivateSend, and extremely low fees (typically $0.01-$0.02 per transaction)."
+      },
+      "whoInvented": {
+        "question": "Who invented Dash?",
+        "answer": "Based on the Bitcoin project, Dash was launched on January 18, 2014 by founder Evan Duffield. The first few years of development saw Dash develop a focus on speed and fungibility, making it an excellent and practical alternative to cash, both online and at the point of sale in shops and restaurants."
+      },
+      "whatUsedFor": {
+        "question": "What is Dash used for?",
+        "answer": "Dash is used for fast, private, and low-cost payments both online and at physical point-of-sale locations. It's designed to work like digital cash — transactions confirm in seconds and can be immediately spent by the recipient. Dash is also used for cross-border payments, remittances, and as a store of value in regions with unstable local currencies."
+      },
+      "whoControls": {
+        "question": "Who controls Dash?",
+        "answer": "No single entity controls Dash. It operates as one of the world's oldest Decentralized Autonomous Organizations (DAO). Decisions are made collectively by masternode operators who vote on proposals for network changes, marketing, and development. The network self-funds through a treasury system that allocates 10% of block rewards to approved projects."
+      }
+    }
   }
 }

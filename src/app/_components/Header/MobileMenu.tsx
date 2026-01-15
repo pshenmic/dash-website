@@ -13,8 +13,8 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu ({
-  onClose: _onClose,
-  mounted: _mounted
+  onClose,
+  mounted
 }: MobileMenuProps): React.ReactNode {
   const t = useTranslations('nav')
   const pathname = usePathname()
@@ -30,12 +30,12 @@ export function MobileMenu ({
 
   // Allow keyboard navigation for accessibility
   useEffect(() => {
-    const handleEscape = (_e: KeyboardEvent): void => {
-      if (_e.key === 'Escape') _onClose()
+    const handleEscape = (e: KeyboardEvent): void => {
+      if (e.key === 'Escape') onClose()
     }
     document.addEventListener('keydown', handleEscape)
     return () => document.removeEventListener('keydown', handleEscape)
-  }, [_onClose])
+  }, [onClose])
 
   const toggleTheme = (): void => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
@@ -46,7 +46,7 @@ export function MobileMenu ({
       {/* Backdrop with fade animation */}
       <div
         className='animate-in fade-in absolute inset-0 bg-primary-dark/50 backdrop-blur-sm duration-200'
-        onClick={_onClose}
+        onClick={onClose}
       />
 
       {/* Slide-in drawer */}
@@ -58,7 +58,7 @@ export function MobileMenu ({
             className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10 transition-colors hover:bg-primary-dark/20 dark:bg-primary-white/10 dark:hover:bg-primary-white/20'
             aria-label='Toggle theme'
           >
-            {_mounted && theme === 'dark'
+            {mounted && theme === 'dark'
               ? (
                 <Moon className='h-[18px] w-[18px] text-primary-white' />
                 )
@@ -72,14 +72,14 @@ export function MobileMenu ({
           <Link
             href='/'
             className={`rounded-[12px] px-4 py-3 text-right text-lg transition-colors ${pathname === '/' ? 'font-extrabold text-primary-dark hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5' : 'font-semibold text-primary-blue hover:bg-primary-blue/10'}`}
-            onClick={_onClose}
+            onClick={onClose}
           >
             {t('home')}
           </Link>
           <Link
             href='/get-started'
             className={`rounded-[12px] px-4 py-3 text-right text-lg transition-colors ${pathname === '/get-started' ? 'font-extrabold text-primary-dark hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5' : 'font-semibold text-primary-blue hover:bg-primary-blue/10'}`}
-            onClick={_onClose}
+            onClick={onClose}
           >
             {t('getStarted')}
           </Link>

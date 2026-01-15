@@ -6,7 +6,7 @@ import { GetDash } from '../../_components/GetDash'
 import { BuyDashOnline } from '../../_components/BuyDashOnline'
 
 export function generateStaticParams (): Array<{ locale: string }> {
-  return routing.locales.map((_locale) => ({ locale: _locale }))
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 export default async function GetStartedPage ({

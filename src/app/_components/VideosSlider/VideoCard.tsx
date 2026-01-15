@@ -15,8 +15,8 @@ interface VideoCardProps {
   video: VideoCardData
 }
 
-export function VideoCard ({ video: _video }: VideoCardProps): React.ReactNode {
-  const { variant, label, title, subtitle, session, image } = _video
+export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
+  const { variant, label, title, subtitle, session, image } = video
 
   const baseClasses =
     'relative h-[216px] w-full overflow-hidden rounded-[25px] shadow-sm dark:border dark:border-white/15'
@@ -36,9 +36,9 @@ export function VideoCard ({ video: _video }: VideoCardProps): React.ReactNode {
 
         <div className='absolute top-[90px] left-[22px]'>
           <h3 className='text-3xl leading-[34px] font-extrabold tracking-[-0.03em] text-primary-dark'>
-            {title.split('\n').map((_line, _i) => (
-              <span key={_i} className='block'>
-                {_line}
+            {title.split('\n').map((line, i) => (
+              <span key={i} className='block'>
+                {line}
               </span>
             ))}
           </h3>
@@ -87,9 +87,9 @@ export function VideoCard ({ video: _video }: VideoCardProps): React.ReactNode {
 
         <div className='absolute bottom-[22px] left-[22px]'>
           <h3 className='text-3xl leading-[29px] font-extrabold tracking-[-0.03em] text-primary-white'>
-            {title.split('\n').map((_line, _i) => (
-              <span key={_i} className='block'>
-                {_line}
+            {title.split('\n').map((line, i) => (
+              <span key={i} className='block'>
+                {line}
               </span>
             ))}
           </h3>
@@ -169,9 +169,9 @@ export function VideoCard ({ video: _video }: VideoCardProps): React.ReactNode {
 
       <div className='absolute bottom-[22px] left-[22px]'>
         <h3 className='text-3xl leading-[29px] font-extrabold tracking-[-0.03em] text-primary-dark'>
-          {title.split('\n').map((_line, _i) => (
-            <span key={_i} className='block'>
-              {_line}
+          {title.split('\n').map((line, i) => (
+            <span key={i} className='block'>
+              {line}
             </span>
           ))}
         </h3>
@@ -196,17 +196,17 @@ function PlayButton (): React.ReactNode {
 function DashPattern (): React.ReactNode {
   return (
     <svg className='h-full w-full' viewBox='0 0 400 250' fill='none'>
-      {[...Array(8)].map((_, _row) =>
-        [...Array(12)].map((_, _col) => (
+      {[...Array(8)].map((_, row) =>
+        [...Array(12)].map((_, col) => (
           <text
-            key={`${_row}-${_col}`}
-            x={_col * 80 - 20 + (_row % 2) * 40}
-            y={_row * 35 + 20}
+            key={`${row}-${col}`}
+            x={col * 80 - 20 + (row % 2) * 40}
+            y={row * 35 + 20}
             fill='currentColor'
             className='text-primary-dark/10'
             fontSize='24'
             fontWeight='800'
-            transform={`rotate(-30 ${_col * 80 + 20} ${_row * 35 + 20})`}
+            transform={`rotate(-30 ${col * 80 + 20} ${row * 35 + 20})`}
           >
             Dash
           </text>

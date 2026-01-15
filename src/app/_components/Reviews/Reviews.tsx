@@ -52,12 +52,12 @@ export function Reviews (): React.ReactNode {
             aria-label='Reviews carousel'
           >
             <div className='-ml-4 flex lg:-ml-[35px]'>
-              {reviews.map((_review, index) => (
+              {reviews.map((review, index) => (
                 <div
                   key={index}
                   className='min-w-0 flex-[0_0_85%] pl-4 sm:flex-[0_0_45%] lg:flex-[0_0_340px] lg:pl-[35px]'
                 >
-                  <ReviewCard review={_review} />
+                  <ReviewCard review={review} />
                 </div>
               ))}
             </div>

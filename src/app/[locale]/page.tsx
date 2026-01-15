@@ -14,7 +14,7 @@ import { FAQ } from '../_components/FAQ'
 import { BugBounty } from '../_components/BugBounty'
 
 export function generateStaticParams (): Array<{ locale: string }> {
-  return routing.locales.map((_locale) => ({ locale: _locale }))
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 export default async function HomePage ({

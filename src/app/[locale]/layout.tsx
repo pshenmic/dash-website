@@ -25,7 +25,7 @@ export function generateStaticParams (): Array<{ locale: string }> {
 }
 
 export default async function LocaleLayout ({
-  children: _children,
+  children,
   params: _params
 }: {
   children: React.ReactNode
@@ -44,7 +44,7 @@ export default async function LocaleLayout ({
           <ThemeProvider>
             <NextIntlClientProvider messages={messages}>
               <Header />
-              {_children}
+              {children}
               <Footer />
             </NextIntlClientProvider>
           </ThemeProvider>

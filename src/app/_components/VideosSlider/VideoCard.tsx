@@ -29,13 +29,13 @@ export function VideoCard ({ video: _video }: VideoCardProps): React.ReactNode {
         </div>
 
         <div className='absolute top-[52px] left-[22px]'>
-          <span className='rounded-full border border-primary-dark/30 px-3 py-1 text-[11px] text-primary-dark'>
+          <span className='rounded-full border border-primary-dark/30 px-3 py-1 text-xs text-primary-dark'>
             {label}
           </span>
         </div>
 
         <div className='absolute top-[90px] left-[22px]'>
-          <h3 className='text-[28px] leading-[34px] font-extrabold tracking-[-0.03em] text-primary-dark'>
+          <h3 className='text-3xl leading-[34px] font-extrabold tracking-[-0.03em] text-primary-dark'>
             {title.split('\n').map((_line, _i) => (
               <span key={_i} className='block'>
                 {_line}
@@ -80,13 +80,13 @@ export function VideoCard ({ video: _video }: VideoCardProps): React.ReactNode {
         </div>
 
         <div className='absolute top-[102px] left-[22px]'>
-          <span className='rounded-full border border-primary-turquoise/50 px-3 py-1 text-[10px] text-primary-turquoise'>
+          <span className='rounded-full border border-primary-turquoise/50 px-3 py-1 text-xs text-primary-turquoise'>
             {label}
           </span>
         </div>
 
         <div className='absolute bottom-[22px] left-[22px]'>
-          <h3 className='text-[29px] leading-[29px] font-extrabold tracking-[-0.03em] text-primary-white'>
+          <h3 className='text-3xl leading-[29px] font-extrabold tracking-[-0.03em] text-primary-white'>
             {title.split('\n').map((_line, _i) => (
               <span key={_i} className='block'>
                 {_line}
@@ -116,17 +116,17 @@ export function VideoCard ({ video: _video }: VideoCardProps): React.ReactNode {
         )}
 
         <div className='absolute top-[22px] left-[22px]'>
-          <span className='rounded-full border border-primary-white/50 px-3 py-1 text-[10px] text-primary-white'>
+          <span className='rounded-full border border-primary-white/50 px-3 py-1 text-xs text-primary-white'>
             {label}
           </span>
         </div>
 
         <div className='absolute top-1/2 left-[22px] w-[140px] -translate-y-1/2'>
-          <h3 className='text-[29px] leading-[29px] font-extrabold tracking-[-0.03em] text-primary-white'>
+          <h3 className='text-3xl leading-[29px] font-extrabold tracking-[-0.03em] text-primary-white'>
             {title}
           </h3>
           {subtitle != null && subtitle !== '' && (
-            <p className='mt-1 text-[11px] leading-[15px] text-primary-white/75'>
+            <p className='mt-1 text-xs leading-[15px] text-primary-white/75'>
               {subtitle}
             </p>
           )}
@@ -162,13 +162,13 @@ export function VideoCard ({ video: _video }: VideoCardProps): React.ReactNode {
       )}
 
       <div className='absolute top-[102px] left-[22px]'>
-        <span className='rounded-full border border-primary-dark/30 px-3 py-1 text-[10px] text-primary-dark'>
+        <span className='rounded-full border border-primary-dark/30 px-3 py-1 text-xs text-primary-dark'>
           {label}
         </span>
       </div>
 
       <div className='absolute bottom-[22px] left-[22px]'>
-        <h3 className='text-[29px] leading-[29px] font-extrabold tracking-[-0.03em] text-primary-dark'>
+        <h3 className='text-3xl leading-[29px] font-extrabold tracking-[-0.03em] text-primary-dark'>
           {title.split('\n').map((_line, _i) => (
             <span key={_i} className='block'>
               {_line}

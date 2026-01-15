@@ -23,10 +23,10 @@ export function HeroSection (): React.ReactNode {
           <div className='animate-[fade-in-up_0.6s_ease-out_0.2s_both]'>
             <Chip>{t('chip')}</Chip>
           </div>
-          <h1 className='max-w-full animate-[fade-in-up_0.6s_ease-out_0.4s_both] text-center text-[32px] leading-[1.1] font-extrabold tracking-[-0.03em] whitespace-pre-line text-primary-white sm:text-[38px] sm:leading-[1.05] lg:text-[64px] lg:whitespace-pre xl:text-[80px] 2xl:text-[96px]'>
+          <h1 className='max-w-full animate-[fade-in-up_0.6s_ease-out_0.4s_both] text-center text-4xl leading-[1.1] font-extrabold tracking-[-0.03em] whitespace-pre-line text-primary-white sm:text-4xl sm:leading-[1.05] lg:text-6xl lg:whitespace-pre xl:text-7xl 2xl:text-8xl'>
             {t('title')}
           </h1>
-          <p className='max-w-full animate-[fade-in-up_0.6s_ease-out_0.6s_both] text-center text-base leading-[1.37] font-medium text-primary-white sm:text-lg lg:max-w-[724px] lg:text-[28px] lg:tracking-[-0.03em]'>
+          <p className='max-w-full animate-[fade-in-up_0.6s_ease-out_0.6s_both] text-center text-base leading-[1.37] font-medium text-primary-white sm:text-lg lg:max-w-[724px] lg:text-3xl lg:tracking-[-0.03em]'>
             {t('subtitle')}
           </p>
         </div>

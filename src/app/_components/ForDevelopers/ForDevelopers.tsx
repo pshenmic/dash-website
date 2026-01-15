@@ -18,10 +18,10 @@ export function ForDevelopers (): React.ReactNode {
       <div className='mx-auto max-w-7xl px-4 lg:px-6'>
         <div className='mb-8 flex flex-col items-start justify-between gap-4 lg:mb-[20px] lg:flex-row lg:items-center'>
           <div className='flex flex-col gap-[5px]'>
-            <span className='text-[18px] font-extrabold text-primary-blue'>
+            <span className='text-lg font-extrabold text-primary-blue'>
               {t('label')}
             </span>
-            <h2 className='max-w-[320px] text-[32px] leading-[34px] font-extrabold tracking-[-0.03em] text-primary-dark lg:max-w-none dark:text-white'>
+            <h2 className='max-w-[320px] text-4xl leading-[34px] font-extrabold tracking-[-0.03em] text-primary-dark lg:max-w-none dark:text-white'>
               {t('title')}{' '}
               <span className='relative inline-block'>
                 {t('titleHighlight')}
@@ -80,9 +80,9 @@ interface DeveloperCardProps {
 }
 
 function DeveloperCard ({
-  title: _title,
-  chip: _chip,
-  image: _image
+  title,
+  chip,
+  image
 }: DeveloperCardProps): React.ReactNode {
   return (
     <Card className='relative h-[158px] lg:h-[235px]'>
@@ -96,18 +96,18 @@ function DeveloperCard ({
           className='h-[18px] w-auto lg:h-[24px]'
         />
         <div className='mt-auto flex flex-col gap-2 lg:gap-3'>
-          <span className='w-fit rounded-full border border-white/50 px-3 py-1.5 text-[10px] font-medium text-white lg:px-[35px] lg:py-[10px] lg:text-[12px]'>
-            {_chip}
+          <span className='w-fit rounded-full border border-white/50 px-3 py-1.5 text-xs font-medium text-white lg:px-[35px] lg:py-[10px] lg:text-xs'>
+            {chip}
           </span>
-          <p className='text-[20px] leading-[22px] font-extrabold tracking-[-0.03em] text-white lg:text-[38px] lg:leading-[40px]'>
-            {_title}
+          <p className='text-xl leading-[22px] font-extrabold tracking-[-0.03em] text-white lg:text-4xl lg:leading-[40px]'>
+            {title}
           </p>
         </div>
       </div>
       {/* Image overflows card bounds by design */}
       <div className='absolute top-1/2 right-[-40px] h-[217px] w-[225px] -translate-y-1/2 lg:right-auto lg:left-1/2 lg:h-[283px] lg:w-[294px]'>
         <Image
-          src={_image}
+          src={image}
           alt=''
           fill
           className='object-contain object-right'
@@ -117,7 +117,7 @@ function DeveloperCard ({
   )
 }
 
-function CodeCard ({ code: _code }: { code: string }): React.ReactNode {
+function CodeCard ({ code }: { code: string }): React.ReactNode {
   return (
     <Card className='flex h-[180px] flex-col lg:h-[235px]'>
       <div className='flex items-center justify-between px-5 py-3 lg:px-[30px] lg:py-4'>
@@ -139,8 +139,8 @@ function CodeCard ({ code: _code }: { code: string }): React.ReactNode {
         </button>
       </div>
       <div className='flex-1 overflow-x-auto bg-white/10 px-5 py-3 lg:px-[30px] lg:py-4'>
-        <pre className='font-mono text-[10px] leading-[1.6] text-white lg:text-[14px]'>
-          <code dangerouslySetInnerHTML={{ __html: highlight(_code) }} />
+        <pre className='font-mono text-xs leading-[1.6] text-white lg:text-sm'>
+          <code dangerouslySetInnerHTML={{ __html: highlight(code) }} />
         </pre>
       </div>
     </Card>

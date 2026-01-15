@@ -11,7 +11,7 @@ interface PriceData {
 }
 
 export function DashPriceCard ({
-  className: _className
+  className
 }: {
   className?: string
 }): React.ReactNode {
@@ -55,19 +55,19 @@ export function DashPriceCard ({
   }, [])
 
   const generateChartPath = (
-    _prices: number[],
-    _width: number,
-    _height: number
+    prices: number[],
+    width: number,
+    height: number
   ): { linePath: string, areaPath: string } => {
-    if (_prices.length < 2) return { linePath: '', areaPath: '' }
+    if (prices.length < 2) return { linePath: '', areaPath: '' }
 
-    const min = Math.min(..._prices)
-    const max = Math.max(..._prices)
+    const min = Math.min(...prices)
+    const max = Math.max(...prices)
     const range = max - min !== 0 ? max - min : 1
 
-    const points = _prices.map((price, i) => {
-      const x = (i / (_prices.length - 1)) * _width
-      const y = _height - ((price - min) / range) * _height
+    const points = prices.map((price, i) => {
+      const x = (i / (prices.length - 1)) * width
+      const y = height - ((price - min) / range) * height
       return { x, y }
     })
 
@@ -77,7 +77,7 @@ export function DashPriceCard ({
       )
       .join(' ')
 
-    const areaPath = `${linePath} L${_width},${_height} L0,${_height} Z`
+    const areaPath = `${linePath} L${width},${height} L0,${height} Z`
 
     return { linePath, areaPath }
   }
@@ -89,7 +89,7 @@ export function DashPriceCard ({
       : { linePath: '', areaPath: '' }
 
   return (
-    <Card className={_className}>
+    <Card className={className}>
       <svg
         className='absolute bottom-0 left-0 h-[60px] w-full lg:h-[92px]'
         viewBox='0 0 234 92'

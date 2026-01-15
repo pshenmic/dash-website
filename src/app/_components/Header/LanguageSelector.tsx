@@ -18,20 +18,20 @@ export function LanguageSelector (): React.ReactNode {
   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
-  const currentLang = LANGUAGES.find((_l) => _l.code === locale) ?? LANGUAGES[0]
+  const currentLang = LANGUAGES.find((l) => l.code === locale) ?? LANGUAGES[0]
   const CurrentFlag = currentLang.flag
 
-  const changeLocale = (_newLocale: string): void => {
-    router.replace(pathname, { locale: _newLocale as 'en' | 'ru' })
+  const changeLocale = (newLocale: string): void => {
+    router.replace(pathname, { locale: newLocale as 'en' | 'ru' })
     setIsOpen(false)
   }
 
   // Close dropdown when clicking outside to prevent UI staying open unexpectedly
   useEffect(() => {
-    const handleClickOutside = (_event: MouseEvent): void => {
+    const handleClickOutside = (event: MouseEvent): void => {
       if (
         dropdownRef.current != null &&
-        !dropdownRef.current.contains(_event.target as Node)
+        !dropdownRef.current.contains(event.target as Node)
       ) {
         setIsOpen(false)
       }
@@ -67,26 +67,26 @@ export function LanguageSelector (): React.ReactNode {
           className='absolute top-full left-0 z-50 mt-2 min-w-full overflow-hidden rounded-[12px] bg-primary-white shadow-lg'
           role='listbox'
         >
-          {LANGUAGES.map((_lang) => {
-            const LangFlag = _lang.flag
+          {LANGUAGES.map((lang) => {
+            const LangFlag = lang.flag
             return (
               <button
-                key={_lang.code}
-                onClick={() => changeLocale(_lang.code)}
+                key={lang.code}
+                onClick={() => changeLocale(lang.code)}
                 className={`flex w-full items-center gap-2 px-3 py-2 transition-colors hover:bg-primary-blue/10 focus:outline-none focus-visible:bg-primary-blue/15 ${
-                  _lang.code === locale ? 'bg-primary-blue/15' : ''
+                  lang.code === locale ? 'bg-primary-blue/15' : ''
                 }`}
                 role='option'
-                aria-selected={_lang.code === locale}
+                aria-selected={lang.code === locale}
               >
                 <div className='h-5 w-5 overflow-hidden rounded'>
                   <LangFlag
-                    title={_lang.title}
+                    title={lang.title}
                     className='h-full w-full object-cover'
                   />
                 </div>
                 <span className='text-sm font-bold text-primary-blue'>
-                  {_lang.label}
+                  {lang.label}
                 </span>
               </button>
             )

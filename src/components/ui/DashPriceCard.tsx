@@ -126,15 +126,15 @@ export function DashPriceCard ({
             )
           : (
             <>
-              <span className='text-[18px] font-extrabold lg:text-[28px]'>
+              <span className='text-lg font-extrabold lg:text-3xl'>
                 {data?.price.toFixed(2)}
               </span>
-              <span className='text-[12px] font-medium lg:text-[18px]'>$</span>
+              <span className='text-xs font-medium lg:text-lg'>$</span>
             </>
             )}
       </p>
 
-      <p className='absolute top-[36px] left-[20px] text-[10px] font-medium lg:top-[72px] lg:left-[35px] lg:text-[12px]'>
+      <p className='absolute top-[36px] left-[20px] text-xs font-medium lg:top-[72px] lg:left-[35px] lg:text-xs'>
         {loading
           ? (
             <span className='inline-block h-[14px] w-[100px] animate-pulse rounded bg-white/10' />

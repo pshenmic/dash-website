@@ -49,7 +49,7 @@ export function BulletsGrid (): React.ReactNode {
               className='mb-auto h-[40px] w-[40px] text-white lg:h-[70px] lg:w-[70px]'
               strokeWidth={1.5}
             />
-            <div className='text-[12px] leading-tight font-medium tracking-[-0.5px] text-white lg:text-[28px] lg:tracking-[-0.84px]'>
+            <div className='text-xs leading-tight font-medium tracking-[-0.5px] text-white lg:text-3xl lg:tracking-[-0.84px]'>
               <p>{t('stableOperation.line1')}</p>
               <p>{t('stableOperation.line2')}</p>
               <p className='font-extrabold'>{t('stableOperation.highlight')}</p>
@@ -57,7 +57,7 @@ export function BulletsGrid (): React.ReactNode {
           </Card>
 
           <Card className='order-3 col-span-1 flex h-[140px] items-center justify-center p-[16px] lg:order-2 lg:col-start-2 lg:row-start-1 lg:h-auto lg:p-[25px]'>
-            <div className='text-[12px] leading-tight font-medium tracking-[-0.5px] text-white lg:text-[24px] lg:tracking-[-0.84px]'>
+            <div className='text-xs leading-tight font-medium tracking-[-0.5px] text-white lg:text-2xl lg:tracking-[-0.84px]'>
               <p>
                 {t('longestDao.line1')}{' '}
                 <span className='font-extrabold'>
@@ -79,7 +79,7 @@ export function BulletsGrid (): React.ReactNode {
               className='h-[28px] w-[28px] shrink-0 text-white lg:h-[50px] lg:w-[50px]'
               strokeWidth={1.5}
             />
-            <div className='text-[12px] leading-tight font-medium tracking-[-0.5px] text-white lg:text-[28px] lg:tracking-[-0.84px]'>
+            <div className='text-xs leading-tight font-medium tracking-[-0.5px] text-white lg:text-3xl lg:tracking-[-0.84px]'>
               <p>{t('optionalPrivacy.line1')}</p>
               <p className='font-extrabold'>{t('optionalPrivacy.highlight')}</p>
             </div>
@@ -99,7 +99,7 @@ export function BulletsGrid (): React.ReactNode {
           <DashPriceCard className='relative order-6 col-span-2 h-[100px] lg:col-span-1 lg:col-start-1 lg:row-start-3 lg:h-auto' />
 
           <Card className='order-7 col-span-1 flex h-[100px] flex-col justify-center p-[16px] lg:col-start-4 lg:row-start-2 lg:h-auto lg:p-[25px]'>
-            <div className='text-[12px] leading-tight font-medium tracking-[-0.5px] text-white lg:text-[22px] lg:tracking-[-0.84px]'>
+            <div className='text-xs leading-tight font-medium tracking-[-0.5px] text-white lg:text-2xl lg:tracking-[-0.84px]'>
               <p className='font-extrabold'>{t('passiveIncome.highlight')}</p>
               <p>{t('passiveIncome.text')}</p>
             </div>
@@ -118,7 +118,7 @@ export function BulletsGrid (): React.ReactNode {
                 className='h-[50px] w-auto lg:h-[90px]'
               />
             </div>
-            <div className='relative text-[12px] leading-tight font-medium tracking-[-0.5px] text-white lg:text-[28px] lg:tracking-[-0.84px]'>
+            <div className='relative text-xs leading-tight font-medium tracking-[-0.5px] text-white lg:text-3xl lg:tracking-[-0.84px]'>
               <p className='font-extrabold'>{t('selfFinancing.highlight')}</p>
               <p>{t('selfFinancing.line1')}</p>
               <p>{t('selfFinancing.line2')}</p>
@@ -139,7 +139,7 @@ export function BulletsGrid (): React.ReactNode {
                 className='scale-[3] -rotate-90 lg:scale-[5]'
               />
             </div>
-            <div className='relative text-[12px] leading-tight font-medium tracking-[-0.5px] text-white lg:text-[28px] lg:tracking-[-0.84px]'>
+            <div className='relative text-xs leading-tight font-medium tracking-[-0.5px] text-white lg:text-3xl lg:tracking-[-0.84px]'>
               <p className='font-extrabold'>{t('instantSecure.line1')}</p>
               <p className='font-extrabold'>{t('instantSecure.line2')}</p>
               <p>{t('instantSecure.text')}</p>
@@ -169,7 +169,7 @@ export function BulletsGrid (): React.ReactNode {
                 />
               </div>
             </div>
-            <div className='text-[12px] leading-tight font-medium tracking-[-0.5px] text-white lg:text-[28px] lg:tracking-[-0.84px]'>
+            <div className='text-xs leading-tight font-medium tracking-[-0.5px] text-white lg:text-3xl lg:tracking-[-0.84px]'>
               <p>
                 <span className='font-extrabold'>
                   {t('activeCommunity.highlight')}
@@ -180,7 +180,7 @@ export function BulletsGrid (): React.ReactNode {
           </Card>
 
           <Card className='order-11 col-span-1 flex h-[100px] flex-col justify-end p-[16px] lg:col-start-3 lg:row-start-4 lg:h-auto lg:p-[35px]'>
-            <div className='text-[12px] leading-tight font-medium tracking-[-0.5px] text-white lg:text-[28px] lg:tracking-[-0.84px]'>
+            <div className='text-xs leading-tight font-medium tracking-[-0.5px] text-white lg:text-3xl lg:tracking-[-0.84px]'>
               <p className='font-extrabold'>
                 {t('uniqueOpportunities.highlight')}
               </p>
@@ -189,7 +189,7 @@ export function BulletsGrid (): React.ReactNode {
           </Card>
 
           <Card className='order-12 col-span-2 flex h-[100px] flex-col justify-end p-[16px] lg:col-span-1 lg:col-start-4 lg:row-start-4 lg:h-auto lg:p-[35px]'>
-            <div className='text-[12px] leading-tight font-medium tracking-[-0.5px] text-white lg:text-[28px] lg:tracking-[-0.84px]'>
+            <div className='text-xs leading-tight font-medium tracking-[-0.5px] text-white lg:text-3xl lg:tracking-[-0.84px]'>
               <p className='font-extrabold'>{t('restrictedIssue.line1')}</p>
               <p className='font-extrabold'>{t('restrictedIssue.line2')}</p>
               <p>{t('restrictedIssue.value')}</p>

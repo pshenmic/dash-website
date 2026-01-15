@@ -18,10 +18,10 @@ export function ForDevelopers (): React.ReactNode {
       <div className='mx-auto max-w-7xl px-4 pb-8 lg:px-6 lg:pb-12'>
         <div className='mb-8 flex flex-col items-start justify-between gap-4 lg:mb-[20px] lg:flex-row lg:items-center'>
           <div className='flex flex-col gap-[5px]'>
-            <span className='text-[18px] font-extrabold text-primary-blue'>
+            <span className='text-lg font-extrabold text-primary-blue'>
               {t('label')}
             </span>
-            <h2 className='max-w-[320px] text-[32px] leading-[34px] font-extrabold tracking-[-0.03em] text-primary-dark lg:max-w-none dark:text-white'>
+            <h2 className='max-w-[320px] text-4xl leading-[34px] font-extrabold tracking-[-0.03em] text-primary-dark lg:max-w-none dark:text-white'>
               {t('title')}{' '}
               <span className='relative inline-block'>
                 {t('titleHighlight')}
@@ -96,10 +96,10 @@ function DeveloperCard ({
           className='h-[18px] w-auto lg:h-[24px]'
         />
         <div className='mt-auto flex flex-col gap-2 lg:gap-3'>
-          <span className='w-fit rounded-full border border-white/50 px-3 py-1.5 text-[10px] font-medium text-white lg:px-[35px] lg:py-[10px] lg:text-[12px]'>
+          <span className='w-fit rounded-full border border-white/50 px-3 py-1.5 text-xs font-medium text-white lg:px-[35px] lg:py-[10px] lg:text-xs'>
             {chip}
           </span>
-          <p className='text-[20px] leading-[22px] font-extrabold tracking-[-0.03em] text-white lg:text-[38px] lg:leading-[40px]'>
+          <p className='text-xl leading-[22px] font-extrabold tracking-[-0.03em] text-white lg:text-4xl lg:leading-[40px]'>
             {title}
           </p>
         </div>
@@ -139,7 +139,7 @@ function CodeCard ({ code }: { code: string }): React.ReactNode {
         </button>
       </div>
       <div className='flex-1 overflow-x-auto bg-white/10 px-5 py-3 lg:px-[30px] lg:py-4'>
-        <pre className='font-mono text-[10px] leading-[1.6] text-white lg:text-[14px]'>
+        <pre className='font-mono text-xs leading-[1.6] text-white lg:text-sm'>
           <code dangerouslySetInnerHTML={{ __html: highlight(code) }} />
         </pre>
       </div>

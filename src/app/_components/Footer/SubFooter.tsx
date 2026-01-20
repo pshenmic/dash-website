@@ -8,7 +8,7 @@ export function SubFooter (): React.ReactNode {
       <span className='text-sm font-medium text-primary-white/50'>
         {t('copyright')}
       </span>
-      <div className='flex flex-wrap items-center justify-center gap-x-[15px] gap-y-1 text-sm font-medium text-primary-white/50'>
+      <div className='flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm font-medium text-primary-white/50'>
         <a
           href='#'
           className='transition-colors hover:text-primary-white/70 focus:outline-none focus-visible:underline'

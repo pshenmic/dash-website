@@ -44,7 +44,7 @@ export function LanguageSelector (): React.ReactNode {
     <div className='relative' ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className='flex items-center gap-2 rounded-[12px] bg-primary-blue/15 px-3 py-2 backdrop-blur-sm transition-colors hover:bg-primary-blue/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50'
+        className='flex items-center gap-2 rounded-xl bg-primary-blue/15 px-3 py-2 backdrop-blur-sm transition-colors hover:bg-primary-blue/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50'
         aria-expanded={isOpen}
         aria-haspopup='listbox'
       >
@@ -64,7 +64,7 @@ export function LanguageSelector (): React.ReactNode {
 
       {isOpen && (
         <div
-          className='absolute top-full left-0 z-50 mt-2 min-w-full overflow-hidden rounded-[12px] bg-primary-white shadow-lg'
+          className='absolute top-full left-0 z-50 mt-2 min-w-full overflow-hidden rounded-xl bg-primary-white shadow-lg'
           role='listbox'
         >
           {LANGUAGES.map((lang) => {

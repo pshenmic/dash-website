@@ -12,7 +12,7 @@ export function Card ({
   return (
     <div
       className={cn(
-        'overflow-hidden rounded-[25px] lg:rounded-[35px]',
+        'overflow-hidden rounded-3xl',
         variant === 'dark' &&
           'bg-primary-dark dark:border dark:border-white/15 dark:bg-secondary-space-cadet',
         variant === 'blue' && 'bg-primary-blue',

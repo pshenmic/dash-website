@@ -51,7 +51,7 @@ export function Header (): React.ReactNode {
         style={{ viewTransitionName: 'header' }}
         className={`fixed top-0 right-0 left-0 z-50 p-4 transition-transform duration-300 lg:p-6 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
       >
-        <div className='mx-auto flex max-w-7xl items-center justify-between rounded-[25px] bg-primary-white p-[15px]'>
+        <div className='mx-auto flex max-w-7xl items-center justify-between rounded-3xl bg-primary-white p-4'>
           <div className='flex w-full items-center justify-between lg:hidden'>
             <Image
               src='/images/logo.svg'
@@ -70,7 +70,7 @@ export function Header (): React.ReactNode {
             </button>
           </div>
 
-          <div className='hidden shrink-0 items-center gap-[15px] pl-[13px] lg:flex'>
+          <div className='hidden shrink-0 items-center gap-4 pl-3 lg:flex'>
             <Image
               src='/images/logo.svg'
               alt='Dash'
@@ -122,13 +122,13 @@ export function Header (): React.ReactNode {
             >
               {mounted && theme === 'dark'
                 ? (
-                  <Moon className='h-[18px] w-[18px] text-primary-dark' />
+                  <Moon className='size-5 text-primary-dark' />
                   )
                 : (
-                  <Sun className='h-[18px] w-[18px] text-primary-dark' />
+                  <Sun className='size-5 text-primary-dark' />
                   )}
             </button>
-            <button className='h-[46px] min-w-[120px] shrink-0 rounded-[12px] bg-primary-turquoise px-5 text-sm font-semibold whitespace-nowrap text-primary-dark transition-colors hover:bg-primary-turquoise/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise focus-visible:ring-offset-2'>
+            <button className='h-12 min-w-30 shrink-0 rounded-xl bg-primary-turquoise px-5 text-sm font-semibold whitespace-nowrap text-primary-dark transition-colors hover:bg-primary-turquoise/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise focus-visible:ring-offset-2'>
               {t('buyDash')}
             </button>
           </div>

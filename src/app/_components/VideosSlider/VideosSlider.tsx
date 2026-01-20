@@ -37,18 +37,18 @@ export function VideosSlider (): React.ReactNode {
           <button
             onClick={() => emblaApi?.scrollPrev()}
             disabled={!canScrollPrev}
-            className='flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary-blue/15 transition-all hover:bg-primary-blue/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue disabled:opacity-40 dark:bg-primary-white/15 dark:hover:bg-primary-white/25 dark:focus-visible:ring-primary-white'
+            className='flex size-11 items-center justify-center rounded-full bg-primary-blue/15 transition-all hover:bg-primary-blue/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue disabled:opacity-40 dark:bg-primary-white/15 dark:hover:bg-primary-white/25 dark:focus-visible:ring-primary-white'
             aria-label='Previous slide'
           >
-            <ArrowLeft className='h-5 w-5 text-primary-blue dark:text-primary-white' />
+            <ArrowLeft className='size-5 text-primary-blue dark:text-primary-white' />
           </button>
           <button
             onClick={() => emblaApi?.scrollNext()}
             disabled={!canScrollNext}
-            className='flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary-blue/15 transition-all hover:bg-primary-blue/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue disabled:opacity-40 dark:bg-primary-white/15 dark:hover:bg-primary-white/25 dark:focus-visible:ring-primary-white'
+            className='flex size-11 items-center justify-center rounded-full bg-primary-blue/15 transition-all hover:bg-primary-blue/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue disabled:opacity-40 dark:bg-primary-white/15 dark:hover:bg-primary-white/25 dark:focus-visible:ring-primary-white'
             aria-label='Next slide'
           >
-            <ArrowRight className='h-5 w-5 text-primary-blue dark:text-primary-white' />
+            <ArrowRight className='size-5 text-primary-blue dark:text-primary-white' />
           </button>
         </div>
 
@@ -58,7 +58,7 @@ export function VideosSlider (): React.ReactNode {
           role='region'
           aria-label='Video carousel'
         >
-          <div className='flex gap-4 pb-2 lg:gap-[39px]'>
+          <div className='flex gap-4 pb-2 lg:gap-10'>
             {videos.map((_video) => (
               <div
                 key={_video.id}

@@ -8,7 +8,7 @@ export function GetStartedHero (): React.ReactNode {
   const t = useTranslations('getStartedHero')
 
   return (
-    <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-12 bg-primary-blue dark:bg-primary-dark'>
+    <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark'>
       <Image
         src='/images/get-started/bg-get-started.webp'
         alt=''

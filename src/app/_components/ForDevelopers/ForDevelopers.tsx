@@ -14,7 +14,7 @@ await dashPlatform.signAndBroadcast(doc)`
 export function ForDevelopers (): React.ReactNode {
   const t = useTranslations('forDevelopers')
   return (
-    <div className='relative z-10 rounded-b-12 bg-primary-white pb-8 lg:pb-12 dark:bg-primary-dark'>
+    <div className='relative z-10 rounded-b-3xl bg-primary-white pb-8 lg:pb-12 dark:bg-primary-dark'>
       <div className='mx-auto max-w-7xl px-4 lg:px-6'>
         <div className='mb-8 flex flex-col items-start justify-between gap-4 lg:mb-5 lg:flex-row lg:items-center'>
           <div className='flex flex-col gap-1'>

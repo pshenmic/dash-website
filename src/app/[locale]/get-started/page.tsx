@@ -22,7 +22,7 @@ export default async function GetStartedPage ({
       <GetStartedHero />
 
       {/* Negative margin creates overlap with hero section */}
-      <section className='relative z-20 -mt-[60px] pb-10 lg:-mt-[108px] lg:pb-16'>
+      <section className='relative z-20 -mt-16 pb-10 lg:-mt-28 lg:pb-16'>
         <GetStartedActions />
       </section>
 

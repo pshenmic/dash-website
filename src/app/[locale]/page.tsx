@@ -47,31 +47,31 @@ export default async function HomePage ({
       </section>
 
       {/* Negative margin creates overlap with ForDevelopers section */}
-      <section className='relative z-0 -mt-[60px] lg:-mt-[108px]'>
+      <section className='relative z-0 -mt-16 lg:-mt-28'>
         <FirstSteps />
       </section>
 
-      <section className='bg-primary-dark py-[60px] lg:py-[100px]'>
+      <section className='bg-primary-dark py-16 lg:py-24'>
         <Reviews />
       </section>
 
-      <section className='bg-primary-dark pb-[60px] lg:pb-[100px]'>
+      <section className='bg-primary-dark pb-16 lg:pb-24'>
         <PlatformBlocks />
       </section>
 
-      <section className='bg-primary-dark py-[60px] lg:py-[100px]'>
+      <section className='bg-primary-dark py-16 lg:py-24'>
         <LatestNews />
       </section>
 
-      <section className='overflow-x-clip bg-primary-dark py-[60px] lg:py-[100px]'>
+      <section className='overflow-x-clip bg-primary-dark py-16 lg:py-24'>
         <HowNodesWork />
       </section>
 
-      <section className='relative z-10 bg-primary-dark pb-[60px] lg:pb-[100px]'>
+      <section className='relative z-10 bg-primary-dark pb-16 lg:pb-24'>
         <FAQ />
       </section>
 
-      <section className='bg-primary-dark pb-[60px] lg:pb-[100px]'>
+      <section className='bg-primary-dark pb-16 lg:pb-24'>
         <BugBounty />
       </section>
     </main>

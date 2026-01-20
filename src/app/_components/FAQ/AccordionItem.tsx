@@ -18,25 +18,25 @@ export function AccordionItem ({
 
   return (
     <div
-      className={`overflow-hidden rounded-[25px] bg-primary-blue/15 transition-all duration-300 lg:rounded-[35px] ${
+      className={`overflow-hidden rounded-3xl bg-primary-blue/15 transition-all duration-300 lg:rounded-4xl ${
         isOpen ? 'border border-primary-blue' : ''
       }`}
     >
       <button
         type='button'
         onClick={() => setIsOpen(!isOpen)}
-        className='flex w-full items-center justify-between px-[20px] py-[18px] lg:px-[36px] lg:py-[24px]'
+        className='flex w-full items-center justify-between px-5 py-5 lg:px-9 lg:py-6'
       >
-        <span className='text-left text-[20px] font-medium text-white lg:text-[32px]'>
+        <span className='text-left text-xl font-medium text-white lg:text-3xl'>
           {question}
         </span>
         <div
-          className={`flex h-[35px] w-[35px] shrink-0 items-center justify-center rounded-full transition-all duration-300 lg:h-[45px] lg:w-[45px] ${
+          className={`flex size-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 lg:size-11 ${
             isOpen ? 'border border-primary-blue' : 'bg-primary-blue'
           }`}
         >
           <ChevronDownIcon
-            className={`h-[12px] w-[12px] text-white transition-transform duration-300 lg:h-[15px] lg:w-[15px] ${
+            className={`size-3 text-white transition-transform duration-300 lg:size-4 ${
               isOpen ? 'rotate-180' : ''
             }`}
           />
@@ -49,7 +49,7 @@ export function AccordionItem ({
         }`}
       >
         <div className='overflow-hidden'>
-          <p className='px-[20px] pb-[20px] text-[14px] leading-[1.6] font-medium text-white lg:px-[36px] lg:pb-[24px] lg:text-[18px]'>
+          <p className='px-5 pb-5 text-sm leading-relaxed font-medium text-white lg:px-9 lg:pb-6 lg:text-lg'>
             {answer}
           </p>
         </div>

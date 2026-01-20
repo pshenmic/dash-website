@@ -24,27 +24,27 @@ export function NewsCard ({
 
   return (
     <div
-      className={`relative h-[400px] w-full overflow-hidden rounded-[30px] lg:h-[505px] lg:w-[400px] lg:rounded-[45px] ${
+      className={`relative h-100 w-full overflow-hidden rounded-4xl lg:h-128 lg:w-100 lg:rounded-5xl ${
         isVideo ? 'bg-primary-blue' : 'bg-white'
       }`}
     >
       {/* Dash Logo */}
-      <div className='absolute top-[25px] left-[25px] z-10 lg:top-[35px] lg:left-[30px]'>
+      <div className='absolute top-6 left-6 z-10 lg:top-9 lg:left-8'>
         <Image
           src='/images/home/developers/logo-dash-small.svg'
           alt='Dash'
           width={37}
           height={30}
-          className='h-[25px] w-auto lg:h-[30px]'
+          className='h-6 w-auto lg:h-8'
         />
       </div>
 
       {/* Tags */}
-      <div className='absolute top-[25px] right-[25px] z-10 flex gap-[10px] lg:top-[32px] lg:right-[30px]'>
+      <div className='absolute top-6 right-6 z-10 flex gap-2.5 lg:top-8 lg:right-8'>
         {tags.map((tag, index) => (
           <span
             key={index}
-            className={`rounded-[35px] px-[25px] py-[10px] text-[11px] font-medium lg:px-[35px] lg:text-[12px] ${
+            className={`rounded-full px-6 py-2.5 text-xs font-medium lg:px-9 lg:text-xs ${
               tag.variant === 'filled'
                 ? 'bg-primary-blue text-white'
                 : isVideo
@@ -58,7 +58,7 @@ export function NewsCard ({
       </div>
 
       {/* Image Preview */}
-      <div className='absolute top-[80px] left-[20px] right-[20px] h-[130px] overflow-hidden rounded-[15px] lg:top-[104px] lg:left-[30px] lg:right-[30px] lg:h-[165px]'>
+      <div className='absolute top-20 left-5 right-5 h-32 overflow-hidden rounded-2xl lg:top-26 lg:left-8 lg:right-8 lg:h-40'>
         <Image
           src={image}
           alt=''
@@ -72,17 +72,17 @@ export function NewsCard ({
               alt='Play'
               width={38}
               height={41}
-              className='h-[32px] w-auto lg:h-[41px]'
+              className='h-8 w-auto lg:h-10'
             />
           </div>
         )}
       </div>
 
       {/* Content */}
-      <div className='absolute bottom-0 left-0 right-0 p-[20px] lg:p-[30px]'>
+      <div className='absolute bottom-0 left-0 right-0 p-5 lg:p-8'>
         {title && (
           <h3
-            className={`mb-[10px] text-[28px] leading-[1.05] font-extrabold tracking-[-0.03em] lg:mb-[15px] lg:text-[38px] lg:leading-[40px] ${
+            className={`mb-2.5 text-3xl leading-tight font-extrabold tracking-tight lg:mb-4 lg:text-4xl lg:leading-10 ${
               isVideo ? 'text-white' : 'text-primary-dark'
             }`}
           >
@@ -90,7 +90,7 @@ export function NewsCard ({
           </h3>
         )}
         <p
-          className={`text-[14px] leading-[1.5] font-medium lg:text-[18px] ${
+          className={`text-sm leading-normal font-medium lg:text-lg ${
             isVideo ? 'text-white' : 'text-primary-dark'
           }`}
         >

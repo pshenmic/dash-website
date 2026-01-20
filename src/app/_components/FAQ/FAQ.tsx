@@ -14,19 +14,19 @@ export function FAQ (): React.ReactNode {
   ]
 
   return (
-    <div className='mx-auto max-w-[1240px] px-4 lg:px-0'>
+    <div className='mx-auto max-w-7xl px-4 lg:px-0'>
       {/* Header */}
-      <div className='mb-[30px] flex flex-col gap-[5px] lg:mb-[35px]'>
-        <p className='text-[16px] font-extrabold text-primary-blue lg:text-[18px]'>
+      <div className='mb-8 flex flex-col gap-1 lg:mb-9'>
+        <p className='text-base font-extrabold text-primary-blue lg:text-lg'>
           {t('chip')}
         </p>
-        <h2 className='text-[28px] leading-[1.1] font-extrabold text-white lg:text-[32px] lg:leading-[34px]'>
+        <h2 className='text-3xl leading-tight font-extrabold text-white lg:text-3xl lg:leading-9'>
           {t('title')}
         </h2>
       </div>
 
       {/* Accordion List */}
-      <div className='flex flex-col gap-[20px] lg:gap-[35px]'>
+      <div className='flex flex-col gap-5 lg:gap-9'>
         {questions.map(({ key, defaultOpen }) => (
           <AccordionItem
             key={key}

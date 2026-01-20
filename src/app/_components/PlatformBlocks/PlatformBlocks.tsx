@@ -8,14 +8,14 @@ export function PlatformBlocks (): React.ReactNode {
 
   return (
     <div className='mx-auto max-w-7xl px-4 lg:px-6'>
-      <div className='flex flex-col gap-[30px] lg:gap-[50px]'>
+      <div className='flex flex-col gap-8 lg:gap-12'>
         {/* Block 1: Providers and Tools - image LEFT, text RIGHT */}
         <Card
           variant='blue'
-          className='relative flex h-[280px] flex-col justify-center px-5 py-6 lg:h-[440px] lg:px-0 lg:py-0'
+          className='relative flex h-72 flex-col justify-center px-5 py-6 lg:h-112 lg:px-0 lg:py-0'
         >
           {/* 3D image - left side on desktop, top on mobile */}
-          <div className='pointer-events-none absolute -left-[100%] -top-[200%] h-[600%] w-[300%] lg:-left-[60%] lg:-top-[100%] lg:h-[400%] lg:w-[200%]'>
+          <div className='pointer-events-none absolute -left-full -top-[200%] h-[600%] w-[300%] lg:-left-[60%] lg:-top-full lg:h-[400%] lg:w-[200%]'>
             <Image
               src='/images/home/platform/providers-bg.png'
               alt=''
@@ -26,12 +26,12 @@ export function PlatformBlocks (): React.ReactNode {
           </div>
 
           {/* Content - right side on desktop */}
-          <div className='relative z-10 ml-auto flex max-w-[280px] flex-col gap-[25px] lg:mr-[100px] lg:max-w-[400px] lg:gap-[35px]'>
-            <div className='flex flex-col gap-[10px] lg:gap-[15px]'>
-              <h3 className='text-[24px] leading-[1.05] font-extrabold tracking-[-0.03em] text-white lg:text-[38px] lg:leading-[40px]'>
+          <div className='relative z-10 ml-auto flex max-w-72 flex-col gap-6 lg:mr-24 lg:max-w-md lg:gap-9'>
+            <div className='flex flex-col gap-2.5 lg:gap-4'>
+              <h3 className='text-2xl leading-tight font-extrabold tracking-tight text-white lg:text-4xl lg:leading-10'>
                 {t('providers.title')}
               </h3>
-              <p className='text-[14px] leading-[1.4] font-medium text-white lg:text-[18px]'>
+              <p className='text-sm leading-normal font-medium text-white lg:text-lg'>
                 {t('providers.description')}
               </p>
             </div>
@@ -44,21 +44,21 @@ export function PlatformBlocks (): React.ReactNode {
         {/* Block 2: Client Libraries - text LEFT, image RIGHT */}
         <Card
           variant='blue'
-          className='relative flex h-[280px] flex-col justify-center px-5 py-6 lg:h-[440px] lg:px-0 lg:py-0'
+          className='relative flex h-72 flex-col justify-center px-5 py-6 lg:h-112 lg:px-0 lg:py-0'
         >
           {/* Content - left side on desktop */}
-          <div className='relative z-10 flex max-w-[280px] flex-col gap-[25px] lg:ml-[100px] lg:max-w-[400px] lg:gap-[35px]'>
-            <div className='flex flex-col gap-[10px] lg:gap-[15px]'>
-              <h3 className='text-[24px] leading-[1.05] font-extrabold tracking-[-0.03em] text-white lg:text-[38px] lg:leading-[40px]'>
+          <div className='relative z-10 flex max-w-72 flex-col gap-6 lg:ml-24 lg:max-w-md lg:gap-9'>
+            <div className='flex flex-col gap-2.5 lg:gap-4'>
+              <h3 className='text-2xl leading-tight font-extrabold tracking-tight text-white lg:text-4xl lg:leading-10'>
                 {t('libraries.title')}
                 <br />
                 {t('libraries.titleLine2')}
               </h3>
-              <p className='text-[14px] leading-[1.4] font-medium text-white lg:text-[18px]'>
+              <p className='text-sm leading-normal font-medium text-white lg:text-lg'>
                 {t('libraries.description')}
               </p>
             </div>
-            <div className='flex gap-[15px]'>
+            <div className='flex gap-4'>
               <Button variant='primary' className='w-fit'>
                 {t('libraries.quickStart')}
               </Button>
@@ -69,7 +69,7 @@ export function PlatformBlocks (): React.ReactNode {
           </div>
 
           {/* 3D image - right side on desktop */}
-          <div className='pointer-events-none absolute -right-[100%] -top-[200%] h-[600%] w-[300%] lg:-right-[60%] lg:-top-[100%] lg:h-[400%] lg:w-[200%]'>
+          <div className='pointer-events-none absolute -right-full -top-[200%] h-[600%] w-[300%] lg:-right-[60%] lg:-top-full lg:h-[400%] lg:w-[200%]'>
             <Image
               src='/images/home/platform/libraries-bg.png'
               alt=''

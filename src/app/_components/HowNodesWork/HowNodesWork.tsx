@@ -8,22 +8,22 @@ export function HowNodesWork (): React.ReactNode {
   const t = useTranslations('howNodesWork')
 
   return (
-    <div className='mx-auto max-w-[1240px] px-4 lg:px-0'>
-      <div className='flex flex-col gap-[30px] lg:flex-row lg:items-stretch lg:justify-between lg:gap-[40px]'>
+    <div className='mx-auto max-w-7xl px-4 lg:px-0'>
+      <div className='flex flex-col gap-8 lg:flex-row lg:items-stretch lg:justify-between lg:gap-10'>
         {/* Left Side - Title and Globe (desktop only) */}
-        <div className='relative flex flex-1 flex-col gap-[20px] lg:gap-[30px]'>
+        <div className='relative flex flex-1 flex-col gap-5 lg:gap-8'>
           {/* Text */}
-          <div className='relative z-10 flex flex-col gap-[5px]'>
-            <p className='text-[16px] font-extrabold text-primary-blue lg:text-[18px]'>
+          <div className='relative z-10 flex flex-col gap-1'>
+            <p className='text-base font-extrabold text-primary-blue lg:text-lg'>
               {t('chip')}
             </p>
-            <h2 className='text-[28px] leading-[1.1] font-extrabold text-white lg:text-[32px] lg:leading-[34px]'>
+            <h2 className='text-3xl leading-tight font-extrabold text-white lg:text-3xl lg:leading-9'>
               {t('title')}
             </h2>
           </div>
 
           {/* Globe Image - desktop version, absolutely positioned */}
-          <div className='hidden lg:absolute lg:inset-0 lg:top-[80px] lg:flex lg:h-auto lg:items-center lg:justify-center'>
+          <div className='hidden lg:absolute lg:inset-0 lg:top-20 lg:flex lg:h-auto lg:items-center lg:justify-center'>
             <Image
               src='/images/home/nodes/globe-network.png'
               alt='Network Globe'
@@ -35,9 +35,9 @@ export function HowNodesWork (): React.ReactNode {
         </div>
 
         {/* Right Side - Cards */}
-        <div className='relative flex flex-col gap-[20px] lg:w-[770px] lg:gap-[30px]'>
+        <div className='relative flex flex-col gap-5 lg:w-3xl lg:gap-8'>
           {/* Globe Image - mobile version, background for the entire cards area */}
-          <div className='pointer-events-none absolute -top-[120px] -bottom-[120px] left-0 right-0 z-0 flex items-center justify-center lg:hidden'>
+          <div className='pointer-events-none absolute -top-32 -bottom-32 left-0 right-0 z-0 flex items-center justify-center lg:hidden'>
             <Image
               src='/images/home/nodes/globe-network.png'
               alt='Network Globe'

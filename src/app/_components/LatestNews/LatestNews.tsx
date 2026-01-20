@@ -8,24 +8,24 @@ export function LatestNews (): React.ReactNode {
 
   return (
     <div className='mx-auto max-w-7xl px-4 lg:px-6'>
-      <div className='flex flex-col gap-[30px] lg:gap-[50px]'>
+      <div className='flex flex-col gap-8 lg:gap-12'>
         {/* Header */}
-        <div className='flex flex-col items-start justify-between gap-[20px] lg:flex-row lg:items-center'>
-          <div className='flex flex-col gap-[5px]'>
-            <p className='text-[14px] font-extrabold text-primary-blue lg:text-[18px]'>
+        <div className='flex flex-col items-start justify-between gap-5 lg:flex-row lg:items-center'>
+          <div className='flex flex-col gap-1'>
+            <p className='text-sm font-extrabold text-primary-blue lg:text-lg'>
               {t('chip')}
             </p>
-            <h2 className='text-[24px] leading-[1.1] font-extrabold text-white lg:text-[32px] lg:leading-[34px]'>
+            <h2 className='text-2xl leading-tight font-extrabold text-white lg:text-3xl lg:leading-9'>
               {t('title')}
             </h2>
           </div>
-          <Button variant='primary' className='h-[55px] w-fit lg:h-[65px]'>
+          <Button variant='primary' className='h-14 w-fit lg:h-16'>
             {t('joinDiscord')}
           </Button>
         </div>
 
         {/* News Cards Row */}
-        <div className='flex flex-col gap-[15px] lg:flex-row lg:justify-between'>
+        <div className='flex flex-col gap-4 lg:flex-row lg:justify-between'>
           {/* Video Card */}
           <NewsCard
             variant='video'

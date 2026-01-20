@@ -21,23 +21,23 @@ export function FooterSocials (): React.ReactNode {
   const t = useTranslations('footer.socials')
 
   return (
-    <div className='flex flex-col gap-[15px]'>
-      <div className='flex flex-col gap-[5px]'>
-        <h3 className='text-[24px] font-extrabold leading-[34px] text-white lg:text-[32px]'>
+    <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-1'>
+        <h3 className='text-2xl font-extrabold leading-9 text-white lg:text-3xl'>
           {t('title')}
         </h3>
-        <p className='text-[13px] font-medium text-white'>
+        <p className='text-sm font-medium text-white'>
           {t('subtitle')}
         </p>
       </div>
-      <div className='flex flex-wrap gap-[10px] lg:gap-[15px]'>
+      <div className='flex flex-wrap gap-2.5 lg:gap-4'>
         {socialLinks.map((social) => (
           <a
             key={social.name}
             href={social.href}
             target='_blank'
             rel='noopener noreferrer'
-            className='flex size-[40px] items-center justify-center rounded-[11px] bg-white/10 transition-colors hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50'
+            className='flex size-10 items-center justify-center rounded-xl bg-white/10 transition-colors hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50'
             aria-label={social.name}
           >
             <Image
@@ -45,7 +45,7 @@ export function FooterSocials (): React.ReactNode {
               alt=''
               width={25}
               height={25}
-              className='h-auto max-h-[23px] w-[25px]'
+              className='h-auto max-h-6 w-6'
             />
           </a>
         ))}

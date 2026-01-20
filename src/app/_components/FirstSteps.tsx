@@ -16,20 +16,20 @@ function FirstStepCard ({
   buttonText
 }: CardProps): React.ReactNode {
   return (
-    <div className='relative flex h-[400px] w-full flex-col overflow-hidden rounded-[24px] bg-white lg:h-[619px] lg:w-[400px] lg:rounded-[36px]'>
+    <div className='relative flex h-100 w-full flex-col overflow-hidden rounded-3xl bg-white lg:h-155 lg:w-100 lg:rounded-4xl'>
       {/* Dash Logo */}
-      <div className='absolute top-[20px] left-[20px] z-10 lg:top-[35px] lg:left-[30px]'>
+      <div className='absolute top-5 left-5 z-10 lg:top-9 lg:left-8'>
         <Image
           src='/images/home/developers/logo-dash-small.svg'
           alt='Dash'
           width={37}
           height={30}
-          className='h-[20px] w-auto lg:h-[30px]'
+          className='h-5 w-auto lg:h-8'
         />
       </div>
 
       {/* 3D Image - fills upper portion */}
-      <div className='relative h-[180px] w-full lg:h-[320px]'>
+      <div className='relative h-44 w-full lg:h-80'>
         <Image
           src={image}
           alt=''
@@ -39,13 +39,13 @@ function FirstStepCard ({
       </div>
 
       {/* Card Content - bottom section */}
-      <div className='flex flex-1 flex-col justify-end p-[20px] lg:p-[30px]'>
-        <div className='flex flex-col gap-[20px] lg:gap-[30px]'>
-          <div className='flex flex-col gap-[10px] lg:gap-[15px]'>
-            <h3 className='text-[24px] leading-[1.1] font-extrabold tracking-[-0.03em] text-primary-dark lg:text-[38px] lg:leading-[40px]'>
+      <div className='flex flex-1 flex-col justify-end p-5 lg:p-8'>
+        <div className='flex flex-col gap-5 lg:gap-8'>
+          <div className='flex flex-col gap-2.5 lg:gap-4'>
+            <h3 className='text-2xl leading-tight font-extrabold tracking-tight text-primary-dark lg:text-4xl lg:leading-10'>
               {title}
             </h3>
-            <p className='text-[12px] font-medium text-primary-dark lg:text-[13px]'>
+            <p className='text-xs font-medium text-primary-dark lg:text-sm'>
               {description}
             </p>
           </div>
@@ -93,19 +93,19 @@ export function FirstSteps (): React.ReactNode {
 
   return (
     <div className='bg-primary-dark'>
-      <div className='mx-auto max-w-7xl px-4 pt-[120px] pb-[60px] lg:px-6 lg:pt-[208px] lg:pb-[100px]'>
+      <div className='mx-auto max-w-7xl px-4 pt-32 pb-16 lg:px-6 lg:pt-52 lg:pb-24'>
         {/* First Steps Section */}
-        <div className='mb-[40px] flex flex-col gap-[5px] lg:mb-[60px]'>
-          <p className='text-[14px] font-extrabold text-primary-blue lg:text-[18px]'>
+        <div className='mb-10 flex flex-col gap-1 lg:mb-16'>
+          <p className='text-sm font-extrabold text-primary-blue lg:text-lg'>
             {t('chip')}
           </p>
-          <h2 className='text-[24px] leading-[1.1] font-extrabold text-white lg:text-[32px] lg:leading-[34px]'>
+          <h2 className='text-2xl leading-tight font-extrabold text-white lg:text-3xl lg:leading-9'>
             {t('title')}
           </h2>
         </div>
 
         {/* Cards Grid */}
-        <div className='flex flex-col gap-[15px] lg:flex-row lg:justify-between'>
+        <div className='flex flex-col gap-4 lg:flex-row lg:justify-between'>
           {cards.map((card, index) => (
             <FirstStepCard
               key={index}
@@ -118,22 +118,22 @@ export function FirstSteps (): React.ReactNode {
         </div>
 
         {/* Wallet Integrations Section */}
-        <div className='mt-[60px] lg:mt-[100px]'>
-          <div className='mb-[40px] flex flex-col items-center gap-[5px] text-center lg:mb-[50px]'>
-            <p className='text-[14px] font-extrabold text-primary-blue lg:text-[18px]'>
+        <div className='mt-16 lg:mt-24'>
+          <div className='mb-10 flex flex-col items-center gap-1 text-center lg:mb-12'>
+            <p className='text-sm font-extrabold text-primary-blue lg:text-lg'>
               {tWallet('chip')}
             </p>
-            <h2 className='text-[24px] leading-[1.1] font-extrabold text-white lg:text-[32px] lg:leading-[34px]'>
+            <h2 className='text-2xl leading-tight font-extrabold text-white lg:text-3xl lg:leading-9'>
               {tWallet('title')}
             </h2>
           </div>
 
           {/* Partners Logos */}
-          <div className='flex flex-wrap items-center justify-center gap-x-[20px] gap-y-[15px] opacity-50 sm:gap-x-[30px] lg:gap-x-[50px]'>
+          <div className='flex flex-wrap items-center justify-center gap-x-5 gap-y-4 opacity-50 sm:gap-x-8 lg:gap-x-12'>
             {partners.map((partner) => (
               <div
                 key={partner.alt}
-                className='relative h-[16px] sm:h-[20px] md:h-[30px] lg:h-[40px]'
+                className='relative h-4 sm:h-5 md:h-8 lg:h-10'
                 style={{ aspectRatio: partner.width / partner.height }}
               >
                 <Image

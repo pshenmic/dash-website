@@ -6,22 +6,22 @@ import { SubFooter } from './SubFooter'
 
 export function Footer (): React.ReactNode {
   return (
-    <footer className='relative z-10 -mt-[30px] lg:-mt-[50px]'>
+    <footer className='relative z-10 -mt-8 lg:-mt-12'>
       {/* Main Footer Card Section */}
-      <div className='rounded-t-[25px] bg-primary-white pt-[60px] dark:bg-primary-dark lg:rounded-t-[35px] lg:pt-[100px]'>
+      <div className='rounded-t-3xl bg-primary-white pt-16 dark:bg-primary-dark lg:rounded-t-4xl lg:pt-24'>
         {/* Footer Card - Blue in light mode, Dark in dark mode */}
-        <div className='mx-auto max-w-[1240px] rounded-[35px] bg-primary-blue px-6 py-[60px] dark:bg-secondary-space-cadet lg:px-[54px] lg:py-[100px]'>
+        <div className='mx-auto max-w-7xl rounded-4xl bg-primary-blue px-6 py-16 dark:bg-secondary-space-cadet lg:px-14 lg:py-24'>
           {/* Top Section: Socials + Newsletter */}
-          <div className='flex flex-col gap-[40px] lg:flex-row lg:justify-between lg:gap-[60px]'>
+          <div className='flex flex-col gap-10 lg:flex-row lg:justify-between lg:gap-16'>
             <FooterSocials />
             <FooterNewsletter />
           </div>
 
           {/* Spacer */}
-          <div className='my-[50px] lg:my-[80px]' />
+          <div className='my-12 lg:my-20' />
 
           {/* Bottom Section: Brand + Links */}
-          <div className='flex flex-col gap-[40px] lg:flex-row lg:justify-between lg:gap-[100px]'>
+          <div className='flex flex-col gap-10 lg:flex-row lg:justify-between lg:gap-24'>
             <FooterBrand />
             <FooterLinks />
           </div>

@@ -21,16 +21,16 @@ export function Reviews (): React.ReactNode {
 
   return (
     <div className='mx-auto max-w-7xl px-4 lg:px-6'>
-      <div className='rounded-[25px] bg-white py-[50px] dark:bg-transparent lg:rounded-[35px] lg:py-[75px]'>
+      <div className='rounded-3xl bg-white py-12 dark:bg-transparent lg:rounded-4xl lg:py-20'>
         {/* Header */}
-        <div className='mb-[30px] flex flex-col items-center gap-[5px] text-center lg:mb-[50px]'>
-          <p className='text-[14px] font-extrabold text-primary-blue lg:text-[18px]'>
+        <div className='mb-8 flex flex-col items-center gap-1 text-center lg:mb-12'>
+          <p className='text-sm font-extrabold text-primary-blue lg:text-lg'>
             {t('chip')}
           </p>
-          <h2 className='text-[24px] leading-[1.1] font-extrabold text-primary-dark dark:text-white lg:text-[32px] lg:leading-[34px]'>
+          <h2 className='text-2xl leading-tight font-extrabold text-primary-dark dark:text-white lg:text-3xl lg:leading-9'>
             {t('title')}
           </h2>
-          <p className='text-[12px] font-medium text-primary-dark dark:text-white/70 lg:text-[13px]'>
+          <p className='text-xs font-medium text-primary-dark dark:text-white/70 lg:text-sm'>
             {t('subtitle')}{' '}
             <a
               href={TRUSTPILOT_URL}
@@ -51,11 +51,11 @@ export function Reviews (): React.ReactNode {
             role='region'
             aria-label='Reviews carousel'
           >
-            <div className='-ml-4 flex lg:-ml-[35px]'>
+            <div className='-ml-4 flex lg:-ml-9'>
               {reviews.map((review, index) => (
                 <div
                   key={index}
-                  className='min-w-0 flex-[0_0_85%] pl-4 sm:flex-[0_0_45%] lg:flex-[0_0_340px] lg:pl-[35px]'
+                  className='min-w-0 flex-[0_0_85%] pl-4 sm:flex-[0_0_45%] lg:flex-[0_0_340px] lg:pl-9'
                 >
                   <ReviewCard review={review} />
                 </div>

@@ -44,7 +44,7 @@ export function GetDash (): React.ReactNode {
                     >
                       <path
                         d='M1 14L14 1M14 1H1M14 1V14'
-                        stroke='#4C7EFF'
+                        stroke='var(--color-primary-blue)'
                         strokeWidth='2'
                         strokeLinecap='round'
                         strokeLinejoin='round'

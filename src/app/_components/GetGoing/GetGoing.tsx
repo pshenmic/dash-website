@@ -62,7 +62,7 @@ export function GetGoing (): React.ReactNode {
       <div className='mx-auto max-w-7xl px-4 lg:px-0'>
         <div className='flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-10'>
           {/* Left - Hero */}
-          <div className='flex flex-col gap-6 lg:w-[486px] lg:shrink-0 lg:gap-9'>
+          <div className='flex flex-col gap-6 lg:w-122 lg:shrink-0 lg:gap-9'>
             {/* Chip */}
             <div className='w-fit rounded-full border border-white px-6 py-3 lg:px-9 lg:py-4'>
               <span className='text-base font-medium text-white lg:text-lg'>
@@ -71,7 +71,7 @@ export function GetGoing (): React.ReactNode {
             </div>
 
             {/* Title */}
-            <h2 className='text-4xl font-extrabold tracking-tight text-white lg:text-5xl lg:leading-[50px]'>
+            <h2 className='text-4xl font-extrabold tracking-tight text-white lg:text-5xl lg:leading-12'>
               {t('title')}
             </h2>
 
@@ -101,7 +101,7 @@ export function GetGoing (): React.ReactNode {
                     >
                       <path
                         d='M1 14L14 1M14 1H1M14 1V14'
-                        stroke='#4C7EFF'
+                        stroke='var(--color-primary-blue)'
                         strokeWidth='2'
                         strokeLinecap='round'
                         strokeLinejoin='round'
@@ -134,7 +134,7 @@ export function GetGoing (): React.ReactNode {
             </div>
 
             {/* Navigation */}
-            <div className='flex items-center justify-between pr-4 lg:w-[604px] lg:pr-0'>
+            <div className='flex items-center justify-between pr-4 lg:w-152 lg:pr-0'>
               {/* Progress dots */}
               <div className='flex gap-2'>
                 {spendCards.map((card, index) => (
@@ -172,12 +172,12 @@ export function GetGoing (): React.ReactNode {
         <div className='mt-12 flex flex-col gap-6 lg:mt-16 lg:gap-8'>
           {/* Header */}
           <div className='flex items-center justify-between'>
-            <h3 className='text-2xl font-extrabold leading-tight text-white sm:text-[32px] sm:leading-[34px]'>
+            <h3 className='text-2xl font-extrabold leading-tight text-white sm:text-3xl sm:leading-9'>
               {t('retailers.title')}
             </h3>
             <Button
               variant='secondary'
-              className='hidden h-14 rounded-[20px] px-9 text-lg font-semibold sm:flex sm:h-16'
+              className='hidden h-14 rounded-2xl px-9 text-lg font-semibold sm:flex sm:h-16'
             >
               {t('retailers.seeAll')}
             </Button>
@@ -198,16 +198,16 @@ export function GetGoing (): React.ReactNode {
           {/* Mobile See All Button */}
           <Button
             variant='secondary'
-            className='h-12 w-full rounded-[20px] text-base font-semibold sm:hidden'
+            className='h-12 w-full rounded-2xl text-base font-semibold sm:hidden'
           >
             {t('retailers.seeAll')}
           </Button>
         </div>
 
         {/* Platform CTA Block */}
-        <div className='relative mt-12 overflow-hidden rounded-[25px] bg-white/15 sm:rounded-[35px] lg:mt-16'>
+        <div className='relative mt-12 overflow-hidden rounded-3xl bg-white/15 sm:rounded-4xl lg:mt-16'>
           {/* 3D Image */}
-          <div className='absolute -right-20 top-0 h-full w-[400px] rotate-180 sm:w-[500px] lg:right-0 lg:top-[-312px] lg:h-[1280px] lg:w-[1330px]'>
+          <div className='absolute -right-20 top-0 h-full w-100 rotate-180 sm:w-125 lg:right-0 lg:-top-78 lg:h-320 lg:w-332'>
             <Image
               src='/images/get-started/get-going/platform-3d.png'
               alt=''
@@ -217,18 +217,18 @@ export function GetGoing (): React.ReactNode {
           </div>
 
           {/* Content */}
-          <div className='relative z-10 flex flex-col gap-6 px-6 py-8 sm:gap-8 sm:px-10 sm:py-12 lg:gap-9 lg:px-[100px] lg:py-12'>
+          <div className='relative z-10 flex flex-col gap-6 px-6 py-8 sm:gap-8 sm:px-10 sm:py-12 lg:gap-9 lg:px-25 lg:py-12'>
             <div className='flex flex-col gap-3 sm:gap-4'>
-              <h3 className='whitespace-nowrap text-2xl font-extrabold leading-10 tracking-tight text-white sm:text-[32px] lg:text-[38px]'>
+              <h3 className='whitespace-nowrap text-2xl font-extrabold leading-10 tracking-tight text-white sm:text-3xl lg:text-4xl'>
                 {t('platform.title')}
               </h3>
-              <p className='w-[280px] text-base font-medium text-white sm:w-[400px] sm:text-lg'>
+              <p className='w-70 text-base font-medium text-white sm:w-100 sm:text-lg'>
                 {t('platform.description')}
               </p>
             </div>
             <Button
               variant='secondary'
-              className='h-12 w-fit rounded-[20px] px-8 text-base font-semibold sm:h-16 sm:px-9 sm:text-lg'
+              className='h-12 w-fit rounded-2xl px-8 text-base font-semibold sm:h-16 sm:px-9 sm:text-lg'
             >
               {t('platform.learnMore')}
             </Button>

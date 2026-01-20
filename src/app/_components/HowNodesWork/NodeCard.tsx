@@ -13,7 +13,7 @@ export function NodeCard ({
 }: NodeCardProps): React.ReactNode {
   return (
     <div
-      className={`relative z-10 overflow-hidden rounded-3xl border border-white/55 bg-linear-to-b from-[#112645] to-primary-dark p-5 lg:h-76 lg:rounded-4xl lg:p-9 ${
+      className={`relative z-10 overflow-hidden rounded-3xl border border-white/55 bg-linear-to-b from-secondary-space-cadet to-primary-dark p-5 lg:h-76 lg:rounded-4xl lg:p-9 ${
         !isActive ? 'opacity-60' : ''
       }`}
     >

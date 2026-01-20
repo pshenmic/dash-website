@@ -406,5 +406,35 @@
   "buyDashOnline": {
     "title": "Places to Buy Dash Online",
     "seeAll": "See All"
+  },
+  "getGoing": {
+    "chip": "Dash Living",
+    "title": "Get Going!",
+    "description": "Grab a coffee, buy a plane ticket, or pay your phone bill. Dash is growing and is accepted by new businesses every day.",
+    "useYourDash": "Use Your Dash",
+    "learnMore": "Learn More",
+    "cards": {
+      "friends": {
+        "label": "How to spend?",
+        "title": "Pay Your\nFriends and Family"
+      },
+      "bills": {
+        "label": "How to spend?",
+        "title": "Airfare, Utility Bills,\nand Subscriptions"
+      },
+      "bills2": {
+        "label": "How to spend?",
+        "title": "Airfare, Utility Bills,\nand Subscriptions"
+      }
+    },
+    "retailers": {
+      "title": "Popular Retailers to Spend Dash",
+      "seeAll": "See All"
+    },
+    "platform": {
+      "title": "Connect, learn, create.",
+      "description": "Be a part of something bigger, get involved with meetups, learn from others, and take ownership in Dash's future.",
+      "learnMore": "Learn More"
+    }
   }
 }

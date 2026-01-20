@@ -14,14 +14,14 @@ await dashPlatform.signAndBroadcast(doc)`
 export function ForDevelopers (): React.ReactNode {
   const t = useTranslations('forDevelopers')
   return (
-    <div className='relative z-10 rounded-b-[50px] bg-primary-white pb-[60px] lg:pb-[108px] dark:bg-primary-dark'>
+    <div className='relative z-10 rounded-b-12 bg-primary-white pb-8 lg:pb-12 dark:bg-primary-dark'>
       <div className='mx-auto max-w-7xl px-4 lg:px-6'>
-        <div className='mb-8 flex flex-col items-start justify-between gap-4 lg:mb-[20px] lg:flex-row lg:items-center'>
-          <div className='flex flex-col gap-[5px]'>
+        <div className='mb-8 flex flex-col items-start justify-between gap-4 lg:mb-5 lg:flex-row lg:items-center'>
+          <div className='flex flex-col gap-1'>
             <span className='text-lg font-extrabold text-primary-blue'>
               {t('label')}
             </span>
-            <h2 className='max-w-[320px] text-4xl leading-[34px] font-extrabold tracking-[-0.03em] text-primary-dark lg:max-w-none dark:text-white'>
+            <h2 className='max-w-80 text-4xl leading-9 font-extrabold tracking-tight text-primary-dark lg:max-w-none dark:text-white'>
               {t('title')}{' '}
               <span className='relative inline-block'>
                 {t('titleHighlight')}
@@ -31,7 +31,7 @@ export function ForDevelopers (): React.ReactNode {
                   alt=''
                   width={113}
                   height={45}
-                  className='pointer-events-none absolute -bottom-[5px] left-1/2 h-[35px] w-[90px] -translate-x-1/2 lg:-bottom-[8px] lg:h-[45px] lg:w-[113px]'
+                  className='pointer-events-none absolute -bottom-1 left-1/2 h-9 w-23 -translate-x-1/2 lg:-bottom-2 lg:h-11 lg:w-28'
                 />
               </span>
             </h2>
@@ -41,8 +41,8 @@ export function ForDevelopers (): React.ReactNode {
           </Button>
         </div>
 
-        <div className='flex flex-col gap-[10px] lg:gap-[19px]'>
-          <div className='grid grid-cols-1 gap-[10px] md:grid-cols-2 md:gap-[19px] lg:grid-cols-3'>
+        <div className='flex flex-col gap-2.5 lg:gap-5'>
+          <div className='grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-5 lg:grid-cols-3'>
             <DeveloperCard
               title={t('cards.apiSdk.title')}
               chip={t('cards.apiSdk.chip')}
@@ -59,7 +59,7 @@ export function ForDevelopers (): React.ReactNode {
               image='/images/home/developers/card-smart-contracts.png'
             />
           </div>
-          <div className='grid grid-cols-1 gap-[10px] md:gap-[19px] lg:grid-cols-2'>
+          <div className='grid grid-cols-1 gap-2.5 md:gap-5 lg:grid-cols-2'>
             <DeveloperCard
               title={t('cards.testnet.title')}
               chip={t('cards.testnet.chip')}
@@ -85,27 +85,27 @@ function DeveloperCard ({
   image
 }: DeveloperCardProps): React.ReactNode {
   return (
-    <Card className='relative h-[158px] lg:h-[235px]'>
+    <Card className='relative h-40 lg:h-59'>
       {/* Content limited to left side, image fills right */}
-      <div className='relative z-10 flex h-full max-w-[55%] flex-col items-start px-5 pt-4 pb-4 lg:max-w-[60%] lg:p-[30px]'>
+      <div className='relative z-10 flex h-full max-w-[55%] flex-col items-start px-5 pt-4 pb-4 lg:max-w-[60%] lg:p-8'>
         <Image
           src='/images/home/developers/logo-dash-small.svg'
           alt=''
           width={30}
           height={24}
-          className='h-[18px] w-auto lg:h-[24px]'
+          className='h-5 w-auto lg:h-6'
         />
         <div className='mt-auto flex flex-col gap-2 lg:gap-3'>
-          <span className='w-fit rounded-full border border-white/50 px-3 py-1.5 text-xs font-medium text-white lg:px-[35px] lg:py-[10px] lg:text-xs'>
+          <span className='w-fit rounded-full border border-white/50 px-3 py-1.5 text-xs font-medium text-white lg:px-9 lg:py-2.5 lg:text-xs'>
             {chip}
           </span>
-          <p className='text-xl leading-[22px] font-extrabold tracking-[-0.03em] text-white lg:text-4xl lg:leading-[40px]'>
+          <p className='text-xl leading-6 font-extrabold tracking-tight text-white lg:text-4xl lg:leading-10'>
             {title}
           </p>
         </div>
       </div>
       {/* Image overflows card bounds by design */}
-      <div className='absolute top-1/2 right-[-40px] h-[217px] w-[225px] -translate-y-1/2 lg:right-auto lg:left-1/2 lg:h-[283px] lg:w-[294px]'>
+      <div className='absolute top-1/2 -right-10 h-54 w-56 -translate-y-1/2 lg:right-auto lg:left-1/2 lg:h-71 lg:w-74'>
         <Image
           src={image}
           alt=''
@@ -119,14 +119,14 @@ function DeveloperCard ({
 
 function CodeCard ({ code }: { code: string }): React.ReactNode {
   return (
-    <Card className='flex h-[180px] flex-col lg:h-[235px]'>
-      <div className='flex items-center justify-between px-5 py-3 lg:px-[30px] lg:py-4'>
+    <Card className='flex h-45 flex-col lg:h-59'>
+      <div className='flex items-center justify-between px-5 py-3 lg:px-8 lg:py-4'>
         <Image
           src='/images/home/developers/logo-typescript.svg'
           alt='TypeScript'
           width={24}
           height={24}
-          className='h-[18px] w-[18px] rounded lg:h-[24px] lg:w-[24px]'
+          className='size-5 rounded lg:size-6'
         />
         <button className='rounded opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50'>
           <Image
@@ -134,12 +134,12 @@ function CodeCard ({ code }: { code: string }): React.ReactNode {
             alt='Copy'
             width={20}
             height={20}
-            className='h-[16px] w-[16px] lg:h-[20px] lg:w-[20px]'
+            className='size-4 lg:size-5'
           />
         </button>
       </div>
-      <div className='flex-1 overflow-x-auto bg-white/10 px-5 py-3 lg:px-[30px] lg:py-4'>
-        <pre className='font-mono text-xs leading-[1.6] text-white lg:text-sm'>
+      <div className='flex-1 overflow-x-auto bg-white/10 px-5 py-3 lg:px-8 lg:py-4'>
+        <pre className='font-mono text-xs leading-relaxed text-white lg:text-sm'>
           <code dangerouslySetInnerHTML={{ __html: highlight(code) }} />
         </pre>
       </div>

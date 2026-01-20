@@ -8,7 +8,7 @@ export function Chip ({
   variant = 'default'
 }: ChipProps): React.ReactNode {
   const baseClasses =
-    'inline-flex w-fit items-center justify-center rounded-[35px] border px-[35px] py-2.5 text-xs font-medium'
+    'inline-flex w-fit items-center justify-center rounded-full border px-9 py-2.5 text-xs font-medium'
 
   const variantClasses = {
     default: 'border-primary-white/50 text-primary-white',

@@ -91,38 +91,38 @@ export function DashPriceCard ({
   return (
     <Card className={className}>
       <svg
-        className='absolute bottom-0 left-0 h-[60px] w-full lg:h-[92px]'
+        className='absolute bottom-0 left-0 h-15 w-full lg:h-23'
         viewBox='0 0 234 92'
         preserveAspectRatio='none'
       >
         <defs>
           <linearGradient id='chartGradient' x1='0' y1='0' x2='0' y2='1'>
-            <stop offset='0%' stopColor='#4C7EFF' stopOpacity='0.3' />
-            <stop offset='100%' stopColor='#4C7EFF' stopOpacity='0' />
+            <stop offset='0%' stopColor='var(--color-primary-blue)' stopOpacity='0.3' />
+            <stop offset='100%' stopColor='var(--color-primary-blue)' stopOpacity='0' />
           </linearGradient>
         </defs>
         {data?.sparkline != null && (
           <>
             <path d={areaPath} fill='url(#chartGradient)' />
-            <path d={linePath} stroke='#4C7EFF' fill='none' strokeWidth='2' />
+            <path d={linePath} stroke='var(--color-primary-blue)' fill='none' strokeWidth='2' />
           </>
         )}
       </svg>
 
-      <div className='absolute top-[16px] left-[20px] lg:top-[30px] lg:left-[35px]'>
+      <div className='absolute top-4 left-5 lg:top-8 lg:left-9'>
         <Image
           src='/images/home/bullets/logo-dash-icon.svg'
           alt=''
           width={34}
           height={28}
-          className='h-[20px] w-auto lg:h-[28px]'
+          className='h-5 w-auto lg:h-7'
         />
       </div>
 
-      <p className='absolute top-[12px] left-[50px] tracking-[-0.5px] text-white lg:top-[30px] lg:left-[84px] lg:tracking-[-0.84px]'>
+      <p className='absolute top-3 left-12 tracking-tight text-white lg:top-8 lg:left-21 lg:tracking-tighter'>
         {loading
           ? (
-            <span className='inline-block h-[28px] w-[80px] animate-pulse rounded bg-white/10 lg:h-[36px] lg:w-[100px]' />
+            <span className='inline-block h-7 w-20 animate-pulse rounded bg-white/10 lg:h-9 lg:w-25' />
             )
           : (
             <>
@@ -134,10 +134,10 @@ export function DashPriceCard ({
             )}
       </p>
 
-      <p className='absolute top-[36px] left-[20px] text-xs font-medium lg:top-[72px] lg:left-[35px] lg:text-xs'>
+      <p className='absolute top-9 left-5 text-xs font-medium lg:top-18 lg:left-9 lg:text-xs'>
         {loading
           ? (
-            <span className='inline-block h-[14px] w-[100px] animate-pulse rounded bg-white/10' />
+            <span className='inline-block h-3.5 w-25 animate-pulse rounded bg-white/10' />
             )
           : (
             <>

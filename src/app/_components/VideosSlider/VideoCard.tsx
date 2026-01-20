@@ -19,7 +19,7 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
   const { variant, label, title, subtitle, session, image } = video
 
   const baseClasses =
-    'relative h-[216px] w-full overflow-hidden rounded-[25px] shadow-sm dark:border dark:border-white/15'
+    'relative h-56 w-full overflow-hidden rounded-3xl shadow-sm dark:border dark:border-white/15'
 
   if (variant === 'light') {
     return (
@@ -28,14 +28,14 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
           <DashPattern />
         </div>
 
-        <div className='absolute top-[52px] left-[22px]'>
+        <div className='absolute top-13 left-6'>
           <span className='rounded-full border border-primary-dark/30 px-3 py-1 text-xs text-primary-dark'>
             {label}
           </span>
         </div>
 
-        <div className='absolute top-[90px] left-[22px]'>
-          <h3 className='text-3xl leading-[34px] font-extrabold tracking-[-0.03em] text-primary-dark'>
+        <div className='absolute top-23 left-6'>
+          <h3 className='text-3xl leading-9 font-extrabold tracking-tight text-primary-dark'>
             {title.split('\n').map((line, i) => (
               <span key={i} className='block'>
                 {line}
@@ -44,12 +44,12 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
           </h3>
         </div>
 
-        <div className='absolute bottom-[16px] left-[22px]'>
+        <div className='absolute bottom-4 left-6'>
           <Image src='/images/logo.svg' alt='Dash' width={60} height={16} />
         </div>
 
         {session != null && session !== '' && (
-          <p className='absolute right-[22px] bottom-[16px] text-xs text-primary-dark/75'>
+          <p className='absolute right-6 bottom-4 text-xs text-primary-dark/75'>
             {session}
           </p>
         )}
@@ -69,7 +69,7 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
           </div>
         )}
 
-        <div className='absolute top-[22px] left-[22px]'>
+        <div className='absolute top-6 left-6'>
           <Image
             src='/images/logo.svg'
             alt='Dash'
@@ -79,14 +79,14 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
           />
         </div>
 
-        <div className='absolute top-[102px] left-[22px]'>
+        <div className='absolute top-26 left-6'>
           <span className='rounded-full border border-primary-turquoise/50 px-3 py-1 text-xs text-primary-turquoise'>
             {label}
           </span>
         </div>
 
-        <div className='absolute bottom-[22px] left-[22px]'>
-          <h3 className='text-3xl leading-[29px] font-extrabold tracking-[-0.03em] text-primary-white'>
+        <div className='absolute bottom-6 left-6'>
+          <h3 className='text-3xl leading-7 font-extrabold tracking-tight text-primary-white'>
             {title.split('\n').map((line, i) => (
               <span key={i} className='block'>
                 {line}
@@ -104,8 +104,8 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
     return (
       <div className={`${baseClasses} bg-primary-blue`}>
         {image != null && image !== '' && (
-          <div className='absolute top-0 right-0 h-full w-[160px]'>
-            <div className='absolute inset-0 rounded-[10px] bg-primary-white/10 backdrop-blur-sm' />
+          <div className='absolute top-0 right-0 h-full w-40'>
+            <div className='absolute inset-0 rounded-xl bg-primary-white/10 backdrop-blur-sm' />
             <Image
               src={image}
               alt=''
@@ -115,24 +115,24 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
           </div>
         )}
 
-        <div className='absolute top-[22px] left-[22px]'>
+        <div className='absolute top-6 left-6'>
           <span className='rounded-full border border-primary-white/50 px-3 py-1 text-xs text-primary-white'>
             {label}
           </span>
         </div>
 
-        <div className='absolute top-1/2 left-[22px] w-[140px] -translate-y-1/2'>
-          <h3 className='text-3xl leading-[29px] font-extrabold tracking-[-0.03em] text-primary-white'>
+        <div className='absolute top-1/2 left-6 w-36 -translate-y-1/2'>
+          <h3 className='text-3xl leading-7 font-extrabold tracking-tight text-primary-white'>
             {title}
           </h3>
           {subtitle != null && subtitle !== '' && (
-            <p className='mt-1 text-xs leading-[15px] text-primary-white/75'>
+            <p className='mt-1 text-xs leading-4 text-primary-white/75'>
               {subtitle}
             </p>
           )}
         </div>
 
-        <div className='absolute bottom-[16px] left-[22px]'>
+        <div className='absolute bottom-4 left-6'>
           <Image
             src='/images/logo.svg'
             alt='Dash'
@@ -150,25 +150,25 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
   // variant === 'coin'
   return (
     <div className={`${baseClasses} bg-primary-white`}>
-      <div className='absolute top-[22px] left-[22px]'>
+      <div className='absolute top-6 left-6'>
         <Image src='/images/logo.svg' alt='Dash' width={60} height={16} />
       </div>
 
       {/* Coin overflows card bounds by design */}
       {image != null && image !== '' && (
-        <div className='absolute -top-[40px] -right-[50px] h-[300px] w-[300px]'>
+        <div className='absolute -top-10 -right-12 size-75'>
           <Image src={image} alt='' fill className='object-contain' />
         </div>
       )}
 
-      <div className='absolute top-[102px] left-[22px]'>
+      <div className='absolute top-26 left-6'>
         <span className='rounded-full border border-primary-dark/30 px-3 py-1 text-xs text-primary-dark'>
           {label}
         </span>
       </div>
 
-      <div className='absolute bottom-[22px] left-[22px]'>
-        <h3 className='text-3xl leading-[29px] font-extrabold tracking-[-0.03em] text-primary-dark'>
+      <div className='absolute bottom-6 left-6'>
+        <h3 className='text-3xl leading-7 font-extrabold tracking-tight text-primary-dark'>
           {title.split('\n').map((line, i) => (
             <span key={i} className='block'>
               {line}
@@ -185,7 +185,7 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
 function PlayButton (): React.ReactNode {
   return (
     <button
-      className='absolute top-[14px] right-[14px] flex h-[38px] w-[38px] items-center justify-center rounded-[10px] bg-primary-white shadow-lg transition-all hover:bg-primary-blue/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue'
+      className='absolute top-3.5 right-3.5 flex h-10 w-10 items-center justify-center rounded-xl bg-primary-white shadow-lg transition-all hover:bg-primary-blue/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue'
       aria-label='Play video'
     >
       <Play className='h-4 w-4 fill-primary-blue text-primary-blue' />

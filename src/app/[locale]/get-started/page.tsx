@@ -4,6 +4,7 @@ import { GetStartedHero } from '../../_components/GetStartedHero'
 import { GetStartedActions } from '../../_components/GetStartedActions'
 import { GetDash } from '../../_components/GetDash'
 import { BuyDashOnline } from '../../_components/BuyDashOnline'
+import { GetGoing } from '../../_components/GetGoing'
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((locale) => ({ locale }))
@@ -32,6 +33,10 @@ export default async function GetStartedPage ({
 
       <section>
         <BuyDashOnline />
+      </section>
+
+      <section>
+        <GetGoing />
       </section>
     </main>
   )

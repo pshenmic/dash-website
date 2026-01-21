@@ -16,6 +16,8 @@
   "nav": {
     "home": "Home",
     "getStarted": "Get Started",
+    "aboutDash": "About Dash",
+    "downloads": "Downloads",
     "institutions": "Institutions",
     "developers": "Developers",
     "community": "Community",
@@ -406,6 +408,11 @@
   "buyDashOnline": {
     "title": "Places to Buy Dash Online",
     "seeAll": "See All"
+  },
+  "downloadsHero": {
+    "title": "Downloads",
+    "description": "List of all the wallets for different platforms where you can manage your Dash. Everything listed here is officially approved to be secure for your usage.",
+    "viewAll": "View All Wallets"
   },
   "getGoing": {
     "chip": "Dash Living",

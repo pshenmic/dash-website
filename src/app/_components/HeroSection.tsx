@@ -1,62 +1,52 @@
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { Chip } from '@/components/ui/Chip'
 import { Button } from '@/components/ui/Button'
 
-interface HeroSectionProps {
-  chip: string
-  title: string
-  subtitle: string
-  downloadWallet: string
-  documentation: string
-}
+export function HeroSection (): React.ReactNode {
+  const t = useTranslations('hero')
 
-export function HeroSection({
-  chip,
-  title,
-  subtitle,
-  downloadWallet,
-  documentation,
-}: HeroSectionProps) {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden rounded-b-[50px] bg-primary-blue dark:bg-primary-dark">
-      {/* Light theme background */}
+    <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-12 bg-primary-blue dark:bg-primary-dark'>
       <Image
-        src="/images/hero-bg.png"
-        alt=""
+        src='/images/bg-hero.png'
+        alt=''
         fill
-        className="object-cover dark:hidden"
+        className='pointer-events-none animate-breathe object-cover object-center lg:object-right dark:brightness-50'
         priority
       />
-      {/* Dark theme background */}
-      <Image
-        src="/images/hero-bg-dark.jpg"
-        alt=""
-        fill
-        className="hidden object-cover dark:block"
-        priority
-      />
+      <div className='absolute inset-0 bg-linear-to-t from-primary-blue/30 to-transparent dark:from-primary-dark/50' />
 
-      <div className="relative z-10 flex flex-col items-center gap-[35px] px-6 py-12 lg:max-w-7xl lg:px-16">
-        <div className="flex max-w-full flex-col items-center gap-[15px]">
-          <Chip>{chip}</Chip>
-          <h1 className="max-w-full whitespace-pre-line text-center text-[32px] font-extrabold leading-[1.1] tracking-[-0.03em] text-primary-white sm:text-[38px] sm:leading-[1.05] lg:text-[96px] lg:leading-[1.02]">
-            {title}
+      <div className='relative z-10 flex flex-col items-center gap-9 px-6 py-12 lg:max-w-7xl lg:px-16'>
+        <div className='flex max-w-full flex-col items-center gap-4'>
+          <div className='animate-fade-in-up-1'>
+            <Chip>{t('chip')}</Chip>
+          </div>
+          <h1 className='max-w-full animate-fade-in-up-2 text-center text-4xl leading-tight font-extrabold tracking-tight whitespace-pre-line text-primary-white sm:text-4xl sm:leading-tight lg:text-6xl lg:whitespace-pre xl:text-7xl 2xl:text-8xl'>
+            {t('title')}
           </h1>
-          <p className="max-w-full text-center text-base font-medium leading-[1.37] text-primary-white sm:text-lg lg:max-w-[724px] lg:text-[28px] lg:tracking-[-0.03em]">
-            {subtitle}
+          <p className='max-w-full animate-fade-in-up-3 text-center text-base leading-snug font-medium text-primary-white sm:text-lg lg:max-w-181 lg:text-3xl lg:tracking-tight'>
+            {t('subtitle')}
           </p>
         </div>
 
-        <div className="flex flex-col items-center gap-2.5 lg:flex-row lg:gap-[15px]">
-          <Button variant="primary">{downloadWallet}</Button>
-          <Button variant="secondary" icon={
-            <div className="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-primary-white/20">
-              <ArrowRight className="h-[15px] w-[15px]" />
-            </div>
-          }>
-            {documentation}
-          </Button>
+        <div className='flex animate-fade-in-up-4 flex-col items-center gap-2.5 lg:flex-row lg:gap-4'>
+          <div className='transition-transform duration-200 hover:scale-105'>
+            <Button variant='primary'>{t('downloadWallet')}</Button>
+          </div>
+          <div className='transition-transform duration-200 hover:scale-105'>
+            <Button
+              variant='secondary'
+              icon={
+                <div className='flex size-11 items-center justify-center rounded-full bg-primary-white'>
+                  <ArrowRight className='size-4 text-primary-blue' />
+                </div>
+              }
+            >
+              {t('documentation')}
+            </Button>
+          </div>
         </div>
       </div>
     </section>

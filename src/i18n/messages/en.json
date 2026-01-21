@@ -1,10 +1,17 @@
 {
   "hero": {
     "chip": "The first DAO period",
-    "title": "Build with Dash.\nFast, Private,\nDecentralized",
+    "title": "Build with Dash.\nFast, Private, Decentralized",
     "subtitle": "Money without borders: moving it instantly, transparently, conveniently, and almost for free",
     "downloadWallet": "Download Wallet",
     "documentation": "Documentation"
+  },
+  "getStartedHero": {
+    "chip": "Dash Quick Start",
+    "title": "Digital Money That's\nBetter Than Cash.",
+    "subtitle": "Dash is instant, global, and easy to use.",
+    "whereToSpend": "Where to Spend",
+    "learnMore": "Learn More"
   },
   "nav": {
     "home": "Home",
@@ -73,7 +80,8 @@
     "longestDao": {
       "line1": "One of the",
       "highlight1": "1st",
-      "line2": "and longest running",
+      "line1End": "and",
+      "line2": "longest running",
       "highlight2": "DAOs"
     },
     "optionalPrivacy": {

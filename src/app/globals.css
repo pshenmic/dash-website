@@ -26,6 +26,15 @@
 
   /* Typography */
   --font-family-sans: "Manrope", sans-serif;
+
+  /* Animations */
+  --animate-breathe: breathe 8s ease-in-out infinite;
+  --animate-breathe-normal: breathe-normal 8s ease-in-out infinite;
+  --animate-fade-in-up: fade-in-up 0.6s ease-out both;
+  --animate-fade-in-up-1: fade-in-up 0.6s ease-out 0.2s both;
+  --animate-fade-in-up-2: fade-in-up 0.6s ease-out 0.4s both;
+  --animate-fade-in-up-3: fade-in-up 0.6s ease-out 0.6s both;
+  --animate-fade-in-up-4: fade-in-up 0.6s ease-out 0.8s both;
 }
 
 body {
@@ -44,7 +53,7 @@ body {
   --sh-comment: #6b7280;
 }
 
-/* Интерактивные элементы: cursor pointer */
+/* Interactive elements: cursor pointer */
 @layer base {
   button:not(:disabled),
   a,
@@ -55,4 +64,65 @@ body {
   [role="button"]:not([aria-disabled="true"]) {
     cursor: pointer;
   }
+}
+
+/* View Transitions - smooth page transitions */
+
+/* Old page - quick fade out */
+::view-transition-old(root) {
+  animation: page-fade-out 150ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* New page - smooth fade in */
+::view-transition-new(root) {
+  animation: page-fade-in 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Header stays in place without animation */
+::view-transition-old(header),
+::view-transition-new(header) {
+  animation: none;
+}
+
+@keyframes page-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero animations */
+@keyframes breathe {
+  0%, 100% { transform: scaleX(-1) scale(1); }
+  50% { transform: scaleX(-1) scale(1.05); }
+}
+
+@keyframes breathe-normal {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes breathe-half {
+  0%, 100% { transform: scale(0.5); }
+  50% { transform: scale(0.525); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

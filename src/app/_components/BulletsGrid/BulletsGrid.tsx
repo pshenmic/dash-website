@@ -1,235 +1,202 @@
 import Image from 'next/image'
+import { CircleCheck, Lock, Users, MessageSquare } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { Chip } from '@/components/ui/Chip'
+import { Card } from '@/components/ui/Card'
+import { DashPriceCard } from '@/components/ui/DashPriceCard'
 
-interface BulletsGridProps {
-  translations: {
-    stableOperation: { line1: string; line2: string; highlight: string }
-    longestDao: { line1: string; highlight1: string; line2: string; highlight2: string }
-    optionalPrivacy: { line1: string; highlight: string }
-    mainCard: { chip: string }
-    priceChart: { price: string; currency: string; change: string; period: string }
-    passiveIncome: { highlight: string; text: string }
-    selfFinancing: { highlight: string; line1: string; line2: string }
-    activeCommunity: { highlight: string; text: string }
-    instantSecure: { line1: string; line2: string; text: string }
-    uniqueOpportunities: { highlight: string; text: string }
-    restrictedIssue: { line1: string; line2: string; value: string }
-  }
-}
+export function BulletsGrid (): React.ReactNode {
+  const t = useTranslations('bullets')
 
-export function BulletsGrid({ translations: t }: BulletsGridProps) {
   return (
-    <section className="bg-primary-white py-8 dark:bg-primary-dark lg:py-16">
-      <div className="mx-auto max-w-7xl px-4 lg:px-6">
-        {/* Grid Container */}
-        <div className="grid grid-cols-2 gap-[15px] lg:grid-cols-[304px_292px_292px_304px] lg:grid-rows-[180px_105px_180px_180px]">
-
-          {/* 1. Stable Operation - Blue card with checkmark */}
-          <div className="col-span-1 row-span-2 flex h-[150px] flex-col justify-end overflow-hidden rounded-[35px] bg-primary-blue p-[20px] lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:h-auto lg:p-[35px]">
-            <Image
-              src="/images/bullets/icon-checkmark.svg"
-              alt=""
-              width={81}
-              height={81}
-              className="mb-auto h-[50px] w-[50px] lg:h-[81px] lg:w-[81px]"
-            />
-            <div className="text-[14px] font-medium leading-tight tracking-[-0.84px] text-white lg:text-[28px]">
-              <p>{t.stableOperation.line1}</p>
-              <p>{t.stableOperation.line2}</p>
-              <p className="font-extrabold">{t.stableOperation.highlight}</p>
-            </div>
-          </div>
-
-          {/* 2. Longest DAO - Dark text only */}
-          <div className="col-span-1 flex h-[80px] flex-col justify-end overflow-hidden rounded-[35px] bg-primary-dark p-[20px] lg:col-start-2 lg:row-start-1 lg:h-auto lg:p-[35px]">
-            <div className="text-[14px] font-medium leading-tight tracking-[-0.84px] text-white lg:text-[28px]">
-              <p>
-                {t.longestDao.line1} <span className="font-extrabold">{t.longestDao.highlight1}</span> {t.longestDao.line2}
-              </p>
-              <p>
-                <span className="font-extrabold">{t.longestDao.highlight2}</span>
-              </p>
-            </div>
-          </div>
-
-          {/* 3. Optional Privacy - Dark with lock icon */}
-          <div className="col-span-1 flex h-[80px] flex-col justify-between overflow-hidden rounded-[35px] bg-primary-dark p-[20px] lg:col-start-3 lg:row-start-1 lg:h-auto lg:p-[35px]">
-            <Image
-              src="/images/bullets/icon-lock.svg"
-              alt=""
-              width={63}
-              height={72}
-              className="h-[35px] w-[30px] lg:h-[72px] lg:w-[63px]"
-            />
-            <div className="text-[14px] font-medium leading-tight tracking-[-0.84px] text-white lg:text-[28px]">
-              <p>{t.optionalPrivacy.line1}</p>
-              <p className="font-extrabold">{t.optionalPrivacy.highlight}</p>
-            </div>
-          </div>
-
-          {/* 4. Dash Coin Small - Dark with 3D coin image */}
-          <div className="col-span-1 flex h-[80px] items-center justify-center overflow-hidden rounded-[35px] bg-primary-dark lg:col-start-4 lg:row-start-1 lg:h-auto">
-            <div className="relative h-full w-full">
+    <div className='bg-primary-white dark:bg-primary-dark'>
+      <div className='mx-auto max-w-7xl px-4 lg:px-6'>
+        {/* Grid 2x6 mobile → 4x4 desktop. order-* overrides for mobile-first layout */}
+        <div className='grid grid-cols-2 gap-2.5 lg:grid-cols-[304px_292px_292px_304px] lg:grid-rows-[180px_105px_180px_180px] lg:gap-4'>
+          {/* Center of grid on desktop (col 2-3, row 2-3) */}
+          <Card className='relative order-1 col-span-2 h-40 lg:order-5 lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-2 lg:h-auto'>
+            {/* Extends beyond bounds for glow effect */}
+            <div className='pointer-events-none absolute -top-20 -left-25 h-75 w-75 rounded-full bg-primary-blue/30 blur-3xl lg:-top-30 lg:-left-42 lg:h-104 lg:w-104 lg:blur-3xl' />
+            {/* Coin overflows card by design */}
+            <div className='absolute -top-15 -right-8 h-75 w-70 lg:-top-23 lg:-right-12 lg:h-123 lg:w-111'>
               <Image
-                src="/images/bullets/coin-3d-small.png"
-                alt="Dash Coin"
+                src='/images/bullets/main-3d-coin.png'
+                alt='Dash 3D Coin'
                 fill
-                className="object-cover"
+                className='object-contain object-right'
               />
             </div>
-          </div>
-
-          {/* 5. Main Card - Large dark card with chip, logo, 3D coin */}
-          <div className="relative col-span-2 h-[180px] overflow-hidden rounded-[35px] bg-primary-dark lg:col-start-2 lg:col-span-2 lg:row-start-2 lg:row-span-2 lg:h-auto">
-            {/* Gradient background - CSS */}
-            <div className="absolute -left-[100px] -top-[100px] h-[400px] w-[400px] rounded-full bg-primary-blue/30 blur-[100px]" />
-            {/* 3D Coin image */}
-            <div className="absolute -right-[50px] -top-[90px] h-[491px] w-[444px] lg:-right-[50px] lg:-top-[90px]">
+            <div className='absolute bottom-4 left-4 lg:bottom-9 lg:left-9'>
               <Image
-                src="/images/bullets/main-3d-coin.png"
-                alt="Dash 3D Coin"
-                fill
-                className="object-contain object-right"
-              />
-            </div>
-            {/* Logo */}
-            <div className="absolute bottom-[20px] left-[20px] lg:bottom-[35px] lg:left-[35px]">
-              <Image
-                src="/images/bullets/logo-dash-white.svg"
-                alt="Dash"
+                src='/images/bullets/logo-dash-white.svg'
+                alt='Dash'
                 width={191}
                 height={51}
-                className="h-[30px] w-auto lg:h-[51px]"
+                className='h-7 w-auto lg:h-13'
               />
             </div>
-            {/* Chip */}
-            <div className="absolute left-[20px] top-[50%] -translate-y-1/2 lg:left-[35px]">
-              <Chip>{t.mainCard.chip}</Chip>
+            <div className='absolute top-1/2 left-4 -translate-y-1/2 lg:left-9'>
+              <Chip>{t('mainCard.chip')}</Chip>
             </div>
-          </div>
+          </Card>
 
-          {/* 6. Price Chart - Dark with chart */}
-          <div className="relative col-span-1 h-[100px] overflow-hidden rounded-[35px] bg-primary-dark lg:col-start-1 lg:row-start-3 lg:h-auto">
-            {/* Chart background */}
-            <div className="absolute bottom-0 left-[35px] h-full w-[234px]">
-              <Image
-                src="/images/bullets/price-chart-bg.svg"
-                alt=""
-                fill
-                className="object-contain object-bottom"
-              />
-            </div>
-            {/* Chart area */}
-            <div className="absolute bottom-0 left-0 h-[92px] w-full">
-              <Image
-                src="/images/bullets/price-chart-area.svg"
-                alt=""
-                fill
-                className="object-contain object-bottom"
-              />
-            </div>
-            {/* Logo icon */}
-            <div className="absolute left-[25px] top-[20px] lg:left-[35px] lg:top-[30px]">
-              <Image
-                src="/images/bullets/logo-dash-icon.svg"
-                alt=""
-                width={34}
-                height={28}
-                className="h-[20px] w-auto lg:h-[28px]"
-              />
-            </div>
-            {/* Price */}
-            <p className="absolute left-[50px] top-[15px] tracking-[-0.84px] text-white lg:left-[84px] lg:top-[30px]">
-              <span className="text-[18px] font-extrabold lg:text-[28px]">{t.priceChart.price}</span>
-              <span className="text-[12px] font-medium lg:text-[18px]">{t.priceChart.currency}</span>
-            </p>
-            {/* Change */}
-            <p className="absolute left-[20px] top-[40px] text-[10px] font-medium lg:left-[49px] lg:top-[72px] lg:text-[12px]">
-              <span className="text-primary-blue">{t.priceChart.change}</span>
-              <span className="text-white/50"> {t.priceChart.period}</span>
-            </p>
-          </div>
-
-          {/* 7. Passive Income - Dark text only, small */}
-          <div className="col-span-1 flex h-[80px] flex-col justify-center overflow-hidden rounded-[35px] bg-primary-dark p-[20px] lg:col-start-4 lg:row-start-2 lg:h-auto lg:p-[25px]">
-            <div className="text-[14px] font-medium leading-tight tracking-[-0.84px] text-white lg:text-[22px]">
-              <p className="font-extrabold">{t.passiveIncome.highlight}</p>
-              <p>{t.passiveIncome.text}</p>
-            </div>
-          </div>
-
-          {/* 8. Self-Financing - Blue with logo */}
-          <div className="relative col-span-1 flex h-[100px] flex-col justify-end overflow-hidden rounded-[35px] bg-primary-blue p-[20px] lg:col-start-4 lg:row-start-3 lg:h-auto lg:p-[35px]">
-            {/* Logo */}
-            <div className="absolute right-[20px] top-[20px] lg:right-[35px] lg:top-[35px]">
-              <Image
-                src="/images/bullets/logo-dash-blue.svg"
-                alt=""
-                width={135}
-                height={110}
-                className="h-[60px] w-auto opacity-30 lg:h-[90px]"
-              />
-            </div>
-            <div className="relative text-[14px] font-medium leading-tight tracking-[-0.84px] text-white lg:text-[28px]">
-              <p className="font-extrabold">{t.selfFinancing.highlight}</p>
-              <p>{t.selfFinancing.line1}</p>
-              <p>{t.selfFinancing.line2}</p>
-            </div>
-          </div>
-
-          {/* 9. Active Community - Dark with users icon */}
-          <div className="col-span-1 flex h-[100px] flex-col justify-between overflow-hidden rounded-[35px] bg-primary-dark p-[20px] lg:col-start-1 lg:row-start-4 lg:h-auto lg:p-[35px]">
-            <Image
-              src="/images/bullets/icon-users.svg"
-              alt=""
-              width={58}
-              height={52}
-              className="h-[30px] w-auto lg:h-[52px]"
+          {/* Tall card on desktop (row-span-2) */}
+          <Card
+            variant='blue'
+            className='order-2 col-span-1 flex h-35 flex-col justify-end p-4 lg:order-1 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:h-auto lg:p-9'
+          >
+            <CircleCheck
+              className='mb-auto size-10 text-white lg:size-18'
+              strokeWidth={1.5}
             />
-            <div className="text-[14px] font-medium leading-tight tracking-[-0.84px] text-white lg:text-[28px]">
+            <div className='text-xs leading-tight font-medium tracking-tight text-white lg:text-3xl lg:tracking-tighter'>
+              <p>{t('stableOperation.line1')}</p>
+              <p>{t('stableOperation.line2')}</p>
+              <p className='font-extrabold'>{t('stableOperation.highlight')}</p>
+            </div>
+          </Card>
+
+          <Card className='order-3 col-span-1 flex h-35 items-center justify-center p-4 lg:order-2 lg:col-start-2 lg:row-start-1 lg:h-auto lg:p-6'>
+            <div className='text-xs leading-tight font-medium tracking-tight text-white lg:text-2xl lg:tracking-tighter'>
               <p>
-                <span className="font-extrabold">{t.activeCommunity.highlight}</span> {t.activeCommunity.text}
+                {t('longestDao.line1')}{' '}
+                <span className='font-extrabold'>
+                  {t('longestDao.highlight1')}
+                </span>{' '}
+                {t('longestDao.line1End')}
+              </p>
+              <p>
+                {t('longestDao.line2')}{' '}
+                <span className='font-extrabold'>
+                  {t('longestDao.highlight2')}
+                </span>
               </p>
             </div>
-          </div>
+          </Card>
 
-          {/* 10. Instant & Secure - Blue with coins */}
-          <div className="relative col-span-1 flex h-[100px] flex-col justify-end overflow-hidden rounded-[35px] bg-primary-blue p-[20px] lg:col-start-2 lg:row-start-4 lg:h-auto lg:p-[35px]">
-            {/* Coins image */}
-            <div className="absolute right-[10px] top-[15px] h-[60px] w-[100px] lg:right-[20px] lg:top-[20px] lg:h-[100px] lg:w-[160px]">
+          <Card className='order-4 col-span-1 flex h-25 items-center gap-3 p-4 lg:order-3 lg:col-start-3 lg:row-start-1 lg:h-auto lg:gap-5 lg:p-9'>
+            <Lock
+              className='size-7 shrink-0 text-white lg:size-12'
+              strokeWidth={1.5}
+            />
+            <div className='text-xs leading-tight font-medium tracking-tight text-white lg:text-3xl lg:tracking-tighter'>
+              <p>{t('optionalPrivacy.line1')}</p>
+              <p className='font-extrabold'>{t('optionalPrivacy.highlight')}</p>
+            </div>
+          </Card>
+
+          <Card className='order-5 col-span-1 flex h-25 items-center justify-center lg:order-4 lg:col-start-4 lg:row-start-1 lg:h-auto'>
+            <div className='relative h-full w-full'>
               <Image
-                src="/images/bullets/coins-stack.png"
-                alt=""
+                src='/images/bullets/coin-3d-small.png'
+                alt='Dash Coin'
                 fill
-                className="object-contain object-right"
+                className='object-cover'
               />
             </div>
-            <div className="relative text-[14px] font-medium leading-tight tracking-[-0.84px] text-white lg:text-[28px]">
-              <p className="font-extrabold">{t.instantSecure.line1}</p>
-              <p className="font-extrabold">{t.instantSecure.line2}</p>
-              <p>{t.instantSecure.text}</p>
-            </div>
-          </div>
+          </Card>
 
-          {/* 11. Unique Opportunities - Dark text only */}
-          <div className="col-span-1 flex h-[80px] flex-col justify-end overflow-hidden rounded-[35px] bg-primary-dark p-[20px] lg:col-start-3 lg:row-start-4 lg:h-auto lg:p-[35px]">
-            <div className="text-[14px] font-medium leading-tight tracking-[-0.84px] text-white lg:text-[28px]">
-              <p className="font-extrabold">{t.uniqueOpportunities.highlight}</p>
-              <p>{t.uniqueOpportunities.text}</p>
-            </div>
-          </div>
+          <DashPriceCard className='relative order-6 col-span-2 h-25 lg:col-span-1 lg:col-start-1 lg:row-start-3 lg:h-auto' />
 
-          {/* 12. Restricted Issue - Dark with number */}
-          <div className="col-span-1 flex h-[80px] flex-col justify-end overflow-hidden rounded-[35px] bg-primary-dark p-[20px] lg:col-start-4 lg:row-start-4 lg:h-auto lg:p-[35px]">
-            <div className="text-[14px] font-medium leading-tight tracking-[-0.84px] text-white lg:text-[28px]">
-              <p className="font-extrabold">{t.restrictedIssue.line1}</p>
-              <p className="font-extrabold">{t.restrictedIssue.line2}</p>
-              <p>{t.restrictedIssue.value}</p>
+          <Card className='order-7 col-span-1 flex h-25 flex-col justify-center p-4 lg:col-start-4 lg:row-start-2 lg:h-auto lg:p-6'>
+            <div className='text-xs leading-tight font-medium tracking-tight text-white lg:text-2xl lg:tracking-tighter'>
+              <p className='font-extrabold'>{t('passiveIncome.highlight')}</p>
+              <p>{t('passiveIncome.text')}</p>
             </div>
-          </div>
+          </Card>
 
+          <Card
+            variant='blue'
+            className='relative order-8 col-span-1 flex h-25 flex-col justify-end p-4 lg:col-start-4 lg:row-start-3 lg:h-auto lg:p-9'
+          >
+            <div className='absolute top-4 right-4 lg:top-9 lg:right-9'>
+              <Image
+                src='/images/bullets/logo-dash-blue.svg'
+                alt=''
+                width={135}
+                height={110}
+                className='h-12 w-auto lg:h-23'
+              />
+            </div>
+            <div className='relative text-xs leading-tight font-medium tracking-tight text-white lg:text-3xl lg:tracking-tighter'>
+              <p className='font-extrabold'>{t('selfFinancing.highlight')}</p>
+              <p>{t('selfFinancing.line1')}</p>
+              <p>{t('selfFinancing.line2')}</p>
+            </div>
+          </Card>
+
+          <Card
+            variant='blue'
+            className='relative order-9 col-span-2 flex h-30 flex-col justify-end p-4 lg:col-span-1 lg:col-start-2 lg:row-start-4 lg:h-auto lg:p-9'
+          >
+            {/* Image rotated and scaled to create decorative overflow effect */}
+            <div className='absolute top-1/2 -right-12 flex h-25 w-75 -translate-y-1/2 items-center justify-center lg:-right-20 lg:h-36 lg:w-125'>
+              <Image
+                src='/images/bullets/coins-stack.png'
+                alt=''
+                width={735}
+                height={144}
+                className='scale-150 -rotate-90 lg:scale-150'
+              />
+            </div>
+            <div className='relative text-xs leading-tight font-medium tracking-tight text-white lg:text-3xl lg:tracking-tighter'>
+              <p className='font-extrabold'>{t('instantSecure.line1')}</p>
+              <p className='font-extrabold'>{t('instantSecure.line2')}</p>
+              <p>{t('instantSecure.text')}</p>
+            </div>
+          </Card>
+
+          <Card className='order-10 col-span-1 flex h-25 flex-col justify-between p-4 lg:col-start-1 lg:row-start-4 lg:h-auto lg:p-9'>
+            <div className='flex flex-col gap-1 lg:gap-2'>
+              <div className='flex items-center gap-2'>
+                <Users
+                  className='h-5 w-5 text-white lg:h-6 lg:w-6'
+                  strokeWidth={1.5}
+                />
+                <MessageSquare
+                  className='h-4 w-4 text-white lg:h-5 lg:w-5'
+                  strokeWidth={1.5}
+                />
+              </div>
+              <div className='flex items-center gap-2'>
+                <Users
+                  className='h-5 w-5 text-white lg:h-6 lg:w-6'
+                  strokeWidth={1.5}
+                />
+                <MessageSquare
+                  className='h-4 w-4 text-white lg:h-5 lg:w-5'
+                  strokeWidth={1.5}
+                />
+              </div>
+            </div>
+            <div className='text-xs leading-tight font-medium tracking-tight text-white lg:text-3xl lg:tracking-tighter'>
+              <p>
+                <span className='font-extrabold'>
+                  {t('activeCommunity.highlight')}
+                </span>{' '}
+                {t('activeCommunity.text')}
+              </p>
+            </div>
+          </Card>
+
+          <Card className='order-11 col-span-1 flex h-25 flex-col justify-end p-4 lg:col-start-3 lg:row-start-4 lg:h-auto lg:p-9'>
+            <div className='text-xs leading-tight font-medium tracking-tight text-white lg:text-3xl lg:tracking-tighter'>
+              <p className='font-extrabold'>
+                {t('uniqueOpportunities.highlight')}
+              </p>
+              <p>{t('uniqueOpportunities.text')}</p>
+            </div>
+          </Card>
+
+          <Card className='order-12 col-span-2 flex h-25 flex-col justify-end p-4 lg:col-span-1 lg:col-start-4 lg:row-start-4 lg:h-auto lg:p-9'>
+            <div className='text-xs leading-tight font-medium tracking-tight text-white lg:text-3xl lg:tracking-tighter'>
+              <p className='font-extrabold'>{t('restrictedIssue.line1')}</p>
+              <p className='font-extrabold'>{t('restrictedIssue.line2')}</p>
+              <p>{t('restrictedIssue.value')}</p>
+            </div>
+          </Card>
         </div>
       </div>
-    </section>
+    </div>
   )
 }

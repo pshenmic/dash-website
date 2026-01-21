@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
-import { Sun, Moon, Menu } from 'lucide-react'
+import { Sun, Moon, Menu, ChevronDown } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
 import { LanguageSelector } from './LanguageSelector'
@@ -48,7 +48,6 @@ export function Header (): React.ReactNode {
   return (
     <>
       <header
-        style={{ viewTransitionName: 'header' }}
         className={`fixed top-0 right-0 left-0 z-50 p-4 transition-transform duration-300 lg:p-6 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
       >
         <div className='mx-auto flex max-w-7xl items-center justify-between rounded-3xl bg-primary-white p-4'>
@@ -88,12 +87,45 @@ export function Header (): React.ReactNode {
             >
               {t('home')}
             </Link>
-            <Link
-              href='/get-started'
-              className={`text-sm whitespace-nowrap transition-colors focus:outline-none focus-visible:underline ${pathname === '/get-started' ? 'font-extrabold text-primary-dark hover:text-primary-dark/70' : 'font-semibold text-primary-blue hover:text-primary-blue/70'}`}
-            >
-              {t('getStarted')}
-            </Link>
+            {/* Get Started Dropdown */}
+            <div className='group relative'>
+              <button
+                className={`flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors focus:outline-none focus-visible:underline ${
+                  pathname === '/get-started' || pathname === '/downloads'
+                    ? 'font-extrabold text-primary-dark hover:text-primary-dark/70'
+                    : 'font-semibold text-primary-blue hover:text-primary-blue/70'
+                }`}
+              >
+                {t('getStarted')}
+                <ChevronDown className='size-3.5 transition-transform duration-200 group-hover:rotate-180' />
+              </button>
+
+              {/* Dropdown Menu */}
+              <div className='invisible absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100'>
+                <div className='min-w-40 rounded-2xl bg-white p-2 shadow-lg ring-1 ring-black/5 dark:bg-primary-dark dark:ring-white/10'>
+                  <Link
+                    href='/get-started'
+                    className={`block rounded-xl px-4 py-2.5 text-sm transition-colors ${
+                      pathname === '/get-started'
+                        ? 'bg-primary-blue/10 font-semibold text-primary-blue'
+                        : 'font-medium text-primary-dark hover:bg-primary-blue/5 dark:text-white dark:hover:bg-white/5'
+                    }`}
+                  >
+                    {t('aboutDash')}
+                  </Link>
+                  <Link
+                    href='/downloads'
+                    className={`block rounded-xl px-4 py-2.5 text-sm transition-colors ${
+                      pathname === '/downloads'
+                        ? 'bg-primary-blue/10 font-semibold text-primary-blue'
+                        : 'font-medium text-primary-dark hover:bg-primary-blue/5 dark:text-white dark:hover:bg-white/5'
+                    }`}
+                  >
+                    {t('downloads')}
+                  </Link>
+                </div>
+              </div>
+            </div>
             <a
               href='#'
               className='text-sm font-semibold whitespace-nowrap text-primary-blue transition-colors hover:text-primary-blue/70 focus:outline-none focus-visible:underline'

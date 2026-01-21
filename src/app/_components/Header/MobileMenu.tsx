@@ -76,13 +76,42 @@ export function MobileMenu ({
           >
             {t('home')}
           </Link>
-          <Link
-            href='/get-started'
-            className={`rounded-xl px-4 py-3 text-right text-lg transition-colors ${pathname === '/get-started' ? 'font-extrabold text-primary-dark hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5' : 'font-semibold text-primary-blue hover:bg-primary-blue/10'}`}
-            onClick={onClose}
-          >
-            {t('getStarted')}
-          </Link>
+          {/* Get Started Section with submenu */}
+          <div className='flex flex-col'>
+            <span
+              className={`rounded-xl px-4 py-3 text-right text-lg transition-colors ${
+                pathname === '/get-started' || pathname === '/downloads'
+                  ? 'font-extrabold text-primary-dark dark:text-primary-white'
+                  : 'font-semibold text-primary-blue'
+              }`}
+            >
+              {t('getStarted')}
+            </span>
+            <div className='flex flex-col gap-1 pr-4'>
+              <Link
+                href='/get-started'
+                className={`rounded-xl px-4 py-2.5 text-right text-base transition-colors ${
+                  pathname === '/get-started'
+                    ? 'bg-primary-blue/10 font-semibold text-primary-blue'
+                    : 'font-medium text-primary-dark/70 hover:bg-primary-blue/5 dark:text-primary-white/70 dark:hover:bg-primary-white/5'
+                }`}
+                onClick={onClose}
+              >
+                {t('aboutDash')}
+              </Link>
+              <Link
+                href='/downloads'
+                className={`rounded-xl px-4 py-2.5 text-right text-base transition-colors ${
+                  pathname === '/downloads'
+                    ? 'bg-primary-blue/10 font-semibold text-primary-blue'
+                    : 'font-medium text-primary-dark/70 hover:bg-primary-blue/5 dark:text-primary-white/70 dark:hover:bg-primary-white/5'
+                }`}
+                onClick={onClose}
+              >
+                {t('downloads')}
+              </Link>
+            </div>
+          </div>
           <a
             href='#'
             className='rounded-xl px-4 py-3 text-right text-lg font-semibold text-primary-blue transition-colors hover:bg-primary-blue/10'

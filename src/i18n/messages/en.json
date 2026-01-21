@@ -412,7 +412,18 @@
   "downloadsHero": {
     "title": "Downloads",
     "description": "List of all the wallets for different platforms where you can manage your Dash. Everything listed here is officially approved to be secure for your usage.",
-    "viewAll": "View All Wallets"
+    "learnMore": "Learn More",
+    "mobileWallets": {
+      "title": "Mobile Wallets",
+      "description1": "A range of Dash mobile wallets are available, each with different features and security.",
+      "description2": "These wallets run from mobile devices, such as your phone or tablet."
+    },
+    "dashPayApp": {
+      "titleLine1": "Download the",
+      "titleLine2": "Official DashPay App",
+      "android": "Android",
+      "ios": "iOS"
+    }
   },
   "getGoing": {
     "chip": "Dash Living",

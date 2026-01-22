@@ -59,12 +59,12 @@ export function VideosSlider (): React.ReactNode {
           aria-label='Video carousel'
         >
           <div className='flex gap-4 pb-2 lg:gap-10'>
-            {videos.map((_video) => (
+            {videos.map((video) => (
               <div
-                key={_video.id}
+                key={video.id}
                 className='min-w-0 flex-[0_0_85%] sm:flex-[0_0_45%] lg:flex-[0_0_384px]'
               >
-                <VideoCard video={_video} />
+                <VideoCard video={video} />
               </div>
             ))}
           </div>

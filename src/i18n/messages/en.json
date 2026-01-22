@@ -22,6 +22,57 @@
     "buyDash": "Buy Dash"
   },
   "footer": {
+    "socials": {
+      "title": "Join in the discussion",
+      "subtitle": "Here you can find information about Dash and talk with our Dashers community:"
+    },
+    "newsletter": {
+      "title": "Subscribe to our Newsletter",
+      "subtitle": "Get every bit of important information straight from us",
+      "placeholder": "Your Email",
+      "send": "Send"
+    },
+    "brand": {
+      "slogan": "Instant transactions and micro-fees. Any amount, anytime, anywhere.",
+      "description": "We have a full service support desk with humans on call, plus extensive learning resources, tools and wikis.",
+      "support": "Get Support"
+    },
+    "links": {
+      "home": {
+        "title": "Home",
+        "individuals": "Individuals",
+        "businesses": "Businesses",
+        "downloads": "Downloads",
+        "buyOnline": "Buy Online",
+        "whereToSpend": "Where to Spend",
+        "newMerchantKit": "New Merchant Kit"
+      },
+      "institutions": {
+        "title": "Institutions",
+        "traders": "Traders",
+        "financialServices": "Financial Services",
+        "regulatory": "Regulatory",
+        "fastPass": "FastPass"
+      },
+      "developers": {
+        "title": "Developers",
+        "platform": "Platform",
+        "documentation": "Documentation",
+        "contributing": "Contributing",
+        "providersAndTools": "Providers and Tools",
+        "roadmap": "Roadmap"
+      },
+      "community": {
+        "title": "Community",
+        "bugBountyProgram": "Bug Bounty Program",
+        "learningResources": "Learning Resources",
+        "connectWithUs": "Connect With Us",
+        "forum": "Forum",
+        "masternodes": "Masternodes",
+        "mining": "Mining",
+        "blog": "Blog"
+      }
+    },
     "copyright": "All Rights Reserved @2025 Dash",
     "termsOfUse": "Terms of Use",
     "privacyStatement": "DCG Privacy Statement",
@@ -41,7 +92,7 @@
         "variant": "dark",
         "label": "News",
         "title": "What's New\nWith Dash",
-        "image": "/images/slider/video-dark.jpg"
+        "image": "/images/home/slider/video-dark.jpg"
       },
       {
         "id": "3",
@@ -49,14 +100,14 @@
         "label": "Spotlight",
         "title": "John Doe",
         "subtitle": "Learn More About Dash Pay",
-        "image": "/images/slider/video-blue-person.jpg"
+        "image": "/images/home/slider/video-blue-person.jpg"
       },
       {
         "id": "4",
         "variant": "coin",
         "label": "The first DAO period",
         "title": "More Than\nA Coin. A DAO.",
-        "image": "/images/slider/coin-3d.png"
+        "image": "/images/home/slider/coin-3d.png"
       }
     ]
   },
@@ -138,6 +189,252 @@
     },
     "codeExample": {
       "language": "Java"
+    }
+  },
+  "getStartedActions": {
+    "getTheApp": {
+      "title": "Get The App",
+      "description": "Download today and start moving money in minutes."
+    },
+    "getDash": {
+      "title": "Get Dash",
+      "description": "Buy Dash online or at an ATM near you."
+    },
+    "getGoing": {
+      "title": "Get Going",
+      "description": "Receive Dash, send some to friends, shop online or in store."
+    },
+    "platform": {
+      "title": "Get the app",
+      "description": "Get started today — download the app and begin transferring money with a secure, reliable platform you can trust.",
+      "viewAll": "View All Apps"
+    },
+    "features": {
+      "instant": {
+        "title": "Instant",
+        "description": "Transactions in less than a second"
+      },
+      "secure": {
+        "title": "Secure",
+        "description": "Fully Private and Anonymous"
+      },
+      "microFees": {
+        "title": "Micro Fees",
+        "description": "Very low fees for every transaction"
+      }
+    }
+  },
+  "firstSteps": {
+    "chip": "First Steps",
+    "title": "Choose Dash for your next Web3 project",
+    "cards": {
+      "identities": {
+        "title": "Identities & Names",
+        "description": "Replace public addresses with your Dash username and never worry about sending money to the wrong person again.",
+        "button": "Choose your identity"
+      },
+      "storage": {
+        "title": "Application Data Storage",
+        "description": "Platform consensus will verify and validate any application data stored on the network.",
+        "button": "Read More"
+      },
+      "developer": {
+        "title": "Frictionless Developer Experience",
+        "description": "Use our SDKs to easily develop applications without worrying about the lower level details.",
+        "button": "Read More"
+      }
+    }
+  },
+  "walletIntegrations": {
+    "chip": "Get Along With Us",
+    "title": "Wallet Integrations"
+  },
+  "reviews": {
+    "chip": "Our Reviews",
+    "title": "Here's what people are saying about us",
+    "subtitle": "You can read all reviews at our page on",
+    "trustpilotLink": "Trustpilot",
+    "reviews": [
+      {
+        "title": "Very personalized and timely",
+        "text": "Very personalized and timely",
+        "author": "Clarence Gardner",
+        "date": "Dec 22, 2025"
+      },
+      {
+        "title": "Best fork of BTC",
+        "text": "Best fork of BTC dunno why people buying MEME coins trash coins unlimited coins and other scam coins but avoid one of the best Fork of BTC which is Dash.",
+        "author": "max friman",
+        "date": "Dec 11, 2025"
+      },
+      {
+        "title": "Very Kind Team",
+        "text": "Very Kind Team. I am small Creator and Struggling in my Field still they replied with kindness and Professionalism.",
+        "author": "Aisha Ali",
+        "date": "Dec 5, 2025"
+      },
+      {
+        "title": "Great team, Good support, Great project",
+        "text": "Great team, Good support, Great project. Come on Dash!",
+        "author": "Wang Jun",
+        "date": "Nov 29, 2025"
+      },
+      {
+        "title": "The Dash team was fantastic!",
+        "text": "The Dash team was fantastic with helping me with my issue. They were communicative, polite, and helpful.",
+        "author": "Thomas Quinlan",
+        "date": "Oct 28, 2025"
+      }
+    ]
+  },
+  "platformBlocks": {
+    "providers": {
+      "title": "Providers and Tools",
+      "description": "Many software development kits and tools already work with Dash. A large ecosystem of partners also provides APIs, custody solutions or payment processing. Getting started is easy!",
+      "button": "Learn More"
+    },
+    "libraries": {
+      "title": "Client Libraries that",
+      "titleLine2": "Speak Your Language",
+      "description": "SDKs are available for the languages you love and use most. Get started building apps using our easy-to-follow guides.",
+      "quickStart": "Quick Start",
+      "jsSdk": "JS SDK"
+    }
+  },
+  "latestNews": {
+    "chip": "Connect with our team",
+    "title": "Check Out Latest News From Dash",
+    "joinDiscord": "Join Discord",
+    "cards": {
+      "video": {
+        "tag": "Video",
+        "title": "Latest news from the Dash team",
+        "description": "Check out what our team has done in the last week."
+      },
+      "post1": {
+        "tagPost": "X Post",
+        "tagAuthor": "@Dashpay",
+        "text": "Dash is the world's oldest decentralized autonomous organization (DAO).\n\nThe network has self-funded for over a decade: no VCs, no premine, no outside grants or investment..."
+      },
+      "post2": {
+        "tagPost": "X Post",
+        "tagAuthor": "@Dashpay",
+        "text": "Is the Lightning Network dead?\n\nOr is it going to rise to new adoption heights?\n\nCome argue with us on the Crypto Quorum, tomorrow at 5pm UTC. Bring..."
+      }
+    },
+    "roadmap": {
+      "comingSoon": "Coming Soon",
+      "title": "So what's next\nfor Dash?",
+      "description": "Plenty of reasons to get excited just around the corner. Read and get prepared.",
+      "features": ["ChainLocks", "Long Living Masternode Quorums", "Evolution Initial Design Document"],
+      "seeFullRoadmap": "See Full Roadmap",
+      "viewReleaseNotes": "View release notes",
+      "releases": {
+        "q1_2025": {
+          "tag": "Q1 2025",
+          "title": "Dash Core v0.2",
+          "items": ["Backports for Bitcoin v0.2.2", "Basic QT Wallet UI update", "Post stress test enhancements"]
+        },
+        "2024": {
+          "tag": "2024",
+          "complete": "Complete",
+          "title": "Dash Platform Rollout",
+          "items": ["Credit system", "Improved identity and data optimizations", "Post stress test enhancements"]
+        }
+      }
+    }
+  },
+  "howNodesWork": {
+    "chip": "Interesting Facts",
+    "title": "How Nodes Are Working",
+    "cards": {
+      "masternodes": {
+        "title": "Masternodes in General:",
+        "description": "Dash is best known as the first cryptocurrency with a focus on user-friendly payments and transaction speed.",
+        "highlight": "What many people do not know is that these features are implemented on top of a network of dedicated servers known as masternodes",
+        "descriptionEnd": ", which gives rise to many exciting features not available on conventional blockchains.",
+        "number": "01"
+      },
+      "hosted": {
+        "title": "Option 1: Hosted masternode",
+        "description": "Since operating your own server requires a certain level knowledge of blockchains and Linux server operating systems, several community members offer",
+        "highlight": "dedicated hosting solutions for a fee.",
+        "descriptionEnd": " Taking advantage of these services means the user only needs to provide the masternode collateral and pay the hosting fee in order to receive payment from the block reward.",
+        "number": "02"
+      }
+    }
+  },
+  "faq": {
+    "chip": "From Our Community",
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "whatIsDash": {
+        "question": "What is Dash?",
+        "answer": "Dash is an open-source cryptocurrency that was forked from Bitcoin in January 2014. The name \"Dash\" comes from \"Digital Cash.\" It focuses on being a fast, cheap global payments network with features like InstantSend (transactions confirm in 1-2 seconds), optional privacy through PrivateSend, and extremely low fees (typically $0.01-$0.02 per transaction)."
+      },
+      "whoInvented": {
+        "question": "Who invented Dash?",
+        "answer": "Based on the Bitcoin project, Dash was launched on January 18, 2014 by founder Evan Duffield. The first few years of development saw Dash develop a focus on speed and fungibility, making it an excellent and practical alternative to cash, both online and at the point of sale in shops and restaurants."
+      },
+      "whatUsedFor": {
+        "question": "What is Dash used for?",
+        "answer": "Dash is used for fast, private, and low-cost payments both online and at physical point-of-sale locations. It's designed to work like digital cash — transactions confirm in seconds and can be immediately spent by the recipient. Dash is also used for cross-border payments, remittances, and as a store of value in regions with unstable local currencies."
+      },
+      "whoControls": {
+        "question": "Who controls Dash?",
+        "answer": "No single entity controls Dash. It operates as one of the world's oldest Decentralized Autonomous Organizations (DAO). Decisions are made collectively by masternode operators who vote on proposals for network changes, marketing, and development. The network self-funds through a treasury system that allocates 10% of block rewards to approved projects."
+      }
+    }
+  },
+  "bugBounty": {
+    "title": "Bug Bounty Program",
+    "description": "The Dash Core Group Bug Bounty Program allows developers to discover and resolve bugs before the general public is aware of such bugs, preventing incidents of widespread abuse.",
+    "button": "Quick Start"
+  },
+  "getDash": {
+    "chip": "Use Dash",
+    "title": "Get Dash",
+    "description": "Dash is easy to buy or receive online, from friends, or at an ATM near you.",
+    "buyOnline": "Buy Online",
+    "findAtm": "Find at ATM",
+    "stats": {
+      "merchants": { "label": "Merchants & Services", "value": "159,000 +" },
+      "exchanges": { "label": "Exchanges and Brokers", "value": "265 +" },
+      "speed": { "label": "Transaction Speed", "value": "1 Second" }
+    }
+  },
+  "buyDashOnline": {
+    "title": "Places to Buy Dash Online",
+    "seeAll": "See All"
+  },
+  "getGoing": {
+    "chip": "Dash Living",
+    "title": "Get Going!",
+    "description": "Grab a coffee, buy a plane ticket, or pay your phone bill. Dash is growing and is accepted by new businesses every day.",
+    "useYourDash": "Use Your Dash",
+    "learnMore": "Learn More",
+    "cards": {
+      "friends": {
+        "label": "How to spend?",
+        "title": "Pay Your\nFriends and Family"
+      },
+      "bills": {
+        "label": "How to spend?",
+        "title": "Airfare, Utility Bills,\nand Subscriptions"
+      },
+      "bills2": {
+        "label": "How to spend?",
+        "title": "Airfare, Utility Bills,\nand Subscriptions"
+      }
+    },
+    "retailers": {
+      "title": "Popular Retailers to Spend Dash",
+      "seeAll": "See All"
+    },
+    "platform": {
+      "title": "Connect, learn, create.",
+      "description": "Be a part of something bigger, get involved with meetups, learn from others, and take ownership in Dash's future.",
+      "learnMore": "Learn More"
     }
   }
 }

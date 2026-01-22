@@ -20,7 +20,7 @@ export function BulletsGrid (): React.ReactNode {
             {/* Coin overflows card by design */}
             <div className='absolute -top-15 -right-8 h-75 w-70 lg:-top-23 lg:-right-12 lg:h-123 lg:w-111'>
               <Image
-                src='/images/bullets/main-3d-coin.png'
+                src='/images/home/bullets/main-3d-coin.png'
                 alt='Dash 3D Coin'
                 fill
                 className='object-contain object-right'
@@ -28,7 +28,7 @@ export function BulletsGrid (): React.ReactNode {
             </div>
             <div className='absolute bottom-4 left-4 lg:bottom-9 lg:left-9'>
               <Image
-                src='/images/bullets/logo-dash-white.svg'
+                src='/images/home/bullets/logo-dash-white.svg'
                 alt='Dash'
                 width={191}
                 height={51}
@@ -88,7 +88,7 @@ export function BulletsGrid (): React.ReactNode {
           <Card className='order-5 col-span-1 flex h-25 items-center justify-center lg:order-4 lg:col-start-4 lg:row-start-1 lg:h-auto'>
             <div className='relative h-full w-full'>
               <Image
-                src='/images/bullets/coin-3d-small.png'
+                src='/images/home/bullets/coin-3d-small.png'
                 alt='Dash Coin'
                 fill
                 className='object-cover'
@@ -111,7 +111,7 @@ export function BulletsGrid (): React.ReactNode {
           >
             <div className='absolute top-4 right-4 lg:top-9 lg:right-9'>
               <Image
-                src='/images/bullets/logo-dash-blue.svg'
+                src='/images/home/bullets/logo-dash-blue.svg'
                 alt=''
                 width={135}
                 height={110}
@@ -132,7 +132,7 @@ export function BulletsGrid (): React.ReactNode {
             {/* Image rotated and scaled to create decorative overflow effect */}
             <div className='absolute top-1/2 -right-12 flex h-25 w-75 -translate-y-1/2 items-center justify-center lg:-right-20 lg:h-36 lg:w-125'>
               <Image
-                src='/images/bullets/coins-stack.png'
+                src='/images/home/bullets/coins-stack.png'
                 alt=''
                 width={735}
                 height={144}

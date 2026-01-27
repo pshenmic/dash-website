@@ -6,6 +6,7 @@ interface WalletCardButton {
   variant: 'primary' | 'secondary' | 'outline'
   inverted?: boolean
   href?: string
+  customClassName?: string
 }
 
 interface WalletCardProps {
@@ -31,6 +32,7 @@ export function WalletCard ({
           width={75}
           height={75}
           className='h-full w-full object-cover'
+          unoptimized={logo.endsWith('.svg')}
         />
       </div>
 
@@ -58,7 +60,7 @@ export function WalletCard ({
               key={index}
               variant={button.variant}
               inverted={button.inverted}
-              className='h-[50px] rounded-xl px-6 text-lg'
+              className={button.customClassName || 'h-[50px] rounded-xl px-6 text-lg'}
             >
               {button.label}
             </Button>

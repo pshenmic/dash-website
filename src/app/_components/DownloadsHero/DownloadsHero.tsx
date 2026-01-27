@@ -75,7 +75,7 @@ export function DownloadsHero (): React.ReactNode {
         </div>
 
         {/* DashPay App Block */}
-        <div className='relative mb-6 overflow-hidden rounded-3xl bg-primary-blue py-6 lg:mb-16 lg:h-72 lg:rounded-4xl lg:py-0'>
+        <div className='relative mb-6 overflow-hidden rounded-3xl bg-primary-blue py-6 dark:bg-secondary-space-cadet lg:mb-16 lg:h-72 lg:rounded-4xl lg:py-0'>
           {/* Decorative Ellipses - centered behind app screenshots */}
           <div className='pointer-events-none absolute -right-20 -top-48 size-180 rounded-full bg-white/15' />
           <div className='pointer-events-none absolute -right-10 -top-32 size-140 rounded-full bg-white/10' />
@@ -93,10 +93,10 @@ export function DownloadsHero (): React.ReactNode {
                 </span>
               </div>
               <div className='flex gap-3 lg:gap-4'>
-                <button className='h-12 rounded-xl bg-white px-6 text-base font-semibold text-primary-blue transition-colors hover:bg-white/90 lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'>
+                <button className='h-12 rounded-xl bg-white px-6 text-base font-semibold text-primary-dark transition-colors hover:bg-white/90 lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'>
                   {t('dashPayApp.android')}
                 </button>
-                <button className='h-12 rounded-xl bg-white/15 px-6 text-base font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/25 lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'>
+                <button className='h-12 rounded-xl bg-white/15 px-6 text-base font-semibold text-primary-dark backdrop-blur-sm transition-colors hover:bg-white/25 lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'>
                   {t('dashPayApp.ios')}
                 </button>
               </div>

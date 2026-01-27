@@ -530,5 +530,124 @@
       "description": "Be a part of something bigger, get involved with meetups, learn from others, and take ownership in Dash's future.",
       "learnMore": "Learn More"
     }
+  },
+  "desktopWallets": {
+    "title": "Desktop Wallets",
+    "description": "A range of Dash desktop wallets are available, each with different features and security.",
+    "platforms": {
+      "windows64": "Windows (64-bit)",
+      "windows32": "Windows (32-bit)",
+      "macIntel": "macOS (Intel)",
+      "macSilicon": "macOS (Apple Silicon)",
+      "linux": "Linux"
+    },
+    "wallets": {
+      "dashCore": {
+        "title": "Dash Core",
+        "description": "Dash Core is full Dash wallet/P2P client with InstantSend, CoinJoin, governance, masternodes, blockchain, RPC console.",
+        "buttons": {
+          "bugBounty": "Bug Bounty",
+          "download": "Download"
+        }
+      },
+      "exodus": {
+        "title": "Exodus",
+        "description": "Exodus is multi-asset wallet with built-in exchanges, local key/data encryption, no accounts/servers.",
+        "buttons": {
+          "website": "Website",
+          "download": "Download"
+        }
+      },
+      "dashElectrum": {
+        "title": "Dash\nElectrum",
+        "description": "Dash Electrum is lightweight open-source Dash wallet with full-node security, light speed, instant tx, CoinJoin, easy UI.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "guardaWallet": {
+        "title": "Guarda\nWallet",
+        "description": "Guarda offers single-app crypto solution with staking, purchases, best exchanges, loans, multisig.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "vultisig": {
+        "title": "Vultisig",
+        "description": "Vultisig is an open-source, seedless multi-chain crypto wallet leveraging TSS and MPC for secure asset management.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "stackWallet": {
+        "title": "Stack\nWallet",
+        "description": "Stack is first open-source, non-custodial, privacy-focused crypto wallet for enthusiasts.",
+        "buttons": {
+          "download": "Download"
+        }
+      }
+    }
+  },
+  "hardwareWallets": {
+    "title": "Hardware Wallets",
+    "description": "Hardware wallets are security devices designed to keep cryptographic keys safe from hackers and thieves. Hardware wallets use random number generators, encrypted key storage, PIN numbers and passwords to offer the highest level of security for your digital currencies.",
+    "wallets": {
+      "tangem": {
+        "title": "Tangem Wallet",
+        "description": "Tangem is Swiss card-shaped NFC hardware wallet for secure mobile crypto storage without cables/batteries/internet.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "ledger": {
+        "title": "Ledger",
+        "description": "Ledger offers chip-based hardware wallets for multi-currency storage/payments, suited to needs.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "keepkey": {
+        "title": "KeepKey",
+        "description": "KeepKey is hardware wallet for secure key generation/storage/signing with computer software.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "safepal": {
+        "title": "SafePal",
+        "description": "SafePal is user-friendly hardware wallet with multi-security and easy UI for storing/trading cryptos.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "dcent": {
+        "title": "D'CENT",
+        "description": "D'CENT provides cold wallets with fingerprint, on-device keys, secure elements for safe tx.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "ellipal": {
+        "title": "Ellipal Titan",
+        "description": "Ellipal Titan is metal-sealed air-gapped cold wallet using QR codes, blocking connections against attacks.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "ngrave": {
+        "title": "NGRAVE",
+        "description": "NGRAVE ZERO is offline hardware wallet with top security, plus GRAPHENE steel key backup.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "secux": {
+        "title": "SecuX",
+        "description": "SecuX offers vault-grade secure hardware wallets with innovative tech for asset control.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      }
+    }
   }
 }

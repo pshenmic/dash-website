@@ -405,6 +405,82 @@
       "speed": { "label": "Transaction Speed", "value": "1 Second" }
     }
   },
+  "walletShowcase": {
+    "title": "Choose Your Wallet",
+    "wallets": {
+      "dashpayAndroid": {
+        "title": "DashPay\nAndroid",
+        "description": "The DashPay Wallet supports advanced Dash features like CoinJoin and usernames, plus real-world spending tools, staking, a merchant map, and more",
+        "buttons": {
+          "download": "Download",
+          "learnMore": "Learn More"
+        }
+      },
+      "vultisig": {
+        "title": "Vultisig",
+        "description": "Vultisig is an open-source, seedless multi-chain crypto wallet leveraging TSS and MPC for secure asset management",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "exodus": {
+        "title": "Exodus",
+        "description": "Exodus is multi-asset wallet with built-in exchanges, local key/data encryption, no accounts/servers.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "edgeWallet": {
+        "title": "Edge Wallet",
+        "description": "Edge Wallet provides maximum security while keeping simplicity, allowing all users to easily manage, transfer and exchange their currencies.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "stackWallet": {
+        "title": "Stack Wallet",
+        "description": "Stack Wallet is a multicoin, non-custodial wallet for Dash and other digital currencies with built-in exchange features.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "dashElectrum": {
+        "title": "Dash Electrum",
+        "description": "Dash Electrum is a lightweight desktop wallet that provides fast and secure Dash transactions with advanced features.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "zyptoWallet": {
+        "title": "Zypto Wallet",
+        "description": "Zypto Wallet is a simple and secure multi-currency wallet designed for ease of use and maximum security.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "trustWallet": {
+        "title": "Trust Wallet",
+        "description": "Trust Wallet is a secure, open-source, decentralized and anonymous crypto wallet with support for multiple blockchains.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "unstoppableWallet": {
+        "title": "Unstoppable Wallet",
+        "description": "Unstoppable Wallet is a fully decentralized wallet for independent and secure management of crypto assets.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "guardaWallet": {
+        "title": "Guarda Wallet",
+        "description": "Guarda Wallet is a secure non-custodial cryptocurrency storage supporting 50+ blockchains and 400K+ tokens.",
+        "buttons": {
+          "download": "Download"
+        }
+      }
+    }
+  },
   "buyDashOnline": {
     "title": "Places to Buy Dash Online",
     "seeAll": "See All"

@@ -405,6 +405,82 @@
       "speed": { "label": "Скорость транзакции", "value": "1 секунда" }
     }
   },
+  "walletShowcase": {
+    "title": "Выберите свой кошелёк",
+    "wallets": {
+      "dashpayAndroid": {
+        "title": "DashPay\nAndroid",
+        "description": "Кошелёк DashPay поддерживает расширенные функции Dash, такие как CoinJoin и имена пользователей, а также инструменты для реальных покупок, стейкинг, карту магазинов и многое другое",
+        "buttons": {
+          "download": "Скачать",
+          "learnMore": "Узнать больше"
+        }
+      },
+      "vultisig": {
+        "title": "Vultisig",
+        "description": "Vultisig — это мультичейн криптокошелёк с открытым исходным кодом, использующий TSS и MPC для безопасного управления активами",
+        "buttons": {
+          "download": "Скачать"
+        }
+      },
+      "exodus": {
+        "title": "Exodus",
+        "description": "Exodus — это мультивалютный кошелёк со встроенными обменниками, локальным шифрованием ключей и данных, без учётных записей и серверов.",
+        "buttons": {
+          "download": "Скачать"
+        }
+      },
+      "edgeWallet": {
+        "title": "Edge Wallet",
+        "description": "Edge Wallet обеспечивает максимальную безопасность при сохранении простоты, позволяя всем пользователям легко управлять, переводить и обменивать свои валюты.",
+        "buttons": {
+          "download": "Скачать"
+        }
+      },
+      "stackWallet": {
+        "title": "Stack Wallet",
+        "description": "Stack Wallet — это мультивалютный некастодиальный кошелёк для Dash и других цифровых валют со встроенными функциями обмена.",
+        "buttons": {
+          "download": "Скачать"
+        }
+      },
+      "dashElectrum": {
+        "title": "Dash Electrum",
+        "description": "Dash Electrum — это лёгкий десктопный кошелёк, обеспечивающий быстрые и безопасные транзакции Dash с расширенными функциями.",
+        "buttons": {
+          "download": "Скачать"
+        }
+      },
+      "zyptoWallet": {
+        "title": "Zypto Wallet",
+        "description": "Zypto Wallet — это простой и безопасный мультивалютный кошелёк, разработанный для удобства использования и максимальной безопасности.",
+        "buttons": {
+          "download": "Скачать"
+        }
+      },
+      "trustWallet": {
+        "title": "Trust Wallet",
+        "description": "Trust Wallet — это безопасный, децентрализованный и анонимный криптокошелёк с открытым исходным кодом и поддержкой нескольких блокчейнов.",
+        "buttons": {
+          "download": "Скачать"
+        }
+      },
+      "unstoppableWallet": {
+        "title": "Unstoppable Wallet",
+        "description": "Unstoppable Wallet — это полностью децентрализованный кошелёк для независимого и безопасного управления криптоактивами.",
+        "buttons": {
+          "download": "Скачать"
+        }
+      },
+      "guardaWallet": {
+        "title": "Guarda Wallet",
+        "description": "Guarda Wallet — это безопасное некастодиальное хранилище криптовалюты с поддержкой 50+ блокчейнов и 400 000+ токенов.",
+        "buttons": {
+          "download": "Скачать"
+        }
+      }
+    }
+  },
   "buyDashOnline": {
     "title": "Где купить Dash онлайн",
     "seeAll": "Смотреть все"

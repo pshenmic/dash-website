@@ -1,6 +1,7 @@
 import { setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import { DownloadsHero } from '../../_components/DownloadsHero'
+import { WalletShowcase } from '../../_components/WalletShowcase'
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((locale) => ({ locale }))
@@ -18,7 +19,9 @@ export default async function DownloadsPage ({
     <main>
       <DownloadsHero />
 
-      {/* Wallet sections will be added here */}
+      <section className='bg-primary-white py-12 dark:bg-primary-dark lg:py-16'>
+        <WalletShowcase />
+      </section>
     </main>
   )
 }

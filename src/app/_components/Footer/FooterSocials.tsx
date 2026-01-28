@@ -23,29 +23,31 @@ export function FooterSocials (): React.ReactNode {
   return (
     <div className='flex flex-col gap-4'>
       <div className='flex flex-col gap-1'>
-        <h3 className='text-2xl font-extrabold leading-9 text-white lg:text-3xl'>
+        <h3 className='animate-fade-in-up text-2xl font-extrabold leading-9 text-white lg:text-3xl'>
           {t('title')}
         </h3>
-        <p className='text-sm font-medium text-white'>
+        <p className='animate-fade-in-up-1 text-sm font-medium text-white'>
           {t('subtitle')}
         </p>
       </div>
       <div className='flex flex-wrap gap-2.5 lg:gap-4'>
-        {socialLinks.map((social) => (
+        {socialLinks.map((social, index) => (
           <a
             key={social.name}
             href={social.href}
             target='_blank'
             rel='noopener noreferrer'
-            className='flex size-10 items-center justify-center rounded-xl bg-white/10 transition-colors hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50'
+            className='flex size-10 items-center justify-center rounded-xl bg-white/10 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-primary-turquoise/20 hover:shadow-md hover:shadow-primary-turquoise/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise/50'
             aria-label={social.name}
+            style={{ animationDelay: `${index * 0.05}s` }}
           >
             <Image
               src={social.icon}
               alt=''
               width={25}
               height={25}
-              className='h-auto max-h-6 w-6'
+              className='size-6'
+              unoptimized
             />
           </a>
         ))}

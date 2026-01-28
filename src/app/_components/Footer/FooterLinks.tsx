@@ -62,9 +62,13 @@ export function FooterLinks (): React.ReactNode {
 
   return (
     <div className='grid grid-cols-2 gap-x-10 gap-y-8 lg:grid-cols-4 lg:gap-x-16'>
-      {linkColumns.map((column) => (
-        <div key={column.titleKey} className='flex flex-col gap-4'>
-          <h4 className='text-lg font-extrabold text-white'>
+      {linkColumns.map((column, columnIndex) => (
+        <div
+          key={column.titleKey}
+          className='flex flex-col gap-4'
+          style={{ animationDelay: `${columnIndex * 0.1}s` }}
+        >
+          <h4 className='animate-fade-in-up text-lg font-extrabold text-white'>
             {t(`${column.titleKey}.title`)}
           </h4>
           <ul className='flex flex-col gap-4'>
@@ -72,7 +76,7 @@ export function FooterLinks (): React.ReactNode {
               <li key={link.key}>
                 <a
                   href={link.href}
-                  className='text-sm font-medium text-white/50 transition-colors hover:text-white/70 focus:outline-none focus-visible:underline'
+                  className='inline-block text-sm font-medium text-white/50 transition-all duration-300 hover:translate-x-1 hover:text-primary-turquoise focus:outline-none focus-visible:text-primary-turquoise focus-visible:underline'
                 >
                   {t(`${column.titleKey}.${link.key}`)}
                 </a>

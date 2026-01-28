@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { WalletCard } from '../WalletShowcase/WalletCard'
+import { MasonryGrid } from '../WalletShowcase/MasonryGrid'
 
 export function DesktopWallets (): React.ReactNode {
   const t = useTranslations('desktopWallets')
@@ -84,7 +85,7 @@ export function DesktopWallets (): React.ReactNode {
         </div>
 
         {/* Right: Platform Filters */}
-        <div className='flex gap-3'>
+        <div className='flex gap-3 overflow-x-auto scrollbar-hide'>
           {platforms.map((platform) => (
             <button
               key={platform.id}
@@ -102,11 +103,11 @@ export function DesktopWallets (): React.ReactNode {
       </div>
 
       {/* Wallets Grid */}
-      <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4'>
+      <MasonryGrid>
         {wallets.map((wallet, index) => (
           <WalletCard key={index} {...wallet} />
         ))}
-      </div>
+      </MasonryGrid>
     </div>
   )
 }

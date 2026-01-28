@@ -649,5 +649,34 @@
         }
       }
     }
+  },
+  "web3Wallets": {
+    "title": "Web3 Wallets",
+    "description1": "Web3 wallets provide decentralized access to your Dash, offering enhanced security and control over your digital assets.",
+    "description2": "These wallets leverage modern cryptographic technologies for secure, trustless transactions.",
+    "wallets": {
+      "vultisig": {
+        "title": "Vultisig",
+        "description": "Vultisig is an open-source, seedless multi-chain crypto wallet leveraging TSS and MPC for secure asset management",
+        "buttons": {
+          "web3Wallet": "Web3 Wallet"
+        }
+      },
+      "trustWallet": {
+        "title": "Trust Wallet",
+        "description": "Trust allows simple crypto control with direct deposits from Binance/Coinbase.",
+        "buttons": {
+          "web3Wallet": "Web3 Wallet"
+        }
+      },
+      "dashPaperWallet": {
+        "title": "Dash\nPaper Wallet",
+        "description": "The Dash Paper Wallet generator allows you to generate, encrypt and secure the keys to a single Dash address on a clean computer without ever connecting to the internet. Perfect for long term secure storage.",
+        "buttons": {
+          "instructions": "Instructions",
+          "generator": "Generator"
+        }
+      }
+    }
   }
 }

@@ -22,19 +22,32 @@ export default async function DownloadsPage ({
     <main>
       <DownloadsHero />
 
-      <section className='bg-primary-white py-12 dark:bg-primary-dark lg:py-16'>
+      {/* Mobile Wallets Showcase Section */}
+      <section className='bg-primary-white py-16 dark:bg-primary-dark lg:py-24'>
         <WalletShowcase />
       </section>
 
-      <section className='bg-primary-white py-12 dark:bg-primary-dark lg:py-16'>
+      {/* Subtle Divider */}
+      <div className='h-px bg-linear-to-r from-transparent via-primary-blue/20 to-transparent dark:via-primary-turquoise/20' />
+
+      {/* Desktop Wallets Section - with subtle turquoise tint */}
+      <section className='bg-primary-turquoise/5 py-16 dark:bg-primary-turquoise/5 lg:py-24'>
         <DesktopWallets />
       </section>
 
-      <section className='bg-primary-white py-12 dark:bg-primary-dark lg:py-16'>
+      {/* Subtle Divider */}
+      <div className='h-px bg-linear-to-r from-transparent via-primary-blue/20 to-transparent dark:via-primary-turquoise/20' />
+
+      {/* Hardware Wallets Section */}
+      <section className='bg-primary-white py-16 dark:bg-primary-dark lg:py-24'>
         <HardwareWallets />
       </section>
 
-      <section className='bg-primary-white py-12 dark:bg-primary-dark lg:py-16'>
+      {/* Subtle Divider */}
+      <div className='h-px bg-linear-to-r from-transparent via-primary-turquoise/30 to-transparent' />
+
+      {/* Web3 Wallets Section - with stronger turquoise tint */}
+      <section className='bg-primary-turquoise/10 py-16 dark:bg-primary-turquoise/10 lg:py-24'>
         <Web3Wallets />
       </section>
     </main>

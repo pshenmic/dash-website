@@ -96,7 +96,7 @@ export function DownloadsHero (): React.ReactNode {
                 <button className='h-12 rounded-xl bg-white px-6 text-base font-semibold text-primary-dark transition-colors hover:bg-white/90 lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'>
                   {t('dashPayApp.android')}
                 </button>
-                <button className='h-12 rounded-xl bg-white/15 px-6 text-base font-semibold text-primary-dark backdrop-blur-sm transition-colors hover:bg-white/25 lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'>
+                <button className='h-12 rounded-xl bg-white/15 px-6 text-base font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/25 lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'>
                   {t('dashPayApp.ios')}
                 </button>
               </div>

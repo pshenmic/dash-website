@@ -4,6 +4,7 @@ import { DownloadsHero } from '../../_components/DownloadsHero'
 import { WalletShowcase } from '../../_components/WalletShowcase'
 import { DesktopWallets } from '../../_components/DesktopWallets'
 import { HardwareWallets } from '../../_components/HardwareWallets'
+import { Web3Wallets } from '../../_components/Web3Wallets'
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((locale) => ({ locale }))
@@ -31,6 +32,10 @@ export default async function DownloadsPage ({
 
       <section className='bg-primary-white py-12 dark:bg-primary-dark lg:py-16'>
         <HardwareWallets />
+      </section>
+
+      <section className='bg-primary-white py-12 dark:bg-primary-dark lg:py-16'>
+        <Web3Wallets />
       </section>
     </main>
   )

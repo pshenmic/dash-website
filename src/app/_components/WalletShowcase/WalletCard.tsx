@@ -7,6 +7,7 @@ interface WalletCardButton {
   inverted?: boolean
   href?: string
   customClassName?: string
+  disabled?: boolean
 }
 
 interface WalletCardProps {
@@ -23,7 +24,7 @@ export function WalletCard ({
   buttons
 }: WalletCardProps): React.ReactNode {
   return (
-    <div className='flex flex-col gap-[35px] rounded-[36px] border border-primary-dark/15 bg-white px-[30px] py-[35px] shadow-[0px_0px_100px_0px_rgba(12,28,51,0.1)] dark:border-white/15 dark:bg-secondary-space-cadet'>
+    <div className='group flex flex-col gap-[35px] rounded-[36px] border border-primary-dark/15 bg-white px-[30px] py-[35px] shadow-[0px_0px_100px_0px_rgba(12,28,51,0.1)] transition-all duration-300 hover:scale-[1.02] hover:border-primary-turquoise/30 hover:shadow-2xl hover:shadow-primary-blue/20 dark:border-white/15 dark:bg-secondary-space-cadet dark:hover:border-primary-turquoise/40 dark:hover:shadow-primary-turquoise/20'>
       {/* Logo */}
       <div className='h-19 w-19 overflow-clip rounded-2xl'>
         <Image
@@ -60,7 +61,9 @@ export function WalletCard ({
               key={index}
               variant={button.variant}
               inverted={button.inverted}
-              className={button.customClassName || 'h-[50px] rounded-xl px-6 text-lg'}
+              href={button.href}
+              disabled={button.disabled}
+              className={button.customClassName || 'h-[50px] rounded-xl px-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary-blue/20 dark:hover:shadow-primary-turquoise/20'}
             >
               {button.label}
             </Button>

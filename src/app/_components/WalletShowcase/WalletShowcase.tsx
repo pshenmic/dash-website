@@ -11,8 +11,8 @@ export function WalletShowcase (): React.ReactNode {
         title: t('wallets.dashpayAndroid.title'),
         description: t('wallets.dashpayAndroid.description'),
         buttons: [
-          { label: t('wallets.dashpayAndroid.buttons.learnMore'), variant: 'outline' as const },
-          { label: t('wallets.dashpayAndroid.buttons.download'), variant: 'primary' as const, inverted: true }
+          { label: t('wallets.dashpayAndroid.buttons.learnMore'), variant: 'outline' as const, disabled: true },
+          { label: t('wallets.dashpayAndroid.buttons.download'), variant: 'primary' as const, inverted: true, href: 'https://play.google.com/store/apps/details?id=hashengineering.darkcoin.wallet' }
         ]
       },
       {
@@ -20,7 +20,7 @@ export function WalletShowcase (): React.ReactNode {
         title: t('wallets.vultisig.title'),
         description: t('wallets.vultisig.description'),
         buttons: [
-          { label: t('wallets.vultisig.buttons.download'), variant: 'primary' as const, inverted: true }
+          { label: t('wallets.vultisig.buttons.download'), variant: 'primary' as const, inverted: true, href: 'https://vultisig.com/download' }
         ]
       },
       {
@@ -28,7 +28,7 @@ export function WalletShowcase (): React.ReactNode {
         title: t('wallets.exodus.title'),
         description: t('wallets.exodus.description'),
         buttons: [
-          { label: t('wallets.exodus.buttons.download'), variant: 'primary' as const, inverted: true }
+          { label: t('wallets.exodus.buttons.download'), variant: 'primary' as const, inverted: true, href: 'https://www.exodus.com/download' }
         ]
       }
     ],
@@ -38,7 +38,7 @@ export function WalletShowcase (): React.ReactNode {
         title: t('wallets.edgeWallet.title'),
         description: t('wallets.edgeWallet.description'),
         buttons: [
-          { label: t('wallets.edgeWallet.buttons.download'), variant: 'primary' as const, inverted: true }
+          { label: t('wallets.edgeWallet.buttons.download'), variant: 'primary' as const, inverted: true, href: 'https://edge.app/' }
         ]
       },
       {
@@ -46,7 +46,7 @@ export function WalletShowcase (): React.ReactNode {
         title: t('wallets.stackWallet.title'),
         description: t('wallets.stackWallet.description'),
         buttons: [
-          { label: t('wallets.stackWallet.buttons.download'), variant: 'primary' as const, inverted: true }
+          { label: t('wallets.stackWallet.buttons.download'), variant: 'primary' as const, inverted: true, href: 'https://stackwallet.com/' }
         ]
       },
       {
@@ -54,7 +54,7 @@ export function WalletShowcase (): React.ReactNode {
         title: t('wallets.dashElectrum.title'),
         description: t('wallets.dashElectrum.description'),
         buttons: [
-          { label: t('wallets.dashElectrum.buttons.download'), variant: 'primary' as const, inverted: true }
+          { label: t('wallets.dashElectrum.buttons.download'), variant: 'primary' as const, inverted: true, href: 'https://electrum.dash.org/' }
         ]
       }
     ],
@@ -64,7 +64,7 @@ export function WalletShowcase (): React.ReactNode {
         title: t('wallets.zyptoWallet.title'),
         description: t('wallets.zyptoWallet.description'),
         buttons: [
-          { label: t('wallets.zyptoWallet.buttons.download'), variant: 'primary' as const, inverted: true }
+          { label: t('wallets.zyptoWallet.buttons.download'), variant: 'primary' as const, inverted: true, href: 'https://zypto.com/' }
         ]
       },
       {
@@ -72,7 +72,7 @@ export function WalletShowcase (): React.ReactNode {
         title: t('wallets.trustWallet.title'),
         description: t('wallets.trustWallet.description'),
         buttons: [
-          { label: t('wallets.trustWallet.buttons.download'), variant: 'primary' as const, inverted: true }
+          { label: t('wallets.trustWallet.buttons.download'), variant: 'primary' as const, inverted: true, href: 'https://trustwallet.com/' }
         ]
       }
     ],
@@ -82,7 +82,7 @@ export function WalletShowcase (): React.ReactNode {
         title: t('wallets.unstoppableWallet.title'),
         description: t('wallets.unstoppableWallet.description'),
         buttons: [
-          { label: t('wallets.unstoppableWallet.buttons.download'), variant: 'primary' as const, inverted: true }
+          { label: t('wallets.unstoppableWallet.buttons.download'), variant: 'primary' as const, inverted: true, href: 'https://unstoppable.money/' }
         ]
       },
       {
@@ -90,7 +90,7 @@ export function WalletShowcase (): React.ReactNode {
         title: t('wallets.guardaWallet.title'),
         description: t('wallets.guardaWallet.description'),
         buttons: [
-          { label: t('wallets.guardaWallet.buttons.download'), variant: 'primary' as const, inverted: true }
+          { label: t('wallets.guardaWallet.buttons.download'), variant: 'primary' as const, inverted: true, href: 'https://guarda.com/downloads' }
         ]
       }
     ]
@@ -99,35 +99,35 @@ export function WalletShowcase (): React.ReactNode {
   return (
     <div className='mx-auto max-w-7xl px-4 lg:px-6'>
       {/* Section Title */}
-      <h2 className='mb-8 text-3xl leading-tight font-extrabold tracking-tight text-primary-dark dark:text-white lg:mb-12 lg:text-4xl lg:leading-10'>
+      <h2 className='mb-8 animate-fade-in-up text-3xl font-extrabold leading-tight tracking-tight text-primary-dark dark:text-white lg:mb-12 lg:text-4xl lg:leading-10'>
         {t('title')}
       </h2>
 
       {/* 4-Column Grid */}
       <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4'>
         {/* Column 1 */}
-        <div className='flex flex-col gap-5'>
+        <div className='flex animate-fade-in-up flex-col gap-5'>
           {wallets.column1.map((wallet, index) => (
             <WalletCard key={index} {...wallet} />
           ))}
         </div>
 
         {/* Column 2 */}
-        <div className='flex flex-col gap-5'>
+        <div className='flex animate-fade-in-up-1 flex-col gap-5'>
           {wallets.column2.map((wallet, index) => (
             <WalletCard key={index} {...wallet} />
           ))}
         </div>
 
         {/* Column 3 */}
-        <div className='flex flex-col gap-5'>
+        <div className='flex animate-fade-in-up-2 flex-col gap-5'>
           {wallets.column3.map((wallet, index) => (
             <WalletCard key={index} {...wallet} />
           ))}
         </div>
 
         {/* Column 4 */}
-        <div className='flex flex-col gap-5'>
+        <div className='flex animate-fade-in-up-3 flex-col gap-5'>
           {wallets.column4.map((wallet, index) => (
             <WalletCard key={index} {...wallet} />
           ))}

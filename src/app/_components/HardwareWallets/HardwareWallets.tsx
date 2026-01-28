@@ -18,7 +18,8 @@ export function HardwareWallets (): React.ReactNode {
         {
           label: t('wallets.tangem.buttons.purchase'),
           variant: 'primary' as const,
-          customClassName: hardwareWalletButtonClass
+          customClassName: hardwareWalletButtonClass,
+          href: 'https://tangem.com/en/pricing/'
         }
       ]
     },
@@ -30,7 +31,8 @@ export function HardwareWallets (): React.ReactNode {
         {
           label: t('wallets.ledger.buttons.purchase'),
           variant: 'primary' as const,
-          customClassName: hardwareWalletButtonClass
+          customClassName: hardwareWalletButtonClass,
+          href: 'https://www.ledger.com/'
         }
       ]
     },
@@ -42,7 +44,8 @@ export function HardwareWallets (): React.ReactNode {
         {
           label: t('wallets.keepkey.buttons.purchase'),
           variant: 'primary' as const,
-          customClassName: hardwareWalletButtonClass
+          customClassName: hardwareWalletButtonClass,
+          href: 'https://shapeshift.com/keepkey'
         }
       ]
     },
@@ -54,7 +57,8 @@ export function HardwareWallets (): React.ReactNode {
         {
           label: t('wallets.safepal.buttons.purchase'),
           variant: 'primary' as const,
-          customClassName: hardwareWalletButtonClass
+          customClassName: hardwareWalletButtonClass,
+          href: 'https://www.safepal.com/'
         }
       ]
     },
@@ -66,7 +70,8 @@ export function HardwareWallets (): React.ReactNode {
         {
           label: t('wallets.dcent.buttons.purchase'),
           variant: 'primary' as const,
-          customClassName: hardwareWalletButtonClass
+          customClassName: hardwareWalletButtonClass,
+          href: 'https://dcentwallet.com/products/BiometricWallet'
         }
       ]
     },
@@ -78,7 +83,8 @@ export function HardwareWallets (): React.ReactNode {
         {
           label: t('wallets.ellipal.buttons.purchase'),
           variant: 'primary' as const,
-          customClassName: hardwareWalletButtonClass
+          customClassName: hardwareWalletButtonClass,
+          href: 'https://www.ellipal.com/'
         }
       ]
     },
@@ -90,7 +96,8 @@ export function HardwareWallets (): React.ReactNode {
         {
           label: t('wallets.ngrave.buttons.purchase'),
           variant: 'primary' as const,
-          customClassName: hardwareWalletButtonClass
+          customClassName: hardwareWalletButtonClass,
+          href: 'https://www.ngrave.io/'
         }
       ]
     },
@@ -102,7 +109,8 @@ export function HardwareWallets (): React.ReactNode {
         {
           label: t('wallets.secux.buttons.purchase'),
           variant: 'primary' as const,
-          customClassName: hardwareWalletButtonClass
+          customClassName: hardwareWalletButtonClass,
+          href: 'https://secuxtech.com/'
         }
       ]
     }
@@ -112,20 +120,22 @@ export function HardwareWallets (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 lg:px-6'>
       {/* Header: Title + Description */}
       <div className='mb-8 flex flex-col gap-2.5 lg:mb-12'>
-        <h2 className='text-[32px] font-extrabold leading-[34px] tracking-tight text-primary-dark dark:text-white'>
+        <h2 className='animate-fade-in-up text-[32px] font-extrabold leading-[34px] tracking-tight text-primary-dark dark:text-white'>
           {t('title')}
         </h2>
-        <p className='text-[13px] font-medium text-primary-dark/50 dark:text-white/50'>
+        <p className='animate-fade-in-up-1 text-[13px] font-medium text-primary-dark/50 dark:text-white/50'>
           {t('description')}
         </p>
       </div>
 
       {/* Wallets Grid */}
-      <MasonryGrid>
-        {wallets.map((wallet, index) => (
-          <WalletCard key={index} {...wallet} />
-        ))}
-      </MasonryGrid>
+      <div className='animate-fade-in-up-2'>
+        <MasonryGrid>
+          {wallets.map((wallet, index) => (
+            <WalletCard key={index} {...wallet} />
+          ))}
+        </MasonryGrid>
+      </div>
     </div>
   )
 }

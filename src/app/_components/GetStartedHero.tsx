@@ -13,7 +13,7 @@ export function GetStartedHero (): React.ReactNode {
         src='/images/get-started/bg-get-started.webp'
         alt=''
         fill
-        className='pointer-events-none animate-breathe-normal object-cover object-center dark:brightness-50'
+        className='pointer-events-none animate-breathe-normal scale-110 object-cover object-center dark:brightness-50'
         priority
       />
       <div className='absolute inset-0 bg-gradient-to-t from-primary-blue/30 to-transparent dark:from-primary-dark/50' />

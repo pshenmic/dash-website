@@ -59,7 +59,7 @@ export function GetGoing (): React.ReactNode {
 
   return (
     <section className='-mt-12 overflow-x-clip bg-primary-blue pb-12 pt-24 lg:-mt-16 lg:pb-16 lg:pt-32'>
-      <div className='mx-auto max-w-7xl px-4 lg:px-0'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-10'>
           {/* Left - Hero */}
           <div className='flex flex-col gap-6 lg:w-122 lg:shrink-0 lg:gap-9'>
@@ -119,8 +119,8 @@ export function GetGoing (): React.ReactNode {
           {/* Right - Slider (extends beyond screen edge) */}
           <div className='flex min-w-0 flex-1 flex-col gap-8 lg:-mr-[calc((100vw-1280px)/2+16px)] lg:gap-12'>
             {/* Carousel */}
-            <div className='overflow-hidden' ref={emblaRef}>
-              <div className='flex gap-3 sm:gap-4'>
+            <div className='-mx-4 overflow-hidden px-4' ref={emblaRef}>
+              <div className='flex gap-3 py-4 sm:gap-4'>
                 {spendCards.map((card) => (
                   <div key={card.id} className='min-w-0 flex-[0_0_auto]'>
                     <SpendCard

@@ -16,7 +16,7 @@ export function BuyDashOnline (): React.ReactNode {
   const t = useTranslations('buyDashOnline')
 
   return (
-    <div className='relative z-10 rounded-b-3xl bg-primary-white px-4 py-10 dark:bg-primary-dark lg:px-0 lg:py-12'>
+    <div className='relative z-10 rounded-b-3xl bg-primary-white px-4 py-12 dark:bg-primary-dark sm:px-6 lg:px-8 lg:py-16'>
       <div className='mx-auto max-w-7xl'>
         {/* Header */}
         <div className='mb-6 flex items-center justify-between lg:mb-8'>

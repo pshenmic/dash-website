@@ -8,7 +8,7 @@ export function HowNodesWork (): React.ReactNode {
   const t = useTranslations('howNodesWork')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 lg:px-0'>
+    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='flex flex-col gap-8 lg:flex-row lg:items-stretch lg:justify-between lg:gap-10'>
         {/* Left Side - Title and Globe (desktop only) */}
         <div className='relative flex flex-1 flex-col gap-5 lg:gap-8'>

@@ -7,7 +7,7 @@ export function PlatformBlocks (): React.ReactNode {
   const t = useTranslations('platformBlocks')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 lg:px-6'>
+    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='flex flex-col gap-8 lg:gap-12'>
         {/* Block 1: Providers and Tools - image LEFT, text RIGHT */}
         <Card

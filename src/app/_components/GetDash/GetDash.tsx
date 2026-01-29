@@ -6,7 +6,7 @@ export function GetDash (): React.ReactNode {
   const t = useTranslations('getDash')
 
   return (
-    <div className='bg-primary-white px-4 py-12 dark:bg-primary-dark lg:px-0 lg:py-12'>
+    <div className='bg-primary-white px-4 py-12 dark:bg-primary-dark sm:px-6 lg:px-8 lg:py-16'>
       <div className='mx-auto max-w-7xl'>
         <div className='flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10'>
           {/* Left Side - Text and Buttons */}

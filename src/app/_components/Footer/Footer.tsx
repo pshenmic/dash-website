@@ -8,7 +8,7 @@ export function Footer (): React.ReactNode {
   return (
     <footer className='relative z-10 -mt-8 lg:-mt-12'>
       {/* Main Footer Card Section */}
-      <div className='rounded-t-3xl bg-primary-white pt-16 dark:bg-primary-dark lg:rounded-t-4xl lg:pt-24'>
+      <div className='rounded-t-3xl bg-primary-white px-4 pt-16 dark:bg-primary-dark sm:px-6 lg:rounded-t-4xl lg:px-8 lg:pt-24'>
         {/* Footer Card - Blue in light mode, Dark in dark mode */}
         <div className='mx-auto max-w-7xl rounded-4xl bg-primary-blue px-6 py-16 dark:bg-secondary-space-cadet lg:px-14 lg:py-24'>
           {/* Top Section: Socials + Newsletter */}
@@ -29,7 +29,7 @@ export function Footer (): React.ReactNode {
       </div>
 
       {/* SubFooter - Light in light mode, Dark in dark mode */}
-      <div className='bg-primary-white px-6 py-8 dark:bg-primary-dark lg:px-16 lg:py-12'>
+      <div className='bg-primary-white px-4 py-8 dark:bg-primary-dark sm:px-6 lg:px-8 lg:py-12'>
         <SubFooter />
       </div>
     </footer>

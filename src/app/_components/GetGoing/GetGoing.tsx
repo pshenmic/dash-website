@@ -5,8 +5,8 @@ import { useTranslations } from 'next-intl'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
+import { LinkCard } from '@/components/ui/LinkCard'
 import { SpendCard } from './SpendCard'
-import { RetailerCard } from './RetailerCard'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const spendCards = [
@@ -186,11 +186,12 @@ export function GetGoing (): React.ReactNode {
           {/* Retailer Cards */}
           <div className='flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-5'>
             {retailers.map((retailer) => (
-              <RetailerCard
+              <LinkCard
                 key={retailer.name}
                 name={retailer.name}
                 url={retailer.url}
                 logo={retailer.logo}
+                variant='blue'
               />
             ))}
           </div>

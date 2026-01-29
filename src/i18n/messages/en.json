@@ -30,7 +30,11 @@
       "title": "Subscribe to our Newsletter",
       "subtitle": "Get every bit of important information straight from us",
       "placeholder": "Your Email",
-      "send": "Send"
+      "send": "Send",
+      "errors": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email"
+      }
     },
     "brand": {
       "slogan": "Instant transactions and micro-fees. Any amount, anytime, anywhere.",

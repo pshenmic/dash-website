@@ -11,7 +11,7 @@ export function BugBounty (): React.ReactNode {
         {/* 3D Dash Logo - right side */}
         <div className='pointer-events-none absolute -bottom-[30%] -right-[20%] top-auto h-[160%] w-[70%] lg:-bottom-[50%] lg:-right-[5%] lg:h-[200%] lg:w-[55%]'>
           <Image
-            src='/images/home/bug-bounty/dash-3d-logo.png'
+            src='/images/shared/3d/dash-logo.png'
             alt=''
             fill
             className='object-contain'

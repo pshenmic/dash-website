@@ -59,7 +59,7 @@ export function FutureOfMoney (): React.ReactNode {
 
           <div className='relative hidden w-full max-w-149 lg:block lg:h-138'>
             <Image
-              src='/images/coin-3d-large.png'
+              src='/images/shared/3d/coin.png'
               alt='Dash 3D Coin'
               fill
               className='object-contain'

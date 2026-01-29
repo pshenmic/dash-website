@@ -209,7 +209,7 @@ export function GetGoing (): React.ReactNode {
           {/* 3D Image */}
           <div className='absolute -right-20 top-0 h-full w-100 rotate-180 sm:w-125 lg:right-0 lg:-top-78 lg:h-320 lg:w-332'>
             <Image
-              src='/images/get-started/get-going/platform-3d.png'
+              src='/images/shared/3d/platform.png'
               alt=''
               fill
               className='object-cover'

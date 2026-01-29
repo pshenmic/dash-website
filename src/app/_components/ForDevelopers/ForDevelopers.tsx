@@ -46,24 +46,24 @@ export function ForDevelopers (): React.ReactNode {
             <DeveloperCard
               title={t('cards.apiSdk.title')}
               chip={t('cards.apiSdk.chip')}
-              image='/images/home/developers/card-api-sdk.png'
+              image='/images/shared/3d/dash-logo.png'
             />
             <DeveloperCard
               title={t('cards.nodes.title')}
               chip={t('cards.nodes.chip')}
-              image='/images/home/developers/card-nodes.png'
+              image='/images/shared/3d/platform.png'
             />
             <DeveloperCard
               title={t('cards.smartContracts.title')}
               chip={t('cards.smartContracts.chip')}
-              image='/images/home/developers/card-smart-contracts.png'
+              image='/images/shared/3d/smart-contracts.png'
             />
           </div>
           <div className='grid grid-cols-1 gap-2.5 md:gap-5 lg:grid-cols-2'>
             <DeveloperCard
               title={t('cards.testnet.title')}
               chip={t('cards.testnet.chip')}
-              image='/images/home/developers/card-testnet.png'
+              image='/images/shared/3d/coin.png'
             />
             <CodeCard code={CODE_SNIPPET} />
           </div>

@@ -17,7 +17,7 @@ export function PlatformBlocks (): React.ReactNode {
           {/* 3D image - left side on desktop, top on mobile */}
           <div className='pointer-events-none absolute -left-full -top-[200%] h-[600%] w-[300%] lg:-left-[60%] lg:-top-full lg:h-[400%] lg:w-[200%]'>
             <Image
-              src='/images/home/platform/providers-bg.png'
+              src='/images/shared/3d/smart-contracts.png'
               alt=''
               fill
               className='scale-y-[-1] object-contain'
@@ -71,7 +71,7 @@ export function PlatformBlocks (): React.ReactNode {
           {/* 3D image - right side on desktop */}
           <div className='pointer-events-none absolute -right-full -top-[200%] h-[600%] w-[300%] lg:-right-[60%] lg:-top-full lg:h-[400%] lg:w-[200%]'>
             <Image
-              src='/images/home/platform/libraries-bg.png'
+              src='/images/shared/3d/platform.png'
               alt=''
               fill
               className='rotate-180 object-contain'

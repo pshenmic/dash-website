@@ -88,7 +88,7 @@ export function BulletsGrid (): React.ReactNode {
           <Card className='order-5 col-span-1 flex h-25 items-center justify-center lg:order-4 lg:col-start-4 lg:row-start-1 lg:h-auto'>
             <div className='relative h-full w-full'>
               <Image
-                src='/images/home/bullets/coin-3d-small.png'
+                src='/images/shared/3d/coin.png'
                 alt='Dash Coin'
                 fill
                 className='object-cover'
@@ -132,7 +132,7 @@ export function BulletsGrid (): React.ReactNode {
             {/* Image rotated and scaled to create decorative overflow effect */}
             <div className='absolute top-1/2 -right-12 flex h-25 w-75 -translate-y-1/2 items-center justify-center lg:-right-20 lg:h-36 lg:w-125'>
               <Image
-                src='/images/home/bullets/coins-stack.png'
+                src='/images/shared/3d/coins-stack.png'
                 alt=''
                 width={735}
                 height={144}

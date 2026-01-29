@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { LinkCard } from '@/components/ui/LinkCard'
 import { SpendCard } from './SpendCard'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const spendCards = [
   {
@@ -92,21 +92,7 @@ export function GetGoing (): React.ReactNode {
                 variant='outline'
                 icon={
                   <div className='flex size-9 items-center justify-center rounded-full bg-white sm:size-11'>
-                    <svg
-                      width='12'
-                      height='12'
-                      viewBox='0 0 15 15'
-                      fill='none'
-                      className='-rotate-45 sm:size-4'
-                    >
-                      <path
-                        d='M1 14L14 1M14 1H1M14 1V14'
-                        stroke='var(--color-primary-blue)'
-                        strokeWidth='2'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                      />
-                    </svg>
+                    <ArrowUpRight className='size-4 text-primary-blue sm:size-5' strokeWidth={2.5} />
                   </div>
                 }
                 className='h-12 rounded-full bg-white/15 pl-6 pr-1.5 text-base font-semibold text-white hover:bg-white/25 sm:h-16 sm:pl-7 sm:pr-2.5 sm:text-lg'

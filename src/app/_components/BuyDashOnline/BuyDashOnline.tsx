@@ -34,7 +34,7 @@ export function BuyDashOnline (): React.ReactNode {
 
         {/* Exchange Cards - horizontal scroll on mobile, flex-wrap on desktop */}
         <div className='-mx-4 px-4 sm:mx-0 sm:px-0'>
-          <div className='scrollbar-hide flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 sm:flex-wrap sm:gap-5 sm:overflow-visible sm:pb-0'>
+          <div className='scrollbar-hide flex snap-x snap-mandatory gap-3 overflow-x-auto py-4 sm:flex-wrap sm:gap-5 sm:overflow-visible sm:py-0'>
             {exchanges.map((exchange) => (
               <LinkCard
                 key={exchange.name}

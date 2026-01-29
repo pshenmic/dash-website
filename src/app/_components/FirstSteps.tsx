@@ -32,7 +32,7 @@ function FirstStepCard ({
       <div className='relative h-44 w-full lg:h-80'>
         <Image
           src={image}
-          alt=''
+          alt={title}
           fill
           className='object-contain object-center'
         />

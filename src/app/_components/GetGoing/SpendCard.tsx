@@ -23,7 +23,7 @@ export function SpendCard ({ label, title, icon }: SpendCardProps): React.ReactN
       <div className='absolute -top-6 right-0 h-36 w-45 sm:-top-10 sm:h-52 sm:w-60'>
         <Image
           src={icon}
-          alt=''
+          alt={title}
           fill
           className='object-contain'
         />

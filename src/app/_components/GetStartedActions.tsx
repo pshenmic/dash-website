@@ -38,7 +38,7 @@ function FeatureCard ({ icon, title, description }: FeatureCardProps): React.Rea
   return (
     <div className='flex items-center gap-4 rounded-2xl border border-primary-dark/15 bg-primary-white p-4 shadow-[0px_0px_100px_0px_rgba(12,28,51,0.1)] lg:gap-6 lg:rounded-3xl lg:p-6'>
       <div className='flex size-12 shrink-0 items-center justify-center rounded-full bg-primary-dark/5 shadow-[inset_0px_0px_12px_0px_rgba(12,28,51,0.12)] lg:size-17'>
-        <Image src={icon} alt='' width={48} height={48} className='size-8 object-contain lg:size-12' />
+        <Image src={icon} alt={title} width={48} height={48} className='size-8 object-contain lg:size-12' />
       </div>
       <div className='flex flex-col gap-1'>
         <h4 className='text-xl font-extrabold tracking-tight text-primary-dark lg:text-3xl lg:leading-10'>

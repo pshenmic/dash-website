@@ -18,7 +18,7 @@ export function PlatformBlocks (): React.ReactNode {
           <div className='pointer-events-none absolute -left-full -top-[200%] h-[600%] w-[300%] lg:-left-[60%] lg:-top-full lg:h-[400%] lg:w-[200%]'>
             <Image
               src='/images/shared/3d/smart-contracts.png'
-              alt=''
+              alt='Dash Platform illustration'
               fill
               className='scale-y-[-1] object-contain'
               priority
@@ -72,7 +72,7 @@ export function PlatformBlocks (): React.ReactNode {
           <div className='pointer-events-none absolute -right-full -top-[200%] h-[600%] w-[300%] lg:-right-[60%] lg:-top-full lg:h-[400%] lg:w-[200%]'>
             <Image
               src='/images/shared/3d/platform.png'
-              alt=''
+              alt='Client libraries illustration'
               fill
               className='rotate-180 object-contain'
             />

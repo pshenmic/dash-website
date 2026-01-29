@@ -112,7 +112,7 @@ export function BulletsGrid (): React.ReactNode {
             <div className='absolute top-4 right-4 lg:top-9 lg:right-9'>
               <Image
                 src='/images/home/bullets/logo-dash-blue.svg'
-                alt=''
+                alt='Dash'
                 width={135}
                 height={110}
                 className='h-12 w-auto lg:h-23'
@@ -133,7 +133,7 @@ export function BulletsGrid (): React.ReactNode {
             <div className='absolute top-1/2 -right-12 flex h-25 w-75 -translate-y-1/2 items-center justify-center lg:-right-20 lg:h-36 lg:w-125'>
               <Image
                 src='/images/shared/3d/coins-stack.png'
-                alt=''
+                alt='Dash coins'
                 width={735}
                 height={144}
                 className='scale-150 -rotate-90 lg:scale-150'

@@ -11,7 +11,7 @@ export function GetStartedHero (): React.ReactNode {
     <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark'>
       <Image
         src='/images/get-started/bg-get-started.webp'
-        alt=''
+        alt='Get started hero background'
         fill
         className='pointer-events-none animate-breathe-normal scale-110 object-cover object-center dark:brightness-50'
         priority

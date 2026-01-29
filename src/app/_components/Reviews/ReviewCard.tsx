@@ -18,7 +18,7 @@ function StarRating (): React.ReactNode {
         <Image
           key={i}
           src='/images/home/reviews/star.svg'
-          alt=''
+          alt='Star'
           width={25}
           height={23}
           className='h-5 w-5 lg:h-6 lg:w-6'

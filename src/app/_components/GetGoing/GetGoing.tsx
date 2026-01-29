@@ -197,7 +197,7 @@ export function GetGoing (): React.ReactNode {
           <div className='absolute -right-20 top-0 h-full w-100 rotate-180 sm:w-125 lg:right-0 lg:-top-78 lg:h-320 lg:w-332'>
             <Image
               src='/images/shared/3d/platform.png'
-              alt=''
+              alt='Dash Platform'
               fill
               className='object-cover'
             />

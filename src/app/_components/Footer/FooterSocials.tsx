@@ -42,7 +42,7 @@ export function FooterSocials (): React.ReactNode {
           >
             <Image
               src={social.icon}
-              alt=''
+              alt={social.name}
               width={25}
               height={25}
               className='h-auto max-h-6 w-6'

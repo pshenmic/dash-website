@@ -61,7 +61,7 @@ export function NewsCard ({
       <div className='absolute top-20 left-5 right-5 h-32 overflow-hidden rounded-2xl lg:top-26 lg:left-8 lg:right-8 lg:h-40'>
         <Image
           src={image}
-          alt=''
+          alt={title ?? 'News preview'}
           fill
           className='object-cover'
         />

@@ -31,7 +31,7 @@ export function DownloadsHero (): React.ReactNode {
               {t('title')}
             </h1>
             <div className='shrink-0 animate-fade-in-up-2'>
-              <button className='flex h-10 items-center gap-2 rounded-full bg-primary-dark/5 pl-4 pr-1.5 backdrop-blur-md transition-smooth hover-scale hover:bg-primary-dark/10 active-press dark:bg-white/10 dark:hover:bg-white/20 lg:h-16 lg:gap-4 lg:pl-9 lg:pr-2.5'>
+              <button className='flex h-10 items-center gap-2 rounded-full bg-white/80 shadow-sm pl-4 pr-1.5 backdrop-blur-md transition-smooth hover-scale hover:bg-white active-press dark:bg-primary-dark/80 dark:hover:bg-primary-dark lg:h-16 lg:gap-4 lg:pl-9 lg:pr-2.5'>
                 <span className='text-sm font-semibold text-primary-dark dark:text-white lg:text-lg'>
                   {t('learnMore')}
                 </span>
@@ -75,7 +75,7 @@ export function DownloadsHero (): React.ReactNode {
         </div>
 
         {/* DashPay App Block */}
-        <div className='relative mb-6 overflow-hidden rounded-3xl bg-linear-to-br from-primary-blue to-secondary-light-blue py-6 shadow-2xl shadow-primary-blue/20 dark:from-secondary-space-cadet dark:to-secondary-yinmn-blue dark:shadow-primary-turquoise/10 lg:mb-16 lg:h-72 lg:rounded-4xl lg:py-0'>
+        <div className='relative overflow-hidden rounded-3xl bg-linear-to-br from-primary-blue to-secondary-light-blue py-6 shadow-2xl shadow-primary-blue/20 dark:from-secondary-space-cadet dark:to-secondary-yinmn-blue dark:shadow-primary-turquoise/10 lg:h-72 lg:rounded-4xl lg:py-0'>
           {/* Decorative Ellipses - centered behind app screenshots */}
           <div className='pointer-events-none absolute -right-20 -top-48 size-180 animate-breathe-normal rounded-full bg-white/15' />
           <div className='pointer-events-none absolute -right-10 -top-32 size-140 animate-breathe-normal rounded-full bg-white/10' />

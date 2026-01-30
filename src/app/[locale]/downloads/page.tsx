@@ -23,7 +23,7 @@ export default async function DownloadsPage ({
       <DownloadsHero />
 
       {/* Mobile Wallets Showcase Section */}
-      <section className='bg-primary-white py-16 dark:bg-primary-dark lg:py-24'>
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
         <WalletShowcase />
       </section>
 

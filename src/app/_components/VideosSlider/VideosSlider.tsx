@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { VideoCard, type VideoCardData } from './VideoCard'
+import { styles } from '@/lib/styles'
 
 export function VideosSlider (): React.ReactNode {
   const t = useTranslations('videosSlider')
@@ -60,10 +61,7 @@ export function VideosSlider (): React.ReactNode {
         >
           <div className='flex gap-4 pb-2 lg:gap-10'>
             {videos.map((video) => (
-              <div
-                key={video.id}
-                className='min-w-0 flex-[0_0_85%] sm:flex-[0_0_45%] lg:flex-[0_0_384px]'
-              >
+              <div key={video.id} className={styles.carouselItem}>
                 <VideoCard video={video} />
               </div>
             ))}

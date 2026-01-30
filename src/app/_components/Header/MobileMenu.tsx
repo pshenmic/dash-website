@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
 import { LanguageSelector } from './LanguageSelector'
+import { cn } from '@/lib/cn'
 
 interface MobileMenuProps {
   onClose: () => void
@@ -71,14 +72,24 @@ export function MobileMenu ({
         <nav className='flex flex-1 flex-col gap-2 overflow-y-auto px-6 py-4'>
           <Link
             href='/'
-            className={`rounded-xl px-4 py-3 text-right text-lg transition-colors ${pathname === '/' ? 'font-extrabold text-primary-dark hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5' : 'font-semibold text-primary-blue hover:bg-primary-blue/10'}`}
+            className={cn(
+              'rounded-xl px-4 py-3 text-right text-lg transition-colors',
+              pathname === '/'
+                ? 'font-extrabold text-primary-dark hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5'
+                : 'font-semibold text-primary-blue hover:bg-primary-blue/10'
+            )}
             onClick={onClose}
           >
             {t('home')}
           </Link>
           <Link
             href='/get-started'
-            className={`rounded-xl px-4 py-3 text-right text-lg transition-colors ${pathname === '/get-started' ? 'font-extrabold text-primary-dark hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5' : 'font-semibold text-primary-blue hover:bg-primary-blue/10'}`}
+            className={cn(
+              'rounded-xl px-4 py-3 text-right text-lg transition-colors',
+              pathname === '/get-started'
+                ? 'font-extrabold text-primary-dark hover:bg-primary-dark/5 dark:text-primary-white dark:hover:bg-primary-white/5'
+                : 'font-semibold text-primary-blue hover:bg-primary-blue/10'
+            )}
             onClick={onClose}
           >
             {t('getStarted')}

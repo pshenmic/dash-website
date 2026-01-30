@@ -24,7 +24,7 @@ export function LinkCard ({
       className={cn(
         'flex items-center rounded-2xl border p-5 sm:rounded-3xl sm:p-6',
         variant === 'light' &&
-          'min-w-52 shrink-0 snap-start gap-4 border-primary-dark/15 bg-white shadow-[0px_0px_100px_0px_rgba(12,28,51,0.1)] transition-shadow hover:shadow-[0px_0px_100px_0px_rgba(12,28,51,0.15)] dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none sm:min-w-0 sm:shrink sm:gap-6',
+          'min-w-52 shrink-0 snap-start gap-4 border-primary-dark/15 bg-white shadow-soft transition-shadow hover:shadow-soft-hover dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none sm:min-w-0 sm:shrink sm:gap-6',
         variant === 'blue' &&
           'flex-1 gap-5 border-white/15 bg-white/15 transition-colors hover:bg-white/20 sm:gap-6',
         className

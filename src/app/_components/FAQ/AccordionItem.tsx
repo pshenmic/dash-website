@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ChevronDownIcon } from './ChevronDownIcon'
+import { cn } from '@/lib/cn'
 
 interface AccordionItemProps {
   question: string
@@ -18,9 +19,10 @@ export function AccordionItem ({
 
   return (
     <div
-      className={`overflow-hidden rounded-3xl bg-primary-blue/15 transition-all duration-300 lg:rounded-4xl ${
-        isOpen ? 'border border-primary-blue' : ''
-      }`}
+      className={cn(
+        'overflow-hidden rounded-3xl bg-primary-blue/15 transition-all duration-300 lg:rounded-4xl',
+        isOpen && 'border border-primary-blue'
+      )}
     >
       <button
         type='button'
@@ -31,22 +33,25 @@ export function AccordionItem ({
           {question}
         </span>
         <div
-          className={`flex size-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 lg:size-11 ${
+          className={cn(
+            'flex size-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 lg:size-11',
             isOpen ? 'border border-primary-blue' : 'bg-primary-blue'
-          }`}
+          )}
         >
           <ChevronDownIcon
-            className={`size-3 text-white transition-transform duration-300 lg:size-4 ${
-              isOpen ? 'rotate-180' : ''
-            }`}
+            className={cn(
+              'size-3 text-white transition-transform duration-300 lg:size-4',
+              isOpen && 'rotate-180'
+            )}
           />
         </div>
       </button>
 
       <div
-        className={`grid transition-all duration-300 ${
+        className={cn(
+          'grid transition-all duration-300',
           isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-        }`}
+        )}
       >
         <div className='overflow-hidden'>
           <p className='px-5 pb-5 text-sm leading-relaxed font-medium text-white lg:px-9 lg:pb-6 lg:text-lg'>

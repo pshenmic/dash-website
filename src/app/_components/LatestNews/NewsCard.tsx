@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { cn } from '@/lib/cn'
 
 interface Tag {
   label: string
@@ -24,9 +25,10 @@ export function NewsCard ({
 
   return (
     <div
-      className={`relative h-100 w-full overflow-hidden rounded-4xl lg:h-128 lg:w-100 lg:rounded-5xl ${
-        isVideo ? 'bg-primary-blue' : 'bg-white'
-      }`}
+      className={cn(
+        'relative h-100 w-full overflow-hidden rounded-4xl lg:h-128 lg:w-100 lg:rounded-5xl',
+        isVideo ? 'bg-primary-blue' : 'bg-white dark:bg-secondary-space-cadet'
+      )}
     >
       {/* Dash Logo */}
       <div className='absolute top-6 left-6 z-10 lg:top-9 lg:left-8'>
@@ -44,13 +46,14 @@ export function NewsCard ({
         {tags.map((tag, index) => (
           <span
             key={index}
-            className={`rounded-full px-6 py-2.5 text-xs font-medium lg:px-9 lg:text-xs ${
+            className={cn(
+              'rounded-full px-6 py-2.5 text-xs font-medium lg:px-9 lg:text-xs',
               tag.variant === 'filled'
                 ? 'bg-primary-blue text-white'
                 : isVideo
                   ? 'border border-white text-white'
-                  : 'border border-primary-blue text-primary-blue'
-            }`}
+                  : 'border border-primary-blue text-primary-blue dark:border-white dark:text-white'
+            )}
           >
             {tag.label}
           </span>
@@ -82,17 +85,19 @@ export function NewsCard ({
       <div className='absolute bottom-0 left-0 right-0 p-5 lg:p-8'>
         {title && (
           <h3
-            className={`mb-2.5 text-3xl leading-tight font-extrabold tracking-tight lg:mb-4 lg:text-4xl lg:leading-10 ${
-              isVideo ? 'text-white' : 'text-primary-dark'
-            }`}
+            className={cn(
+              'mb-2.5 text-3xl leading-tight font-extrabold tracking-tight lg:mb-4 lg:text-4xl lg:leading-10',
+              isVideo ? 'text-white' : 'text-primary-dark dark:text-white'
+            )}
           >
             {title}
           </h3>
         )}
         <p
-          className={`text-sm leading-normal font-medium lg:text-lg ${
-            isVideo ? 'text-white' : 'text-primary-dark'
-          }`}
+          className={cn(
+            'text-sm leading-normal font-medium lg:text-lg',
+            isVideo ? 'text-white' : 'text-primary-dark dark:text-white/80'
+          )}
         >
           {description}
         </p>

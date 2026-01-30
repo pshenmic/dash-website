@@ -10,7 +10,7 @@ interface ActionCardProps {
 
 function ActionCard ({ title, description }: ActionCardProps): React.ReactNode {
   return (
-    <div className='flex flex-1 items-center justify-between rounded-4xl border border-primary-dark/15 bg-primary-white p-6 shadow-[0px_0px_100px_0px_rgba(12,28,51,0.1)] lg:p-9'>
+    <div className='flex flex-1 items-center justify-between rounded-4xl border border-primary-dark/15 bg-primary-white p-6 shadow-soft lg:p-9'>
       <div className='flex flex-col gap-4'>
         <h3 className='text-2xl font-extrabold tracking-tight text-primary-dark lg:text-4xl lg:leading-10'>
           {title}
@@ -36,8 +36,8 @@ interface FeatureCardProps {
 
 function FeatureCard ({ icon, title, description }: FeatureCardProps): React.ReactNode {
   return (
-    <div className='flex items-center gap-4 rounded-2xl border border-primary-dark/15 bg-primary-white p-4 shadow-[0px_0px_100px_0px_rgba(12,28,51,0.1)] lg:gap-6 lg:rounded-3xl lg:p-6'>
-      <div className='flex size-12 shrink-0 items-center justify-center rounded-full bg-primary-dark/5 shadow-[inset_0px_0px_12px_0px_rgba(12,28,51,0.12)] lg:size-17'>
+    <div className='flex items-center gap-4 rounded-2xl border border-primary-dark/15 bg-primary-white p-4 shadow-soft lg:gap-6 lg:rounded-3xl lg:p-6'>
+      <div className='flex size-12 shrink-0 items-center justify-center rounded-full bg-primary-dark/5 shadow-inset lg:size-17'>
         <Image src={icon} alt={title} width={48} height={48} className='size-8 object-contain lg:size-12' />
       </div>
       <div className='flex flex-col gap-1'>

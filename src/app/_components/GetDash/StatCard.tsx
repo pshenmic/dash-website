@@ -7,7 +7,7 @@ interface StatCardProps {
 
 export function StatCard ({ label, value }: StatCardProps): React.ReactNode {
   return (
-    <div className='flex h-full flex-col items-start justify-between overflow-hidden rounded-2xl border border-primary-blue px-3 py-4 sm:rounded-3xl sm:px-5 sm:py-6 lg:rounded-4xl lg:px-8 lg:py-10'>
+    <div className='flex h-full flex-col items-start justify-between overflow-hidden rounded-2xl border border-primary-blue px-3 py-4 hover-lift sm:rounded-3xl sm:px-5 sm:py-6 lg:rounded-4xl lg:px-8 lg:py-10'>
       {/* Dash Logo */}
       <div className='relative h-5 w-6 sm:h-6 sm:w-8 lg:h-8 lg:w-9'>
         <Image

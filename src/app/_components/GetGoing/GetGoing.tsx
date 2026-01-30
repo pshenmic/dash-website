@@ -5,9 +5,9 @@ import { useTranslations } from 'next-intl'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
+import { LinkCard } from '@/components/ui/LinkCard'
 import { SpendCard } from './SpendCard'
-import { RetailerCard } from './RetailerCard'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const spendCards = [
   {
@@ -59,7 +59,7 @@ export function GetGoing (): React.ReactNode {
 
   return (
     <section className='-mt-12 overflow-x-clip bg-primary-blue pb-12 pt-24 lg:-mt-16 lg:pb-16 lg:pt-32'>
-      <div className='mx-auto max-w-7xl px-4 lg:px-0'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-10'>
           {/* Left - Hero */}
           <div className='flex flex-col gap-6 lg:w-122 lg:shrink-0 lg:gap-9'>
@@ -92,21 +92,7 @@ export function GetGoing (): React.ReactNode {
                 variant='outline'
                 icon={
                   <div className='flex size-9 items-center justify-center rounded-full bg-white sm:size-11'>
-                    <svg
-                      width='12'
-                      height='12'
-                      viewBox='0 0 15 15'
-                      fill='none'
-                      className='-rotate-45 sm:size-4'
-                    >
-                      <path
-                        d='M1 14L14 1M14 1H1M14 1V14'
-                        stroke='var(--color-primary-blue)'
-                        strokeWidth='2'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                      />
-                    </svg>
+                    <ArrowUpRight className='size-4 text-primary-blue sm:size-5' strokeWidth={2.5} />
                   </div>
                 }
                 className='h-12 rounded-full bg-white/15 pl-6 pr-1.5 text-base font-semibold text-white hover:bg-white/25 sm:h-16 sm:pl-7 sm:pr-2.5 sm:text-lg'
@@ -119,8 +105,8 @@ export function GetGoing (): React.ReactNode {
           {/* Right - Slider (extends beyond screen edge) */}
           <div className='flex min-w-0 flex-1 flex-col gap-8 lg:-mr-[calc((100vw-1280px)/2+16px)] lg:gap-12'>
             {/* Carousel */}
-            <div className='overflow-hidden' ref={emblaRef}>
-              <div className='flex gap-3 sm:gap-4'>
+            <div className='-mx-10 overflow-hidden px-10' ref={emblaRef}>
+              <div className='flex gap-5 py-10 sm:gap-6'>
                 {spendCards.map((card) => (
                   <div key={card.id} className='min-w-0 flex-[0_0_auto]'>
                     <SpendCard
@@ -151,14 +137,14 @@ export function GetGoing (): React.ReactNode {
               <div className='hidden gap-5 sm:flex'>
                 <button
                   onClick={scrollPrev}
-                  className='flex size-11 items-center justify-center rounded-full bg-white/15 transition-colors hover:bg-white/25'
+                  className='flex size-11 items-center justify-center rounded-full bg-white/15 transition-smooth hover:bg-white/25 active-press'
                   aria-label='Previous slide'
                 >
                   <ChevronLeft className='size-5 text-white' />
                 </button>
                 <button
                   onClick={scrollNext}
-                  className='flex size-11 items-center justify-center rounded-full bg-white/15 transition-colors hover:bg-white/25'
+                  className='flex size-11 items-center justify-center rounded-full bg-white/15 transition-smooth hover:bg-white/25 active-press'
                   aria-label='Next slide'
                 >
                   <ChevronRight className='size-5 text-white' />
@@ -186,11 +172,12 @@ export function GetGoing (): React.ReactNode {
           {/* Retailer Cards */}
           <div className='flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-5'>
             {retailers.map((retailer) => (
-              <RetailerCard
+              <LinkCard
                 key={retailer.name}
                 name={retailer.name}
                 url={retailer.url}
                 logo={retailer.logo}
+                variant='blue'
               />
             ))}
           </div>
@@ -209,8 +196,8 @@ export function GetGoing (): React.ReactNode {
           {/* 3D Image */}
           <div className='absolute -right-20 top-0 h-full w-100 rotate-180 sm:w-125 lg:right-0 lg:-top-78 lg:h-320 lg:w-332'>
             <Image
-              src='/images/get-started/get-going/platform-3d.png'
-              alt=''
+              src='/images/shared/3d/platform.png'
+              alt='Dash Platform'
               fill
               className='object-cover'
             />

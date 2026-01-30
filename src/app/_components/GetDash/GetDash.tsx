@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import { ArrowUpRight } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { StatCard } from './StatCard'
 
@@ -6,7 +7,7 @@ export function GetDash (): React.ReactNode {
   const t = useTranslations('getDash')
 
   return (
-    <div className='bg-primary-white px-4 py-12 dark:bg-primary-dark lg:px-0 lg:py-12'>
+    <div className='bg-primary-white px-4 py-12 dark:bg-primary-dark sm:px-6 lg:px-8 lg:py-16'>
       <div className='mx-auto max-w-7xl'>
         <div className='flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-10'>
           {/* Left Side - Text and Buttons */}
@@ -35,21 +36,7 @@ export function GetDash (): React.ReactNode {
                 inverted
                 icon={
                   <div className='flex size-9 items-center justify-center rounded-full bg-white sm:size-11'>
-                    <svg
-                      width='12'
-                      height='12'
-                      viewBox='0 0 15 15'
-                      fill='none'
-                      className='-rotate-45 sm:size-4'
-                    >
-                      <path
-                        d='M1 14L14 1M14 1H1M14 1V14'
-                        stroke='var(--color-primary-blue)'
-                        strokeWidth='2'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                      />
-                    </svg>
+                    <ArrowUpRight className='size-4 text-primary-blue sm:size-5' strokeWidth={2.5} />
                   </div>
                 }
                 className='h-12 rounded-2xl pl-6 pr-2 text-base sm:h-16 sm:rounded-2xl sm:pl-9 sm:pr-2.5 sm:text-lg'

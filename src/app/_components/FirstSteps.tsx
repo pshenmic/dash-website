@@ -32,7 +32,7 @@ function FirstStepCard ({
       <div className='relative h-44 w-full lg:h-80'>
         <Image
           src={image}
-          alt=''
+          alt={title}
           fill
           className='object-contain object-center'
         />
@@ -64,19 +64,19 @@ export function FirstSteps (): React.ReactNode {
 
   const cards = [
     {
-      image: '/images/home/first-steps/card-identities.png',
+      image: '/images/shared/3d/coins-stack.png',
       title: t('cards.identities.title'),
       description: t('cards.identities.description'),
       buttonText: t('cards.identities.button')
     },
     {
-      image: '/images/home/first-steps/card-storage.png',
+      image: '/images/shared/3d/smart-contracts.png',
       title: t('cards.storage.title'),
       description: t('cards.storage.description'),
       buttonText: t('cards.storage.button')
     },
     {
-      image: '/images/home/first-steps/card-developer.png',
+      image: '/images/shared/3d/coin.png',
       title: t('cards.developer.title'),
       description: t('cards.developer.description'),
       buttonText: t('cards.developer.button')

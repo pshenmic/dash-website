@@ -14,7 +14,7 @@ export function FAQ (): React.ReactNode {
   ]
 
   return (
-    <div className='mx-auto max-w-7xl px-4 lg:px-0'>
+    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       {/* Header */}
       <div className='mb-8 flex flex-col gap-1 lg:mb-9'>
         <p className='text-base font-extrabold text-primary-blue lg:text-lg'>

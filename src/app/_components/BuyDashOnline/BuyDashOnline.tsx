@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/Button'
-import { ExchangeCard } from './ExchangeCard'
+import { LinkCard } from '@/components/ui/LinkCard'
 
 const exchanges = [
   { name: 'Kraken', url: 'kraken.com', logo: '/images/get-started/exchanges/kraken.svg' },
@@ -16,7 +16,7 @@ export function BuyDashOnline (): React.ReactNode {
   const t = useTranslations('buyDashOnline')
 
   return (
-    <div className='relative z-10 rounded-b-3xl bg-primary-white px-4 py-10 dark:bg-primary-dark lg:px-0 lg:py-12'>
+    <div className='relative z-10 rounded-b-3xl bg-primary-white px-4 py-12 dark:bg-primary-dark sm:px-6 lg:px-8 lg:py-16'>
       <div className='mx-auto max-w-7xl'>
         {/* Header */}
         <div className='mb-6 flex items-center justify-between lg:mb-8'>
@@ -34,13 +34,14 @@ export function BuyDashOnline (): React.ReactNode {
 
         {/* Exchange Cards - horizontal scroll on mobile, flex-wrap on desktop */}
         <div className='-mx-4 px-4 sm:mx-0 sm:px-0'>
-          <div className='scrollbar-hide flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 sm:flex-wrap sm:gap-5 sm:overflow-visible sm:pb-0'>
+          <div className='scrollbar-hide flex snap-x snap-mandatory gap-3 overflow-x-auto py-4 sm:flex-wrap sm:gap-5 sm:overflow-visible sm:py-0'>
             {exchanges.map((exchange) => (
-              <ExchangeCard
+              <LinkCard
                 key={exchange.name}
                 name={exchange.name}
                 url={exchange.url}
                 logo={exchange.logo}
+                variant='light'
               />
             ))}
           </div>

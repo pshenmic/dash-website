@@ -23,7 +23,7 @@ export function Button ({
 }: ButtonProps): React.ReactNode {
   const classes = cn(
     'flex h-16 items-center justify-center gap-4 rounded-full px-9 text-lg font-semibold backdrop-blur-sm',
-    'transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+    'active-press transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
     disabled && 'cursor-not-allowed opacity-50',
     !disabled && variant === 'primary' &&
       !inverted &&

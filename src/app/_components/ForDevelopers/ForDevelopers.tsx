@@ -28,7 +28,7 @@ export function ForDevelopers (): React.ReactNode {
                 {/* SVG positioned to wrap text like hand-drawn underline */}
                 <Image
                   src='/images/home/developers/decoration-line.svg'
-                  alt=''
+                  alt='Decoration'
                   width={113}
                   height={45}
                   className='pointer-events-none absolute -bottom-1 left-1/2 h-9 w-23 -translate-x-1/2 lg:-bottom-2 lg:h-11 lg:w-28'
@@ -46,24 +46,24 @@ export function ForDevelopers (): React.ReactNode {
             <DeveloperCard
               title={t('cards.apiSdk.title')}
               chip={t('cards.apiSdk.chip')}
-              image='/images/home/developers/card-api-sdk.png'
+              image='/images/shared/3d/dash-logo.png'
             />
             <DeveloperCard
               title={t('cards.nodes.title')}
               chip={t('cards.nodes.chip')}
-              image='/images/home/developers/card-nodes.png'
+              image='/images/shared/3d/platform.png'
             />
             <DeveloperCard
               title={t('cards.smartContracts.title')}
               chip={t('cards.smartContracts.chip')}
-              image='/images/home/developers/card-smart-contracts.png'
+              image='/images/shared/3d/smart-contracts.png'
             />
           </div>
           <div className='grid grid-cols-1 gap-2.5 md:gap-5 lg:grid-cols-2'>
             <DeveloperCard
               title={t('cards.testnet.title')}
               chip={t('cards.testnet.chip')}
-              image='/images/home/developers/card-testnet.png'
+              image='/images/shared/3d/coin.png'
             />
             <CodeCard code={CODE_SNIPPET} />
           </div>
@@ -90,7 +90,7 @@ function DeveloperCard ({
       <div className='relative z-10 flex h-full max-w-[55%] flex-col items-start px-5 pt-4 pb-4 lg:max-w-[60%] lg:p-8'>
         <Image
           src='/images/home/developers/logo-dash-small.svg'
-          alt=''
+          alt='Dash'
           width={30}
           height={24}
           className='h-5 w-auto lg:h-6'
@@ -108,7 +108,7 @@ function DeveloperCard ({
       <div className='absolute top-1/2 -right-10 h-54 w-56 -translate-y-1/2 lg:right-auto lg:left-1/2 lg:h-71 lg:w-74'>
         <Image
           src={image}
-          alt=''
+          alt={title}
           fill
           className='object-contain object-right'
         />

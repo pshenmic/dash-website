@@ -4,6 +4,8 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useTranslations } from 'next-intl'
 import { ReviewCard, type ReviewData } from './ReviewCard'
+import { cn } from '@/lib/cn'
+import { styles } from '@/lib/styles'
 
 const TRUSTPILOT_URL = 'https://www.trustpilot.com/review/www.dash.org'
 
@@ -55,7 +57,7 @@ export function Reviews (): React.ReactNode {
               {reviews.map((review, index) => (
                 <div
                   key={index}
-                  className='min-w-0 flex-[0_0_85%] pl-4 sm:flex-[0_0_45%] lg:flex-[0_0_340px] lg:pl-9'
+                  className={cn(styles.carouselItem, 'pl-4 lg:pl-9')}
                 >
                   <ReviewCard review={review} />
                 </div>

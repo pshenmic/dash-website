@@ -64,7 +64,7 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
       <div className={`${baseClasses} bg-primary-dark`}>
         {image != null && image !== '' && (
           <div className='absolute inset-0'>
-            <Image src={image} alt='' fill className='object-cover' />
+            <Image src={image} alt={title} fill className='object-cover' />
             <div className='absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary-dark/60 to-transparent' />
           </div>
         )}
@@ -108,7 +108,7 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
             <div className='absolute inset-0 rounded-xl bg-primary-white/10 backdrop-blur-sm' />
             <Image
               src={image}
-              alt=''
+              alt={title}
               fill
               className='object-cover object-top'
             />
@@ -157,7 +157,7 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
       {/* Coin overflows card bounds by design */}
       {image != null && image !== '' && (
         <div className='absolute -top-10 -right-12 size-75'>
-          <Image src={image} alt='' fill className='object-contain' />
+          <Image src={image} alt={title} fill className='object-contain' />
         </div>
       )}
 

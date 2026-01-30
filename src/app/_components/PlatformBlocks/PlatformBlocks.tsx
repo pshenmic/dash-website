@@ -7,7 +7,7 @@ export function PlatformBlocks (): React.ReactNode {
   const t = useTranslations('platformBlocks')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 lg:px-6'>
+    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='flex flex-col gap-8 lg:gap-12'>
         {/* Block 1: Providers and Tools - image LEFT, text RIGHT */}
         <Card
@@ -17,8 +17,8 @@ export function PlatformBlocks (): React.ReactNode {
           {/* 3D image - left side on desktop, top on mobile */}
           <div className='pointer-events-none absolute -left-full -top-[200%] h-[600%] w-[300%] lg:-left-[60%] lg:-top-full lg:h-[400%] lg:w-[200%]'>
             <Image
-              src='/images/home/platform/providers-bg.png'
-              alt=''
+              src='/images/shared/3d/smart-contracts.png'
+              alt='Dash Platform illustration'
               fill
               className='scale-y-[-1] object-contain'
               priority
@@ -71,8 +71,8 @@ export function PlatformBlocks (): React.ReactNode {
           {/* 3D image - right side on desktop */}
           <div className='pointer-events-none absolute -right-full -top-[200%] h-[600%] w-[300%] lg:-right-[60%] lg:-top-full lg:h-[400%] lg:w-[200%]'>
             <Image
-              src='/images/home/platform/libraries-bg.png'
-              alt=''
+              src='/images/shared/3d/platform.png'
+              alt='Client libraries illustration'
               fill
               className='rotate-180 object-contain'
             />

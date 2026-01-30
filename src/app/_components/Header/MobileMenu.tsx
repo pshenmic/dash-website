@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
 import { LanguageSelector } from './LanguageSelector'
+import { cn } from '@/lib/cn'
 
 interface MobileMenuProps {
   onClose: () => void
@@ -71,7 +72,12 @@ export function MobileMenu ({
         <nav className='flex flex-1 flex-col gap-2 overflow-y-auto px-6 py-4'>
           <Link
             href='/'
-            className={`rounded-xl px-4 py-3 text-right text-lg transition-all duration-300 transform focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 ${pathname === '/' ? 'font-bold text-primary-dark dark:text-white bg-primary-blue/10 dark:bg-primary-blue/20 scale-[0.98]' : 'font-semibold text-primary-blue dark:text-primary-turquoise hover:bg-primary-blue/5 dark:hover:bg-white/5 hover:scale-[1.02] hover:translate-x-1'}`}
+            className={cn(
+              'rounded-xl px-4 py-3 text-right text-lg transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
+              pathname === '/'
+                ? 'font-bold text-primary-dark dark:text-white bg-primary-blue/10 dark:bg-primary-blue/20'
+                : 'font-semibold text-primary-blue dark:text-primary-turquoise hover:bg-primary-blue/5 dark:hover:bg-white/5'
+            )}
             onClick={onClose}
           >
             {t('home')}
@@ -79,33 +85,36 @@ export function MobileMenu ({
           {/* Get Started Section with submenu */}
           <div className='flex flex-col'>
             <span
-              className={`rounded-xl px-4 py-3 text-right text-lg transition-all duration-300 ${
+              className={cn(
+                'rounded-xl px-4 py-3 text-right text-lg transition-smooth',
                 pathname === '/get-started' || pathname === '/downloads'
                   ? 'font-bold text-primary-dark dark:text-white'
                   : 'font-semibold text-primary-blue dark:text-primary-turquoise'
-              }`}
+              )}
             >
               {t('getStarted')}
             </span>
             <div className='flex flex-col gap-1 pr-4'>
               <Link
                 href='/get-started'
-                className={`rounded-xl px-4 py-2.5 text-right text-base transition-all duration-200 transform focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 ${
+                className={cn(
+                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
                   pathname === '/get-started'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise scale-[0.98]'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5 hover:scale-[1.02] hover:translate-x-1'
-                }`}
+                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
+                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
+                )}
                 onClick={onClose}
               >
                 {t('aboutDash')}
               </Link>
               <Link
                 href='/downloads'
-                className={`rounded-xl px-4 py-2.5 text-right text-base transition-all duration-200 transform focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 ${
+                className={cn(
+                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
                   pathname === '/downloads'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise scale-[0.98]'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5 hover:scale-[1.02] hover:translate-x-1'
-                }`}
+                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
+                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
+                )}
                 onClick={onClose}
               >
                 {t('downloads')}

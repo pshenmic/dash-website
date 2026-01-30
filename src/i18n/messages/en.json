@@ -32,7 +32,11 @@
       "title": "Subscribe to our Newsletter",
       "subtitle": "Get every bit of important information straight from us",
       "placeholder": "Your Email",
-      "send": "Send"
+      "send": "Send",
+      "errors": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email"
+      }
     },
     "brand": {
       "slogan": "Instant transactions and micro-fees. Any amount, anytime, anywhere.",
@@ -209,7 +213,14 @@
     "platform": {
       "title": "Get the app",
       "description": "Get started today — download the app and begin transferring money with a secure, reliable platform you can trust.",
-      "viewAll": "View All Apps"
+      "viewAll": "View All Apps",
+      "apps": {
+        "desktop": { "name": "Desktop", "type": "App" },
+        "ios": { "name": "iOS", "type": "App" },
+        "android": { "name": "Android", "type": "App" }
+      },
+      "other": { "title": "Other", "subtitle": "Platforms" },
+      "download": "Download"
     },
     "features": {
       "instant": {

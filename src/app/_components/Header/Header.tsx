@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes'
 import { Sun, Moon, Menu, ChevronDown } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
+import { cn } from '@/lib/cn'
 import { LanguageSelector } from './LanguageSelector'
 import { MobileMenu } from './MobileMenu'
 
@@ -48,7 +49,11 @@ export function Header (): React.ReactNode {
   return (
     <>
       <header
-        className={`fixed top-0 right-0 left-0 z-50 p-4 transition-all duration-500 lg:p-6 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+        style={{ viewTransitionName: 'header' }}
+        className={cn(
+          'fixed top-0 right-0 left-0 z-50 p-4 transition-transform duration-300 lg:p-6',
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        )}
       >
         {/* Subtle gradient overlay for depth */}
         <div className='pointer-events-none absolute inset-0 bg-linear-to-b from-primary-blue/5 to-transparent dark:from-primary-turquoise/5' />
@@ -86,18 +91,24 @@ export function Header (): React.ReactNode {
           <nav className='hidden shrink-0 items-center gap-10 lg:flex'>
             <Link
               href='/'
-              className={`text-sm lg:text-base whitespace-nowrap transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 rounded-lg px-3 py-2 ${pathname === '/' ? 'font-bold text-primary-dark dark:text-white bg-primary-blue/10 dark:bg-primary-blue/20' : 'font-semibold text-primary-blue hover:text-primary-blue/80 hover:bg-primary-blue/5 dark:text-primary-turquoise dark:hover:bg-white/5'}`}
+              className={cn(
+                'text-sm lg:text-base whitespace-nowrap transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 rounded-lg px-3 py-2',
+                pathname === '/'
+                  ? 'font-bold text-primary-dark dark:text-white bg-primary-blue/10 dark:bg-primary-blue/20'
+                  : 'font-semibold text-primary-blue hover:text-primary-blue/80 hover:bg-primary-blue/5 dark:text-primary-turquoise dark:hover:bg-white/5'
+              )}
             >
               {t('home')}
             </Link>
             {/* Get Started Dropdown */}
             <div className='group relative'>
               <button
-                className={`flex items-center gap-1.5 text-sm lg:text-base whitespace-nowrap transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 rounded-lg px-3 py-2 ${
+                className={cn(
+                  'flex items-center gap-1.5 text-sm lg:text-base whitespace-nowrap transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 rounded-lg px-3 py-2',
                   pathname === '/get-started' || pathname === '/downloads'
                     ? 'font-bold text-primary-dark dark:text-white bg-primary-blue/10 dark:bg-primary-blue/20'
                     : 'font-semibold text-primary-blue hover:text-primary-blue/80 hover:bg-primary-blue/5 dark:text-primary-turquoise dark:hover:bg-white/5'
-                }`}
+                )}
               >
                 {t('getStarted')}
                 <ChevronDown className='size-3.5 transition-all duration-300 group-hover:rotate-180 group-hover:scale-110' />
@@ -108,21 +119,23 @@ export function Header (): React.ReactNode {
                 <div className='min-w-48 rounded-2xl bg-white/95 dark:bg-primary-dark/95 backdrop-blur-md p-2 shadow-xl shadow-primary-dark/10 dark:shadow-black/30 border border-primary-dark/5 dark:border-white/10'>
                   <Link
                     href='/get-started'
-                    className={`block rounded-xl px-4 py-2.5 text-sm lg:text-base transition-all duration-200 transform ${
+                    className={cn(
+                      'block rounded-xl px-4 py-2.5 text-sm lg:text-base transition-all duration-200 transform',
                       pathname === '/get-started'
                         ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise scale-[0.98]'
                         : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5 hover:scale-[1.02] hover:translate-x-1'
-                    }`}
+                    )}
                   >
                     {t('aboutDash')}
                   </Link>
                   <Link
                     href='/downloads'
-                    className={`block rounded-xl px-4 py-2.5 text-sm lg:text-base transition-all duration-200 transform ${
+                    className={cn(
+                      'block rounded-xl px-4 py-2.5 text-sm lg:text-base transition-all duration-200 transform',
                       pathname === '/downloads'
                         ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise scale-[0.98]'
                         : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5 hover:scale-[1.02] hover:translate-x-1'
-                    }`}
+                    )}
                   >
                     {t('downloads')}
                   </Link>

@@ -211,7 +211,14 @@
     "platform": {
       "title": "Скачайте приложение",
       "description": "Начните сегодня — скачайте приложение и начните переводить деньги с надёжной платформой.",
-      "viewAll": "Все приложения"
+      "viewAll": "Все приложения",
+      "apps": {
+        "desktop": { "name": "Десктоп", "type": "Прил." },
+        "ios": { "name": "iOS", "type": "Прил." },
+        "android": { "name": "Android", "type": "Прил." }
+      },
+      "other": { "title": "Другие", "subtitle": "Платформы" },
+      "download": "Скачать"
     },
     "features": {
       "instant": {

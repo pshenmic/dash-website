@@ -56,9 +56,10 @@ interface PlatformCardProps {
   icon: React.ReactNode
   name: string
   type: string
+  downloadText: string
 }
 
-function PlatformCard ({ icon, name, type }: PlatformCardProps): React.ReactNode {
+function PlatformCard ({ icon, name, type, downloadText }: PlatformCardProps): React.ReactNode {
   return (
     <div className='flex flex-col gap-3 rounded-3xl bg-white/15 p-3'>
       <div className='flex items-center gap-3'>
@@ -69,7 +70,7 @@ function PlatformCard ({ icon, name, type }: PlatformCardProps): React.ReactNode
         </span>
       </div>
       <button className='h-8 w-full rounded-full bg-white/15 text-sm font-medium text-primary-white backdrop-blur-sm transition-colors hover:bg-white/25'>
-        Download
+        {downloadText}
       </button>
     </div>
   )
@@ -119,23 +120,26 @@ export function GetStartedActions (): React.ReactNode {
             <div className='grid grid-cols-2 gap-3 lg:flex lg:max-w-80 lg:flex-wrap'>
               <PlatformCard
                 icon={<Monitor className='size-4 text-primary-white' />}
-                name='Desktop'
-                type='App'
+                name={t('platform.apps.desktop.name')}
+                type={t('platform.apps.desktop.type')}
+                downloadText={t('platform.download')}
               />
               <PlatformCard
                 icon={<AppleIcon className='h-6 w-5 text-primary-white' />}
-                name='iOS'
-                type='App'
+                name={t('platform.apps.ios.name')}
+                type={t('platform.apps.ios.type')}
+                downloadText={t('platform.download')}
               />
               <PlatformCard
                 icon={<Smartphone className='size-6 text-primary-white' />}
-                name='Android'
-                type='App'
+                name={t('platform.apps.android.name')}
+                type={t('platform.apps.android.type')}
+                downloadText={t('platform.download')}
               />
               <div className='relative flex h-24 items-end rounded-3xl border border-white/15 p-3'>
                 <div className='text-base text-primary-white'>
-                  <p className='font-extrabold'>Other</p>
-                  <p className='font-medium'>Platforms</p>
+                  <p className='font-extrabold'>{t('platform.other.title')}</p>
+                  <p className='font-medium'>{t('platform.other.subtitle')}</p>
                 </div>
                 <button className='absolute right-3 top-3 flex size-8 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm'>
                   <div className='flex size-6 items-center justify-center rounded-full bg-primary-white'>

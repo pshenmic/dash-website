@@ -28,6 +28,12 @@
   /* Typography */
   --font-family-sans: "Manrope", sans-serif;
 
+  /* Shadows (based on primary-dark color) */
+  --shadow-soft: 0px 0px 100px 0px oklch(from var(--color-primary-dark) l c h / 0.1);
+  --shadow-soft-hover: 0px 0px 100px 0px oklch(from var(--color-primary-dark) l c h / 0.15);
+  --shadow-card: 0px 0px 35px 0px oklch(from var(--color-primary-dark) l c h / 0.1);
+  --shadow-inset: inset 0px 0px 12px 0px oklch(from var(--color-primary-dark) l c h / 0.12);
+
   /* Animations */
   --animate-breathe: breathe 8s ease-in-out infinite;
   --animate-breathe-normal: breathe-normal 8s ease-in-out infinite;
@@ -126,6 +132,24 @@ body {
 @keyframes fade-in-up {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reusable utility patterns */
+@layer utilities {
+  /* Focus ring for interactive elements */
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2;
+  }
+
+  /* Hover scale effect */
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  /* Icon button base */
+  .icon-button {
+    @apply flex size-11 items-center justify-center rounded-full bg-white/15 transition-colors hover:bg-white/25;
+  }
 }
 
 /* Hide scrollbar for horizontal scroll containers */

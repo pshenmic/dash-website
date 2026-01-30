@@ -105,8 +105,8 @@ export function GetGoing (): React.ReactNode {
           {/* Right - Slider (extends beyond screen edge) */}
           <div className='flex min-w-0 flex-1 flex-col gap-8 lg:-mr-[calc((100vw-1280px)/2+16px)] lg:gap-12'>
             {/* Carousel */}
-            <div className='-mx-4 overflow-hidden px-4' ref={emblaRef}>
-              <div className='flex gap-3 py-4 sm:gap-4'>
+            <div className='-mx-10 overflow-hidden px-10' ref={emblaRef}>
+              <div className='flex gap-5 py-10 sm:gap-6'>
                 {spendCards.map((card) => (
                   <div key={card.id} className='min-w-0 flex-[0_0_auto]'>
                     <SpendCard

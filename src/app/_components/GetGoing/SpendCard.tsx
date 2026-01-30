@@ -8,7 +8,7 @@ interface SpendCardProps {
 
 export function SpendCard ({ label, title, icon }: SpendCardProps): React.ReactNode {
   return (
-    <div className='relative h-50 w-75 shrink-0 overflow-hidden rounded-3xl border border-white/15 bg-white/15 shadow-card sm:h-66 sm:w-100 sm:rounded-4xl'>
+    <div className='relative h-50 w-75 shrink-0 overflow-hidden rounded-3xl border border-white/15 bg-white/15 shadow-card hover-lift sm:h-66 sm:w-100 sm:rounded-4xl'>
       {/* Dash Logo - top left */}
       <div className='absolute left-5 top-5 h-5.5 w-7 sm:left-7 sm:top-9 sm:h-7.5 sm:w-9'>
         <Image

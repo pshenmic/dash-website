@@ -137,14 +137,14 @@ export function GetGoing (): React.ReactNode {
               <div className='hidden gap-5 sm:flex'>
                 <button
                   onClick={scrollPrev}
-                  className='flex size-11 items-center justify-center rounded-full bg-white/15 transition-colors hover:bg-white/25'
+                  className='flex size-11 items-center justify-center rounded-full bg-white/15 transition-smooth hover:bg-white/25 active-press'
                   aria-label='Previous slide'
                 >
                   <ChevronLeft className='size-5 text-white' />
                 </button>
                 <button
                   onClick={scrollNext}
-                  className='flex size-11 items-center justify-center rounded-full bg-white/15 transition-colors hover:bg-white/25'
+                  className='flex size-11 items-center justify-center rounded-full bg-white/15 transition-smooth hover:bg-white/25 active-press'
                   aria-label='Next slide'
                 >
                   <ChevronRight className='size-5 text-white' />

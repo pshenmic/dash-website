@@ -19,7 +19,7 @@ export function Button ({
     <button
       className={cn(
         'flex h-16 items-center justify-center gap-4 rounded-full px-9 text-lg font-semibold backdrop-blur-sm',
-        'transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+        'active-press transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
         variant === 'primary' &&
           !inverted &&
           'bg-primary-white text-primary-blue hover:bg-primary-white/90 focus-visible:ring-primary-white',

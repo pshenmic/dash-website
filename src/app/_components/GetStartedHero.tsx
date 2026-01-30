@@ -32,10 +32,10 @@ export function GetStartedHero (): React.ReactNode {
         </div>
 
         <div className='flex animate-fade-in-up-4 flex-col items-center gap-2.5 lg:flex-row lg:gap-4'>
-          <div className='transition-transform duration-200 hover:scale-105'>
+          <div className='hover-scale'>
             <Button variant='primary'>{t('whereToSpend')}</Button>
           </div>
-          <div className='transition-transform duration-200 hover:scale-105'>
+          <div className='hover-scale'>
             <Button
               variant='secondary'
               icon={

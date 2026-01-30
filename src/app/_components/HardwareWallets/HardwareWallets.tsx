@@ -7,7 +7,7 @@ import { MasonryGrid } from '../WalletShowcase/MasonryGrid'
 export function HardwareWallets (): React.ReactNode {
   const t = useTranslations('hardwareWallets')
 
-  const hardwareWalletButtonClass = 'h-[50px] rounded-[12px] bg-primary-blue text-[18px] font-semibold text-white hover:bg-primary-blue/90'
+  const hardwareWalletButtonClass = 'h-12 rounded-xl bg-primary-blue text-lg font-semibold text-white hover:bg-primary-blue/90'
 
   const wallets = [
     {
@@ -120,10 +120,10 @@ export function HardwareWallets (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 lg:px-6'>
       {/* Header: Title + Description */}
       <div className='mb-8 flex flex-col gap-2.5 lg:mb-12'>
-        <h2 className='animate-fade-in-up text-[32px] font-extrabold leading-[34px] tracking-tight text-primary-dark dark:text-white'>
+        <h2 className='animate-fade-in-up text-3xl font-extrabold leading-9 tracking-tight text-primary-dark dark:text-white'>
           {t('title')}
         </h2>
-        <p className='animate-fade-in-up-1 text-[13px] font-medium text-primary-dark/50 dark:text-white/50'>
+        <p className='animate-fade-in-up-1 text-sm font-medium text-primary-dark/50 dark:text-white/50'>
           {t('description')}
         </p>
       </div>

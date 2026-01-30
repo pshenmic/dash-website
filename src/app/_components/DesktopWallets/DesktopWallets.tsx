@@ -87,10 +87,10 @@ export function DesktopWallets (): React.ReactNode {
       <div className='mb-8 flex flex-col gap-6 lg:mb-12 lg:flex-row lg:items-center lg:justify-between lg:gap-8'>
         {/* Left: Title and Description */}
         <div className='flex flex-col gap-2.5'>
-          <h2 className='animate-fade-in-up text-[32px] font-extrabold leading-[34px] tracking-tight text-primary-dark dark:text-white'>
+          <h2 className='animate-fade-in-up text-3xl font-extrabold leading-9 tracking-tight text-primary-dark dark:text-white'>
             {t('title')}
           </h2>
-          <p className='animate-fade-in-up-1 text-[13px] font-medium text-primary-dark/50 dark:text-white/50'>
+          <p className='animate-fade-in-up-1 text-sm font-medium text-primary-dark/50 dark:text-white/50'>
             {t('description')}
           </p>
         </div>
@@ -101,10 +101,10 @@ export function DesktopWallets (): React.ReactNode {
             <button
               key={platform.id}
               onClick={() => setSelectedPlatform(platform.id)}
-              className={`flex h-8 shrink-0 items-center justify-center whitespace-nowrap rounded-xl px-[25px] py-2.5 text-[13px] font-medium leading-normal backdrop-blur-md transition-all duration-300 ${
+              className={`flex h-8 shrink-0 items-center justify-center whitespace-nowrap rounded-xl px-6 py-2.5 text-sm font-medium leading-normal backdrop-blur-md transition-smooth ${
                 selectedPlatform === platform.id
-                  ? 'scale-105 bg-primary-turquoise/25 text-primary-turquoise shadow-md shadow-primary-turquoise/20 hover:bg-primary-turquoise/30 dark:text-primary-turquoise'
-                  : 'bg-primary-blue/15 text-primary-blue hover:scale-105 hover:bg-primary-blue/20 hover:shadow-md hover:shadow-primary-blue/20 dark:text-white dark:hover:bg-white/10'
+                  ? 'bg-primary-turquoise/25 text-primary-turquoise hover:bg-primary-turquoise/30 dark:text-primary-turquoise'
+                  : 'bg-primary-blue/15 text-primary-blue hover:bg-primary-blue/20 dark:text-white dark:hover:bg-white/10 hover-scale active-press'
               }`}
             >
               {t(`platforms.${platform.label}`)}

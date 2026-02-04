@@ -1,7 +1,10 @@
+@import "dash-ui-kit/theme";
+@import "dash-ui-kit/styles";
 @import "tailwindcss";
 
-/* Dark mode with class selector (for next-themes) */
-@custom-variant dark (&:where(.dark, .dark *));
+
+/* Dark mode for dash-ui-kit */
+@variant dark (&:is(.dark *));
 
 @theme {
   /* Primary Colors */

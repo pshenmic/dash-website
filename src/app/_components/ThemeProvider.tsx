@@ -1,19 +1,11 @@
 'use client'
 
-import { ThemeProvider as NextThemesProvider } from 'next-themes'
+import { ThemeProvider as DashThemeProvider } from 'dash-ui-kit/react'
 
 export function ThemeProvider ({
   children
 }: {
   children: React.ReactNode
 }): React.ReactNode {
-  return (
-    <NextThemesProvider
-      attribute='class'
-      defaultTheme='light'
-      enableSystem={false}
-    >
-      {children}
-    </NextThemesProvider>
-  )
+  return <DashThemeProvider>{children}</DashThemeProvider>
 }

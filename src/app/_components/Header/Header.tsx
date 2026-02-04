@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { useTheme } from 'next-themes'
+import { useTheme } from 'dash-ui-kit/react'
 import { Sun, Moon, Menu } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
@@ -15,7 +15,7 @@ import { NavDropdownLink } from './NavDropdownLink'
 export function Header (): React.ReactNode {
   const t = useTranslations('nav')
   const pathname = usePathname()
-  const { theme, setTheme } = useTheme()
+  const { theme, toggleTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
@@ -44,9 +44,6 @@ export function Header (): React.ReactNode {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY])
 
-  const toggleTheme = (): void => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-  }
 
   return (
     <>

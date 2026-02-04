@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
-import { useTheme } from 'next-themes'
+import { useTheme } from 'dash-ui-kit/react'
 import { useTranslations } from 'next-intl'
 import { usePathname } from '@/i18n/navigation'
 import { LanguageSelector } from './LanguageSelector'
@@ -20,7 +20,7 @@ export function MobileMenu ({
 }: MobileMenuProps): React.ReactNode {
   const t = useTranslations('nav')
   const pathname = usePathname()
-  const { theme, setTheme } = useTheme()
+  const { theme, toggleTheme } = useTheme()
 
   // Prevent background scrolling while menu is open
   useEffect(() => {
@@ -39,9 +39,6 @@ export function MobileMenu ({
     return () => document.removeEventListener('keydown', handleEscape)
   }, [onClose])
 
-  const toggleTheme = (): void => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-  }
 
   return (
     <div className='fixed inset-0 z-50'>

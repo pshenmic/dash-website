@@ -1,14 +1,15 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { US, RU } from 'country-flag-icons/react/3x2'
+import { USFlag } from '@/components/icons/USFlag'
+import { RUFlag } from '@/components/icons/RUFlag'
 import { useLocale } from 'next-intl'
 import { useRouter, usePathname } from '@/i18n/navigation'
 import { ChevronDown } from 'lucide-react'
 
 const LANGUAGES = [
-  { code: 'en', label: 'EN', flag: US, title: 'English' },
-  { code: 'ru', label: 'RU', flag: RU, title: 'Русский' }
+  { code: 'en', label: 'EN', flag: USFlag, title: 'English' },
+  { code: 'ru', label: 'RU', flag: RUFlag, title: 'Русский' }
 ]
 
 export function LanguageSelector (): React.ReactNode {

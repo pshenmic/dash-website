@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { highlight } from 'sugar-high'
 import { useTranslations } from 'next-intl'
-import { Button } from 'dash-ui-kit/react'
+import { Button, DashLogo } from 'dash-ui-kit/react'
 import { Card } from '@/components/ui/Card'
 
 const CODE_SNIPPET = `const { dashPlatform } = window
@@ -88,11 +88,8 @@ function DeveloperCard ({
     <Card className='relative h-40 lg:h-59'>
       {/* Content limited to left side, image fills right */}
       <div className='relative z-10 flex h-full max-w-[55%] flex-col items-start px-5 pt-4 pb-4 lg:max-w-[60%] lg:p-8'>
-        <Image
-          src='/images/home/developers/logo-dash-small.svg'
-          alt='Dash'
-          width={30}
-          height={24}
+        <DashLogo
+          color="white"
           className='h-5 w-auto lg:h-6'
         />
         <div className='mt-auto flex flex-col gap-2 lg:gap-3'>

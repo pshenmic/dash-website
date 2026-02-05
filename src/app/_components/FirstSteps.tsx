@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Button } from 'dash-ui-kit/react'
+import { Button, DashLogo } from 'dash-ui-kit/react'
 
 interface CardProps {
   image: string
@@ -19,12 +19,8 @@ function FirstStepCard ({
     <div className='relative flex h-100 w-full flex-col overflow-hidden rounded-3xl bg-white lg:h-155 lg:w-100 lg:rounded-4xl'>
       {/* Dash Logo */}
       <div className='absolute top-5 left-5 z-10 lg:top-9 lg:left-8'>
-        <Image
-          src='/images/home/developers/logo-dash-small.svg'
-          alt='Dash'
-          width={37}
-          height={30}
-          className='h-5 w-auto lg:h-8'
+        <DashLogo
+          className='h-5 w-auto lg:h-8 text-primary-dark'
         />
       </div>
 

@@ -1,8 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
-import { useTheme, Button } from 'dash-ui-kit/react'
+import { useTheme, Button, DashLogo } from 'dash-ui-kit/react'
 import { Sun, Moon, Menu } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
@@ -59,12 +58,10 @@ export function Header (): React.ReactNode {
 
         <div className='relative mx-auto flex max-w-7xl items-center justify-between rounded-3xl bg-white/80 dark:bg-primary-dark/90 backdrop-blur-md border border-primary-dark/5 dark:border-white/10 shadow-lg shadow-primary-dark/5 p-4 lg:p-5'>
           <div className='flex w-full items-center justify-between lg:hidden'>
-            <Image
-              src='/images/logo.svg'
-              alt='Dash'
+            <DashLogo
               width={79}
               height={21}
-              priority
+              className="text-primary-dark dark:text-white"
             />
             <button
               onClick={() => setIsMobileMenuOpen(true)}
@@ -77,12 +74,10 @@ export function Header (): React.ReactNode {
           </div>
 
           <div className='hidden shrink-0 items-center gap-4 pl-3 lg:flex'>
-            <Image
-              src='/images/logo.svg'
-              alt='Dash'
+            <DashLogo
               width={79}
               height={21}
-              priority
+              className="text-primary-dark dark:text-white"
             />
             <LanguageSelector />
           </div>

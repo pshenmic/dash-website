@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Play } from 'lucide-react'
+import { DashLogo } from 'dash-ui-kit/react'
 
 export interface VideoCardData {
   id: string
@@ -45,7 +46,7 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
         </div>
 
         <div className='absolute bottom-4 left-6'>
-          <Image src='/images/logo.svg' alt='Dash' width={60} height={16} />
+          <DashLogo width={60} height={16} className="text-primary-dark" />
         </div>
 
         {session != null && session !== '' && (
@@ -70,12 +71,10 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
         )}
 
         <div className='absolute top-6 left-6'>
-          <Image
-            src='/images/logo.svg'
-            alt='Dash'
+          <DashLogo
             width={40}
             height={11}
-            className='brightness-0 invert'
+            color="white"
           />
         </div>
 
@@ -133,12 +132,10 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
         </div>
 
         <div className='absolute bottom-4 left-6'>
-          <Image
-            src='/images/logo.svg'
-            alt='Dash'
+          <DashLogo
             width={60}
             height={16}
-            className='brightness-0 invert'
+            color="white"
           />
         </div>
 
@@ -151,7 +148,7 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
   return (
     <div className={`${baseClasses} bg-primary-white`}>
       <div className='absolute top-6 left-6'>
-        <Image src='/images/logo.svg' alt='Dash' width={60} height={16} />
+        <DashLogo width={60} height={16} className="text-primary-dark" />
       </div>
 
       {/* Coin overflows card bounds by design */}

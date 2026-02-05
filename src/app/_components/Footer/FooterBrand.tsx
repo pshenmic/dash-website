@@ -1,7 +1,7 @@
 'use client'
 
-import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { DashLogo } from 'dash-ui-kit/react'
 
 export function FooterBrand (): React.ReactNode {
   const t = useTranslations('footer.brand')
@@ -9,11 +9,8 @@ export function FooterBrand (): React.ReactNode {
   return (
     <div className='flex max-w-md flex-col gap-4'>
       <div className='animate-fade-in-up flex items-center gap-5'>
-        <Image
-          src='/images/footer/logo-dash-white.svg'
-          alt='Dash'
-          width={121}
-          height={33}
+        <DashLogo
+          color="white"
           className='h-7 w-auto lg:h-8'
         />
         <p className='text-sm font-medium text-white/50'>

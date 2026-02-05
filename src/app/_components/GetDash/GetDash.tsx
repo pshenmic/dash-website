@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight } from 'lucide-react'
-import { Button } from '@/components/ui/Button'
+import { Button } from 'dash-ui-kit/react'
 import { StatCard } from './StatCard'
 
 export function GetDash (): React.ReactNode {
@@ -32,19 +32,18 @@ export function GetDash (): React.ReactNode {
             {/* Buttons */}
             <div className='flex flex-col gap-2.5 sm:flex-row sm:gap-4'>
               <Button
-                variant='primary'
-                inverted
-                icon={
-                  <div className='flex size-9 items-center justify-center rounded-full bg-white sm:size-11'>
-                    <ArrowUpRight className='size-4 text-primary-blue sm:size-5' strokeWidth={2.5} />
-                  </div>
-                }
+                variant='solid'
+                colorScheme='brand'
                 className='h-12 rounded-2xl pl-6 pr-2 text-base sm:h-16 sm:rounded-2xl sm:pl-9 sm:pr-2.5 sm:text-lg'
               >
                 {t('buyOnline')}
+                <div className='flex size-9 items-center justify-center rounded-full bg-white sm:size-11'>
+                  <ArrowUpRight className='size-4 text-primary-blue sm:size-5' strokeWidth={2.5} />
+                </div>
               </Button>
               <Button
                 variant='outline'
+                colorScheme='brand'
                 className='h-12 rounded-2xl px-6 text-base sm:h-16 sm:rounded-2xl sm:px-9 sm:text-lg'
               >
                 {t('findAtm')}

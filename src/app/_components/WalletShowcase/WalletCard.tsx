@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { Button } from '@/components/ui/Button'
+import { Button } from 'dash-ui-kit/react'
+import { cn } from '@/lib/cn'
 
 interface WalletCardButton {
   label: string
@@ -8,6 +9,31 @@ interface WalletCardButton {
   href?: string
   customClassName?: string
   disabled?: boolean
+}
+
+// Simple mapping: all buttons use 'brand' colorScheme
+function mapVariant(variant: 'primary' | 'secondary' | 'outline'): {
+  variant: 'solid' | 'outline'
+  colorScheme: 'brand'
+} {
+  return {
+    variant: variant === 'outline' ? 'outline' : 'solid',
+    colorScheme: 'brand'
+  }
+}
+
+// Generate button-like classes for <a> tags
+function getButtonLinkClasses(variant: 'solid' | 'outline', customClassName?: string) {
+  return cn(
+    // Base button styles
+    'inline-flex items-center justify-center',
+    'font-semibold transition-colors',
+    // Variant styles
+    variant === 'solid' && 'bg-primary-blue text-white hover:bg-primary-blue/90 dark:bg-primary-turquoise dark:text-primary-dark dark:hover:bg-primary-turquoise/90',
+    variant === 'outline' && 'border border-primary-blue text-primary-blue hover:bg-primary-blue/10 dark:border-primary-turquoise dark:text-primary-turquoise dark:hover:bg-primary-turquoise/10',
+    // Custom classes (includes size, rounded, etc.)
+    customClassName || 'h-12 rounded-xl px-6 text-lg'
+  )
 }
 
 interface WalletCardProps {
@@ -56,18 +82,38 @@ export function WalletCard ({
 
         {/* Action Buttons */}
         <div className='flex flex-col gap-2.5'>
-          {buttons.map((button, index) => (
-            <Button
-              key={index}
-              variant={button.variant}
-              inverted={button.inverted}
-              href={button.href}
-              disabled={button.disabled}
-              className={button.customClassName || 'h-12 rounded-xl px-6 text-lg hover-scale'}
-            >
-              {button.label}
-            </Button>
-          ))}
+          {buttons.map((button, index) => {
+            const { variant, colorScheme } = mapVariant(button.variant)
+
+            // If button has href, render as styled link
+            if (button.href && !button.disabled) {
+              return (
+                <a
+                  key={index}
+                  href={button.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={getButtonLinkClasses(variant, button.customClassName)}
+                >
+                  {button.label}
+                </a>
+              )
+            }
+
+            // Regular button
+            const className = button.customClassName || 'h-12 rounded-xl px-6 text-lg'
+            return (
+              <Button
+                key={index}
+                variant={variant}
+                colorScheme={colorScheme}
+                disabled={button.disabled}
+                className={className}
+              >
+                {button.label}
+              </Button>
+            )
+          })}
         </div>
       </div>
     </div>

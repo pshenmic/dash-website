@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
-import { Button } from '@/components/ui/Button'
+import { Button } from 'dash-ui-kit/react'
 import { LinkCard } from '@/components/ui/LinkCard'
 import { SpendCard } from './SpendCard'
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
@@ -83,21 +83,21 @@ export function GetGoing (): React.ReactNode {
             {/* Buttons */}
             <div className='flex flex-col gap-3 sm:flex-row sm:gap-4'>
               <Button
-                variant='secondary'
+                variant='outline'
+                colorScheme='brand'
                 className='h-12 rounded-full px-8 text-base font-semibold sm:h-16 sm:px-9 sm:text-lg'
               >
                 {t('useYourDash')}
               </Button>
               <Button
                 variant='outline'
-                icon={
-                  <div className='flex size-9 items-center justify-center rounded-full bg-white sm:size-11'>
-                    <ArrowUpRight className='size-4 text-primary-blue sm:size-5' strokeWidth={2.5} />
-                  </div>
-                }
+                colorScheme='brand'
                 className='h-12 rounded-full bg-white/15 pl-6 pr-1.5 text-base font-semibold text-white hover:bg-white/25 sm:h-16 sm:pl-7 sm:pr-2.5 sm:text-lg'
               >
                 {t('learnMore')}
+                <div className='flex size-9 items-center justify-center rounded-full bg-white sm:size-11'>
+                  <ArrowUpRight className='size-4 text-primary-blue sm:size-5' strokeWidth={2.5} />
+                </div>
               </Button>
             </div>
           </div>
@@ -162,7 +162,8 @@ export function GetGoing (): React.ReactNode {
               {t('retailers.title')}
             </h3>
             <Button
-              variant='secondary'
+              variant='outline'
+              colorScheme='brand'
               className='hidden h-14 rounded-2xl px-9 text-lg font-semibold sm:flex sm:h-16'
             >
               {t('retailers.seeAll')}
@@ -184,7 +185,8 @@ export function GetGoing (): React.ReactNode {
 
           {/* Mobile See All Button */}
           <Button
-            variant='secondary'
+            variant='outline'
+            colorScheme='brand'
             className='h-12 w-full rounded-2xl text-base font-semibold sm:hidden'
           >
             {t('retailers.seeAll')}
@@ -214,7 +216,8 @@ export function GetGoing (): React.ReactNode {
               </p>
             </div>
             <Button
-              variant='secondary'
+              variant='outline'
+              colorScheme='brand'
               className='h-12 w-fit rounded-2xl px-8 text-base font-semibold sm:h-16 sm:px-9 sm:text-lg'
             >
               {t('platform.learnMore')}

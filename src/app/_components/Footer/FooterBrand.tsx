@@ -29,7 +29,7 @@ export function FooterBrand (): React.ReactNode {
 
       <a
         href='/support'
-        className='animate-fade-in-up-2 inline-flex h-16 w-fit items-center justify-center rounded-2xl bg-white/15 px-9 text-lg font-semibold text-white backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-primary-turquoise/25 hover:text-primary-turquoise hover:shadow-lg hover:shadow-primary-turquoise/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise/50'
+        className='animate-fade-in-up-2 inline-flex h-16 w-fit items-center justify-center rounded-2xl bg-white/15 px-9 text-lg font-semibold text-white backdrop-blur-md transition-all duration-300  hover:bg-primary-turquoise/25 hover:text-primary-turquoise hover:shadow-lg hover:shadow-primary-turquoise/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise/50'
       >
         {t('support')}
       </a>

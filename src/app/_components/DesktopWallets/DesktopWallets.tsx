@@ -104,7 +104,7 @@ export function DesktopWallets (): React.ReactNode {
               className={`flex h-8 shrink-0 items-center justify-center whitespace-nowrap rounded-xl px-6 py-2.5 text-sm font-medium leading-normal backdrop-blur-md transition-smooth ${
                 selectedPlatform === platform.id
                   ? 'bg-primary-turquoise/25 text-primary-turquoise hover:bg-primary-turquoise/30 dark:text-primary-turquoise'
-                  : 'bg-primary-blue/15 text-primary-blue hover:bg-primary-blue/20 dark:text-white dark:hover:bg-white/10 hover-scale active-press'
+                  : 'bg-primary-blue/15 text-primary-blue hover:bg-primary-blue/20 dark:text-white dark:hover:bg-white/10 active-press'
               }`}
             >
               {t(`platforms.${platform.label}`)}

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { highlight } from 'sugar-high'
 import { useTranslations } from 'next-intl'
-import { Button } from '@/components/ui/Button'
+import { Button } from 'dash-ui-kit/react'
 import { Card } from '@/components/ui/Card'
 
 const CODE_SNIPPET = `const { dashPlatform } = window
@@ -36,7 +36,7 @@ export function ForDevelopers (): React.ReactNode {
               </span>
             </h2>
           </div>
-          <Button variant='primary' className='hidden lg:inline-flex'>
+          <Button variant='solid' colorScheme='brand' className='hidden lg:inline-flex'>
             {t('joinDiscord')}
           </Button>
         </div>

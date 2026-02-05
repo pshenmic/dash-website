@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Button } from '@/components/ui/Button'
+import { Button } from 'dash-ui-kit/react'
 
 interface CardProps {
   image: string
@@ -49,7 +49,7 @@ function FirstStepCard ({
               {description}
             </p>
           </div>
-          <Button variant='primary' className='w-full'>
+          <Button variant='solid' colorScheme='brand' className='w-full'>
             {buttonText}
           </Button>
         </div>

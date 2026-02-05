@@ -66,7 +66,7 @@ export function FooterNewsletter (): React.ReactNode {
         </div>
         <button
           type='submit'
-          className='h-16 rounded-2xl bg-white px-9 text-lg font-semibold text-primary-blue transition-all duration-300 hover:scale-105 hover:bg-white/90 hover:shadow-xl hover:shadow-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-blue dark:bg-primary-turquoise dark:text-primary-dark dark:hover:bg-primary-turquoise/90 dark:hover:shadow-primary-turquoise/30 dark:focus-visible:ring-primary-turquoise/50 dark:focus-visible:ring-offset-secondary-space-cadet'
+          className='h-16 rounded-2xl bg-white px-9 text-lg font-semibold text-primary-blue transition-all duration-300  hover:bg-white/90 hover:shadow-xl hover:shadow-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-blue dark:bg-primary-turquoise dark:text-primary-dark dark:hover:bg-primary-turquoise/90 dark:hover:shadow-primary-turquoise/30 dark:focus-visible:ring-primary-turquoise/50 dark:focus-visible:ring-offset-secondary-space-cadet'
         >
           {t('send')}
         </button>

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { CircleCheck, Lock, Users, MessageSquare } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Chip } from '@/components/ui/Chip'
+import { Badge } from 'dash-ui-kit/react'
 import { Card } from '@/components/ui/Card'
 import { DashPriceCard } from '@/components/ui/DashPriceCard'
 
@@ -36,7 +36,7 @@ export function BulletsGrid (): React.ReactNode {
               />
             </div>
             <div className='absolute top-1/2 left-4 -translate-y-1/2 lg:left-9'>
-              <Chip>{t('mainCard.chip')}</Chip>
+              <Badge variant='bordered' color='white' size='sm'>{t('mainCard.chip')}</Badge>
             </div>
           </Card>
 

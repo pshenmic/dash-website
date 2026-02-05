@@ -7,8 +7,7 @@ import { MasonryGrid } from '../WalletShowcase/MasonryGrid'
 export function Web3Wallets (): React.ReactNode {
   const t = useTranslations('web3Wallets')
 
-  const blueButtonClass = 'h-12 rounded-xl bg-primary-turquoise text-lg font-semibold text-primary-dark transition-smooth hover-scale hover:bg-primary-turquoise/90 active-press'
-  const lightButtonClass = 'h-12 rounded-xl bg-primary-turquoise/15 text-lg font-semibold text-primary-turquoise backdrop-blur-md transition-smooth hover-scale hover:bg-primary-turquoise/25 active-press dark:text-primary-turquoise'
+  const buttonClass = 'h-12 rounded-xl text-lg font-semibold active-press'
 
   const wallets = [
     {
@@ -19,7 +18,7 @@ export function Web3Wallets (): React.ReactNode {
         {
           label: t('wallets.vultisig.buttons.web3Wallet'),
           variant: 'primary' as const,
-          customClassName: blueButtonClass,
+          customClassName: buttonClass,
           href: 'https://vultisig.com/download'
         }
       ]
@@ -32,7 +31,7 @@ export function Web3Wallets (): React.ReactNode {
         {
           label: t('wallets.trustWallet.buttons.web3Wallet'),
           variant: 'primary' as const,
-          customClassName: blueButtonClass,
+          customClassName: buttonClass,
           href: 'https://trustwallet.com/'
         }
       ]
@@ -45,13 +44,13 @@ export function Web3Wallets (): React.ReactNode {
         {
           label: t('wallets.dashPaperWallet.buttons.instructions'),
           variant: 'outline' as const,
-          customClassName: lightButtonClass,
+          customClassName: buttonClass,
           href: 'https://docs.dash.org/en/stable/user/wallets/paper.html'
         },
         {
           label: t('wallets.dashPaperWallet.buttons.generator'),
           variant: 'primary' as const,
-          customClassName: blueButtonClass,
+          customClassName: buttonClass,
           href: 'https://paper.dash.org/'
         }
       ]

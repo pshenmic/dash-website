@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Button } from '@/components/ui/Button'
+import { Button } from 'dash-ui-kit/react'
 
 interface ReleaseItem {
   tag: string
@@ -158,10 +158,10 @@ export function RoadmapBlock (): React.ReactNode {
 
             {/* Buttons */}
             <div className='flex flex-col gap-2.5 lg:gap-4'>
-              <Button variant='primary' className='w-full lg:h-16'>
+              <Button variant='solid' colorScheme='brand' className='w-full lg:h-16'>
                 {t('seeFullRoadmap')}
               </Button>
-              <Button variant='secondary' className='w-full lg:h-16'>
+              <Button variant='outline' colorScheme='brand' className='w-full lg:h-16'>
                 {t('viewReleaseNotes')}
               </Button>
             </div>

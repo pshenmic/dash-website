@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Button } from '@/components/ui/Button'
+import { Button } from 'dash-ui-kit/react'
 import { Card } from '@/components/ui/Card'
 
 export function PlatformBlocks (): React.ReactNode {
@@ -35,7 +35,7 @@ export function PlatformBlocks (): React.ReactNode {
                 {t('providers.description')}
               </p>
             </div>
-            <Button variant='primary' className='w-fit'>
+            <Button variant='solid' colorScheme='brand' className='w-fit'>
               {t('providers.button')}
             </Button>
           </div>
@@ -59,10 +59,10 @@ export function PlatformBlocks (): React.ReactNode {
               </p>
             </div>
             <div className='flex gap-4'>
-              <Button variant='primary' className='w-fit'>
+              <Button variant='solid' colorScheme='brand' className='w-fit'>
                 {t('libraries.quickStart')}
               </Button>
-              <Button variant='secondary' className='w-fit'>
+              <Button variant='outline' colorScheme='brand' className='w-fit'>
                 {t('libraries.jsSdk')}
               </Button>
             </div>

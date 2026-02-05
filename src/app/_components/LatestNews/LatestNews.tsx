@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-import { Button } from '@/components/ui/Button'
+import { Button } from 'dash-ui-kit/react'
 import { NewsCard } from './NewsCard'
 import { RoadmapBlock } from './RoadmapBlock'
 
@@ -19,7 +19,7 @@ export function LatestNews (): React.ReactNode {
               {t('title')}
             </h2>
           </div>
-          <Button variant='primary' className='h-14 w-fit lg:h-16'>
+          <Button variant='solid' colorScheme='brand' className='h-14 w-fit lg:h-16'>
             {t('joinDiscord')}
           </Button>
         </div>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { useTheme } from 'dash-ui-kit/react'
+import { useTheme, Button } from 'dash-ui-kit/react'
 import { Sun, Moon, Menu } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
@@ -68,7 +68,7 @@ export function Header (): React.ReactNode {
             />
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20 hover:scale-110 hover:rotate-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 active:scale-95'
+              className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20  hover:rotate-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 '
               aria-label='Open menu'
               aria-expanded={isMobileMenuOpen}
             >
@@ -124,7 +124,7 @@ export function Header (): React.ReactNode {
           <div className='hidden shrink-0 items-center gap-3 lg:flex'>
             <button
               onClick={toggleTheme}
-              className='flex h-10 w-10 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20 hover:scale-110 hover:rotate-12 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2'
+              className='flex h-10 w-10 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20  hover:rotate-12 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2'
               aria-label='Toggle theme'
             >
               {mounted && theme === 'dark'
@@ -135,9 +135,13 @@ export function Header (): React.ReactNode {
                   <Sun className='size-5 lg:size-6 text-primary-dark transition-transform duration-300' />
                   )}
             </button>
-            <button className='h-12 lg:h-14 min-w-30 shrink-0 rounded-xl bg-primary-turquoise px-5 lg:px-7 text-sm lg:text-base font-semibold whitespace-nowrap text-primary-dark transition-all duration-300 hover:bg-primary-turquoise/90 hover:scale-105 hover:shadow-lg hover:shadow-primary-turquoise/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise focus-visible:ring-offset-2 active:scale-95'>
+            <Button
+              variant='solid'
+              colorScheme='mint'
+              className='h-12 lg:h-14 min-w-30 shrink-0 rounded-xl px-5 lg:px-7 text-sm lg:text-base font-semibold whitespace-nowrap '
+            >
               {t('buyDash')}
-            </button>
+            </Button>
           </div>
         </div>
       </header>

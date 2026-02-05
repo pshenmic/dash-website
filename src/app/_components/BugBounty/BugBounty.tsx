@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Button } from '@/components/ui/Button'
+import { Button } from 'dash-ui-kit/react'
 
 export function BugBounty (): React.ReactNode {
   const t = useTranslations('bugBounty')
@@ -28,11 +28,8 @@ export function BugBounty (): React.ReactNode {
               {t('description')}
             </p>
           </div>
-          {/* Light theme: white button, Dark theme: blue button */}
-          <Button variant='primary' className='w-fit dark:hidden'>
-            {t('button')}
-          </Button>
-          <Button variant='primary' inverted className='hidden w-fit dark:flex'>
+          {/* Single button - works in both themes */}
+          <Button variant='solid' colorScheme='brand' className='w-fit'>
             {t('button')}
           </Button>
         </div>

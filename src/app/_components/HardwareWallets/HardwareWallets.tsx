@@ -7,7 +7,7 @@ import { MasonryGrid } from '../WalletShowcase/MasonryGrid'
 export function HardwareWallets (): React.ReactNode {
   const t = useTranslations('hardwareWallets')
 
-  const hardwareWalletButtonClass = 'h-12 rounded-xl bg-primary-blue text-lg font-semibold text-white hover:bg-primary-blue/90'
+  const hardwareWalletButtonClass = 'h-12 rounded-xl text-lg font-semibold'
 
   const wallets = [
     {

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Button, DashLogo } from 'dash-ui-kit/react'
+import { Button, DashLogo, Heading, Text } from 'dash-ui-kit/react'
 
 interface CardProps {
   image: string
@@ -38,12 +38,12 @@ function FirstStepCard ({
       <div className='flex flex-1 flex-col justify-end p-5 lg:p-8'>
         <div className='flex flex-col gap-5 lg:gap-8'>
           <div className='flex flex-col gap-2.5 lg:gap-4'>
-            <h3 className='text-2xl leading-tight font-extrabold tracking-tight text-primary-dark lg:text-4xl lg:leading-10'>
+            <Heading as='h3' size='xl' weight='extrabold' className='leading-tight tracking-tight text-primary-dark! lg:text-4xl lg:leading-10'>
               {title}
-            </h3>
-            <p className='text-xs font-medium text-primary-dark lg:text-sm'>
+            </Heading>
+            <Text size='xs' weight='medium' className='text-primary-dark! lg:text-sm'>
               {description}
-            </p>
+            </Text>
           </div>
           <Button variant='solid' colorScheme='brand' className='w-full'>
             {buttonText}
@@ -95,9 +95,9 @@ export function FirstSteps (): React.ReactNode {
           <p className='text-sm font-extrabold text-primary-blue lg:text-lg'>
             {t('chip')}
           </p>
-          <h2 className='text-2xl leading-tight font-extrabold text-white lg:text-3xl lg:leading-9'>
+          <Heading as='h2' size='xl' weight='extrabold' className='leading-tight text-white lg:text-3xl lg:leading-9'>
             {t('title')}
-          </h2>
+          </Heading>
         </div>
 
         {/* Cards Grid */}
@@ -119,9 +119,9 @@ export function FirstSteps (): React.ReactNode {
             <p className='text-sm font-extrabold text-primary-blue lg:text-lg'>
               {tWallet('chip')}
             </p>
-            <h2 className='text-2xl leading-tight font-extrabold text-white lg:text-3xl lg:leading-9'>
+            <Heading as='h2' size='xl' weight='extrabold' className='leading-tight text-white lg:text-3xl lg:leading-9'>
               {tWallet('title')}
-            </h2>
+            </Heading>
           </div>
 
           {/* Partners Logos */}

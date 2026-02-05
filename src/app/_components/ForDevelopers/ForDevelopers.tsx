@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { highlight } from 'sugar-high'
 import { useTranslations } from 'next-intl'
-import { Button, DashLogo } from 'dash-ui-kit/react'
+import { Button, DashLogo, Heading, Text } from 'dash-ui-kit/react'
 import { Card } from '@/components/ui/Card'
 
 const CODE_SNIPPET = `const { dashPlatform } = window
@@ -21,7 +21,7 @@ export function ForDevelopers (): React.ReactNode {
             <span className='text-lg font-extrabold text-primary-blue'>
               {t('label')}
             </span>
-            <h2 className='max-w-80 text-4xl leading-9 font-extrabold tracking-tight text-primary-dark lg:max-w-none dark:text-white'>
+            <Heading as='h2' size='2xl' weight='extrabold' className='max-w-80 leading-9 tracking-tight lg:max-w-none dark:text-white'>
               {t('title')}{' '}
               <span className='relative inline-block'>
                 {t('titleHighlight')}
@@ -34,7 +34,7 @@ export function ForDevelopers (): React.ReactNode {
                   className='pointer-events-none absolute -bottom-1 left-1/2 h-9 w-23 -translate-x-1/2 lg:-bottom-2 lg:h-11 lg:w-28'
                 />
               </span>
-            </h2>
+            </Heading>
           </div>
           <Button variant='solid' colorScheme='brand' className='hidden lg:inline-flex'>
             {t('joinDiscord')}
@@ -96,9 +96,9 @@ function DeveloperCard ({
           <span className='w-fit rounded-full border border-white/50 px-3 py-1.5 text-xs font-medium text-white lg:px-9 lg:py-2.5 lg:text-xs'>
             {chip}
           </span>
-          <p className='text-xl leading-6 font-extrabold tracking-tight text-white lg:text-4xl lg:leading-10'>
+          <Text size='xl' weight='extrabold' className='leading-6 tracking-tight text-white lg:text-4xl lg:leading-10'>
             {title}
-          </p>
+          </Text>
         </div>
       </div>
       {/* Image overflows card bounds by design */}

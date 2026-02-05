@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 import { ArrowUpRight } from 'lucide-react'
-import { Button } from 'dash-ui-kit/react'
+import { Button, Heading, Text } from 'dash-ui-kit/react'
 import { StatCard } from './StatCard'
 
 export function GetDash (): React.ReactNode {
@@ -21,12 +21,12 @@ export function GetDash (): React.ReactNode {
 
             {/* Title and Description */}
             <div className='flex flex-col gap-2.5 lg:gap-4'>
-              <h2 className='text-3xl leading-tight font-extrabold tracking-tight text-primary-dark dark:text-white lg:text-4xl lg:leading-10'>
+              <Heading as='h2' size='2xl' weight='extrabold' className='leading-tight tracking-tight dark:text-white lg:text-4xl lg:leading-10'>
                 {t('title')}
-              </h2>
-              <p className='max-w-sm text-base font-medium text-primary-dark dark:text-white lg:text-lg'>
+              </Heading>
+              <Text size='base' weight='medium' className='max-w-sm dark:text-white lg:text-lg'>
                 {t('description')}
-              </p>
+              </Text>
             </div>
 
             {/* Buttons */}

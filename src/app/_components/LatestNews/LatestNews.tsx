@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-import { Button } from 'dash-ui-kit/react'
+import { Button, Heading } from 'dash-ui-kit/react'
 import { NewsCard } from './NewsCard'
 import { RoadmapBlock } from './RoadmapBlock'
 
@@ -15,9 +15,9 @@ export function LatestNews (): React.ReactNode {
             <p className='text-sm font-extrabold text-primary-blue lg:text-lg'>
               {t('chip')}
             </p>
-            <h2 className='text-2xl leading-tight font-extrabold text-white lg:text-3xl lg:leading-9'>
+            <Heading as='h2' size='xl' weight='extrabold' className='leading-tight text-white lg:text-3xl lg:leading-9'>
               {t('title')}
-            </h2>
+            </Heading>
           </div>
           <Button variant='solid' colorScheme='brand' className='h-14 w-fit lg:h-16'>
             {t('joinDiscord')}

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Button } from 'dash-ui-kit/react'
+import { Button, Heading, Text } from 'dash-ui-kit/react'
 
 export function BugBounty (): React.ReactNode {
   const t = useTranslations('bugBounty')
@@ -21,12 +21,12 @@ export function BugBounty (): React.ReactNode {
         {/* Content - left side */}
         <div className='relative z-10 flex max-w-72 flex-col gap-6 lg:ml-24 lg:max-w-100 lg:gap-9'>
           <div className='flex flex-col gap-2.5 lg:gap-4'>
-            <h3 className='text-2xl leading-tight font-extrabold tracking-tight text-white lg:text-4xl lg:leading-10'>
+            <Heading as='h3' size='xl' weight='extrabold' className='leading-tight tracking-tight text-white lg:text-4xl lg:leading-10'>
               {t('title')}
-            </h3>
-            <p className='text-sm leading-snug font-medium text-white lg:text-lg'>
+            </Heading>
+            <Text size='sm' weight='medium' className='leading-snug text-white lg:text-lg'>
               {t('description')}
-            </p>
+            </Text>
           </div>
           {/* Single button - works in both themes */}
           <Button variant='solid' colorScheme='brand' className='w-fit'>

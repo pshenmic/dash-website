@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Button, Badge } from 'dash-ui-kit/react'
+import { Button, Badge, Heading, Text } from 'dash-ui-kit/react'
 
 export function FutureOfMoney (): React.ReactNode {
   const t = useTranslations('futureOfMoney')
@@ -12,12 +12,12 @@ export function FutureOfMoney (): React.ReactNode {
           <div className='flex max-w-117 flex-col gap-9'>
             <div className='flex flex-col gap-4'>
               <Badge variant='bordered' color='blue' size='sm'>{t('chip')}</Badge>
-              <h2 className='text-4xl leading-10 font-extrabold tracking-tight text-primary-dark lg:text-4xl dark:text-primary-white'>
+              <Heading as='h2' size='2xl' weight='extrabold' className='leading-10 tracking-tight dark:text-white lg:text-4xl'>
                 {t('title')}
-              </h2>
-              <p className='max-w-99 text-lg font-medium text-primary-dark dark:text-primary-white/80'>
+              </Heading>
+              <Text size='lg' weight='medium' opacity={80} className='max-w-99 dark:text-white'>
                 {t('description')}
-              </p>
+              </Text>
             </div>
 
             <div className='flex gap-4'>

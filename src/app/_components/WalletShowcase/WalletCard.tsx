@@ -11,14 +11,14 @@ interface WalletCardButton {
   disabled?: boolean
 }
 
-// Simple mapping: all buttons use 'brand' colorScheme
+// Simple mapping: all buttons use 'gray' colorScheme
 function mapVariant(variant: 'primary' | 'secondary' | 'outline'): {
   variant: 'solid' | 'outline'
-  colorScheme: 'brand'
+  colorScheme: 'gray'
 } {
   return {
     variant: variant === 'outline' ? 'outline' : 'solid',
-    colorScheme: 'brand'
+    colorScheme: 'gray'
   }
 }
 
@@ -29,8 +29,8 @@ function getButtonLinkClasses(variant: 'solid' | 'outline', customClassName?: st
     'inline-flex items-center justify-center',
     'font-semibold transition-colors',
     // Variant styles
-    variant === 'solid' && 'bg-primary-blue text-white hover:bg-primary-blue/90 dark:bg-primary-turquoise dark:text-primary-dark dark:hover:bg-primary-turquoise/90',
-    variant === 'outline' && 'border border-primary-blue text-primary-blue hover:bg-primary-blue/10 dark:border-primary-turquoise dark:text-primary-turquoise dark:hover:bg-primary-turquoise/10',
+    variant === 'solid' && 'bg-primary-blue text-white hover:bg-primary-blue/90 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500',
+    variant === 'outline' && 'border border-primary-blue text-primary-blue hover:bg-primary-blue/10 dark:border-gray-500 dark:text-gray-300 dark:hover:bg-gray-700/50',
     // Custom classes (includes size, rounded, etc.)
     customClassName || 'h-12 rounded-xl px-6 text-lg'
   )

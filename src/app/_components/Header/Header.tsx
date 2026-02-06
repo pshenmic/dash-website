@@ -43,20 +43,15 @@ export function Header (): React.ReactNode {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY])
 
-
   return (
     <>
       <header
-        style={{ viewTransitionName: 'header' }}
         className={cn(
           'fixed top-0 right-0 left-0 z-50 p-4 transition-transform duration-300 lg:p-6',
           isVisible ? 'translate-y-0' : '-translate-y-full'
         )}
       >
-        {/* Subtle gradient overlay for depth */}
-        <div className='pointer-events-none absolute inset-0 bg-linear-to-b from-primary-blue/5 to-transparent dark:from-primary-turquoise/5' />
-
-        <div className='relative mx-auto flex max-w-7xl items-center justify-between rounded-3xl bg-white/80 dark:bg-primary-dark/90 backdrop-blur-md border border-primary-dark/5 dark:border-white/10 shadow-lg shadow-primary-dark/5 p-4 lg:p-5'>
+        <div className='mx-auto flex max-w-7xl items-center justify-between rounded-3xl bg-white/80 dark:bg-primary-dark/80 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg p-4 lg:p-5'>
           <div className='flex w-full items-center justify-between lg:hidden'>
             <DashLogo
               width={79}
@@ -65,7 +60,7 @@ export function Header (): React.ReactNode {
             />
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20  hover:rotate-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 '
+              className='flex h-10 w-10 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20 hover:rotate-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2'
               aria-label='Open menu'
               aria-expanded={isMobileMenuOpen}
             >
@@ -89,7 +84,7 @@ export function Header (): React.ReactNode {
                 'text-sm lg:text-base whitespace-nowrap transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 rounded-lg px-3 py-2',
                 pathname === '/'
                   ? 'font-bold text-primary-dark dark:text-white bg-primary-blue/10 dark:bg-primary-blue/20'
-                  : 'font-semibold text-primary-blue hover:text-primary-blue/80 hover:bg-primary-blue/5 dark:text-primary-turquoise dark:hover:bg-white/5'
+                  : 'font-semibold text-primary-dark hover:text-primary-dark/80 hover:bg-white/20 dark:text-primary-turquoise dark:hover:bg-white/5'
               )}
             >
               {t('home')}
@@ -109,35 +104,35 @@ export function Header (): React.ReactNode {
               <a
                 key={label}
                 href='#'
-                className='text-sm lg:text-base font-semibold whitespace-nowrap text-primary-blue dark:text-primary-turquoise transition-all duration-300 hover:text-primary-blue/80 hover:bg-primary-blue/5 dark:hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 rounded-lg px-3 py-2'
+                className='text-sm lg:text-base font-semibold whitespace-nowrap text-primary-dark dark:text-primary-turquoise transition-all duration-300 hover:text-primary-dark/80 hover:bg-white/20 dark:hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 rounded-lg px-3 py-2'
               >
                 {label}
               </a>
             ))}
           </nav>
 
-          <div className='hidden shrink-0 items-center gap-3 lg:flex'>
-            <button
-              onClick={toggleTheme}
-              className='flex h-10 w-10 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20  hover:rotate-12 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2'
-              aria-label='Toggle theme'
-            >
-              {mounted && theme === 'dark'
-                ? (
-                  <Moon className='size-5 lg:size-6 text-primary-dark transition-transform duration-300' />
-                  )
-                : (
-                  <Sun className='size-5 lg:size-6 text-primary-dark transition-transform duration-300' />
-                  )}
-            </button>
-            <Button
-              variant='solid'
-              colorScheme='mint'
-              className='h-12 lg:h-14 min-w-30 shrink-0 rounded-xl px-5 lg:px-7 text-sm lg:text-base font-semibold whitespace-nowrap '
-            >
-              {t('buyDash')}
-            </Button>
-          </div>
+            <div className='hidden shrink-0 items-center gap-3 lg:flex'>
+              <button
+                onClick={toggleTheme}
+                className='flex h-10 w-10 lg:h-12 lg:w-12 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20 hover:rotate-12 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2'
+                aria-label='Toggle theme'
+              >
+                {mounted && theme === 'dark'
+                  ? (
+                    <Moon className='size-5 lg:size-6 text-primary-dark dark:text-white transition-transform duration-300' />
+                    )
+                  : (
+                    <Sun className='size-5 lg:size-6 text-primary-dark dark:text-white transition-transform duration-300' />
+                    )}
+              </button>
+              <Button
+                variant='solid'
+                colorScheme='brand'
+                className='h-12 lg:h-14 min-w-30 shrink-0 rounded-xl px-5 lg:px-7 text-sm lg:text-base font-semibold whitespace-nowrap'
+              >
+                {t('buyDash')}
+              </Button>
+            </div>
         </div>
       </header>
 

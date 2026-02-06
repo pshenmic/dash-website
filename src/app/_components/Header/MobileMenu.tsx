@@ -54,15 +54,15 @@ export function MobileMenu ({
           <LanguageSelector />
           <button
             onClick={toggleTheme}
-            className='flex size-10 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20  hover:rotate-12 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2 '
+            className='flex size-10 items-center justify-center rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20 hover:rotate-12 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2'
             aria-label='Toggle theme'
           >
             {mounted && theme === 'dark'
               ? (
-                <Moon className='size-5 text-primary-dark transition-transform duration-300' />
+                <Moon className='size-5 text-primary-dark dark:text-white transition-transform duration-300' />
                 )
               : (
-                <Sun className='size-5 text-primary-dark transition-transform duration-300' />
+                <Sun className='size-5 text-primary-dark dark:text-white transition-transform duration-300' />
                 )}
           </button>
         </div>
@@ -106,8 +106,8 @@ export function MobileMenu ({
         <div className='p-6'>
           <Button
             variant='solid'
-            colorScheme='mint'
-            className='h-14 w-full rounded-xl text-base font-semibold '
+            colorScheme='brand'
+            className='h-14 w-full rounded-xl text-base font-semibold'
           >
             {t('buyDash')}
           </Button>

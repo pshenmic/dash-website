@@ -8,10 +8,10 @@ export function HeroSection (): React.ReactNode {
   const t = useTranslations('hero')
 
   return (
-    <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-12 bg-primary-blue dark:bg-primary-dark'>
+    <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark'>
       <Image
-        src='/images/bg-hero.png'
-        alt=''
+        src='/images/home/bg-hero.webp'
+        alt='Dash hero background'
         fill
         className='pointer-events-none animate-breathe object-cover object-center lg:object-right dark:brightness-50'
         priority

@@ -111,8 +111,8 @@ export function DashPriceCard ({
 
       <div className='absolute top-4 left-5 lg:top-8 lg:left-9'>
         <Image
-          src='/images/bullets/logo-dash-icon.svg'
-          alt=''
+          src='/images/home/bullets/logo-dash-icon.svg'
+          alt='Dash'
           width={34}
           height={28}
           className='h-5 w-auto lg:h-7'

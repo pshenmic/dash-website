@@ -1,3 +1,5 @@
+import { cn } from '@/lib/cn'
+
 interface ChipProps {
   children: React.ReactNode
   variant?: 'default' | 'outline'
@@ -17,7 +19,7 @@ export function Chip ({
   }
 
   return (
-    <span className={`${baseClasses} ${variantClasses[variant]}`}>
+    <span className={cn(baseClasses, variantClasses[variant])}>
       {children}
     </span>
   )

@@ -6,6 +6,7 @@ import { useTheme } from 'next-themes'
 import { Sun, Moon, Menu } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
+import { cn } from '@/lib/cn'
 import { LanguageSelector } from './LanguageSelector'
 import { MobileMenu } from './MobileMenu'
 
@@ -49,7 +50,10 @@ export function Header (): React.ReactNode {
     <>
       <header
         style={{ viewTransitionName: 'header' }}
-        className={`fixed top-0 right-0 left-0 z-50 p-4 transition-transform duration-300 lg:p-6 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+        className={cn(
+          'fixed top-0 right-0 left-0 z-50 p-4 transition-transform duration-300 lg:p-6',
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        )}
       >
         <div className='mx-auto flex max-w-7xl items-center justify-between rounded-3xl bg-primary-white p-4'>
           <div className='flex w-full items-center justify-between lg:hidden'>
@@ -84,13 +88,23 @@ export function Header (): React.ReactNode {
           <nav className='hidden shrink-0 items-center gap-10 lg:flex'>
             <Link
               href='/'
-              className={`text-sm whitespace-nowrap transition-colors focus:outline-none focus-visible:underline ${pathname === '/' ? 'font-extrabold text-primary-dark hover:text-primary-dark/70' : 'font-semibold text-primary-blue hover:text-primary-blue/70'}`}
+              className={cn(
+                'text-sm whitespace-nowrap transition-colors focus:outline-none focus-visible:underline',
+                pathname === '/'
+                  ? 'font-extrabold text-primary-dark hover:text-primary-dark/70'
+                  : 'font-semibold text-primary-blue hover:text-primary-blue/70'
+              )}
             >
               {t('home')}
             </Link>
             <Link
               href='/get-started'
-              className={`text-sm whitespace-nowrap transition-colors focus:outline-none focus-visible:underline ${pathname === '/get-started' ? 'font-extrabold text-primary-dark hover:text-primary-dark/70' : 'font-semibold text-primary-blue hover:text-primary-blue/70'}`}
+              className={cn(
+                'text-sm whitespace-nowrap transition-colors focus:outline-none focus-visible:underline',
+                pathname === '/get-started'
+                  ? 'font-extrabold text-primary-dark hover:text-primary-dark/70'
+                  : 'font-semibold text-primary-blue hover:text-primary-blue/70'
+              )}
             >
               {t('getStarted')}
             </Link>

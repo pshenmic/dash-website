@@ -8,12 +8,12 @@ export function GetStartedHero (): React.ReactNode {
   const t = useTranslations('getStartedHero')
 
   return (
-    <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-12 bg-primary-blue dark:bg-primary-dark'>
+    <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark'>
       <Image
-        src='/images/bg-get-started.png'
-        alt=''
+        src='/images/get-started/bg-get-started.webp'
+        alt='Get started hero background'
         fill
-        className='pointer-events-none animate-breathe-normal object-cover object-center dark:brightness-50'
+        className='pointer-events-none animate-breathe-normal scale-110 object-cover object-center dark:brightness-50'
         priority
       />
       <div className='absolute inset-0 bg-gradient-to-t from-primary-blue/30 to-transparent dark:from-primary-dark/50' />
@@ -32,10 +32,10 @@ export function GetStartedHero (): React.ReactNode {
         </div>
 
         <div className='flex animate-fade-in-up-4 flex-col items-center gap-2.5 lg:flex-row lg:gap-4'>
-          <div className='transition-transform duration-200 hover:scale-105'>
+          <div className='hover-scale'>
             <Button variant='primary'>{t('whereToSpend')}</Button>
           </div>
-          <div className='transition-transform duration-200 hover:scale-105'>
+          <div className='hover-scale'>
             <Button
               variant='secondary'
               icon={

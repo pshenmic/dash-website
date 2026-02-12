@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { ViewTransitions } from 'next-view-transitions'
 import { Manrope } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
 }
 
 export function generateStaticParams (): Array<{ locale: string }> {
-  return routing.locales.map((_locale) => ({ locale: _locale }))
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 export default async function LocaleLayout ({
@@ -36,20 +35,18 @@ export default async function LocaleLayout ({
   const messages = await getMessages({ locale })
 
   return (
-    <ViewTransitions>
-      <html lang={locale} suppressHydrationWarning>
-        <body
-          className={`${manrope.variable} bg-primary-white font-sans antialiased dark:bg-primary-dark`}
-        >
-          <ThemeProvider>
-            <NextIntlClientProvider messages={messages}>
-              <Header />
-              {children}
-              <Footer />
-            </NextIntlClientProvider>
-          </ThemeProvider>
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang={locale} suppressHydrationWarning>
+      <body
+        className={`${manrope.variable} bg-primary-white font-sans antialiased dark:bg-primary-dark`}
+      >
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   )
 }

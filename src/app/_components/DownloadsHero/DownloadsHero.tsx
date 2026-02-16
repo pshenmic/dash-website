@@ -12,8 +12,8 @@ export function DownloadsHero (): React.ReactNode {
       {/* Background Image */}
       <div className='pointer-events-none absolute right-0 top-0 h-80 w-96 lg:h-auto lg:w-auto'>
         <Image
-          src='/images/downloads/hero-bg.png'
-          alt=''
+          src='/images/shared/3d/platform.png'
+          alt='Dash platform'
           width={1800}
           height={1200}
           className='animate-breathe-normal object-contain object-top-right dark:brightness-50'

@@ -4,8 +4,9 @@ import { useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useTranslations } from 'next-intl'
-import { Link, usePathname } from '@/i18n/navigation'
+import { usePathname } from '@/i18n/navigation'
 import { LanguageSelector } from './LanguageSelector'
+import { MobileNavLink } from './MobileNavLink'
 import { cn } from '@/lib/cn'
 
 interface MobileMenuProps {
@@ -70,18 +71,9 @@ export function MobileMenu ({
         </div>
 
         <nav className='flex flex-1 flex-col gap-2 overflow-y-auto px-6 py-4'>
-          <Link
-            href='/'
-            className={cn(
-              'rounded-xl px-4 py-3 text-right text-lg transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-              pathname === '/'
-                ? 'font-bold text-primary-dark dark:text-white bg-primary-blue/10 dark:bg-primary-blue/20'
-                : 'font-semibold text-primary-blue dark:text-primary-turquoise hover:bg-primary-blue/5 dark:hover:bg-white/5'
-            )}
-            onClick={onClose}
-          >
+          <MobileNavLink href='/' onClick={onClose}>
             {t('home')}
-          </Link>
+          </MobileNavLink>
           {/* Get Started Section with submenu */}
           <div className='flex flex-col'>
             <span
@@ -95,50 +87,23 @@ export function MobileMenu ({
               {t('getStarted')}
             </span>
             <div className='flex flex-col gap-1 pr-4'>
-              <Link
-                href='/get-started'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/get-started'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
+              <MobileNavLink href='/get-started' variant='sub' onClick={onClose}>
                 {t('aboutDash')}
-              </Link>
-              <Link
-                href='/downloads'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/downloads'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
+              </MobileNavLink>
+              <MobileNavLink href='/downloads' variant='sub' onClick={onClose}>
                 {t('downloads')}
-              </Link>
+              </MobileNavLink>
             </div>
           </div>
-          <a
-            href='#'
-            className='rounded-xl px-4 py-3 text-right text-lg font-semibold text-primary-blue dark:text-primary-turquoise transition-all duration-300 transform hover:bg-primary-blue/5 dark:hover:bg-white/5 hover:scale-[1.02] hover:translate-x-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2'
-          >
+          <MobileNavLink href='#'>
             {t('institutions')}
-          </a>
-          <a
-            href='#'
-            className='rounded-xl px-4 py-3 text-right text-lg font-semibold text-primary-blue dark:text-primary-turquoise transition-all duration-300 transform hover:bg-primary-blue/5 dark:hover:bg-white/5 hover:scale-[1.02] hover:translate-x-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2'
-          >
+          </MobileNavLink>
+          <MobileNavLink href='#'>
             {t('developers')}
-          </a>
-          <a
-            href='#'
-            className='rounded-xl px-4 py-3 text-right text-lg font-semibold text-primary-blue dark:text-primary-turquoise transition-all duration-300 transform hover:bg-primary-blue/5 dark:hover:bg-white/5 hover:scale-[1.02] hover:translate-x-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2'
-          >
+          </MobileNavLink>
+          <MobileNavLink href='#'>
             {t('community')}
-          </a>
+          </MobileNavLink>
         </nav>
 
         <div className='p-6'>

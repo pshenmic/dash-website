@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Button } from 'dash-ui-kit/react'
+import { Button, Heading, Text } from 'dash-ui-kit/react'
 import { cn } from '@/lib/cn'
 
 interface WalletCardButton {
@@ -67,17 +67,17 @@ export function WalletCard ({
       <div className='flex flex-col gap-6'>
         {/* Text Content */}
         <div className='flex flex-col gap-4'>
-          <h3 className='text-3xl leading-9 font-extrabold tracking-tight text-primary-dark dark:text-white'>
+          <Heading as='h3' size='2xl' weight='extrabold' className='leading-9 tracking-tight dark:text-white'>
             {title.split('\n').map((line, i, arr) => (
               <span key={i}>
                 {line}
                 {i < arr.length - 1 && <br />}
               </span>
             ))}
-          </h3>
-          <p className='text-sm leading-normal font-medium text-primary-dark dark:text-white'>
+          </Heading>
+          <Text size='sm' weight='medium' className='leading-normal dark:text-white'>
             {description}
-          </p>
+          </Text>
         </div>
 
         {/* Action Buttons */}

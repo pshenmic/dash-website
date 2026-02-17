@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { Heading, Text } from 'dash-ui-kit/react'
 import { WalletCard } from '../WalletShowcase/WalletCard'
 import { MasonryGrid } from '../WalletShowcase/MasonryGrid'
 
@@ -61,16 +62,16 @@ export function Web3Wallets (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 lg:px-6'>
       {/* Header: Title + Description */}
       <div className='mb-8 flex flex-col gap-2.5 lg:mb-12'>
-        <h2 className='animate-fade-in-up text-3xl font-extrabold leading-9 tracking-tight text-primary-dark dark:text-white'>
+        <Heading as='h2' size='2xl' weight='extrabold' className='animate-fade-in-up leading-9 tracking-tight dark:text-white'>
           {t('title')}
-        </h2>
+        </Heading>
         <div className='animate-fade-in-up-1 flex flex-col gap-2'>
-          <p className='text-sm font-medium text-primary-dark/50 dark:text-white/50'>
+          <Text size='sm' weight='medium' className='text-primary-dark/50 dark:text-white/50'>
             {t('description1')}
-          </p>
-          <p className='text-sm font-medium text-primary-dark/50 dark:text-white/50'>
+          </Text>
+          <Text size='sm' weight='medium' className='text-primary-dark/50 dark:text-white/50'>
             {t('description2')}
-          </p>
+          </Text>
         </div>
       </div>
 

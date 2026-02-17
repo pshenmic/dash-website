@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { Heading, Text } from 'dash-ui-kit/react'
 import { WalletCard } from '../WalletShowcase/WalletCard'
 import { MasonryGrid } from '../WalletShowcase/MasonryGrid'
 
@@ -87,12 +88,12 @@ export function DesktopWallets (): React.ReactNode {
       <div className='mb-8 flex flex-col gap-6 lg:mb-12 lg:flex-row lg:items-center lg:justify-between lg:gap-8'>
         {/* Left: Title and Description */}
         <div className='flex flex-col gap-2.5'>
-          <h2 className='animate-fade-in-up text-3xl font-extrabold leading-9 tracking-tight text-primary-dark dark:text-white'>
+          <Heading as='h2' size='2xl' weight='extrabold' className='animate-fade-in-up leading-9 tracking-tight dark:text-white'>
             {t('title')}
-          </h2>
-          <p className='animate-fade-in-up-1 text-sm font-medium text-primary-dark/50 dark:text-white/50'>
+          </Heading>
+          <Text size='sm' weight='medium' className='animate-fade-in-up-1 text-primary-dark/50 dark:text-white/50'>
             {t('description')}
-          </p>
+          </Text>
         </div>
 
         {/* Right: Platform Filters */}

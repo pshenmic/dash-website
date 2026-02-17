@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Input } from 'dash-ui-kit/react'
+import { Input, Button } from 'dash-ui-kit/react'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -28,7 +28,7 @@ export function FooterNewsletter (): React.ReactNode {
     e.preventDefault()
     if (!validateEmail(email)) return
     // TODO: Implement newsletter subscription
-    console.log('Subscribe:', email)
+    setEmail('')
   }
 
   return (
@@ -55,12 +55,15 @@ export function FooterNewsletter (): React.ReactNode {
           colorScheme={error !== '' ? 'error' : 'default'}
           className='w-full sm:w-64'
         />
-        <button
+        <Button
           type='submit'
-          className='h-16 rounded-2xl bg-white px-9 text-lg font-semibold text-primary-blue transition-all duration-300  hover:bg-white/90 hover:shadow-xl hover:shadow-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise/50 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-blue dark:bg-primary-turquoise dark:text-primary-dark dark:hover:bg-primary-turquoise/90 dark:hover:shadow-primary-turquoise/30 dark:focus-visible:ring-primary-turquoise/50 dark:focus-visible:ring-offset-secondary-space-cadet'
+          variant='solid'
+          colorScheme='lightGray'
+          size='xl'
+          className='rounded-2xl px-9 text-lg font-semibold'
         >
           {t('send')}
-        </button>
+        </Button>
       </form>
     </div>
   )

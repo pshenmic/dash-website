@@ -7,18 +7,27 @@ interface MobileNavLinkProps {
   href: string
   children: React.ReactNode
   variant?: 'primary' | 'sub'
-  onClick?: () => void
+  disabled?: boolean
+  onClose?: () => void
 }
 
 export function MobileNavLink ({
   href,
   children,
-  variant = 'primary',
-  onClick
+  variant = 'sub',
+  disabled = false,
+  onClose
 }: MobileNavLinkProps): React.ReactNode {
   const pathname = usePathname()
   const isActive = pathname === href
-  const isPlaceholder = href === '#'
+
+  if (disabled) {
+    return (
+      <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
+        {children}
+      </span>
+    )
+  }
 
   const className = cn(
     'rounded-xl text-right focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
@@ -30,16 +39,8 @@ export function MobileNavLink ({
     !isActive && variant === 'sub' && 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
   )
 
-  if (isPlaceholder) {
-    return (
-      <a href='#' className={className}>
-        {children}
-      </a>
-    )
-  }
-
   return (
-    <Link href={href} className={className} onClick={onClick}>
+    <Link href={href} className={className} onClick={onClose}>
       {children}
     </Link>
   )

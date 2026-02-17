@@ -4,14 +4,19 @@ import { useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
 import { useTheme, Button } from 'dash-ui-kit/react'
 import { useTranslations } from 'next-intl'
-import { Link, usePathname } from '@/i18n/navigation'
+import { usePathname } from '@/i18n/navigation'
 import { LanguageSelector } from './LanguageSelector'
+import { MobileNavLink } from './MobileNavLink'
 import { cn } from '@/lib/cn'
 
 interface MobileMenuProps {
   onClose: () => void
   mounted: boolean
 }
+
+const GET_STARTED_ROUTES = ['/get-started', '/get-started/payments', '/downloads', '/get-started/buy-online', '/get-started/spend', '/get-started/transactions']
+const INSTITUTIONS_ROUTES = ['/institutions', '/institutions/traders', '/institutions/financial-services', '/institutions/regulatory', '/institutions/fastpass']
+const DEVELOPERS_ROUTES = ['/build', '/developers/platform', '/discover', '/developers/contributing', '/developers/tools', '/developers/roadmap']
 
 export function MobileMenu ({
   onClose,
@@ -37,7 +42,6 @@ export function MobileMenu ({
     document.addEventListener('keydown', handleEscape)
     return () => document.removeEventListener('keydown', handleEscape)
   }, [onClose])
-
 
   return (
     <div className='fixed inset-0 z-50'>
@@ -67,7 +71,7 @@ export function MobileMenu ({
         </div>
 
         <nav className='flex flex-1 flex-col gap-2 overflow-y-auto px-6 py-4'>
-          {/* Home Section with submenu */}
+          {/* Home Section */}
           <div className='flex flex-col'>
             <span
               className={cn(
@@ -80,38 +84,20 @@ export function MobileMenu ({
               {t('home')}
             </span>
             <div className='flex flex-col gap-1 pr-4'>
-              <Link
-                href='/'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('buildWithDash')}
-              </Link>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('individuals')}
-              </span>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('businesses')}
-              </span>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('downloads')}
-              </span>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('newMerchantKit')}
-              </span>
+              <MobileNavLink href='/' onClose={onClose}>{t('buildWithDash')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('individuals')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('businesses')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('downloads')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('newMerchantKit')}</MobileNavLink>
             </div>
           </div>
-          {/* Get Started Section with submenu */}
+
+          {/* Get Started Section */}
           <div className='flex flex-col'>
             <span
               className={cn(
                 'rounded-xl px-4 py-3 text-right text-lg transition-smooth',
-                pathname === '/get-started' || pathname === '/get-started/payments' || pathname === '/downloads' || pathname === '/get-started/buy-online' || pathname === '/get-started/spend' || pathname === '/get-started/transactions'
+                GET_STARTED_ROUTES.includes(pathname)
                   ? 'font-bold text-primary-dark dark:text-white'
                   : 'font-semibold text-primary-blue dark:text-primary-turquoise'
               )}
@@ -119,86 +105,21 @@ export function MobileMenu ({
               {t('getStarted')}
             </span>
             <div className='flex flex-col gap-1 pr-4'>
-              <Link
-                href='/get-started'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/get-started'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('aboutDash')}
-              </Link>
-              <Link
-                href='/get-started/payments'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/get-started/payments'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('takeControl')}
-              </Link>
-              <Link
-                href='/downloads'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/downloads'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('downloads')}
-              </Link>
-              <Link
-                href='/get-started/buy-online'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/get-started/buy-online'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('buyOnline')}
-              </Link>
-              <Link
-                href='/get-started/spend'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/get-started/spend'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('whereToSpend')}
-              </Link>
-              <Link
-                href='/get-started/transactions'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/get-started/transactions'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('easyTransactions')}
-              </Link>
+              <MobileNavLink href='/get-started' onClose={onClose}>{t('aboutDash')}</MobileNavLink>
+              <MobileNavLink href='/get-started/payments' onClose={onClose}>{t('takeControl')}</MobileNavLink>
+              <MobileNavLink href='/downloads' onClose={onClose}>{t('downloads')}</MobileNavLink>
+              <MobileNavLink href='/get-started/buy-online' onClose={onClose}>{t('buyOnline')}</MobileNavLink>
+              <MobileNavLink href='/get-started/spend' onClose={onClose}>{t('whereToSpend')}</MobileNavLink>
+              <MobileNavLink href='/get-started/transactions' onClose={onClose}>{t('easyTransactions')}</MobileNavLink>
             </div>
           </div>
-          {/* Institutions Section with submenu */}
+
+          {/* Institutions Section */}
           <div className='flex flex-col'>
             <span
               className={cn(
                 'rounded-xl px-4 py-3 text-right text-lg transition-smooth',
-                pathname === '/institutions' || pathname === '/institutions/traders' || pathname === '/institutions/financial-services' || pathname === '/institutions/regulatory' || pathname === '/institutions/fastpass'
+                INSTITUTIONS_ROUTES.includes(pathname)
                   ? 'font-bold text-primary-dark dark:text-white'
                   : 'font-semibold text-primary-blue dark:text-primary-turquoise'
               )}
@@ -206,74 +127,20 @@ export function MobileMenu ({
               {t('institutions')}
             </span>
             <div className='flex flex-col gap-1 pr-4'>
-              <Link
-                href='/institutions'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/institutions'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('operateWithConfidence')}
-              </Link>
-              <Link
-                href='/institutions/traders'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/institutions/traders'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('tradeWithConfidence')}
-              </Link>
-              <Link
-                href='/institutions/financial-services'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/institutions/financial-services'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('financialServices')}
-              </Link>
-              <Link
-                href='/institutions/regulatory'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/institutions/regulatory'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('regulatory')}
-              </Link>
-              <Link
-                href='/institutions/fastpass'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/institutions/fastpass'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('fastPass')}
-              </Link>
+              <MobileNavLink href='/institutions' onClose={onClose}>{t('operateWithConfidence')}</MobileNavLink>
+              <MobileNavLink href='/institutions/traders' onClose={onClose}>{t('tradeWithConfidence')}</MobileNavLink>
+              <MobileNavLink href='/institutions/financial-services' onClose={onClose}>{t('financialServices')}</MobileNavLink>
+              <MobileNavLink href='/institutions/regulatory' onClose={onClose}>{t('regulatory')}</MobileNavLink>
+              <MobileNavLink href='/institutions/fastpass' onClose={onClose}>{t('fastPass')}</MobileNavLink>
             </div>
           </div>
-          {/* Developers Section with submenu */}
+
+          {/* Developers Section */}
           <div className='flex flex-col'>
             <span
               className={cn(
                 'rounded-xl px-4 py-3 text-right text-lg transition-smooth',
-                pathname === '/build' || pathname === '/developers/platform' || pathname === '/discover' || pathname === '/developers/contributing' || pathname === '/developers/tools' || pathname === '/developers/roadmap'
+                DEVELOPERS_ROUTES.includes(pathname)
                   ? 'font-bold text-primary-dark dark:text-white'
                   : 'font-semibold text-primary-blue dark:text-primary-turquoise'
               )}
@@ -281,110 +148,29 @@ export function MobileMenu ({
               {t('developers')}
             </span>
             <div className='flex flex-col gap-1 pr-4'>
-              <Link
-                href='/build'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/build'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('buildNextGen')}
-              </Link>
-              <Link
-                href='/developers/platform'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/developers/platform'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('dashPlatform')}
-              </Link>
-              <Link
-                href='/discover'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/discover'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('discoverDash')}
-              </Link>
-              <Link
-                href='/developers/contributing'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/developers/contributing'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('contributing')}
-              </Link>
-              <Link
-                href='/developers/tools'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/developers/tools'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('providersTools')}
-              </Link>
-              <Link
-                href='/developers/roadmap'
-                className={cn(
-                  'rounded-xl px-4 py-2.5 text-right text-base transition-smooth focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue/50 focus-visible:ring-offset-2',
-                  pathname === '/developers/roadmap'
-                    ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise'
-                    : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
-                )}
-                onClick={onClose}
-              >
-                {t('dashRoadmap')}
-              </Link>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('documentation')}
-              </span>
+              <MobileNavLink href='/build' onClose={onClose}>{t('buildNextGen')}</MobileNavLink>
+              <MobileNavLink href='/developers/platform' onClose={onClose}>{t('dashPlatform')}</MobileNavLink>
+              <MobileNavLink href='/discover' onClose={onClose}>{t('discoverDash')}</MobileNavLink>
+              <MobileNavLink href='/developers/contributing' onClose={onClose}>{t('contributing')}</MobileNavLink>
+              <MobileNavLink href='/developers/tools' onClose={onClose}>{t('providersTools')}</MobileNavLink>
+              <MobileNavLink href='/developers/roadmap' onClose={onClose}>{t('dashRoadmap')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('documentation')}</MobileNavLink>
             </div>
           </div>
-          {/* Community Section with submenu */}
+
+          {/* Community Section */}
           <div className='flex flex-col'>
             <span className='rounded-xl px-4 py-3 text-right text-lg font-semibold text-primary-blue dark:text-primary-turquoise'>
               {t('community')}
             </span>
             <div className='flex flex-col gap-1 pr-4'>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('bugBounty')}
-              </span>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('learningResources')}
-              </span>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('connectWithUs')}
-              </span>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('forum')}
-              </span>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('masternodes')}
-              </span>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('mining')}
-              </span>
-              <span className='rounded-xl px-4 py-2.5 text-right text-base font-medium text-primary-dark/40 dark:text-white/40 cursor-default'>
-                {t('blog')}
-              </span>
+              <MobileNavLink href='#' disabled>{t('bugBounty')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('learningResources')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('connectWithUs')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('forum')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('masternodes')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('mining')}</MobileNavLink>
+              <MobileNavLink href='#' disabled>{t('blog')}</MobileNavLink>
             </div>
           </div>
         </nav>
@@ -392,7 +178,7 @@ export function MobileMenu ({
         <div className='p-6'>
           <Button
             variant='solid'
-            colorScheme='brand'
+            colorScheme='mint'
             className='h-14 w-full rounded-xl text-base font-semibold'
           >
             {t('buyDash')}

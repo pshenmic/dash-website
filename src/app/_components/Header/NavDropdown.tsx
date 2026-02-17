@@ -7,12 +7,16 @@ interface NavDropdownProps {
   label: string
   isActive: boolean
   children: React.ReactNode
+  align?: 'center' | 'right'
+  className?: string
 }
 
 export function NavDropdown ({
   label,
   isActive,
-  children
+  children,
+  align = 'center',
+  className
 }: NavDropdownProps): React.ReactNode {
   return (
     <div className='group relative'>
@@ -28,8 +32,15 @@ export function NavDropdown ({
         <ChevronDown className='size-3.5 transition-all duration-300 group-hover:rotate-180' />
       </button>
 
-      <div className='invisible absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100'>
-        <div className='min-w-48 rounded-2xl bg-white/80 dark:bg-primary-dark/80 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg p-2'>
+      <div className={cn(
+        'invisible absolute top-full pt-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100',
+        align === 'center' && 'left-1/2 -translate-x-1/2',
+        align === 'right' && 'right-0'
+      )}>
+        <div className={cn(
+          'rounded-2xl bg-white/95 dark:bg-primary-dark/95 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg p-2',
+          className ?? 'min-w-52'
+        )}>
           {children}
         </div>
       </div>

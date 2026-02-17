@@ -102,7 +102,7 @@ export function RoadmapBlock (): React.ReactNode {
                   <span className='flex items-center gap-1.5 rounded-full bg-white/15 px-4 py-2 text-sm font-bold text-white'>
                     <Image
                       src='/images/home/news/check-icon.svg'
-                      alt=''
+                      alt='Completed'
                       width={14}
                       height={10}
                     />

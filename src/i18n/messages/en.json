@@ -695,6 +695,102 @@
       }
     }
   },
+  "payments": {
+    "hero": {
+      "chip": "Businesses",
+      "title": "Take Control of Your Payments.",
+      "subtitle": "Access a new generation of customers.",
+      "acceptDash": "Accept Dash",
+      "documentation": "Documentation"
+    },
+    "featureCards": {
+      "instant": {
+        "title": "Instant and cheap",
+        "description": "Dash offers the fastest payments and almost for free."
+      },
+      "turnkey": {
+        "title": "Turnkey or in-house",
+        "description": "Quick, simple setup or a custom fit. Shape Dash to your business needs."
+      },
+      "enterprise": {
+        "title": "Startup to enterprise",
+        "description": "Big or small, Dash scales with your business no matter the size."
+      }
+    },
+    "revenue": {
+      "title": "Increase revenue and efficiency in your business",
+      "subtitle": "Say goodbye to chargebacks, your sales settle within a second.",
+      "table": {
+        "name": "Name",
+        "speed": "Speed",
+        "settlement": "Settlement",
+        "cost": "Cost",
+        "dash": { "speed": "1 Sec", "settlement": "1 Sec", "cost": "≤$0.01" },
+        "bitcoin": { "name": "Bitcoin", "speed": "10 min", "settlement": "60 min", "cost": "$0.30" },
+        "paypal": { "name": "PayPal", "speed": "5 sec", "settlement": "8 days", "cost": "2.9%" },
+        "cards": { "name": "Cards", "speed": "3 sec", "settlement": "3 business days", "cost": "≤7%" },
+        "wire": { "name": "Wire", "speed": "1-5 days", "settlement": "1-5 days", "cost": "$5-$200" }
+      },
+      "benefits": {
+        "instant": { "title": "Instant", "description": "Transactions in less than a second" },
+        "secure": { "title": "Secure", "description": "Fully Private and Anonymous" },
+        "microFees": { "title": "Micro Fees", "description": "Very low fees for every transaction" }
+      }
+    },
+    "integrations": {
+      "title": "Integrations that work",
+      "description": "Setup Dash in your business quickly and effectively. Leverage Dash partners to add services and expand your business to a new generation of customers.",
+      "documentation": "Documentation",
+      "stats": {
+        "volume": { "label": "Payment Volume $", "value": "4.48 Billion+" },
+        "addresses": { "label": "Daily Active Addresses", "value": "54,300 +" },
+        "transactions": { "label": "Transactions/Day", "value": "8,220 +" }
+      }
+    },
+    "compliance": {
+      "title": "Dash is KYC/AML Compliant",
+      "description": "Dash's transaction rules are identical to Bitcoin, and therefore for regulatory and compliance purposes Dash can and should be treated identically to Bitcoin. BlockchainIntel and Coinfirm are KYC/AML service providers that offer services covering the Dash blockchain.",
+      "providers": ["BlockchainIntel", "Coinfirm"],
+      "button": "Transactions on Explorer"
+    },
+    "growBusiness": {
+      "subtitle": "Integrating Dash is easy and you have full control over how your funds are handled.",
+      "title": "Grow your business with Dash",
+      "cards": {
+        "ecommerce": {
+          "title": "E-Commerce Plugins",
+          "description": "Shopify, WooCommerce, Magento or ZenCart are just a few ways you can integrate Dash."
+        },
+        "custom": {
+          "title": "Custom Integration",
+          "description": "Dash APIs allow you to customize payments that fit your business needs."
+        },
+        "compliance": {
+          "title": "Simple Compliance",
+          "description": "Turnkey solutions so you can rest easy."
+        },
+        "auditing": {
+          "title": "Auditing & Reporting",
+          "description": "Easy to audit, easy to integrate in your current workflow."
+        }
+      }
+    },
+    "whereToBuy": {
+      "subtitle": "Dash is available globally through major exchanges and brokers.",
+      "title": "Where to buy Dash",
+      "seeAll": "See All"
+    },
+    "whereToUse": {
+      "title": "Where to use Dash",
+      "subtitle": "Dash is accepted by thousands of businesses around the world. Join them and gain access to a new generation of customers.",
+      "seeAll": "See All"
+    },
+    "brandGuidelines": {
+      "title": "Brand Guidelines",
+      "description": "At Dash, we build solutions that enable users across the world to adapt to the blockchain era. Our goal is to make blockchain simpler, safer and easier to use with the power of the Dash blockchain network.",
+      "button": "View Guidelines"
+    }
+  },
   "web3Wallets": {
     "title": "Web3 Wallets",
     "description1": "Web3 wallets provide decentralized access to your Dash, offering enhanced security and control over your digital assets.",

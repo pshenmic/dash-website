@@ -127,7 +127,7 @@ export function Header (): React.ReactNode {
               </button>
               <Button
                 variant='solid'
-                colorScheme='brand'
+                colorScheme='mint'
                 className='h-12 lg:h-14 min-w-30 shrink-0 rounded-xl px-5 lg:px-7 text-sm lg:text-base font-semibold whitespace-nowrap'
               >
                 {t('buyDash')}

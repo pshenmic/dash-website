@@ -723,5 +723,31 @@
         }
       }
     }
+  },
+  "spend": {
+    "hero": {
+      "chip": "Where to Spend",
+      "title": "Spend your Dash At Thousands\nOf Retailers and Services",
+      "subtitle": "Shop online in the US, or at a local grocery in Venezuela. Feast on chicken in Caracas, or enjoy a relaxed coffee in New Hampshire. Top up your phone, or browse the internet with maximum security. Endless options for you to decide.",
+      "examples": "Examples",
+      "learnMore": "Learn More"
+    },
+    "merchants": {
+      "title": "Where to Spend Dash?",
+      "subtitle": "A big list of officially approved places where you can spend your Dash.",
+      "filters": {
+        "all": "All",
+        "giftCards": "Gift Cards",
+        "privacy": "Privacy",
+        "travel": "Travel",
+        "bills": "Bills",
+        "cards": "Cards"
+      }
+    },
+    "becomeMerchant": {
+      "title": "Become an Official\nDash Merchant",
+      "description": "Fill the form and we add you to our listing of Dash accepting merchants",
+      "fillForm": "Fill the Form"
+    }
   }
 }

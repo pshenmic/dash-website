@@ -206,7 +206,7 @@ export function GetGoing (): React.ReactNode {
           {/* Content */}
           <div className='relative z-10 flex flex-col gap-6 px-6 py-8 sm:gap-8 sm:px-10 sm:py-12 lg:gap-9 lg:px-25 lg:py-12'>
             <div className='flex flex-col gap-3 sm:gap-4'>
-              <Heading as='h3' size='xl' weight='extrabold' className='whitespace-nowrap leading-10 tracking-tight text-white sm:text-3xl lg:text-4xl'>
+              <Heading as='h3' size='xl' weight='extrabold' className='lg:whitespace-nowrap leading-10 tracking-tight text-white sm:text-3xl lg:text-4xl'>
                 {t('platform.title')}
               </Heading>
               <Text size='base' weight='medium' className='w-70 text-white sm:w-100 sm:text-lg'>

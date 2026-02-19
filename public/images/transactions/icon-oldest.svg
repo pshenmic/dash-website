@@ -1,0 +1,18 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Ico" filter="url(#filter0_i_0_7)">
+<rect width="68" height="68" rx="34" fill="var(--fill-0, #0C1C33)" fill-opacity="0.05"/>
+<path id="checkmark" d="M28.6667 34L32.2222 37.5556L39.3333 30.4444M34 18L37.3957 21.3271L42 20.1436L43.2772 24.7228L47.8564 26L46.6729 30.6043L50 34L46.6729 37.3957L47.8564 42L43.2772 43.2772L42 47.8564L37.3957 46.6729L34 50L30.6043 46.6729L26 47.8564L24.7228 43.2772L20.1436 42L21.3271 37.3957L18 34L21.3271 30.6043L20.1436 26L24.7228 24.7228L26 20.1436L30.6043 21.3271L34 18Z" stroke="var(--stroke-0, white)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_i_0_7" x="0" y="0" width="68" height="68" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="6"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0470588 0 0 0 0 0.109804 0 0 0 0 0.2 0 0 0 0.12 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_7"/>
+</filter>
+</defs>
+</svg>

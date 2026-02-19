@@ -1,6 +1,10 @@
 import { setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
-import { PlaceholderPage } from '@/app/_components/PlaceholderPage/PlaceholderPage'
+import { InstitutionsHero } from './_components/InstitutionsHero'
+import { InstitutionsNav } from './_components/InstitutionsNav'
+import { AdvancedTrading } from './_components/AdvancedTrading'
+import { ComprehensiveServices } from './_components/ComprehensiveServices'
+import { ClientLibraries } from './_components/ClientLibraries'
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((locale) => ({ locale }))
@@ -14,5 +18,29 @@ export default async function InstitutionsPage ({
   const { locale } = await _params
   setRequestLocale(locale)
 
-  return <PlaceholderPage title='Operate With Confidence' />
+  return (
+    <main>
+      <InstitutionsHero />
+
+      {/* Navigation Cards */}
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+        <InstitutionsNav />
+      </section>
+
+      {/* Advanced Trading */}
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+        <AdvancedTrading />
+      </section>
+
+      {/* Comprehensive Services */}
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+        <ComprehensiveServices />
+      </section>
+
+      {/* Client Libraries */}
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+        <ClientLibraries />
+      </section>
+    </main>
+  )
 }

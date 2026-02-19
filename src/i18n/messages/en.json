@@ -1294,5 +1294,50 @@
       "chip": "Digital Cash",
       "title": "Accounting &\nTax Solutions"
     }
+  },
+  "regulatoryPage": {
+    "hero": {
+      "chip": "Regulatory",
+      "title": "Regulatory Information",
+      "subtitle": "Dash is not a security and offers greater transparency and less risk than Bitcoin with regards to privacy. Learn more about how legal regulations apply to Dash.",
+      "button": "Learn More"
+    },
+    "fincen": {
+      "chip": "Information",
+      "title": "DCG response\nto FinCEN",
+      "description": "Dash Core Group supplements the original Financial Crimes Enforcement Network ('FinCEN') with this additional information with respect to the Notice of Proposed Rulemaking, published on December 23, 2020, titled, 'Requirements for Certain Transactions Involving Convertible Virtual Currency or Digital Assets'.",
+      "primaryButton": "Original Letter to FinCEN",
+      "secondaryButton": "Supplementary Response to FinCEN"
+    },
+    "fatf": {
+      "title": "Dash Complies with\nthe FATF Rule",
+      "description": "The Financial Action Task Force (FATF) released their guidelines for countries' regulations of the cryptocurrency industry in 2019, including the Travel Rule. Dash is in full compliance with the FATF guidelines. For more information, please contact us at",
+      "email": "compliance@dash.org",
+      "button": "FATF Statement"
+    },
+    "security": {
+      "chip": "Information",
+      "title": "Dash is Not a Security",
+      "description": "The Crypto Rating Council gave Dash a score of 1.0, meaning it is least likely to be considered a security under the Howey Test. Dash offers greater transparency than Bitcoin, and its privacy features are entirely optional.",
+      "secondParagraph": "For more information about Dash's regulatory standing, please contact",
+      "email": "compliance@dash.org",
+      "button": "Crypto Rating Council Asset Ratings"
+    },
+    "kycamlBlock": {
+      "title": "KYC/AML Services",
+      "description": "Day-to-day compliance is a priority for the Dash network. Our partners provide KYC/AML services to exchanges, crypto companies, law enforcement, and financial institutions working with Dash.",
+      "blockchainIntel": {
+        "name": "Blockchain Intel",
+        "description": "Blockchain Intel provides a REST API for risk scoring of Dash transactions, helping businesses comply with regulatory requirements."
+      },
+      "chainalysis": {
+        "name": "Chainalysis",
+        "description": "Chainalysis provides blockchain analytics and transparency solutions for government agencies, exchanges, and financial institutions."
+      }
+    },
+    "kycamlPartners": {
+      "chip": "Regulations",
+      "title": "KYC/AML Services"
+    }
   }
 }

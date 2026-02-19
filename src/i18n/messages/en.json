@@ -823,6 +823,246 @@
       "button": "View Guidelines"
     }
   },
+  "transactions": {
+    "hero": {
+      "chip": "New Merchant Kit",
+      "title": "Crypto Transactions\nare Easier than Ever!",
+      "subtitle": "See the many benefits for merchants that accept cryptocurrency payments below. Scroll further for step by step instructions on how to easily accept Dash crypto payments. Basic new merchant set up only takes a few minutes!",
+      "learnMore": "Learn More"
+    },
+    "starterKit": {
+      "title": "Merchant Starter Kit Nav",
+      "description": "Know what you are looking for? Use these quick start links to go directly to the section you need.",
+      "skipToDownloads": "Skip to Printable Downloads",
+      "cards": {
+        "whyCrypto": "Why Crypto?",
+        "whyDash": "Why Dash?",
+        "wallet": "Install a Wallet",
+        "exchange": "Crypto Exchange Account",
+        "gift": "Free Gift for New Merchants",
+        "pos": "Evaluate POS Options"
+      }
+    },
+    "glossary": {
+      "title": "Glossary of Terms",
+      "terms": {
+        "wallet": {
+          "title": "Wallet",
+          "content": "A digital wallet is a software program or physical device that stores your cryptocurrency keys and allows you to send and receive digital currency."
+        },
+        "walletApp": {
+          "title": "Wallet App",
+          "content": "A desktop or mobile application that enables you to create crypto wallets that can be used to accept or send cryptocurrency."
+        },
+        "p2p": {
+          "title": "P2P",
+          "content": "Peer-to-peer (P2P) refers to the direct exchange of cryptocurrency between individuals without an intermediary, like a bank or centralized exchange."
+        },
+        "publicAddress": {
+          "title": "Public Address",
+          "content": "A public address is a cryptographic hash of a public key, serving as an identifier that can be shared to receive cryptocurrency transactions."
+        },
+        "exchange": {
+          "title": "[CryptoCurrency] Exchange",
+          "content": "A cryptocurrency exchange is an online platform where you can buy, sell, and trade cryptocurrencies using fiat money or other digital currencies."
+        },
+        "qrCode": {
+          "title": "QR Code",
+          "content": "A Quick Response code that contains a wallet address and can optionally include a payment amount, making cryptocurrency transactions quick and easy."
+        }
+      }
+    },
+    "whyCrypto": {
+      "block1": {
+        "number": "01",
+        "title": "Lower Transaction Fees",
+        "description": "Credit card companies typically charge 2-4% or more on every transaction, especially for international payments. Crypto payments using Dash typically cost less than one US cent per transaction. Imagine reducing thousands of dollars per year in payment processing fees simply by offering customers an additional payment option."
+      },
+      "block2": {
+        "number": "02",
+        "title": "No Chargebacks",
+        "description": "A credit card chargeback can take weeks to resolve and results in lost revenue and merchandise. Crypto payments are irreversible once confirmed, protecting merchants from fraudulent chargeback claims. Instant settlement means you get paid immediately with no middleman holding your funds."
+      }
+    },
+    "quote": "With Dash, accepting crypto payments is as easy as spending your profit.",
+    "becomeButton": "Become a Merchant",
+    "dashFeatures": {
+      "spending": {
+        "title": "Crypto Spending Made Easy",
+        "description": "Simple payment process"
+      },
+      "instant": {
+        "title": "Instant Transactions",
+        "description": "Confirmed in a few seconds"
+      },
+      "oldest": {
+        "title": "One of the Oldest Cryptos Around",
+        "description": "Trusted since 2014"
+      },
+      "fees": {
+        "title": "Less than $0.01 Fee Per Transaction",
+        "description": "Near-zero transaction costs"
+      },
+      "secure": {
+        "title": "Secure Payments Give Peace of Mind",
+        "description": "Protected by blockchain"
+      }
+    },
+    "whatSetsDashApart": {
+      "title": "What Sets Dash Apart",
+      "learnMore": "Learn More",
+      "items": [
+        "Instant transactions (few seconds)",
+        "Secure Payments",
+        "Can accept payments from anyone, anywhere on the planet",
+        "Low transaction fees (less than 1 US cent per transaction)",
+        "Worldwide network of retailers and investors that transact with Dash",
+        "Found on the largest and most reputable cryptocurrency exchanges",
+        "User friendly Mobile DashPay app",
+        "One of the oldest and most-established cryptocurrencies in existence"
+      ]
+    },
+    "walletSetup": {
+      "title": "Download & Install a Wallet App",
+      "items": {
+        "createDashpay": {
+          "title": "How to Create a Dashpay",
+          "content": "Download the DashPay app from the official app stores (Google Play Store or Apple App Store). Check the developer name matches 'Dash Core Group' and verify the app has significant download numbers and positive reviews. Follow the in-app setup wizard to create your wallet."
+        },
+        "addingFunds": {
+          "title": "Adding funds to Dashpay",
+          "content": "Once you've installed DashPay, you can add funds by receiving Dash from another wallet, purchasing Dash through a supported exchange, or having someone send Dash to your wallet address or DashPay username."
+        },
+        "assistance": {
+          "title": "Need Assistance?",
+          "content": "If you need help setting up your wallet, visit the Dash support page or join the Dash Discord community where helpful volunteers can assist you with any questions."
+        }
+      }
+    },
+    "sendReceive": {
+      "title": "How to Send & Receive Dash",
+      "description": "With the DashPay app, sending and receiving Dash is as simple as scanning a QR code. Open your wallet, scan the sender's or recipient's QR code, enter the amount, and confirm. Transactions are confirmed in seconds.",
+      "button": "See Additional DashPay Options"
+    },
+    "howToBuy": {
+      "title": "How to Buy Dash",
+      "subtitle": "Crypto Exchange",
+      "items": {
+        "createAccount": {
+          "title": "Create an Account on a Reputable Crypto/Fiat exchange",
+          "content": "Sign up on a regulated and well-known exchange such as Kraken, Binance, Coinbase, or Uphold. You'll need to complete identity verification (KYC) which typically requires a government-issued ID and proof of address."
+        },
+        "howExchangesWork": {
+          "title": "How Exchanges Work",
+          "content": "Crypto exchanges operate similarly to stock exchanges. You deposit fiat currency (USD, EUR, etc.), place buy orders for Dash at market or limit prices, and the exchange matches your order with a seller. Once purchased, Dash appears in your exchange wallet."
+        },
+        "withdrawalFreezes": {
+          "title": "Withdrawal Freezes",
+          "content": "Many exchanges impose a temporary withdrawal hold on new accounts or after large deposits. This is typically 24-72 hours but can vary. Plan ahead to ensure you have access to your Dash when you need it."
+        },
+        "whereDoesItGo": {
+          "title": "Where Does My Dash Go After I Purchase on an Exchange",
+          "content": "After purchasing, your Dash sits in your exchange wallet. For maximum security, transfer it to your personal wallet (like DashPay) where you control the private keys. Simply copy your wallet address and initiate a withdrawal from the exchange."
+        }
+      }
+    },
+    "buySellDash": {
+      "chip": "How to Buy Dash",
+      "title": "Ready to Buy/Sell Dash?",
+      "description": "Get started on one of these reputable exchanges. Each platform offers different features, from margin trading to simple buy/sell interfaces.",
+      "tip": "Tip: Compare fees and features across exchanges to find the best fit for your needs.",
+      "additionalExchanges": "Additional Exchanges",
+      "exchanges": {
+        "kraken": { "name": "Kraken", "type": "Margin Trading" },
+        "binance": { "name": "Binance", "type": "Futures" },
+        "coinbase": { "name": "Coinbase", "type": "Exchange" },
+        "uphold": { "name": "Uphold", "type": "Exchange" }
+      }
+    },
+    "spreadTheWord": {
+      "title": "Spread the Word!",
+      "description": "Know a local merchant who might benefit from accepting Dash? Fill out our form and we'll reach out to them with information about the benefits of accepting cryptocurrency payments.",
+      "button": "Help Dash Grow"
+    },
+    "freeDashCoin": {
+      "title": "Receive a Free Dash Coin",
+      "description": "As a thank you for joining the Dash merchant network, new merchants can receive a complimentary Dash coin to get started.",
+      "giftTitle": "Exclusive Gift for New Merchants",
+      "giftChip": "New Merchant Gift",
+      "giftDescription": "If you've followed along with this guide, you're well on your way to accepting Dash payments. Complete the steps below to claim your new merchant gift."
+    },
+    "merchantGift": {
+      "title": "How to Get Your New Merchant Gift",
+      "description": "Simply submit your business location details and proof of Dash acceptance. Once verified, we'll send you a commemorative Dash coin and welcome package.",
+      "button": "Become an Official Dash Merchant"
+    },
+    "posGuide": {
+      "chip": "Evaluate Point of Sale Options",
+      "title": "How to Choose a POS System",
+      "posQuestion": "Do you Need a POS?",
+      "posAnswer": "If you have a physical store or accept in-person payments, a Point of Sale (POS) system can streamline crypto payments. POS systems handle payment processing, inventory tracking, and receipt generation all in one place.",
+      "description": "Point of Sale (POS) systems allow merchants to accept cryptocurrency payments in physical retail locations. Several solutions support Dash, offering different features and pricing. Below we compare the most popular options to help you choose the right one."
+    },
+    "posAccordion": {
+      "title": "How to Choose a POS System",
+      "items": {
+        "first": {
+          "title": "What is a POS System?",
+          "content": "A Point of Sale system is hardware and/or software that processes customer payments at the time of purchase. For crypto, this means generating QR codes, detecting incoming payments, and confirming transactions in real-time."
+        },
+        "cost": {
+          "title": "Consider the Cost",
+          "content": "POS costs vary widely — from free software-only solutions to dedicated hardware terminals costing hundreds of dollars. Consider setup fees, monthly subscriptions, per-transaction fees, and any hardware purchases required."
+        },
+        "tools": {
+          "title": "What Tools Do You Need?",
+          "content": "Consider whether you need physical hardware (a terminal), a mobile app, eCommerce integration, invoicing capabilities, automatic fiat conversion, and multi-coin support. Match the POS features to your business requirements."
+        },
+        "setup": {
+          "title": "How Straightforward is The Setup Process?",
+          "content": "Some POS systems require technical knowledge to set up, while others offer plug-and-play simplicity. Consider your technical comfort level and whether the provider offers setup assistance and ongoing technical support."
+        }
+      }
+    },
+    "posTable": {
+      "title": "List of POS Systems",
+      "headers": {
+        "service": "Service",
+        "coins": "Coins",
+        "physicalPos": "Physical POS",
+        "posApp": "POS App",
+        "fees": "Fees",
+        "ecommerce": "eCommerce",
+        "invoice": "Invoice",
+        "techSupport": "Tech Support",
+        "fiat": "Fiat"
+      }
+    },
+    "posWebsites": {
+      "title": "Visit these Dash recommended POS Websites",
+      "learnMore": "Learn More"
+    },
+    "merchantDownloads": {
+      "title": "New Merchant Kit Downloads",
+      "cards": {
+        "fullKit": {
+          "title": "DIY Full Merchant Kit PDF",
+          "description": "8.5x11 printable PDF with everything you need to set up as a Dash merchant.",
+          "button": "Download"
+        },
+        "stickers": {
+          "title": "Dash Merchant Sticker Files",
+          "description": "Let your customers know you accept Dash with these printable sticker designs.",
+          "button": "Download"
+        },
+        "quickStart": {
+          "title": "Merchant Quick Start Guide Files",
+          "description": "This custom booklet and brochure contains a condensed version of the merchant kit.",
+          "button": "Download"
+        }
+      }
+    }
+  },
   "web3Wallets": {
     "title": "Web3 Wallets",
     "description1": "Web3 wallets provide decentralized access to your Dash, offering enhanced security and control over your digital assets.",

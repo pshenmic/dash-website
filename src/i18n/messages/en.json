@@ -1152,5 +1152,47 @@
       "description": "List of service providers accredited with the FastPass badge.",
       "seeAll": "See All"
     }
+  },
+  "institutionsPage": {
+    "hero": {
+      "chip": "Institutions",
+      "title": "Operate With Confidence in the\nNew World of Digital Currencies",
+      "subtitle": "Dash is instant, global, and easy to use.",
+      "learnMore": "Learn More"
+    },
+    "nav": {
+      "traders": {
+        "title": "Traders",
+        "description": "Access economic metrics and trading/custody solutions."
+      },
+      "financialServices": {
+        "title": "Financial Services",
+        "description": "Optimize your capital with services covering lending, staking, derivatives and tax."
+      },
+      "regulatory": {
+        "title": "Regulatory",
+        "description": "Learn more about how legal regulations apply to Dash and which services can help."
+      }
+    },
+    "trading": {
+      "chip": "Trading",
+      "title": "Advanced Trading",
+      "description1": "The leading service providers within the digital currency trading ecosystem provide Dash traders with all the tools and services they require for any strategy they want to execute.",
+      "description2": "With Dash, it is possible to conduct high volume trades through an OTC desk or hedge trading position with derivatives.",
+      "tradersButton": "Traders",
+      "metricsButton": "On-Chain Metrics"
+    },
+    "services": {
+      "title": "Comprehensive\nServices",
+      "description1": "Financial services in cryptocurrency are a critical component to increase flexibility, efficiency, security, and visibility through reporting.",
+      "description2": "Lending, borrowing, staking, custody, accounting and tax services are all available in the Dash ecosystem.",
+      "button": "Financial Services"
+    },
+    "clientLibraries": {
+      "title": "Client Libraries that\nSpeak Your Language",
+      "description": "SDKs are available for the languages you love and use most. Get started building apps using our easy-to-follow guides.",
+      "quickStart": "Quick Start",
+      "jsSdk": "JS SDK"
+    }
   }
 }

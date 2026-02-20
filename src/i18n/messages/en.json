@@ -16,6 +16,8 @@
   "nav": {
     "home": "Home",
     "getStarted": "Get Started",
+    "aboutDash": "About Dash",
+    "downloads": "Downloads",
     "institutions": "Institutions",
     "developers": "Developers",
     "community": "Community",
@@ -111,7 +113,7 @@
         "variant": "coin",
         "label": "The first DAO period",
         "title": "More Than\nA Coin. A DAO.",
-        "image": "/images/home/slider/coin-3d.png"
+        "image": "/images/home/bullets/main-3d-coin.png"
       }
     ]
   },
@@ -414,9 +416,101 @@
       "speed": { "label": "Transaction Speed", "value": "1 Second" }
     }
   },
+  "walletShowcase": {
+    "title": "Choose Your Wallet",
+    "wallets": {
+      "dashpayAndroid": {
+        "title": "DashPay\nAndroid",
+        "description": "The DashPay Wallet supports advanced Dash features like CoinJoin and usernames, plus real-world spending tools, staking, a merchant map, and more",
+        "buttons": {
+          "download": "Download",
+          "learnMore": "Learn More"
+        }
+      },
+      "vultisig": {
+        "title": "Vultisig",
+        "description": "Vultisig is an open-source, seedless multi-chain crypto wallet leveraging TSS and MPC for secure asset management",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "exodus": {
+        "title": "Exodus",
+        "description": "Exodus is multi-asset wallet with built-in exchanges, local key/data encryption, no accounts/servers.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "edgeWallet": {
+        "title": "Edge Wallet",
+        "description": "Edge Wallet provides maximum security while keeping simplicity, allowing all users to easily manage, transfer and exchange their currencies.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "stackWallet": {
+        "title": "Stack Wallet",
+        "description": "Stack Wallet is a multicoin, non-custodial wallet for Dash and other digital currencies with built-in exchange features.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "dashElectrum": {
+        "title": "Dash Electrum",
+        "description": "Dash Electrum is a lightweight desktop wallet that provides fast and secure Dash transactions with advanced features.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "zyptoWallet": {
+        "title": "Zypto Wallet",
+        "description": "Zypto Wallet is a simple and secure multi-currency wallet designed for ease of use and maximum security.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "trustWallet": {
+        "title": "Trust Wallet",
+        "description": "Trust Wallet is a secure, open-source, decentralized and anonymous crypto wallet with support for multiple blockchains.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "unstoppableWallet": {
+        "title": "Unstoppable Wallet",
+        "description": "Unstoppable Wallet is a fully decentralized wallet for independent and secure management of crypto assets.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "guardaWallet": {
+        "title": "Guarda Wallet",
+        "description": "Guarda Wallet is a secure non-custodial cryptocurrency storage supporting 50+ blockchains and 400K+ tokens.",
+        "buttons": {
+          "download": "Download"
+        }
+      }
+    }
+  },
   "buyDashOnline": {
     "title": "Places to Buy Dash Online",
     "seeAll": "See All"
+  },
+  "downloadsHero": {
+    "title": "Downloads",
+    "description": "List of all the wallets for different platforms where you can manage your Dash. Everything listed here is officially approved to be secure for your usage.",
+    "learnMore": "Learn More",
+    "mobileWallets": {
+      "title": "Mobile Wallets",
+      "description1": "A range of Dash mobile wallets are available, each with different features and security.",
+      "description2": "These wallets run from mobile devices, such as your phone or tablet."
+    },
+    "dashPayApp": {
+      "titleLine1": "Download the",
+      "titleLine2": "Official DashPay App",
+      "android": "Android",
+      "ios": "iOS"
+    }
   },
   "getGoing": {
     "chip": "Dash Living",
@@ -446,6 +540,154 @@
       "title": "Connect, learn, create.",
       "description": "Be a part of something bigger, get involved with meetups, learn from others, and take ownership in Dash's future.",
       "learnMore": "Learn More"
+    }
+  },
+  "desktopWallets": {
+    "title": "Desktop Wallets",
+    "description": "A range of Dash desktop wallets are available, each with different features and security.",
+    "platforms": {
+      "windows64": "Windows (64-bit)",
+      "windows32": "Windows (32-bit)",
+      "macIntel": "macOS (Intel)",
+      "macSilicon": "macOS (Apple Silicon)",
+      "linux": "Linux"
+    },
+    "wallets": {
+      "dashCore": {
+        "title": "Dash Core",
+        "description": "Dash Core is full Dash wallet/P2P client with InstantSend, CoinJoin, governance, masternodes, blockchain, RPC console.",
+        "buttons": {
+          "bugBounty": "Bug Bounty",
+          "download": "Download"
+        }
+      },
+      "exodus": {
+        "title": "Exodus",
+        "description": "Exodus is multi-asset wallet with built-in exchanges, local key/data encryption, no accounts/servers.",
+        "buttons": {
+          "website": "Website",
+          "download": "Download"
+        }
+      },
+      "dashElectrum": {
+        "title": "Dash\nElectrum",
+        "description": "Dash Electrum is lightweight open-source Dash wallet with full-node security, light speed, instant tx, CoinJoin, easy UI.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "guardaWallet": {
+        "title": "Guarda\nWallet",
+        "description": "Guarda offers single-app crypto solution with staking, purchases, best exchanges, loans, multisig.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "vultisig": {
+        "title": "Vultisig",
+        "description": "Vultisig is an open-source, seedless multi-chain crypto wallet leveraging TSS and MPC for secure asset management.",
+        "buttons": {
+          "download": "Download"
+        }
+      },
+      "stackWallet": {
+        "title": "Stack\nWallet",
+        "description": "Stack is first open-source, non-custodial, privacy-focused crypto wallet for enthusiasts.",
+        "buttons": {
+          "download": "Download"
+        }
+      }
+    }
+  },
+  "hardwareWallets": {
+    "title": "Hardware Wallets",
+    "description": "Hardware wallets are security devices designed to keep cryptographic keys safe from hackers and thieves. Hardware wallets use random number generators, encrypted key storage, PIN numbers and passwords to offer the highest level of security for your digital currencies.",
+    "wallets": {
+      "tangem": {
+        "title": "Tangem Wallet",
+        "description": "Tangem is Swiss card-shaped NFC hardware wallet for secure mobile crypto storage without cables/batteries/internet.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "ledger": {
+        "title": "Ledger",
+        "description": "Ledger offers chip-based hardware wallets for multi-currency storage/payments, suited to needs.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "keepkey": {
+        "title": "KeepKey",
+        "description": "KeepKey is hardware wallet for secure key generation/storage/signing with computer software.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "safepal": {
+        "title": "SafePal",
+        "description": "SafePal is user-friendly hardware wallet with multi-security and easy UI for storing/trading cryptos.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "dcent": {
+        "title": "D'CENT",
+        "description": "D'CENT provides cold wallets with fingerprint, on-device keys, secure elements for safe tx.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "ellipal": {
+        "title": "Ellipal Titan",
+        "description": "Ellipal Titan is metal-sealed air-gapped cold wallet using QR codes, blocking connections against attacks.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "ngrave": {
+        "title": "NGRAVE",
+        "description": "NGRAVE ZERO is offline hardware wallet with top security, plus GRAPHENE steel key backup.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      },
+      "secux": {
+        "title": "SecuX",
+        "description": "SecuX offers vault-grade secure hardware wallets with innovative tech for asset control.",
+        "buttons": {
+          "purchase": "Purchase Options"
+        }
+      }
+    }
+  },
+  "web3Wallets": {
+    "title": "Web3 Wallets",
+    "description1": "Web3 wallets provide decentralized access to your Dash, offering enhanced security and control over your digital assets.",
+    "description2": "These wallets leverage modern cryptographic technologies for secure, trustless transactions.",
+    "wallets": {
+      "vultisig": {
+        "title": "Vultisig",
+        "description": "Vultisig is an open-source, seedless multi-chain crypto wallet leveraging TSS and MPC for secure asset management",
+        "buttons": {
+          "web3Wallet": "Web3 Wallet"
+        }
+      },
+      "trustWallet": {
+        "title": "Trust Wallet",
+        "description": "Trust allows simple crypto control with direct deposits from Binance/Coinbase.",
+        "buttons": {
+          "web3Wallet": "Web3 Wallet"
+        }
+      },
+      "dashPaperWallet": {
+        "title": "Dash\nPaper Wallet",
+        "description": "The Dash Paper Wallet generator allows you to generate, encrypt and secure the keys to a single Dash address on a clean computer without ever connecting to the internet. Perfect for long term secure storage.",
+        "buttons": {
+          "instructions": "Instructions",
+          "generator": "Generator"
+        }
+      }
     }
   }
 }

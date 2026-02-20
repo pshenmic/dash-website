@@ -29,7 +29,7 @@ export function LatestNews (): React.ReactNode {
           {/* Video Card */}
           <NewsCard
             variant='video'
-            image='/images/home/slider/video-light.jpg'
+            image='/images/home/slider/video-dark.jpg'
             title={t('cards.video.title')}
             description={t('cards.video.description')}
             tags={[{ label: t('cards.video.tag'), variant: 'outline' }]}

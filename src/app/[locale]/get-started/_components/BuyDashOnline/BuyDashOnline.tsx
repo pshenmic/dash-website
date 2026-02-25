@@ -5,11 +5,11 @@ import { Button, Heading } from 'dash-ui-kit/react'
 import { LinkCard } from '@/components/ui/LinkCard'
 
 const exchanges = [
-  { name: 'Kraken', url: 'kraken.com', logo: '/images/get-started/exchanges/kraken.svg' },
-  { name: 'Coinbase', url: 'coinbase.com', logo: '/images/get-started/exchanges/coinbase.svg' },
-  { name: 'Uphold', url: 'uphold.com', logo: '/images/get-started/exchanges/uphold.svg' },
-  { name: 'Binance', url: 'binance.com', logo: '/images/get-started/exchanges/binance.svg' },
-  { name: 'Edge', url: 'edge.app', logo: '/images/get-started/exchanges/edge.png' }
+  { name: 'Kraken', url: 'kraken.com', logo: '/images/shared/logos/kraken.svg' },
+  { name: 'Coinbase', url: 'coinbase.com', logo: '/images/shared/logos/coinbase.svg' },
+  { name: 'Uphold', url: 'uphold.com', logo: '/images/shared/logos/uphold.svg' },
+  { name: 'Binance', url: 'binance.com', logo: '/images/shared/logos/binance.svg' },
+  { name: 'Edge', url: 'edge.app', logo: '/images/shared/logos/edge.png' }
 ]
 
 export function BuyDashOnline (): React.ReactNode {

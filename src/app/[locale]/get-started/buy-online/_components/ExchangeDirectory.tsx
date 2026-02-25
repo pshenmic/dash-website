@@ -90,25 +90,26 @@ export function ExchangeDirectory (): React.ReactNode {
       {/* Header + Filters */}
       <div className='mb-8 flex flex-col gap-4 lg:mb-10 lg:flex-row lg:items-center lg:justify-between'>
         <div>
-          <Heading as='h2' size='xl' weight='extrabold' className='leading-tight tracking-tight dark:text-white sm:text-3xl sm:leading-9'>
+          <Heading as='h2' size='xl' weight='extrabold' className='text-[32px] leading-8.5 dark:text-white'>
             {t('title')}
           </Heading>
-          <Text size='sm' weight='medium' opacity={60} className='mt-1 dark:text-white lg:text-base'>
+          <Text size='sm' weight='medium' opacity={50} className='mt-1 dark:text-white'>
             {t('subtitle')}
           </Text>
         </div>
 
         {/* Filter Tabs */}
-        <div className='flex gap-2'>
+        <div className='flex flex-wrap gap-2'>
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
+              aria-pressed={activeFilter === filter}
               className={cn(
-                'rounded-full px-5 py-2 text-sm font-medium transition-colors',
+                'h-8 rounded-xl px-6.25 text-sm font-semibold transition-colors',
                 activeFilter === filter
                   ? 'bg-primary-blue text-white'
-                  : 'border border-primary-dark/15 bg-white text-primary-dark/60 hover:bg-primary-dark/5 dark:border-white/15 dark:bg-secondary-space-cadet dark:text-white/60 dark:hover:bg-white/10'
+                  : 'bg-primary-blue/15 text-primary-blue hover:bg-primary-blue/20 dark:bg-primary-blue/20 dark:text-primary-blue'
               )}
             >
               {t(`filters.${filter}`)}

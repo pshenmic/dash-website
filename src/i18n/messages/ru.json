@@ -542,7 +542,8 @@
       "dashUsd": "DASHUSD",
       "dashEur": "DASHEUR",
       "pairLabel": "Dash | Доллар США",
-      "pairLabelEur": "Dash | Евро"
+      "pairLabelEur": "Dash | Евро",
+      "error": "Не удалось загрузить данные о цене. Попробуйте позже."
     },
     "exchanges": {
       "title": "Где купить Dash?",

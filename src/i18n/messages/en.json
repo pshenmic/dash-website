@@ -542,7 +542,8 @@
       "dashUsd": "DASHUSD",
       "dashEur": "DASHEUR",
       "pairLabel": "Dash | US Dollar",
-      "pairLabelEur": "Dash | Euro"
+      "pairLabelEur": "Dash | Euro",
+      "error": "Unable to load price data. Please try again later."
     },
     "exchanges": {
       "title": "Where to Purchase Dash?",

@@ -57,9 +57,11 @@ export function DashPriceChart (): React.ReactNode {
   const [activePeriod, setActivePeriod] = useState<Period>('7')
   const [data, setData] = useState<PriceData | null>(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
   const fetchData = useCallback(async (currency: Currency, days: Period) => {
     setLoading(true)
+    setError(false)
     try {
       const [chartRes, priceRes] = await Promise.all([
         fetch(
@@ -88,8 +90,9 @@ export function DashPriceChart (): React.ReactNode {
         change24h,
         sparkline: prices
       })
-    } catch (error) {
-      console.error('Failed to fetch Dash price:', error)
+    } catch (err) {
+      console.error('Failed to fetch Dash price:', err)
+      setError(true)
     } finally {
       setLoading(false)
     }
@@ -115,16 +118,17 @@ export function DashPriceChart (): React.ReactNode {
         {/* Top bar: pair tabs + period buttons */}
         <div className='flex flex-col gap-3 border-b border-primary-dark/10 px-5 py-4 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between lg:px-8 lg:py-5'>
           {/* Pair tabs */}
-          <div className='flex gap-1.5 rounded-xl bg-primary-dark/5 p-1 dark:bg-white/5'>
+          <div className='flex gap-0.5'>
             {(['usd', 'eur'] as const).map((pair) => (
               <button
                 key={pair}
                 onClick={() => setActivePair(pair)}
+                aria-pressed={activePair === pair}
                 className={cn(
-                  'rounded-lg px-4 py-1.5 text-xs font-semibold tracking-wide transition-colors lg:text-sm',
+                  'rounded-xl px-4 py-1.5 text-xs tracking-wide transition-colors lg:text-sm',
                   activePair === pair
-                    ? 'bg-primary-blue text-white shadow-sm'
-                    : 'text-primary-dark/50 hover:text-primary-dark dark:text-white/50 dark:hover:text-white'
+                    ? 'bg-primary-dark/5 font-extrabold text-primary-dark dark:bg-white/10 dark:text-white'
+                    : 'font-medium text-primary-dark/50 hover:text-primary-dark dark:text-white/50 dark:hover:text-white'
                 )}
               >
                 {pair === 'usd' ? t('dashUsd') : t('dashEur')}
@@ -133,16 +137,17 @@ export function DashPriceChart (): React.ReactNode {
           </div>
 
           {/* Period buttons */}
-          <div className='flex gap-1 rounded-xl bg-primary-dark/5 p-1 dark:bg-white/5'>
+          <div className='flex gap-0.5'>
             {periods.map(({ key, label }) => (
               <button
                 key={key}
                 onClick={() => setActivePeriod(key)}
+                aria-pressed={activePeriod === key}
                 className={cn(
-                  'rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors lg:text-sm',
+                  'rounded-xl px-3 py-1.5 text-xs transition-colors lg:text-sm',
                   activePeriod === key
-                    ? 'bg-primary-blue text-white shadow-sm'
-                    : 'text-primary-dark/50 hover:text-primary-dark dark:text-white/50 dark:hover:text-white'
+                    ? 'bg-primary-dark/5 font-extrabold text-primary-dark dark:bg-white/10 dark:text-white'
+                    : 'font-medium text-primary-dark/50 hover:text-primary-dark dark:text-white/50 dark:hover:text-white'
                 )}
               >
                 {label}
@@ -153,66 +158,78 @@ export function DashPriceChart (): React.ReactNode {
 
         {/* Price info */}
         <div className='px-5 pt-5 lg:px-8 lg:pt-7'>
-          {/* Logo + pair name + status */}
-          <div className='flex items-center gap-3'>
-            <div className='flex size-10 items-center justify-center rounded-full bg-primary-blue lg:size-12'>
+          <div className='flex items-center gap-4 lg:gap-5'>
+            {/* Large Dash circle — 75px per Figma */}
+            <div className='flex size-15 shrink-0 items-center justify-center rounded-full bg-primary-blue lg:size-18.75'>
               <Image
                 src='/images/buy-online/dash-icon.svg'
                 alt='Dash'
-                width={24}
-                height={20}
-                className='h-4 w-auto lg:h-5'
+                width={36}
+                height={30}
+                className='h-5.5 w-auto lg:h-7'
               />
             </div>
-            <span className='text-sm font-medium text-primary-dark/70 dark:text-white/70 lg:text-base'>
-              {activePair === 'usd' ? t('pairLabel') : t('pairLabelEur')}
-            </span>
-            <span className='size-2 rounded-full bg-state-success' />
-          </div>
 
-          {/* Price + change */}
-          <div className='mt-3 flex items-baseline gap-3 lg:mt-4'>
-            {loading
-              ? (
-                <span className='inline-block h-9 w-36 animate-pulse rounded-lg bg-primary-dark/10 dark:bg-white/10 lg:h-12 lg:w-48' />
-                )
-              : (
-                <>
-                  <span className='text-3xl font-extrabold tracking-tight text-primary-dark dark:text-white lg:text-5xl'>
-                    {data?.price.toFixed(2)}
-                  </span>
-                  <span className='text-base font-medium text-primary-dark/50 dark:text-white/50 lg:text-lg'>
-                    {currencySymbol}
-                  </span>
-                </>
-                )}
-
-            {loading
-              ? (
-                <span className='inline-block h-6 w-16 animate-pulse rounded-lg bg-primary-dark/10 dark:bg-white/10' />
-                )
-              : (
-                <span
-                  className={cn(
-                    'rounded-lg px-2.5 py-1 text-xs font-semibold lg:text-sm',
-                    isPositive
-                      ? 'bg-state-success/15 text-state-success'
-                      : 'bg-state-error/15 text-state-error'
-                  )}
-                >
-                  {isPositive ? '+' : ''}{data?.change24h.toFixed(2)}%
+            {/* Stacked right side */}
+            <div className='flex flex-col gap-1.5 lg:gap-2'>
+              {/* Top: pair name + live dot */}
+              <div className='flex items-center gap-2'>
+                <span className='text-sm font-medium text-primary-dark/70 dark:text-white/70 lg:text-base'>
+                  {activePair === 'usd' ? t('pairLabel') : t('pairLabelEur')}
                 </span>
-                )}
+                <span className='size-2 rounded-full bg-state-success' />
+              </div>
+
+              {/* Bottom: price + currency + change badge */}
+              <div className='flex items-baseline gap-2 lg:gap-3'>
+                {loading
+                  ? (
+                    <span className='inline-block h-9 w-36 animate-pulse rounded-lg bg-primary-dark/10 dark:bg-white/10 lg:h-12 lg:w-48' />
+                    )
+                  : (
+                    <>
+                      <span className='text-3xl font-extrabold tracking-tight text-primary-dark dark:text-white lg:text-5xl'>
+                        {data?.price.toFixed(2)}
+                      </span>
+                      <span className='text-base font-medium text-primary-dark/50 dark:text-white/50 lg:text-lg'>
+                        {currencySymbol}
+                      </span>
+                    </>
+                    )}
+
+                {loading
+                  ? (
+                    <span className='inline-block h-6 w-16 animate-pulse rounded-lg bg-primary-dark/10 dark:bg-white/10' />
+                    )
+                  : (
+                    <span
+                      className={cn(
+                        'rounded-lg px-2.5 py-1 text-xs font-semibold lg:text-sm',
+                        isPositive
+                          ? 'bg-state-success/15 text-state-success'
+                          : 'bg-state-error/15 text-state-error'
+                      )}
+                    >
+                      {isPositive ? '+' : ''}{data?.change24h.toFixed(2)}%
+                    </span>
+                    )}
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Chart */}
         <div className='mt-4 px-0 lg:mt-6'>
+          {error && !loading && (
+            <div className='flex h-32 items-center justify-center text-sm font-medium text-primary-dark/40 dark:text-white/40 lg:h-48'>
+              {t('error')}
+            </div>
+          )}
           {loading
             ? (
               <div className='h-32 animate-pulse bg-primary-dark/5 dark:bg-white/5 lg:h-48' />
               )
-            : (
+            : !error && (
               <svg
                 className='h-32 w-full lg:h-48'
                 viewBox={`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`}

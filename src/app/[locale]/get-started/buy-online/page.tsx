@@ -21,7 +21,7 @@ export default async function BuyOnlinePage ({
       <BuyOnlineHero />
 
       {/* Dash Price Chart - overlapping hero */}
-      <section className='relative z-20 -mt-16 pb-10 lg:-mt-28 lg:pb-16'>
+      <section className='relative z-20 -mt-24 pb-10 lg:-mt-44 lg:pb-16'>
         <DashPriceChart />
       </section>
 

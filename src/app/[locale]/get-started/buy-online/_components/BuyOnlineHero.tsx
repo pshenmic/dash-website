@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Badge, Button } from 'dash-ui-kit/react'
+import { Badge } from 'dash-ui-kit/react'
 
 export function BuyOnlineHero (): React.ReactNode {
   const t = useTranslations('buyOnline.hero')
@@ -31,13 +31,15 @@ export function BuyOnlineHero (): React.ReactNode {
         </div>
 
         <div className='flex animate-fade-in-up-4 flex-col items-center gap-2.5 lg:flex-row lg:gap-4'>
-          <Button variant='solid' colorScheme='brand'>{t('listOfExchanges')}</Button>
-          <Button variant='outline' colorScheme='brand' className='gap-4'>
+          <button className='h-16.25 rounded-full bg-white px-9 text-lg font-semibold text-primary-dark backdrop-blur-sm transition-smooth active-press'>
+            {t('listOfExchanges')}
+          </button>
+          <button className='flex h-16.25 items-center gap-4 rounded-full bg-white/15 pl-9 pr-2.5 text-lg font-semibold text-white backdrop-blur-sm transition-smooth active-press'>
             {t('learnMore')}
-            <div className='flex size-11 items-center justify-center rounded-full bg-primary-white'>
-              <ArrowRight className='size-4 text-primary-blue' />
+            <div className='flex size-11.25 shrink-0 items-center justify-center rounded-full bg-white'>
+              <ArrowUpRight className='size-5 text-primary-blue' />
             </div>
-          </Button>
+          </button>
         </div>
       </div>
     </section>

@@ -14,7 +14,7 @@ interface MobileMenuProps {
   mounted: boolean
 }
 
-const GET_STARTED_ROUTES = ['/get-started', '/get-started/payments', '/downloads', '/get-started/buy-online', '/get-started/spend', '/get-started/transactions']
+const GET_STARTED_ROUTES = ['/get-started', '/get-started/take-control', '/downloads', '/get-started/buy-online', '/get-started/spend', '/get-started/transactions']
 const INSTITUTIONS_ROUTES = ['/institutions', '/institutions/traders', '/institutions/financial-services', '/institutions/regulatory', '/institutions/fastpass']
 const DEVELOPERS_ROUTES = ['/build', '/developers/platform', '/discover', '/developers/contributing', '/developers/tools', '/developers/roadmap']
 
@@ -106,7 +106,7 @@ export function MobileMenu ({
             </span>
             <div className='flex flex-col gap-1 pr-4'>
               <MobileNavLink href='/get-started' onClose={onClose}>{t('aboutDash')}</MobileNavLink>
-              <MobileNavLink href='/get-started/payments' onClose={onClose}>{t('takeControl')}</MobileNavLink>
+              <MobileNavLink href='/get-started/take-control' onClose={onClose}>{t('takeControl')}</MobileNavLink>
               <MobileNavLink href='/downloads' onClose={onClose}>{t('downloads')}</MobileNavLink>
               <MobileNavLink href='/get-started/buy-online' onClose={onClose}>{t('buyOnline')}</MobileNavLink>
               <MobileNavLink href='/get-started/spend' onClose={onClose}>{t('whereToSpend')}</MobileNavLink>

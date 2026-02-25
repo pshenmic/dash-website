@@ -26,7 +26,7 @@ const linkColumns: LinkColumn[] = [
     titleKey: 'getStarted',
     links: [
       { key: 'aboutDash', href: '/get-started' },
-      { key: 'takeControl', href: '/get-started/payments' },
+      { key: 'takeControl', href: '/get-started/take-control' },
       { key: 'downloads', href: '/downloads' },
       { key: 'buyOnline', href: '/get-started/buy-online' },
       { key: 'whereToSpend', href: '/get-started/spend' },

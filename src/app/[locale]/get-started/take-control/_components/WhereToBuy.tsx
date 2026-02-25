@@ -3,10 +3,10 @@ import { Button, Heading, Text } from 'dash-ui-kit/react'
 import { LinkCard } from '@/components/ui/LinkCard'
 
 const exchanges = [
-  { name: 'Kraken', url: 'kraken.com', logo: '/images/payments/logo-kraken.svg' },
-  { name: 'Coinbase', url: 'coinbase.com', logo: '/images/payments/logo-coinbase.svg' },
-  { name: 'Uphold', url: 'uphold.com', logo: '/images/payments/logo-uphold.svg' },
-  { name: 'Binance', url: 'binance.com', logo: '/images/payments/logo-binance.svg' }
+  { name: 'Kraken', url: 'kraken.com', logo: '/images/shared/logos/kraken.svg' },
+  { name: 'Coinbase', url: 'coinbase.com', logo: '/images/shared/logos/coinbase.svg' },
+  { name: 'Uphold', url: 'uphold.com', logo: '/images/shared/logos/uphold.svg' },
+  { name: 'Binance', url: 'binance.com', logo: '/images/shared/logos/binance.svg' }
 ]
 
 export function WhereToBuy (): React.ReactNode {

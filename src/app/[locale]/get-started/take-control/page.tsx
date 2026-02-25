@@ -52,18 +52,16 @@ export default async function PaymentsPage ({
       </section>
 
       {/* Where to Buy */}
-      <section className='bg-primary-blue py-10 dark:bg-primary-dark lg:py-16'>
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
         <WhereToBuy />
       </section>
 
-      {/* Where to Use */}
+      {/* Where to Use + Brand Guidelines — shared blue background */}
       <section className='bg-primary-blue py-10 dark:bg-primary-dark lg:py-16'>
         <WhereToUse />
-      </section>
-
-      {/* Brand Guidelines */}
-      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
-        <BrandGuidelines />
+        <div className='mt-10 lg:mt-16'>
+          <BrandGuidelines />
+        </div>
       </section>
     </main>
   )

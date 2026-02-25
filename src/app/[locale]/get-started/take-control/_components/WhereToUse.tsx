@@ -3,9 +3,9 @@ import { Button, Heading, Text } from 'dash-ui-kit/react'
 import { LinkCard } from '@/components/ui/LinkCard'
 
 const merchants = [
-  { name: 'Travala', url: 'travala.com', logo: '/images/payments/logo-travala.png' },
-  { name: 'Bitrefill', url: 'bitrefill.com', logo: '/images/payments/logo-bitrefill.svg' },
-  { name: 'Mobile Topup', url: 'mobiletopup.com', logo: '/images/payments/logo-mobiletopup.svg' }
+  { name: 'Travala', url: 'travala.com', logo: '/images/shared/logos/travala.png' },
+  { name: 'Bitrefill', url: 'bitrefill.com', logo: '/images/shared/logos/bitrefill.svg' },
+  { name: 'Mobile Topup', url: 'mobiletopup.com', logo: '/images/shared/logos/mobiletopup.svg' }
 ]
 
 export function WhereToUse (): React.ReactNode {
@@ -14,7 +14,7 @@ export function WhereToUse (): React.ReactNode {
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       {/* Header */}
-      <div className='mb-6 flex items-end justify-between lg:mb-8'>
+      <div className='mb-6 flex items-center justify-between lg:mb-8'>
         <div>
           <Heading as='h2' size='xl' weight='extrabold' className='leading-tight tracking-tight text-white sm:text-3xl sm:leading-9'>
             {t('title')}
@@ -26,7 +26,7 @@ export function WhereToUse (): React.ReactNode {
         <Button
           variant='solid'
           colorScheme='brand'
-          className='hidden h-12 rounded-2xl px-6 text-base sm:flex sm:h-16 sm:rounded-2xl sm:px-9 sm:text-lg'
+          className='hidden h-12 rounded-2xl px-6 text-base sm:flex sm:h-16 sm:rounded-2xl sm:px-9 sm:text-lg bg-white! text-primary-dark! hover:bg-white/85!'
         >
           {t('seeAll')}
         </Button>
@@ -53,7 +53,7 @@ export function WhereToUse (): React.ReactNode {
         <Button
           variant='solid'
           colorScheme='brand'
-          className='h-12 w-full rounded-2xl text-base'
+          className='h-12 w-full rounded-2xl text-base bg-white! text-primary-dark! hover:bg-white/85!'
         >
           {t('seeAll')}
         </Button>

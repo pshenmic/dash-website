@@ -700,8 +700,8 @@
       "chip": "Businesses",
       "title": "Take Control of Your Payments.",
       "subtitle": "Access a new generation of customers.",
-      "acceptDash": "Accept Dash",
-      "documentation": "Documentation"
+      "acceptDash": "How Dash Works",
+      "documentation": "Learn More"
     },
     "featureCards": {
       "instant": {
@@ -738,9 +738,10 @@
       }
     },
     "integrations": {
+      "chip": "Work With Dash",
       "title": "Integrations that work",
       "description": "Setup Dash in your business quickly and effectively. Leverage Dash partners to add services and expand your business to a new generation of customers.",
-      "documentation": "Documentation",
+      "documentation": "Check Out Partners",
       "stats": {
         "volume": { "label": "Payment Volume $", "value": "4.48 Billion+" },
         "addresses": { "label": "Daily Active Addresses", "value": "54,300 +" },

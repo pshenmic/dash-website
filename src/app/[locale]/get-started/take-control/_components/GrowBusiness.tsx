@@ -16,7 +16,7 @@ export function GrowBusiness (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       {/* Section Header */}
       <div className='mb-8 lg:mb-10'>
-        <Text size='sm' weight='medium' opacity={60} className='dark:text-white lg:text-base'>
+        <Text size='lg' weight='extrabold' className='text-primary-blue'>
           {t('subtitle')}
         </Text>
         <Heading as='h2' size='xl' weight='extrabold' className='mt-1.5 leading-tight tracking-tight dark:text-white sm:text-3xl sm:leading-9'>
@@ -29,12 +29,10 @@ export function GrowBusiness (): React.ReactNode {
         {cards.map(({ key, icon }) => (
           <div
             key={key}
-            className='flex flex-col rounded-3xl border border-primary-dark/10 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none lg:rounded-4xl lg:p-7'
+            className='flex flex-col rounded-[25px] border border-primary-dark/10 bg-white p-6.25 shadow-[0px_0px_100px_0px_rgba(12,28,51,0.1)] dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none'
           >
-            <div className='mb-6 flex size-17 items-center justify-center rounded-2xl bg-primary-dark/5 dark:bg-white/10'>
-              <Image src={icon} alt={t(`cards.${key}.title`)} width={32} height={32} />
-            </div>
-            <Heading as='h3' size='lg' weight='extrabold' className='leading-tight tracking-tight text-primary-dark! dark:text-white!'>
+            <Image src={icon} alt={t(`cards.${key}.title`)} width={68} height={68} className='mb-8.75' />
+            <Heading as='h3' size='xl' weight='extrabold' className='text-2xl leading-tight tracking-tight sm:text-[32px] sm:leading-10 sm:tracking-[-0.96px] text-primary-dark! dark:text-white!'>
               {t(`cards.${key}.title`)}
             </Heading>
             <Text size='sm' weight='medium' opacity={60} className='mt-3 text-primary-dark! dark:text-white!'>

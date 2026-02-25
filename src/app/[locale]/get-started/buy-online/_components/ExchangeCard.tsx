@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Heading, Text } from 'dash-ui-kit/react'
 
 interface ExchangeCardProps {
   name: string
@@ -31,12 +32,12 @@ export function ExchangeCard ({
           <Image src={logo} alt={name} fill className='object-contain' />
         </div>
         <div>
-          <p className='text-xl font-extrabold tracking-tight text-primary-dark dark:text-white lg:text-2xl'>
+          <Heading as='h3' size='xl' weight='extrabold' className='tracking-tight text-primary-dark! dark:text-white! lg:text-2xl'>
             {name}
-          </p>
-          <p className='text-xs font-medium text-primary-dark/35 dark:text-white/35'>
+          </Heading>
+          <Text size='xs' weight='medium' className='text-primary-dark/35 dark:text-white/35'>
             {type}
-          </p>
+          </Text>
         </div>
       </div>
 

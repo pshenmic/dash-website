@@ -1,30 +1,36 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Heading, Text } from 'dash-ui-kit/react'
 import { MerchantCard } from './MerchantCard'
 import { cn } from '@/lib/cn'
 
 const filters = ['all', 'giftCards', 'privacy', 'travel', 'bills', 'cards'] as const
+type Filter = typeof filters[number]
 
 const merchants = [
-  { name: 'DashSpend', category: 'Gift Cards and Spending Apps', logo: '/images/spend/logo-dashspend.svg' },
-  { name: 'NYM', category: 'Privacy', logo: '/images/spend/logo-nym.png' },
-  { name: 'Travala.com', category: 'Travel', logo: '/images/spend/logo-travala.png' },
-  { name: 'Bitrefill', category: 'Gift Cards and Spending Apps', logo: '/images/spend/logo-bitrefill.png' },
-  { name: 'Spritz', category: 'Bills', logo: '/images/spend/logo-spritz.svg' },
-  { name: 'Swapin', category: 'Bills', logo: '/images/spend/logo-swapin.svg', logoClassName: 'h-8 w-[100px]', imageClassName: 'dark:invert' },
-  { name: 'Zypto', category: 'Bills', logo: '/images/spend/logo-zypto.png' },
-  { name: 'Flexa', category: 'Gift Cards and Spending Apps', logo: '/images/spend/logo-flexa.svg' },
-  { name: 'Coinbase', category: 'Cards', logo: '/images/spend/logo-coinbase.svg' },
-  { name: 'Piggy Cards', category: 'Gift Cards and Spending Apps', logo: '/images/spend/logo-piggycards.png' },
-  { name: 'Alternative Airlines', category: 'Travel', logo: '/images/spend/logo-alternative-airlines.svg' }
+  { name: 'DashSpend', filter: 'giftCards' as Filter, logo: '/images/spend/logo-dashspend.svg' },
+  { name: 'NYM', filter: 'privacy' as Filter, logo: '/images/spend/logo-nym.png' },
+  { name: 'Travala.com', filter: 'travel' as Filter, logo: '/images/spend/logo-travala.png' },
+  { name: 'Bitrefill', filter: 'giftCards' as Filter, logo: '/images/spend/logo-bitrefill.png' },
+  { name: 'Spritz', filter: 'bills' as Filter, logo: '/images/spend/logo-spritz.svg' },
+  { name: 'Swapin', filter: 'bills' as Filter, logo: '/images/spend/logo-swapin.svg', logoClassName: 'h-8 w-[100px]', imageClassName: 'dark:invert' },
+  { name: 'Zypto', filter: 'bills' as Filter, logo: '/images/spend/logo-zypto.png' },
+  { name: 'Flexa', filter: 'giftCards' as Filter, logo: '/images/spend/logo-flexa.svg' },
+  { name: 'Coinbase', filter: 'cards' as Filter, logo: '/images/spend/logo-coinbase.svg' },
+  { name: 'Piggy Cards', filter: 'giftCards' as Filter, logo: '/images/spend/logo-piggycards.png' },
+  { name: 'Alternative Airlines', filter: 'travel' as Filter, logo: '/images/spend/logo-alternative-airlines.svg' }
 ]
 
 export function MerchantDirectory (): React.ReactNode {
   const t = useTranslations('spend.merchants')
-  const [activeFilter, setActiveFilter] = useState<string>('all')
+  const [activeFilter, setActiveFilter] = useState<Filter>('all')
+
+  const filteredMerchants = useMemo(
+    () => activeFilter === 'all' ? merchants : merchants.filter((m) => m.filter === activeFilter),
+    [activeFilter]
+  )
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
@@ -60,10 +66,14 @@ export function MerchantDirectory (): React.ReactNode {
 
       {/* Merchant Cards Grid */}
       <div className='grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
-        {merchants.map((merchant) => (
+        {filteredMerchants.map((merchant) => (
           <MerchantCard
             key={merchant.name}
-            {...merchant}
+            name={merchant.name}
+            category={t(`filters.${merchant.filter}`)}
+            logo={merchant.logo}
+            logoClassName={merchant.logoClassName}
+            imageClassName={merchant.imageClassName}
           />
         ))}
       </div>

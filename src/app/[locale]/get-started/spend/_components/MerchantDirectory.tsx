@@ -13,13 +13,13 @@ const merchants = [
   { name: 'NYM', category: 'Privacy', logo: '/images/spend/logo-nym.png' },
   { name: 'Travala.com', category: 'Travel', logo: '/images/spend/logo-travala.png' },
   { name: 'Bitrefill', category: 'Gift Cards and Spending Apps', logo: '/images/spend/logo-bitrefill.png' },
-  { name: 'Spritz', category: 'Bills', logo: '/images/spend/logo-spritz.png' },
-  { name: 'Swapin', category: 'Bills', logo: '/images/spend/logo-swapin.svg' },
+  { name: 'Spritz', category: 'Bills', logo: '/images/spend/logo-spritz.svg' },
+  { name: 'Swapin', category: 'Bills', logo: '/images/spend/logo-swapin.svg', logoClassName: 'h-8 w-[100px]', imageClassName: 'dark:invert' },
   { name: 'Zypto', category: 'Bills', logo: '/images/spend/logo-zypto.png' },
-  { name: 'Flexa', category: 'Gift Cards and Spending Apps', logo: '/images/spend/logo-flexa.png' },
+  { name: 'Flexa', category: 'Gift Cards and Spending Apps', logo: '/images/spend/logo-flexa.svg' },
   { name: 'Coinbase', category: 'Cards', logo: '/images/spend/logo-coinbase.svg' },
   { name: 'Piggy Cards', category: 'Gift Cards and Spending Apps', logo: '/images/spend/logo-piggycards.png' },
-  { name: 'Alternative Airlines', category: 'Travel', logo: '/images/spend/logo-alternative-airlines.png' }
+  { name: 'Alternative Airlines', category: 'Travel', logo: '/images/spend/logo-alternative-airlines.svg' }
 ]
 
 export function MerchantDirectory (): React.ReactNode {
@@ -46,10 +46,10 @@ export function MerchantDirectory (): React.ReactNode {
               key={filter}
               onClick={() => setActiveFilter(filter)}
               className={cn(
-                'rounded-full px-5 py-2 text-sm font-medium transition-colors',
+                'rounded-xl px-5 py-2 text-sm font-medium transition-colors',
                 activeFilter === filter
                   ? 'bg-primary-blue text-white'
-                  : 'border border-primary-dark/15 bg-white text-primary-dark/60 hover:bg-primary-dark/5 dark:border-white/15 dark:bg-secondary-space-cadet dark:text-white/60 dark:hover:bg-white/10'
+                  : 'bg-primary-blue/15 text-primary-dark hover:bg-primary-blue/25 dark:bg-primary-blue/15 dark:text-white dark:hover:bg-primary-blue/25'
               )}
             >
               {t(`filters.${filter}`)}

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { ArrowUpRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Heading, Text } from 'dash-ui-kit/react'
 
@@ -23,12 +24,15 @@ export function StarterKitNav (): React.ReactNode {
             <Heading as='h2' size='xl' weight='extrabold' className='leading-tight tracking-tight text-white sm:text-3xl sm:leading-9'>
               {t('title')}
             </Heading>
-            <Text size='sm' weight='medium' className='text-white/80 lg:text-base'>
+            <Text size='sm' weight='medium' className='text-white lg:text-base'>
               {t('description')}
             </Text>
             <div>
-              <a href='#merchant-downloads' className='inline-block rounded-full bg-white px-8 py-4 text-sm font-semibold text-primary-blue transition-opacity hover:opacity-90'>
+              <a href='#merchant-downloads' className='inline-flex items-center gap-4 rounded-xl bg-white/15 p-2.5 text-lg font-semibold text-white backdrop-blur-sm transition-smooth hover:bg-white/20'>
                 {t('skipToDownloads')}
+                <div className='flex size-8.75 shrink-0 items-center justify-center rounded-full bg-white'>
+                  <ArrowUpRight className='size-4 text-primary-blue' />
+                </div>
               </a>
             </div>
           </div>
@@ -39,12 +43,12 @@ export function StarterKitNav (): React.ReactNode {
               <a
                 key={card.key}
                 href={card.href}
-                className='flex flex-col items-center gap-3 rounded-2xl bg-white/10 px-4 py-6 text-center transition-colors hover:bg-white/20'
+                className='flex flex-col items-start gap-6 rounded-3xl bg-white/15 p-6 transition-colors hover:bg-white/20'
               >
-                <div className='relative size-10'>
+                <div className='relative h-8 w-10'>
                   <Image src={card.icon} alt='' fill className='object-contain' />
                 </div>
-                <span className='text-sm font-semibold text-white'>
+                <span className='text-2xl font-extrabold leading-6.5 text-white'>
                   {t(`cards.${card.key}`)}
                 </span>
               </a>

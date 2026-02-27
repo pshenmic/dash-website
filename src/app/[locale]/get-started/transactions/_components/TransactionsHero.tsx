@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Badge, Button } from 'dash-ui-kit/react'
+import { Badge } from 'dash-ui-kit/react'
 
 export function TransactionsHero (): React.ReactNode {
   const t = useTranslations('transactions.hero')
@@ -13,7 +13,7 @@ export function TransactionsHero (): React.ReactNode {
         alt=''
         width={1024}
         height={1024}
-        className='pointer-events-none absolute right-0 top-1/2 h-auto w-[60%] max-w-2xl -translate-y-1/2 object-contain opacity-80 lg:w-[50%]'
+        className='pointer-events-none absolute right-0 top-1/2 h-[170%] w-auto -translate-y-1/2 translate-x-[25%] animate-breathe-normal dark:brightness-50'
         priority
       />
       <div className='absolute inset-0 bg-linear-to-t from-primary-blue/30 to-transparent dark:from-primary-dark/50' />
@@ -32,12 +32,12 @@ export function TransactionsHero (): React.ReactNode {
         </div>
 
         <div className='animate-fade-in-up-4'>
-          <Button variant='outline' colorScheme='brand' className='gap-4'>
+          <button className='flex h-16.25 items-center gap-4 rounded-full bg-white/15 pl-9 pr-2.5 text-lg font-semibold text-white backdrop-blur-sm transition-smooth active-press'>
             {t('learnMore')}
-            <div className='flex size-11 items-center justify-center rounded-full bg-primary-white'>
-              <ArrowRight className='size-4 text-primary-blue' />
+            <div className='flex size-11.25 shrink-0 items-center justify-center rounded-full bg-white'>
+              <ArrowUpRight className='size-5 text-primary-blue' />
             </div>
-          </Button>
+          </button>
         </div>
       </div>
     </section>

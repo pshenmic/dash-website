@@ -47,12 +47,12 @@ export default async function TransactionsPage ({
       </section>
 
       {/* Why Crypto? */}
-      <section id='why-crypto' className='bg-primary-blue py-10 lg:py-16'>
+      <section id='why-crypto' className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
         <WhyCryptoBlocks />
       </section>
 
       {/* Quote */}
-      <section className='bg-primary-white py-14 dark:bg-primary-dark lg:py-20'>
+      <section className='overflow-hidden bg-primary-blue py-14 lg:py-20'>
         <QuoteBlock />
       </section>
 

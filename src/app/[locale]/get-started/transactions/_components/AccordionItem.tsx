@@ -14,17 +14,25 @@ export function AccordionItem ({ title, children, defaultOpen = false }: Accordi
   const [isOpen, setIsOpen] = useState(defaultOpen)
 
   return (
-    <div className='overflow-hidden rounded-2xl bg-gray-50 dark:bg-white/10'>
+    <div className='overflow-hidden rounded-[35px] bg-primary-blue/15 dark:bg-white/10'>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className='flex w-full items-center justify-between px-6 py-5 text-left text-sm font-semibold text-primary-dark/80 transition-colors hover:bg-gray-100 dark:text-white dark:hover:bg-white/5 lg:text-base'
+        className='flex w-full items-center justify-between px-9 py-6 text-left transition-colors'
       >
-        {title}
-        <ChevronDown className={cn('size-5 shrink-0 text-primary-dark/40 transition-transform duration-200 dark:text-white/60', isOpen && 'rotate-180')} />
+        <span className='text-[32px] font-medium leading-8.5 text-primary-dark dark:text-white'>{title}</span>
+        <div className={cn(
+          'flex size-11.25 shrink-0 items-center justify-center rounded-full transition-colors',
+          isOpen ? 'border border-primary-dark dark:border-primary-blue' : 'bg-primary-dark dark:bg-primary-blue'
+        )}>
+          <ChevronDown className={cn(
+            'size-4 transition-transform duration-200',
+            isOpen ? 'rotate-180 text-primary-dark dark:text-primary-blue' : 'text-white'
+          )} />
+        </div>
       </button>
       <div className={cn('grid transition-all duration-200', isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]')}>
         <div className='overflow-hidden'>
-          <div className='px-6 pb-5 text-sm leading-relaxed text-primary-dark/60 dark:text-white/70'>
+          <div className='px-9 pb-8 text-lg leading-relaxed text-primary-dark/75 dark:text-white/70'>
             {children}
           </div>
         </div>

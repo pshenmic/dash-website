@@ -832,7 +832,7 @@
     },
     "starterKit": {
       "title": "Merchant Starter Kit Nav",
-      "description": "Know what you are looking for? Use these quick start links to go directly to the section you need.",
+      "description": "Know what you are looking for? Use these quick start links to navigate faster. Click on the icon to jump to the section you need.\nThe information contained on this page can also be accessed through a printable PDF. In addition, merchants can download files for official \"Dash is Accepted Here\" stickers. If you're looking for those, you can skip to the Dash Merchant Kit downloads section.",
       "skipToDownloads": "Skip to Printable Downloads",
       "cards": {
         "whyCrypto": "Why Crypto?",
@@ -844,6 +844,7 @@
       }
     },
     "glossary": {
+      "subtitle": "Find Out More",
       "title": "Glossary of Terms",
       "terms": {
         "wallet": {
@@ -873,18 +874,20 @@
       }
     },
     "whyCrypto": {
+      "subtitle": "Learn More",
+      "title": "Why Crypto?",
       "block1": {
         "number": "01",
         "title": "Lower Transaction Fees",
-        "description": "Credit card companies typically charge 2-4% or more on every transaction, especially for international payments. Crypto payments using Dash typically cost less than one US cent per transaction. Imagine reducing thousands of dollars per year in payment processing fees simply by offering customers an additional payment option."
+        "description": "At the top of the list is lower transaction fees. The costs incurred from traditional payment system fees can add up. These costs can be significantly reduced by accepting a cryptocurrency like Dash. <highlight>Credit card processing fees can cost a business between 1.5% to 3.5% of each transaction's total. Transactions that are considered \"high-risk\" may be hit with even higher rates per transaction</highlight> (ie: card not present, gambling, cannabis, etc.). With crypto, depending on the coin, the same costs can be reduced down to mere cents -- regardless of merchant category."
       },
       "block2": {
         "number": "02",
         "title": "No Chargebacks",
-        "description": "A credit card chargeback can take weeks to resolve and results in lost revenue and merchandise. Crypto payments are irreversible once confirmed, protecting merchants from fraudulent chargeback claims. Instant settlement means you get paid immediately with no middleman holding your funds."
+        "description": "Accepting crypto payments also means no chargebacks, which can be incredibly costly to businesses – both in regard to the monetary value and time. <highlight>A chargeback can cost your business the price of the item being disputed, as well as the chargeback fees incurred, and the time needed to dispute fraudulent chargebacks.</highlight> No centralized institution can reverse the crypto payments made to your business. Your business can choose to set up refund policies on your own terms."
       }
     },
-    "quote": "With Dash, accepting crypto payments is as easy as spending your profit.",
+    "quote": "With Dash, accepting crypto payments is as <bold>easy as spending your profit.</bold>",
     "becomeButton": "Become a Merchant",
     "dashFeatures": {
       "spending": {

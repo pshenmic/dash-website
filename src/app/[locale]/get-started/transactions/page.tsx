@@ -57,12 +57,12 @@ export default async function TransactionsPage ({
       </section>
 
       {/* Why Dash? - Features */}
-      <section id='why-dash' className='bg-primary-white pb-10 dark:bg-primary-dark lg:pb-16'>
+      <section id='why-dash' className='bg-primary-blue pb-10 pt-14 lg:pb-16'>
         <DashFeatures />
       </section>
 
       {/* What Sets Dash Apart */}
-      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+      <section className='bg-primary-blue py-10 lg:py-16'>
         <WhatSetsDashApart />
       </section>
 

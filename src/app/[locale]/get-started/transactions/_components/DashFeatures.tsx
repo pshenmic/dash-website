@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { cn } from '@/lib/cn'
 
 const features = [
   { key: 'spending', icon: '/images/transactions/icon-spending.svg' },
@@ -14,20 +15,25 @@ export function DashFeatures (): React.ReactNode {
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
+      <div className='grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
         {features.map((feature) => (
-          <div key={feature.key} className='flex flex-col items-center gap-4 rounded-3xl bg-primary-blue px-6 py-8 text-center'>
-            <div className='relative size-12'>
-              <Image src={feature.icon} alt='' fill className='object-contain' />
+          <div key={feature.key} className='flex flex-col items-start gap-6.25 rounded-[25px] border border-white/15 bg-white/15 p-6.25'>
+            <div className={cn(
+              'size-12',
+              feature.key === 'fees'
+                ? 'flex items-center justify-center rounded-full bg-primary-dark/5 shadow-[inset_0_0_12px_rgba(12,28,51,0.12)]'
+                : 'relative'
+            )}>
+              {feature.key === 'fees'
+                ? <Image src={feature.icon} alt='' width={32} height={26} />
+                : <Image src={feature.icon} alt='' fill className='object-contain' />
+              }
             </div>
-            <div>
-              <p className='text-sm font-bold text-white'>
-                {t(`${feature.key}.title`)}
-              </p>
-              <p className='mt-1 text-xs text-white/60'>
-                {t(`${feature.key}.description`)}
-              </p>
-            </div>
+            <p className='text-2xl leading-6.5 font-medium text-white'>
+              {t.rich(`${feature.key}.label`, {
+                bold: (chunks) => <strong className='font-extrabold'>{chunks}</strong>
+              })}
+            </p>
           </div>
         ))}
       </div>

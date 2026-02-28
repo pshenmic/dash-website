@@ -1,36 +1,43 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Heading, Text } from 'dash-ui-kit/react'
 
 export function SendReceiveDash (): React.ReactNode {
   const t = useTranslations('transactions.sendReceive')
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div className='overflow-hidden rounded-3xl bg-primary-blue lg:rounded-4xl'>
-        <div className='flex flex-col items-center gap-8 p-8 lg:flex-row lg:gap-16 lg:p-16'>
-          {/* Phone mockups */}
-          <div className='relative h-64 w-full max-w-sm lg:h-80 lg:max-w-md'>
+      <div className='overflow-hidden rounded-[35px] bg-primary-blue'>
+        <div className='flex flex-col lg:flex-row'>
+          {/* Left — phone mockups, rotated 30deg */}
+          <div className='relative hidden min-h-100 w-full shrink-0 lg:block lg:w-[45%]'>
             <Image
               src='/images/transactions/phones-mockup.png'
               alt='DashPay app mockup'
-              fill
-              className='object-contain'
+              width={747}
+              height={718}
+              className='pointer-events-none absolute -bottom-16 -left-30 rotate-30'
             />
           </div>
 
-          {/* Content */}
-          <div className='flex flex-1 flex-col gap-6'>
-            <Heading as='h2' size='xl' weight='extrabold' className='leading-tight tracking-tight text-white sm:text-3xl sm:leading-9'>
-              {t('title')}
-            </Heading>
-            <Text size='sm' weight='medium' className='text-white/80 lg:text-base'>
-              {t('description')}
-            </Text>
-            <div>
-              <button className='rounded-full bg-white px-8 py-4 text-sm font-semibold text-primary-blue transition-opacity hover:opacity-90'>
-                {t('button')}
-              </button>
+          {/* Right — text content, vertically centered */}
+          <div className='flex flex-1 items-center p-8 lg:p-16'>
+            <div className='flex flex-col gap-8.75'>
+              {/* Text group: title + body (gap-3.75) */}
+              <div className='flex flex-col gap-3.75'>
+                <h2 className='text-[38px] font-extrabold leading-10 text-white' style={{ letterSpacing: '-0.03em' }}>
+                  {t('title')}
+                </h2>
+                <div className='max-w-150 text-lg font-medium leading-normal text-white'>
+                  <p>{t('paragraph1')}</p>
+                  <p className='mt-5'>{t('paragraph2')}</p>
+                </div>
+              </div>
+              {/* Button */}
+              <div>
+                <button className='h-16.25 rounded-[20px] bg-white px-8.75 text-lg font-semibold text-primary-dark backdrop-blur-sm transition-smooth hover:opacity-90'>
+                  {t('button')}
+                </button>
+              </div>
             </div>
           </div>
         </div>

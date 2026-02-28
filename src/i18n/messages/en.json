@@ -890,42 +890,28 @@
     "quote": "With Dash, accepting crypto payments is as <bold>easy as spending your profit.</bold>",
     "becomeButton": "Become a Merchant",
     "dashFeatures": {
-      "spending": {
-        "title": "Crypto Spending Made Easy",
-        "description": "Simple payment process"
-      },
-      "instant": {
-        "title": "Instant Transactions",
-        "description": "Confirmed in a few seconds"
-      },
-      "oldest": {
-        "title": "One of the Oldest Cryptos Around",
-        "description": "Trusted since 2014"
-      },
-      "fees": {
-        "title": "Less than $0.01 Fee Per Transaction",
-        "description": "Near-zero transaction costs"
-      },
-      "secure": {
-        "title": "Secure Payments Give Peace of Mind",
-        "description": "Protected by blockchain"
-      }
+      "spending": { "label": "<bold>Crypto Spending</bold> Made Easy" },
+      "instant": { "label": "<bold>Instant Transactions</bold> (few seconds)" },
+      "oldest": { "label": "One of the <bold>Oldest Cryptos Around</bold>" },
+      "fees": { "label": "<bold>Less than $0.01 Fee</bold> Per Transaction" },
+      "secure": { "label": "<bold>Secure Payments</bold> Give Peace of Mind" }
     },
     "whatSetsDashApart": {
       "title": "What Sets Dash Apart",
       "learnMore": "Learn More",
       "items": [
-        "Instant transactions (few seconds)",
-        "Secure Payments",
-        "Can accept payments from anyone, anywhere on the planet",
-        "Low transaction fees (less than 1 US cent per transaction)",
-        "Worldwide network of retailers and investors that transact with Dash",
-        "Found on the largest and most reputable cryptocurrency exchanges",
-        "User friendly Mobile DashPay app",
-        "One of the oldest and most-established cryptocurrencies in existence"
+        "<bold>Instant transactions</bold> (few seconds)",
+        "<bold>Low transaction fees</bold> (less than 1 US cent per transaction regardless of total transaction value)",
+        "User friendly Mobile <bold>DashPay app</bold>",
+        "<bold>Secure Payments</bold>",
+        "<bold>Worldwide network of retailers and investors</bold> that transact with Dash",
+        "<bold>One of the oldest and most-established cryptocurrencies</bold> in existence",
+        "<bold>Can accept payments from anyone,</bold> anywhere on the planet",
+        "<bold>Found on the largest and most reputable</bold> cryptocurrency exchanges"
       ]
     },
     "walletSetup": {
+      "subtitle": "A crypto wallet is all you really need to begin accepting Dash payments!",
       "title": "Download & Install a Wallet App",
       "items": {
         "createDashpay": {
@@ -943,8 +929,9 @@
       }
     },
     "sendReceive": {
-      "title": "How to Send & Receive Dash",
-      "description": "With the DashPay app, sending and receiving Dash is as simple as scanning a QR code. Open your wallet, scan the sender's or recipient's QR code, enter the amount, and confirm. Transactions are confirmed in seconds.",
+      "title": "How to Send &\nReceive Dash",
+      "paragraph1": "The easiest way to receive Dash as a payment from your customers is by showing them a QR code that they can scan. Both your public address and the associated QR code can be seen/copied by clicking the Receive button in the DashPay app. If you buy Dash at an exchange that is not already integrated with your DashPay app, you just need to know your public address to transfer your digital cash to the app.",
+      "paragraph2": "There are a few ways to send Dash from your DashPay, the easiest way is by scanning a QR code. This is done by clicking the Scan to Send button in the app.",
       "button": "See Additional DashPay Options"
     },
     "howToBuy": {

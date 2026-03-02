@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Heading } from 'dash-ui-kit/react'
 
 const posWebsites = [
-  { name: 'Binance Pay', logo: '/images/transactions/logo-binancepay.svg' },
-  { name: 'CoinPayments', logo: '/images/transactions/logo-coinpayments.svg' },
-  { name: 'CTX', logo: '/images/transactions/logo-ctx.svg' },
-  { name: 'Cyclebit', logo: '/images/transactions/logo-cyclebit.svg' },
-  { name: 'Salamantex', logo: '/images/transactions/logo-salamantex.svg' },
-  { name: 'xMoney', logo: '/images/transactions/logo-xmoney.svg' }
+  { name: 'Binance Pay', logo: '/images/transactions/logo-binancepay.svg', width: 47, height: 47 },
+  { name: 'CoinPayments', logo: '/images/transactions/logo-coinpayments.svg', width: 30, height: 47 },
+  { name: 'CTX', logo: '/images/transactions/logo-ctx.svg', width: 73, height: 27 },
+  { name: 'Cyclebit', logo: '/images/transactions/logo-cyclebit.svg', width: 44, height: 47 },
+  { name: 'Salamantex', logo: '/images/transactions/logo-salamantex.svg', width: 48, height: 48 },
+  { name: 'xMoney', logo: '/images/transactions/logo-xmoney.svg', width: 47, height: 47 }
 ]
 
 export function POSWebsites (): React.ReactNode {
@@ -16,22 +15,27 @@ export function POSWebsites (): React.ReactNode {
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <Heading as='h2' size='xl' weight='extrabold' className='mb-8 leading-tight tracking-tight dark:text-white sm:text-3xl sm:leading-9 lg:mb-10'>
-        {t('title')}
-      </Heading>
+      <div className='mb-8 flex flex-col gap-1.25'>
+        <span className='text-lg font-extrabold text-primary-blue'>{t('subtitle')}</span>
+        <h2 className='text-[32px] font-extrabold leading-8.5 text-primary-dark dark:text-white'>
+          {t('title')}
+        </h2>
+      </div>
 
       <div className='grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
         {posWebsites.map((website) => (
-          <div key={website.name} className='flex flex-col items-center gap-4 overflow-hidden rounded-3xl border border-primary-dark/10 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none'>
-            <div className='relative size-12 overflow-hidden rounded-xl'>
-              <Image src={website.logo} alt={website.name} fill className='object-contain' />
+          <div key={website.name} className='flex flex-col gap-5 overflow-hidden rounded-[25px] border border-primary-dark/15 bg-white p-6.25 shadow-[0_0_100px_0_rgba(12,28,51,0.1)] dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none'>
+            <div className='flex h-[47px] items-center'>
+              <Image src={website.logo} alt={website.name} width={website.width} height={website.height} />
             </div>
-            <p className='text-sm font-bold text-primary-dark dark:text-white'>
-              {website.name}
-            </p>
-            <button className='w-full rounded-full border border-primary-blue/20 px-4 py-2.5 text-xs font-semibold text-primary-blue transition-colors hover:bg-primary-blue/5 dark:border-white/20 dark:text-white dark:hover:bg-white/5'>
-              {t('learnMore')}
-            </button>
+            <div className='flex flex-col gap-3'>
+              <p className='text-lg font-extrabold text-primary-dark dark:text-white'>
+                {website.name}
+              </p>
+              <button className='h-10 w-full rounded-[12px] bg-primary-blue/15 text-lg font-semibold text-primary-dark backdrop-blur-[5px] transition-smooth hover:bg-primary-blue/25 dark:text-white'>
+                {t('learnMore')}
+              </button>
+            </div>
           </div>
         ))}
       </div>

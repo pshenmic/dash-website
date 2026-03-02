@@ -959,8 +959,8 @@
     "buySellDash": {
       "chip": "How to Buy Dash",
       "title": "Ready to Buy/Sell Dash?",
-      "description": "Get started on one of these reputable exchanges. Each platform offers different features, from margin trading to simple buy/sell interfaces.",
-      "tip": "Tip: Compare fees and features across exchanges to find the best fit for your needs.",
+      "description": "Dash is available on many of the world's top crypto exchanges. A few of them are listed here.",
+      "tip": "<bold>Tip:</bold> Before creating an account with an exchange, verify that the cryptocurrencies you want can be traded on that exchange.",
       "additionalExchanges": "Additional Exchanges",
       "exchanges": {
         "kraken": { "name": "Kraken", "type": "Margin Trading" },
@@ -975,25 +975,30 @@
       "button": "Help Dash Grow"
     },
     "freeDashCoin": {
-      "title": "Receive a Free Dash Coin",
-      "description": "As a thank you for joining the Dash merchant network, new merchants can receive a complimentary Dash coin to get started.",
-      "giftTitle": "Exclusive Gift for New Merchants",
-      "giftChip": "New Merchant Gift",
-      "giftDescription": "If you've followed along with this guide, you're well on your way to accepting Dash payments. Complete the steps below to claim your new merchant gift."
+      "chip": "New Merchant Kit",
+      "giftTitle": "Exclusive Gift for\nNew Merchants",
+      "giftDescription1": "If you've followed along with the guide and you've made it this far, Congrats, you've got everything set up!",
+      "giftDescription2": "Now that you know what Dash is, how to install a wallet, and how to send and receive crypto – it's time for the exciting part!",
+      "title": "Receive a Free\nDash Coin",
+      "description": "While the high quality metal Dash coin pictured here does not have any real monetary value, it tangibly represents the beauty of the world of Dash crypto. After being an active merchant for one month, you can receive this exclusive coin (while supplies last)."
     },
     "merchantGift": {
-      "title": "How to Get Your New Merchant Gift",
-      "description": "Simply submit your business location details and proof of Dash acceptance. Once verified, we'll send you a commemorative Dash coin and welcome package.",
+      "title": "How to Get Your\nNew Merchant Gift",
+      "description": "Submit the details of your location so it can be added to our listing of Dash accepting merchants. After one month of accepting Dash you will be eligible to receive your free Dash coin.",
       "button": "Become an Official Dash Merchant"
     },
     "posGuide": {
-      "chip": "Evaluate Point of Sale Options",
-      "title": "How to Choose a POS System",
-      "posQuestion": "Do you Need a POS?",
-      "posAnswer": "If you have a physical store or accept in-person payments, a Point of Sale (POS) system can streamline crypto payments. POS systems handle payment processing, inventory tracking, and receipt generation all in one place.",
-      "description": "Point of Sale (POS) systems allow merchants to accept cryptocurrency payments in physical retail locations. Several solutions support Dash, offering different features and pricing. Below we compare the most popular options to help you choose the right one."
+      "chip": "New Merchant Kit",
+      "title": "Evaluate Point\nof Sale Options",
+      "posTitle": "How to Choose\na POS System",
+      "posDescription": "If you've decided that utilizing a POS will benefit your processes, finding a system that meets the requirements and budget of your business is essential. Here are several items to consider:",
+      "posQuestion": "Do you Need\na POS?",
+      "posAnswer": "A POS system comes with many benefits, like invoicing, inventory management, etc. Depending on the POS system you select, you may have the option to install a physical payment terminal (much like the chip/card reader for credit card transactions), create invoices, receipts, generate transaction history and reports, and even automatically convert crypto to fiat (or vice versa).",
+      "description1": "While you can simply use a Dash wallet, at no cost, it may be useful to utilize a Point of Sale system.",
+      "description2": "A crypto Point of Sale (POS) system is similar to traditional POS systems utilized for cash and credit card transactions but also adds the ability to receive payments in one or more cryptocurrencies."
     },
     "posAccordion": {
+      "subtitle": "Here are several items to consider:",
       "title": "How to Choose a POS System",
       "items": {
         "first": {
@@ -1015,38 +1020,41 @@
       }
     },
     "posTable": {
+      "subtitle": "Dash Support",
       "title": "List of POS Systems",
       "headers": {
         "service": "Service",
-        "coins": "Coins",
-        "physicalPos": "Physical POS",
+        "coins": "Supported Coins",
+        "physicalPos": "Physical POS Device",
         "posApp": "POS App",
         "fees": "Fees",
-        "ecommerce": "eCommerce",
-        "invoice": "Invoice",
+        "ecommerce": "eCommerce Plugin",
+        "invoice": "Invoice Builder",
         "techSupport": "Tech Support",
-        "fiat": "Fiat"
+        "fiat": "Fiat Conversion"
       }
     },
     "posWebsites": {
+      "subtitle": "Learn More",
       "title": "Visit these Dash recommended POS Websites",
       "learnMore": "Learn More"
     },
     "merchantDownloads": {
       "title": "New Merchant Kit Downloads",
+      "helpButton": "Help Dash Grow",
       "cards": {
         "fullKit": {
-          "title": "DIY Full Merchant Kit PDF",
-          "description": "8.5x11 printable PDF with everything you need to set up as a Dash merchant.",
+          "title": "DIY Full Merchant\nKit PDF",
+          "description": "8.5x11 printable PDF that contains all of the information found on this webpage. Instructions for printing (DIY and for the print shop) are included in the zipped folder.",
           "button": "Download"
         },
         "stickers": {
-          "title": "Dash Merchant Sticker Files",
+          "title": "Dash Merchant\nSticker Files",
           "description": "Let your customers know you accept Dash with these printable sticker designs.",
           "button": "Download"
         },
         "quickStart": {
-          "title": "Merchant Quick Start Guide Files",
+          "title": "Merchant Quick\nStart Guide Files",
           "description": "This custom booklet and brochure contains a condensed version of the merchant kit.",
           "button": "Download"
         }

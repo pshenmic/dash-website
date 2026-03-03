@@ -890,11 +890,11 @@
     "quote": "With Dash, accepting crypto payments is as <bold>easy as spending your profit.</bold>",
     "becomeButton": "Become a Merchant",
     "dashFeatures": {
-      "spending": { "label": "<bold>Crypto Spending</bold> Made Easy" },
-      "instant": { "label": "<bold>Instant Transactions</bold> (few seconds)" },
-      "oldest": { "label": "One of the <bold>Oldest Cryptos Around</bold>" },
-      "fees": { "label": "<bold>Less than $0.01 Fee</bold> Per Transaction" },
-      "secure": { "label": "<bold>Secure Payments</bold> Give Peace of Mind" }
+      "spending": { "label": "<bold>Crypto Spending</bold> Made Easy", "alt": "Crypto Spending Made Easy" },
+      "instant": { "label": "<bold>Instant Transactions</bold> (few seconds)", "alt": "Instant Transactions" },
+      "oldest": { "label": "One of the <bold>Oldest Cryptos Around</bold>", "alt": "Oldest Cryptos Around" },
+      "fees": { "label": "<bold>Less than $0.01 Fee</bold> Per Transaction", "alt": "Less than $0.01 Fee" },
+      "secure": { "label": "<bold>Secure Payments</bold> Give Peace of Mind", "alt": "Secure Payments" }
     },
     "whatSetsDashApart": {
       "title": "What Sets Dash Apart",

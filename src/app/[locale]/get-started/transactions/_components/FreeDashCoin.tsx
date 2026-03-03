@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { Heading } from 'dash-ui-kit/react'
 
 export function FreeDashCoin (): React.ReactNode {
   const t = useTranslations('transactions.freeDashCoin')
@@ -12,9 +13,9 @@ export function FreeDashCoin (): React.ReactNode {
           <span className='self-start rounded-[35px] border border-primary-dark px-8.75 py-2.5 text-xs font-medium text-primary-dark dark:border-white dark:text-white'>
             {t('chip')}
           </span>
-          <h2 className='text-[38px] font-extrabold leading-10 text-primary-dark dark:text-white' style={{ letterSpacing: '-0.03em' }}>
+          <Heading as='h2' weight='extrabold' className='text-2xl leading-tight tracking-tight md:text-[38px] md:leading-10 dark:text-white'>
             {t('giftTitle')}
-          </h2>
+          </Heading>
           <div className='max-w-98.75 text-lg font-medium leading-normal text-primary-dark dark:text-white'>
             <p>{t('giftDescription1')}</p>
             <p className='mt-5'>{t('giftDescription2')}</p>
@@ -24,9 +25,9 @@ export function FreeDashCoin (): React.ReactNode {
         {/* Right — blue card with coin image */}
         <div className='flex flex-1 overflow-hidden rounded-[35px] bg-primary-blue'>
           <div className='flex shrink-0 flex-col gap-3 p-12.5'>
-            <h3 className='text-[38px] font-extrabold leading-10 text-white' style={{ letterSpacing: '-0.03em' }}>
+            <Heading as='h3' weight='extrabold' className='text-2xl leading-tight tracking-tight text-white md:text-[38px] md:leading-10'>
               {t('title')}
-            </h3>
+            </Heading>
             <p className='max-w-87.5 text-[13px] font-medium leading-normal text-white'>
               {t('description')}
             </p>

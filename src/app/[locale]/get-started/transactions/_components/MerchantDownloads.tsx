@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { Button, Heading } from 'dash-ui-kit/react'
 
 const downloads = ['fullKit', 'stickers', 'quickStart'] as const
 
@@ -10,12 +11,12 @@ export function MerchantDownloads (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       {/* Header row — title left, button right */}
       <div className='mb-8 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center'>
-        <h2 className='text-[32px] font-extrabold leading-8.5 text-primary-dark dark:text-white'>
+        <Heading as='h2' weight='extrabold' className='text-[32px] leading-8.5 dark:text-white'>
           {t('title')}
-        </h2>
-        <button className='h-16.25 shrink-0 rounded-[20px] bg-primary-blue px-8.75 text-lg font-semibold text-white backdrop-blur-[5px] transition-smooth hover:opacity-90'>
+        </Heading>
+        <Button variant='solid' colorScheme='brand' className='h-16.25 shrink-0 rounded-[20px] px-8.75 text-lg'>
           {t('helpButton')}
-        </button>
+        </Button>
       </div>
 
       {/* Cards grid */}
@@ -36,16 +37,16 @@ export function MerchantDownloads (): React.ReactNode {
             {/* Card content */}
             <div className='mt-7.5 flex flex-col gap-7.5'>
               <div className='flex flex-col gap-3.75'>
-                <h3 className='whitespace-pre-line text-[38px] font-extrabold leading-10 text-primary-dark dark:text-white' style={{ letterSpacing: '-0.03em' }}>
+                <Heading as='h3' weight='extrabold' className='whitespace-pre-line text-[38px] leading-10 tracking-tight dark:text-white'>
                   {t(`cards.${card}.title`)}
-                </h3>
+                </Heading>
                 <p className='text-[13px] font-medium leading-normal text-primary-dark dark:text-white'>
                   {t(`cards.${card}.description`)}
                 </p>
               </div>
-              <button className='h-16.25 w-full rounded-[20px] bg-primary-blue text-lg font-semibold text-white backdrop-blur-[5px] transition-smooth hover:opacity-90'>
+              <Button variant='solid' colorScheme='brand' className='h-16.25 w-full rounded-[20px] text-lg'>
                 {t(`cards.${card}.button`)}
-              </button>
+              </Button>
             </div>
           </div>
         ))}

@@ -6,40 +6,41 @@ export function AdvancedTrading (): React.ReactNode {
   const t = useTranslations('institutionsPage.trading')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div className='flex flex-col items-center gap-8 lg:flex-row lg:gap-16'>
-        {/* Left - Text */}
-        <div className='flex flex-1 flex-col items-start gap-6'>
-          <Badge variant='bordered' color='gray' size='sm'>{t('chip')}</Badge>
-          <Heading as='h2' size='lg' weight='extrabold' className='leading-tight tracking-tight dark:text-white'>
-            {t('title')}
-          </Heading>
-          <div className='flex flex-col gap-4'>
-            <Text size='sm' weight='medium' className='leading-relaxed dark:text-white/80 lg:text-base'>
-              {t('description1')}
-            </Text>
-            <Text size='sm' weight='medium' className='leading-relaxed dark:text-white/80 lg:text-base'>
-              {t('description2')}
-            </Text>
-          </div>
-          <div className='flex flex-wrap gap-4'>
-            <button className='rounded-2xl bg-primary-blue px-8 py-4 text-base font-semibold text-white transition-opacity hover:opacity-90'>
-              {t('tradersButton')}
-            </button>
-            <button className='rounded-2xl bg-primary-blue/15 px-8 py-4 text-base font-semibold text-primary-blue transition-opacity hover:opacity-90 dark:bg-white/15 dark:text-white'>
-              {t('metricsButton')}
-            </button>
-          </div>
-        </div>
+    <div className='bg-primary-white dark:bg-primary-dark'>
+      <div className='mx-auto max-w-7xl px-4 lg:px-6'>
+        <div className='flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between'>
+          <div className='flex max-w-117 flex-col gap-9'>
+            <div className='flex flex-col gap-4'>
+              <Badge variant='bordered' color='gray' size='sm' className='self-start border-primary-dark! text-primary-dark! dark:border-white! dark:text-white!'>{t('chip')}</Badge>
+              <Heading as='h2' size='2xl' weight='extrabold' className='leading-10 tracking-tight dark:text-white lg:text-4xl'>
+                {t('title')}
+              </Heading>
+              <Text size='lg' weight='medium' className='dark:text-white'>
+                {t('description1')}
+              </Text>
+              <Text size='lg' weight='medium' className='dark:text-white'>
+                {t('description2')}
+              </Text>
+            </div>
 
-        {/* Right - 3D coin */}
-        <div className='relative h-64 w-full shrink-0 lg:h-96 lg:w-96'>
-          <Image
-            src='/images/institutions/trading-coin.png'
-            alt='Dash trading coin'
-            fill
-            className='object-contain'
-          />
+            <div className='flex w-full flex-col gap-4 lg:w-auto lg:flex-row'>
+              <button className='h-12 rounded-2xl bg-primary-blue px-9 text-lg font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90 lg:h-16'>
+                {t('tradersButton')}
+              </button>
+              <button className='h-12 rounded-2xl bg-primary-blue/15 px-9 text-lg font-semibold text-primary-blue backdrop-blur-sm transition-opacity hover:opacity-90 lg:h-16 dark:bg-white/15 dark:text-white'>
+                {t('metricsButton')}
+              </button>
+            </div>
+          </div>
+
+          <div className='relative hidden w-full max-w-149 lg:block lg:h-138'>
+            <Image
+              src='/images/institutions/trading-coin.png'
+              alt='Dash trading coin'
+              fill
+              className='object-contain'
+            />
+          </div>
         </div>
       </div>
     </div>

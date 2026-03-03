@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Heading, Text } from 'dash-ui-kit/react'
 
 export interface ReviewData {
   title: string
@@ -34,17 +35,17 @@ export function ReviewCard ({ review }: ReviewCardProps): React.ReactNode {
       <StarRating />
 
       <div className='flex flex-1 flex-col gap-2.5 lg:gap-4'>
-        <h4 className='text-sm font-extrabold text-primary-dark dark:text-white lg:text-lg'>
+        <Heading as='h4' weight='extrabold' className='text-sm dark:text-white lg:text-lg'>
           {review.title}
-        </h4>
-        <p className='line-clamp-3 text-xs font-medium leading-snug text-primary-dark dark:text-white/80 lg:text-sm'>
+        </Heading>
+        <Text weight='medium' className='line-clamp-3 text-xs leading-snug dark:text-white/80 lg:text-sm'>
           {review.text}
-        </p>
+        </Text>
         <div className='mt-auto flex items-center gap-4'>
           <div className='h-px w-9 bg-primary-dark/50 dark:bg-white/30' />
-          <span className='text-xs font-medium text-primary-dark/50 dark:text-white/50 lg:text-sm'>
+          <Text weight='medium' className='text-xs text-primary-dark/50! dark:text-white/50 lg:text-sm'>
             {review.author}, {review.date}
-          </span>
+          </Text>
         </div>
       </div>
     </div>

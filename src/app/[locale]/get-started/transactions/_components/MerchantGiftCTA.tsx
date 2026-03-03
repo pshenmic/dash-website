@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { Button, Heading } from 'dash-ui-kit/react'
 
 export function MerchantGiftCTA (): React.ReactNode {
   const t = useTranslations('transactions.merchantGift')
@@ -22,16 +23,16 @@ export function MerchantGiftCTA (): React.ReactNode {
           <div className='flex flex-1 items-center p-8 lg:p-16'>
             <div className='flex flex-col gap-8.75'>
               <div className='flex flex-col gap-3.75'>
-                <h2 className='text-[38px] font-extrabold leading-10 text-primary-dark dark:text-white' style={{ letterSpacing: '-0.03em' }}>
+                <Heading as='h2' weight='extrabold' className='text-2xl leading-tight tracking-tight md:text-[38px] md:leading-10 dark:text-white'>
                   {t('title')}
-                </h2>
+                </Heading>
                 <p className='max-w-125 text-lg font-medium leading-normal text-primary-dark dark:text-white'>
                   {t('description')}
                 </p>
               </div>
-              <button className='h-16.25 w-full rounded-[20px] bg-primary-blue text-lg font-semibold text-white backdrop-blur-sm transition-smooth hover:opacity-90'>
+              <Button variant='solid' colorScheme='brand' className='h-16.25 w-full rounded-[20px] text-lg'>
                 {t('button')}
-              </button>
+              </Button>
             </div>
           </div>
         </div>

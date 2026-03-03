@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { Button, Heading } from 'dash-ui-kit/react'
 
 const exchanges = [
   { key: 'kraken', logo: '/images/transactions/logo-kraken.svg' },
@@ -19,9 +20,9 @@ export function BuySellDash (): React.ReactNode {
           <span className='self-start rounded-[35px] border border-primary-dark px-8.75 py-2.5 text-xs font-medium text-primary-dark dark:border-white dark:text-white'>
             {t('chip')}
           </span>
-          <h2 className='text-[38px] font-extrabold leading-10 text-primary-dark dark:text-white' style={{ letterSpacing: '-0.03em' }}>
+          <Heading as='h2' weight='extrabold' className='text-2xl leading-tight tracking-tight md:text-[38px] md:leading-10 dark:text-white'>
             {t('title')}
-          </h2>
+          </Heading>
           <div className='max-w-98.75 text-lg font-medium leading-normal text-primary-dark dark:text-white'>
             <p>{t('description')}</p>
             <p className='mt-5'>
@@ -30,9 +31,9 @@ export function BuySellDash (): React.ReactNode {
               })}
             </p>
           </div>
-          <button className='mt-1 h-16.25 self-start rounded-[20px] bg-primary-blue px-8.75 text-lg font-semibold text-white backdrop-blur-sm transition-smooth hover:opacity-90'>
+          <Button variant='solid' colorScheme='brand' className='mt-1 h-16.25 self-start rounded-[20px] px-8.75 text-lg'>
             {t('additionalExchanges')}
-          </button>
+          </Button>
         </div>
 
         {/* Right side — cards in flex-wrap */}

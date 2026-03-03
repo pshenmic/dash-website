@@ -25,8 +25,8 @@ export function DashFeatures (): React.ReactNode {
                 : 'relative'
             )}>
               {feature.key === 'fees'
-                ? <Image src={feature.icon} alt='' width={32} height={26} />
-                : <Image src={feature.icon} alt='' fill className='object-contain' />
+                ? <Image src={feature.icon} alt={t(`${feature.key}.label`)} width={32} height={26} />
+                : <Image src={feature.icon} alt={t(`${feature.key}.label`)} fill className='object-contain' />
               }
             </div>
             <p className='text-2xl leading-6.5 font-medium text-white'>

@@ -46,7 +46,7 @@ export function StarterKitNav (): React.ReactNode {
                 className='flex flex-col items-start gap-6 rounded-3xl bg-white/15 p-6 transition-colors hover:bg-white/20'
               >
                 <div className='relative h-8 w-10'>
-                  <Image src={card.icon} alt='' fill className='object-contain' />
+                  <Image src={card.icon} alt={t(`cards.${card.key}`)} fill className='object-contain' />
                 </div>
                 <span className='text-2xl font-extrabold leading-6.5 text-white'>
                   {t(`cards.${card.key}`)}

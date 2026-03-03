@@ -22,6 +22,7 @@ export function QuoteBlock (): React.ReactNode {
       <Image
         src='/images/transactions/hero-bg.png'
         alt=''
+        role='presentation'
         width={1024}
         height={1024}
         className='pointer-events-none absolute right-0 top-1/2 hidden h-[300%] w-auto max-w-none -translate-y-1/2 -rotate-90 object-contain lg:block'

@@ -11,6 +11,7 @@ export function TransactionsHero (): React.ReactNode {
       <Image
         src='/images/transactions/hero-bg.png'
         alt=''
+        role='presentation'
         width={1024}
         height={1024}
         className='pointer-events-none absolute right-0 top-1/2 h-[170%] w-auto -translate-y-1/2 translate-x-[25%] animate-breathe-normal dark:brightness-50'

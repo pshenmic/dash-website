@@ -11,6 +11,7 @@ export function SpreadTheWord (): React.ReactNode {
         <Image
           src='/images/transactions/wave-3d.png'
           alt=''
+          role='presentation'
           fill
           className='pointer-events-none object-cover object-right'
         />

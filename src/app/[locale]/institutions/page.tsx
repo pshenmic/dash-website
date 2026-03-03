@@ -22,8 +22,8 @@ export default async function InstitutionsPage ({
     <main>
       <InstitutionsHero />
 
-      {/* Navigation Cards */}
-      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+      {/* Navigation Cards - overlaps hero bottom */}
+      <section className='relative z-20 -mt-16 pb-10 lg:-mt-28 lg:pb-16'>
         <InstitutionsNav />
       </section>
 

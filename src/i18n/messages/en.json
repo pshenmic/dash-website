@@ -568,7 +568,9 @@
     "mobileWallets": {
       "title": "Mobile Wallets",
       "description1": "A range of Dash mobile wallets are available, each with different features and security.",
-      "description2": "These wallets run from mobile devices, such as your phone or tablet."
+      "description2": "These wallets run from mobile devices, such as your phone or tablet.",
+      "filterAndroid": "Android",
+      "filterIos": "iOS"
     },
     "dashPayApp": {
       "titleLine1": "Download the",
@@ -1184,12 +1186,12 @@
     },
     "services": {
       "title": "Comprehensive\nServices",
-      "description1": "Financial services in cryptocurrency are a critical component to increase flexibility, efficiency, security, and visibility through reporting.",
-      "description2": "Lending, borrowing, staking, custody, accounting and tax services are all available in the Dash ecosystem.",
+      "description": "Financial services in cryptocurrency are a critical component to increase flexibility, efficiency, security, and visibility through reporting.\n\nLending, borrowing, staking, custody, accounting and tax services are all available in the Dash ecosystem.",
       "button": "Financial Services"
     },
     "clientLibraries": {
-      "title": "Client Libraries that\nSpeak Your Language",
+      "title": "Client Libraries that",
+      "titleLine2": "Speak Your Language",
       "description": "SDKs are available for the languages you love and use most. Get started building apps using our easy-to-follow guides.",
       "quickStart": "Quick Start",
       "jsSdk": "JS SDK"

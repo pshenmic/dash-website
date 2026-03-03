@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { ArrowRight, Monitor, Smartphone } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { Heading, Text } from 'dash-ui-kit/react'
 import { AppleIcon } from '@/components/icons/AppleIcon'
 
 interface ActionCardProps {
@@ -12,12 +13,12 @@ function ActionCard ({ title, description }: ActionCardProps): React.ReactNode {
   return (
     <div className='flex flex-1 items-center justify-between rounded-4xl border border-primary-dark/15 bg-primary-white p-6 shadow-soft hover-lift lg:p-9'>
       <div className='flex flex-col gap-4'>
-        <h3 className='text-2xl font-extrabold tracking-tight text-primary-dark lg:text-4xl lg:leading-10'>
+        <Heading as='h3' className='text-2xl font-extrabold tracking-tight text-primary-dark! lg:text-4xl lg:leading-10'>
           {title}
-        </h3>
-        <p className='max-w-60 text-sm font-medium text-primary-dark'>
+        </Heading>
+        <Text className='max-w-60 text-sm font-medium text-primary-dark!'>
           {description}
-        </p>
+        </Text>
       </div>
       <button className='flex size-16 shrink-0 items-center justify-center rounded-2xl bg-primary-blue/15 transition-smooth hover:bg-primary-blue/25 active-press'>
         <div className='flex size-11 items-center justify-center rounded-full bg-primary-white'>
@@ -41,12 +42,12 @@ function FeatureCard ({ icon, title, description }: FeatureCardProps): React.Rea
         <Image src={icon} alt={title} width={48} height={48} className='size-8 object-contain lg:size-12' />
       </div>
       <div className='flex flex-col gap-1'>
-        <h4 className='text-xl font-extrabold tracking-tight text-primary-dark lg:text-3xl lg:leading-10'>
+        <Heading as='h4' className='text-xl font-extrabold tracking-tight text-primary-dark! lg:text-3xl lg:leading-10'>
           {title}
-        </h4>
-        <p className='text-xs font-medium text-primary-dark/50 tracking-tight'>
+        </Heading>
+        <Text className='text-xs font-medium text-primary-dark/50! tracking-tight'>
           {description}
-        </p>
+        </Text>
       </div>
     </div>
   )
@@ -104,12 +105,12 @@ export function GetStartedActions (): React.ReactNode {
           <div className='relative z-10 flex flex-col gap-6'>
             <div className='flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between'>
               <div className='flex flex-col gap-3'>
-                <h3 className='text-2xl font-extrabold leading-tight tracking-tight text-primary-white lg:text-4xl lg:leading-10'>
+                <Heading as='h3' className='text-2xl font-extrabold leading-tight tracking-tight text-primary-white lg:text-4xl lg:leading-10'>
                   {t('platform.title')}
-                </h3>
-                <p className='max-w-96 text-sm font-medium text-primary-white'>
+                </Heading>
+                <Text className='max-w-96 text-sm font-medium text-primary-white'>
                   {t('platform.description')}
-                </p>
+                </Text>
               </div>
               <button className='h-12 w-full rounded-xl bg-primary-white px-6 text-lg font-semibold text-primary-blue transition-smooth hover:bg-primary-white/90 active-press lg:w-auto'>
                 {t('platform.viewAll')}
@@ -156,7 +157,7 @@ export function GetStartedActions (): React.ReactNode {
               src='/images/get-started/phones-mockup.webp'
               alt='Dash mobile app'
               fill
-              className='object-contain object-right-bottom'
+              className='object-contain object-bottom-right'
             />
           </div>
         </div>

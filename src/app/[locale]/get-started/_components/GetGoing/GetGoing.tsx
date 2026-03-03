@@ -12,15 +12,15 @@ import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
 const spendCards = [
   {
     id: 'friends',
-    icon: '/images/get-started/get-going/spend/phone-check.png'
+    icon: '/images/get-started/get-going/spend/phone-check.webp'
   },
   {
     id: 'bills',
-    icon: '/images/get-started/get-going/spend/airplane.png'
+    icon: '/images/get-started/get-going/spend/airplane.webp'
   },
   {
     id: 'bills2',
-    icon: '/images/get-started/get-going/spend/airplane.png'
+    icon: '/images/get-started/get-going/spend/airplane.webp'
   }
 ]
 

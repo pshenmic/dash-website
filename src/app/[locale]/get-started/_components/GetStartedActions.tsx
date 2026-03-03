@@ -153,7 +153,7 @@ export function GetStartedActions (): React.ReactNode {
           {/* Phone mockup image - hidden on mobile */}
           <div className='absolute -bottom-12 -right-12 hidden h-112 w-124 lg:right-0 lg:top-40 lg:block'>
             <Image
-              src='/images/get-started/phones-mockup.png'
+              src='/images/get-started/phones-mockup.webp'
               alt='Dash mobile app'
               fill
               className='object-contain object-right-bottom'
@@ -164,17 +164,17 @@ export function GetStartedActions (): React.ReactNode {
         {/* Right column - Feature cards */}
         <div className='flex w-full flex-col gap-6 lg:w-96'>
           <FeatureCard
-            icon='/images/get-started/icon-instant.png'
+            icon='/images/get-started/icon-instant.webp'
             title={t('features.instant.title')}
             description={t('features.instant.description')}
           />
           <FeatureCard
-            icon='/images/get-started/icon-secure.png'
+            icon='/images/get-started/icon-secure.webp'
             title={t('features.secure.title')}
             description={t('features.secure.description')}
           />
           <FeatureCard
-            icon='/images/get-started/icon-micro-fees.png'
+            icon='/images/get-started/icon-micro-fees.webp'
             title={t('features.microFees.title')}
             description={t('features.microFees.description')}
           />

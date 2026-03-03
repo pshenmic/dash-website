@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { Heading } from 'dash-ui-kit/react'
 
 export function SendReceiveDash (): React.ReactNode {
   const t = useTranslations('transactions.sendReceive')
@@ -24,9 +25,9 @@ export function SendReceiveDash (): React.ReactNode {
             <div className='flex flex-col gap-8.75'>
               {/* Text group: title + body (gap-3.75) */}
               <div className='flex flex-col gap-3.75'>
-                <h2 className='text-[38px] font-extrabold leading-10 text-white' style={{ letterSpacing: '-0.03em' }}>
+                <Heading as='h2' weight='extrabold' className='text-2xl leading-tight tracking-tight text-white md:text-[38px] md:leading-10'>
                   {t('title')}
-                </h2>
+                </Heading>
                 <div className='max-w-150 text-lg font-medium leading-normal text-white'>
                   <p>{t('paragraph1')}</p>
                   <p className='mt-5'>{t('paragraph2')}</p>

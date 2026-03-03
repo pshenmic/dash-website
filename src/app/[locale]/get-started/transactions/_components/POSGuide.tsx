@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { Heading } from 'dash-ui-kit/react'
 
 export function POSGuide (): React.ReactNode {
   const t = useTranslations('transactions.posGuide')
@@ -24,9 +25,9 @@ export function POSGuide (): React.ReactNode {
           <div className='flex flex-col gap-16 p-12.5'>
             {/* Top text group */}
             <div className='flex max-w-66.75 flex-col gap-3.75'>
-              <h3 className='text-[38px] font-extrabold leading-10 text-white' style={{ letterSpacing: '-0.03em' }}>
+              <Heading as='h3' weight='extrabold' className='text-2xl leading-tight tracking-tight text-white md:text-[38px] md:leading-10'>
                 {t('posTitle')}
-              </h3>
+              </Heading>
               <p className='text-lg font-medium leading-normal text-white'>
                 {t('posDescription')}
               </p>
@@ -34,9 +35,9 @@ export function POSGuide (): React.ReactNode {
 
             {/* Bottom text group */}
             <div className='flex flex-col gap-3.75'>
-              <h3 className='text-[38px] font-extrabold leading-10 text-white' style={{ letterSpacing: '-0.03em' }}>
+              <Heading as='h3' weight='extrabold' className='text-2xl leading-tight tracking-tight text-white md:text-[38px] md:leading-10'>
                 {t('posQuestion')}
-              </h3>
+              </Heading>
               <p className='max-w-166.75 text-lg font-medium leading-normal text-white'>
                 {t('posAnswer')}
               </p>
@@ -49,9 +50,9 @@ export function POSGuide (): React.ReactNode {
           <span className='self-start rounded-[35px] border border-primary-dark px-8.75 py-2.5 text-xs font-medium text-primary-dark dark:border-white dark:text-white'>
             {t('chip')}
           </span>
-          <h2 className='text-[38px] font-extrabold leading-10 text-primary-dark dark:text-white' style={{ letterSpacing: '-0.03em' }}>
+          <Heading as='h2' weight='extrabold' className='text-2xl leading-tight tracking-tight md:text-[38px] md:leading-10 dark:text-white'>
             {t('title')}
-          </h2>
+          </Heading>
           <div className='max-w-98.75 text-lg font-medium leading-normal text-primary-dark dark:text-white'>
             <p>{t('description1')}</p>
             <p className='mt-5'>{t('description2')}</p>

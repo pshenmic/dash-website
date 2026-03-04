@@ -1227,6 +1227,12 @@
       "title": "Investment Options",
       "description": "Manage your Dash and crypto investments in a trusted environment with these top-of-the-line platforms.",
       "seeAll": "See All"
+    },
+    "cards": {
+      "perpetualSwap": "Perpetual Swap",
+      "futures": "Futures",
+      "marginTrading": "Margin Trading",
+      "investments": "Investments"
     }
   }
 }

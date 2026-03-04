@@ -1238,13 +1238,14 @@
   "financialServicesPage": {
     "hero": {
       "chip": "Financial Services",
-      "title": "Professional Financial\nServices For The\nDash Ecosystem",
-      "subtitle": "The leading service providers in the cryptocurrency financial services ecosystem work with Dash to service the needs of users and institutions. These services include banking, interest bearing accounts, custody, and accounting and tax services to name a few. For services such as OTC and derivatives trading, please see the Traders page.",
-      "button": "Traders"
+      "title": "Professional Financial Services\nFor The Dash Ecosystem",
+      "subtitle": "Dash-integrated companies provide services in lending, staking, accounting, taxes, and custodial solutions.",
+      "button": "Learn More"
     },
     "interest": {
-      "chip": "Interest",
-      "title": "Borrow or Earn Interest",
+      "chip": "Use Dash",
+      "title": "Borrow or Earn Interest with Dash",
+      "description": "The top cryptocurrency loan service providers allow users to earn or borrow Dash.",
       "bankera": {
         "name": "Bankera",
         "apr": "6.95% APR",
@@ -1258,7 +1259,7 @@
     },
     "stakingBlock": {
       "title": "Stake Your Dash and\nWork for the Network",
-      "description": "Masternodes power the second tier of the Dash network. They provide Dash's advanced features, such as InstantSend and CoinJoin, via a proof of service consensus mechanism. To run a masternode, you need a collateral of 1000 DASH. Dash's masternode network is the most established in the crypto world.",
+      "description": "Dash is not a Proof of Stake protocol, but it pays part of the block reward to masternodes to perform certain work for the network. Thanks to this, some popular staking services also work with Dash. You can deposit your Dash in any one of these staking services and obtain a return in exchange for the work your coins will do for the network through these services. If you have 1,000 Dash or more, you may also want to consider starting a masternode instead and work for the network directly.",
       "button": "Masternode Information"
     },
     "stakingProviders": {
@@ -1282,8 +1283,8 @@
       }
     },
     "selfCustodial": {
-      "chip": "Security",
-      "title": "Personal Self-Custodial Solutions"
+      "chip": "Self-Custodial",
+      "title": "Personal\nSelf-Custodial Solutions"
     },
     "accountingBlock": {
       "title": "Accounting & Tax",
@@ -1291,7 +1292,7 @@
     },
     "accountingProviders": {
       "chip": "Digital Cash",
-      "title": "Accounting & Tax Solutions"
+      "title": "Accounting &\nTax Solutions"
     }
   }
 }

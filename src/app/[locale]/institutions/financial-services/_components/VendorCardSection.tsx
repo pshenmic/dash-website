@@ -13,7 +13,7 @@ interface VendorCardSectionProps {
   description?: string
   seeAllLabel?: string
   cards: VendorCard[]
-  columns?: 2 | 3 | 4
+  columns?: 2 | 3 | 4 | 6
 }
 
 export function VendorCardSection ({ chip, title, description, seeAllLabel, cards, columns = 4 }: VendorCardSectionProps): React.ReactNode {
@@ -21,7 +21,9 @@ export function VendorCardSection ({ chip, title, description, seeAllLabel, card
     ? 'sm:grid-cols-2'
     : columns === 3
       ? 'sm:grid-cols-2 lg:grid-cols-3'
-      : 'sm:grid-cols-2 lg:grid-cols-4'
+      : columns === 6
+        ? 'sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6'
+        : 'sm:grid-cols-2 lg:grid-cols-4'
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
@@ -32,17 +34,17 @@ export function VendorCardSection ({ chip, title, description, seeAllLabel, card
             {chip != null && (
               <Badge variant='bordered' color='gray' size='sm' className='w-fit'>{chip}</Badge>
             )}
-            <Heading as='h2' size={description != null ? 'md' : 'lg'} weight='extrabold' className='leading-tight tracking-tight dark:text-white'>
+            <Heading as='h2' weight='extrabold' className='text-3xl leading-9 dark:text-white'>
               {title}
             </Heading>
             {description != null && (
-              <Text size='xs' weight='medium' className='max-w-2xl leading-relaxed text-primary-dark/50! dark:text-white/50!'>
+              <Text weight='medium' className='max-w-2xl text-xs leading-normal text-primary-dark/50! dark:text-white/50!'>
                 {description}
               </Text>
             )}
           </div>
           {seeAllLabel != null && (
-            <button className='shrink-0 rounded-2xl bg-primary-blue px-9 py-4 text-base font-semibold text-primary-dark transition-opacity hover:opacity-90'>
+            <button className='h-16 shrink-0 rounded-2xl bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
               {seeAllLabel}
             </button>
           )}
@@ -53,7 +55,7 @@ export function VendorCardSection ({ chip, title, description, seeAllLabel, card
           {cards.map((card) => (
             <div
               key={card.name}
-              className='flex flex-col gap-5 rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none'
+              className='flex flex-col justify-between gap-5 rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none'
             >
               <Image
                 src={card.logo}
@@ -63,10 +65,10 @@ export function VendorCardSection ({ chip, title, description, seeAllLabel, card
                 className='size-12 object-contain'
               />
               <div className='flex flex-col gap-1'>
-                <Heading as='h3' size='md' weight='extrabold' className='leading-tight text-primary-dark! dark:text-white!'>
+                <Heading as='h3' weight='extrabold' className='text-lg leading-normal text-primary-dark! dark:text-white!'>
                   {card.name}
                 </Heading>
-                <Text size='xs' weight='medium' className='text-primary-dark/35! dark:text-white/35!'>
+                <Text weight='medium' className='text-xs opacity-35 text-primary-dark! dark:text-white!'>
                   {card.website}
                 </Text>
               </div>

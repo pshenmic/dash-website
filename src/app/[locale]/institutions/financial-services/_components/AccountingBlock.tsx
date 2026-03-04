@@ -13,14 +13,14 @@ export function AccountingBlock (): React.ReactNode {
           alt=''
           width={1024}
           height={1024}
-          className='pointer-events-none absolute right-0 top-1/2 h-auto w-[60%] max-w-lg -translate-y-1/2 rotate-180 object-contain opacity-80 lg:w-[50%]'
+          className='pointer-events-none absolute -right-[20%] top-1/2 h-auto w-[120%] -translate-y-1/2 rotate-180 object-contain opacity-80 lg:w-full'
         />
 
-        <div className='relative z-10 flex flex-col gap-4 p-8 lg:max-w-md lg:p-16'>
-          <Heading as='h2' size='lg' weight='extrabold' className='leading-tight tracking-tight text-white'>
+        <div className='relative z-10 flex flex-col gap-4 p-8 lg:p-16'>
+          <Heading as='h2' weight='extrabold' className='text-4xl leading-10 tracking-tight text-white'>
             {t('title')}
           </Heading>
-          <Text size='sm' weight='medium' className='leading-relaxed text-white lg:text-base'>
+          <Text size='lg' weight='medium' className='max-w-100 leading-normal text-white'>
             {t('description')}
           </Text>
         </div>

@@ -6,26 +6,6 @@ import { OTCVendors } from './_components/OTCVendors'
 import { TradingCategorySection } from './_components/TradingCategorySection'
 import { getTranslations } from 'next-intl/server'
 
-const derivativesCards = [
-  { name: 'Huobi Futures', subtitle: 'Perpetual Swap', logo: '/images/traders/logo-huobi.svg' },
-  { name: 'Gate.io', subtitle: 'Perpetual Swap', logo: '/images/traders/logo-gate-io.svg' },
-  { name: 'Binance', subtitle: 'Futures', logo: '/images/traders/logo-binance.svg' },
-  { name: 'OKEX', subtitle: 'Perpetual Swap', logo: '/images/traders/logo-okex.svg' }
-]
-
-const marginCards = [
-  { name: 'Kraken', subtitle: 'Margin Trading', logo: '/images/traders/logo-kraken-margin.svg' },
-  { name: 'HitBTC', subtitle: 'Margin Trading', logo: '/images/traders/logo-hitbtc.svg' },
-  { name: 'CoinDCX', subtitle: 'Margin Trading', logo: '/images/traders/logo-coindcx.svg' },
-  { name: 'KuCoin', subtitle: 'Margin Trading', logo: '/images/traders/logo-kucoin.svg' }
-]
-
-const investmentCards = [
-  { name: 'Webull', subtitle: 'Investments', logo: '/images/traders/logo-webull.svg' },
-  { name: 'eToro', subtitle: 'Investments', logo: '/images/traders/logo-etoro.svg' },
-  { name: 'QuantFury', subtitle: 'Investments', logo: '/images/traders/logo-quantfury.svg' }
-]
-
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((locale) => ({ locale }))
 }
@@ -38,6 +18,26 @@ export default async function TradersPage ({
   const { locale } = await _params
   setRequestLocale(locale)
   const t = await getTranslations('tradersPage')
+
+  const derivativesCards = [
+    { name: 'Huobi Futures', subtitle: t('cards.perpetualSwap'), logo: '/images/traders/logo-huobi.svg' },
+    { name: 'Gate.io', subtitle: t('cards.perpetualSwap'), logo: '/images/traders/logo-gate-io.svg' },
+    { name: 'Binance', subtitle: t('cards.futures'), logo: '/images/traders/logo-binance.svg' },
+    { name: 'OKEX', subtitle: t('cards.perpetualSwap'), logo: '/images/traders/logo-okex.svg' }
+  ]
+
+  const marginCards = [
+    { name: 'Kraken', subtitle: t('cards.marginTrading'), logo: '/images/traders/logo-kraken-margin.svg' },
+    { name: 'HitBTC', subtitle: t('cards.marginTrading'), logo: '/images/traders/logo-hitbtc.svg' },
+    { name: 'CoinDCX', subtitle: t('cards.marginTrading'), logo: '/images/traders/logo-coindcx.svg' },
+    { name: 'KuCoin', subtitle: t('cards.marginTrading'), logo: '/images/traders/logo-kucoin.svg' }
+  ]
+
+  const investmentCards = [
+    { name: 'Webull', subtitle: t('cards.investments'), logo: '/images/traders/logo-webull.svg' },
+    { name: 'eToro', subtitle: t('cards.investments'), logo: '/images/traders/logo-etoro.svg' },
+    { name: 'QuantFury', subtitle: t('cards.investments'), logo: '/images/traders/logo-quantfury.svg' }
+  ]
 
   return (
     <main>

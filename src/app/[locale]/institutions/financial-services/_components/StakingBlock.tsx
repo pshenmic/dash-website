@@ -31,7 +31,7 @@ export function StakingBlock (): React.ReactNode {
         <div className='pointer-events-none absolute -right-full -top-[200%] h-[600%] w-[300%] lg:-right-[60%] lg:-top-full lg:h-[400%] lg:w-[200%]'>
           <Image
             src='/images/shared/3d/dash-logo.png'
-            alt=''
+            alt='Dash logo'
             fill
             className='rotate-180 object-contain'
           />

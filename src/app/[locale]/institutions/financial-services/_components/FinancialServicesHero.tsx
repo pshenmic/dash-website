@@ -10,7 +10,7 @@ export function FinancialServicesHero (): React.ReactNode {
     <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark'>
       <Image
         src='/images/financial-services/hero-bg.png'
-        alt=''
+        alt='Financial services hero background'
         width={1080}
         height={1080}
         className='pointer-events-none absolute top-[-69.26%] left-[-25.66%] h-[238.52%] w-[115.39%] max-w-none object-contain'

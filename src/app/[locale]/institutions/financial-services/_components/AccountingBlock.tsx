@@ -10,7 +10,7 @@ export function AccountingBlock (): React.ReactNode {
       <div className='relative overflow-hidden rounded-3xl bg-primary-blue lg:rounded-4xl'>
         <Image
           src='/images/financial-services/accounting-bg.png'
-          alt=''
+          alt='Accounting block background'
           width={1024}
           height={1024}
           className='pointer-events-none absolute -right-[20%] top-1/2 h-auto w-[120%] -translate-y-1/2 rotate-180 object-contain opacity-80 lg:w-full'

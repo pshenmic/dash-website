@@ -16,14 +16,14 @@ export function OTCVendors (): React.ReactNode {
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <Heading as='h2' size='lg' weight='extrabold' className='mb-10 leading-tight tracking-tight dark:text-white'>
+      <Heading as='h2' size='xl' weight='extrabold' className='mb-10 text-[32px]! leading-8.5 tracking-tight dark:text-white'>
         {t('title')}
       </Heading>
-      <div className='grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
+      <div className='grid grid-cols-2 gap-5 sm:grid-cols-3 xl:grid-cols-6'>
         {vendors.map((vendor) => (
           <div
             key={vendor.name}
-            className='flex flex-col gap-5 rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none'
+            className='flex flex-col gap-5 rounded-[25px] border border-primary-dark/15 bg-white p-6.25 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none'
           >
             <Image
               src={vendor.logo}
@@ -32,8 +32,8 @@ export function OTCVendors (): React.ReactNode {
               height={47}
               className='size-12 object-contain'
             />
-            <div className='flex flex-col gap-1'>
-              <Heading as='h3' size='md' weight='extrabold' className='leading-tight text-primary-dark! dark:text-white!'>
+            <div className='flex flex-col gap-1.25'>
+              <Heading as='h3' size='lg' weight='extrabold' className='leading-tight text-primary-dark! dark:text-white!'>
                 {vendor.name}
               </Heading>
               <Text size='xs' weight='medium' className='text-primary-dark/35! dark:text-white/35!'>

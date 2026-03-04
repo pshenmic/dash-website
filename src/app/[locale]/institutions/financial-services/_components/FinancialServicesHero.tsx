@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Badge } from 'dash-ui-kit/react'
+import { Badge, Heading, Text } from 'dash-ui-kit/react'
 
 export function FinancialServicesHero (): React.ReactNode {
   const t = useTranslations('financialServicesPage.hero')
@@ -23,12 +23,12 @@ export function FinancialServicesHero (): React.ReactNode {
           <div className='animate-fade-in-up-1'>
             <Badge variant='bordered' color='white' size='sm'>{t('chip')}</Badge>
           </div>
-          <h1 className='max-w-full animate-fade-in-up-2 text-center text-4xl leading-tight font-extrabold tracking-tight whitespace-pre-line text-primary-white sm:text-4xl sm:leading-tight lg:text-6xl lg:leading-[1.02] lg:whitespace-pre xl:text-7xl 2xl:text-8xl'>
+          <Heading as='h1' className='max-w-full animate-fade-in-up-2 text-center text-4xl leading-tight font-extrabold tracking-tight whitespace-pre-line text-primary-white sm:text-4xl sm:leading-tight lg:text-6xl lg:leading-[1.02] lg:whitespace-pre xl:text-7xl 2xl:text-8xl'>
             {t('title')}
-          </h1>
-          <p className='max-w-full animate-fade-in-up-3 text-center text-base leading-snug font-medium text-primary-white sm:text-lg lg:max-w-212 lg:text-3xl lg:tracking-tight'>
+          </Heading>
+          <Text className='max-w-full animate-fade-in-up-3 text-center text-base leading-snug font-medium text-primary-white sm:text-lg lg:max-w-212 lg:text-3xl lg:tracking-tight'>
             {t('subtitle')}
-          </p>
+          </Text>
         </div>
 
         <div className='animate-fade-in-up-4'>

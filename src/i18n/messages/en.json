@@ -1318,21 +1318,21 @@
     "security": {
       "chip": "Information",
       "title": "Dash is Not a Security",
-      "description": "The Crypto Rating Council gave Dash a score of 1.0, meaning it is least likely to be considered a security under the Howey Test. Dash offers greater transparency than Bitcoin, and its privacy features are entirely optional.",
-      "secondParagraph": "For more information about Dash's regulatory standing, please contact",
+      "description": "The status of Dash as \"not a security\" has been validated by many entities, most recently the Crypto Rating Council which provided the best possible score of 1.0, equivalent to the score for Bitcoin. The score takes into account various points within the Howey Test to conclude that Dash has few characteristics that are consistent with being a security.",
+      "secondParagraph": "Business compliance officers and regulators interested in speaking with Dash Core Group and/or requesting our legal opinions on the matter, please reach out to us at",
       "email": "compliance@dash.org",
       "button": "Crypto Rating Council Asset Ratings"
     },
     "kycamlBlock": {
       "title": "KYC/AML Services",
-      "description": "Day-to-day compliance is a priority for the Dash network. Our partners provide KYC/AML services to exchanges, crypto companies, law enforcement, and financial institutions working with Dash.",
+      "description": "Day-to-day compliance requirements can be difficult to scale for many businesses within the cryptocurrency industry, such as KYC/AML compliance for exchanges. The largest names in KYC/AML for cryptocurrency help ensure that businesses remain in compliance. Our partners in this space provide state of the art KYC/AML services to some of the best known cryptocurrency companies, law enforcement agencies, and financial institutions around the globe.",
       "blockchainIntel": {
-        "name": "Blockchain Intel",
-        "description": "Blockchain Intel provides a REST API for risk scoring of Dash transactions, helping businesses comply with regulatory requirements."
+        "name": "Blockchain\nIntel",
+        "description": "BlockchainIntel offers a REST API that provides a risk score and corresponding reasons for blockchain wallet addresses. The score is based on known profiles tied to the address owner and behavioral data such as geographic location, links to fraud, scams and known merchants."
       },
       "chainalysis": {
         "name": "Chainalysis",
-        "description": "Chainalysis provides blockchain analytics and transparency solutions for government agencies, exchanges, and financial institutions."
+        "description": "Chainalysis works to create transparency for a global economy built on blockchains, enabling banks, business, and governments to have a common understanding of how people use cryptocurrency."
       }
     },
     "kycamlPartners": {

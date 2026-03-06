@@ -12,32 +12,34 @@ export function KYCAMLPartners (): React.ReactNode {
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div className='flex flex-col gap-12'>
-        <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between'>
+        {/* Left — text */}
+        <div className='flex flex-col gap-3.75'>
           <Badge variant='bordered' color='gray' size='sm' className='w-fit'>{t('chip')}</Badge>
-          <Heading as='h2' size='lg' weight='extrabold' className='leading-tight tracking-tight dark:text-white'>
+          <Heading as='h2' weight='extrabold' className='text-[38px] leading-10 tracking-[-0.03em] dark:text-white'>
             {t('title')}
           </Heading>
         </div>
 
-        <div className='grid gap-5 sm:grid-cols-2 lg:grid-cols-3'>
-          {partners.map((partner) => (
+        {/* Right — partner cards */}
+        <div className='flex flex-col gap-5 sm:flex-row'>
+          {partners.map((partner, i) => (
             <div
               key={partner.name}
-              className='flex flex-col gap-5 rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none'
+              className={`flex w-full flex-col rounded-[25px] border border-primary-dark/15 bg-white p-6.25 shadow-[0_0_100px_0_rgba(12,28,51,0.1)] dark:border-white/15 dark:bg-secondary-space-cadet sm:w-[190px] ${i === 1 ? 'justify-between' : 'gap-5'}`}
             >
               <Image
                 src={partner.logo}
                 alt={partner.name}
                 width={47}
                 height={47}
-                className='size-12 object-contain'
+                className='h-12 w-auto object-contain'
               />
-              <div className='flex flex-col gap-1'>
-                <Heading as='h3' size='md' weight='extrabold' className='leading-tight text-primary-dark! dark:text-white!'>
+              <div className='flex flex-col gap-1.25'>
+                <Heading as='h3' weight='extrabold' className='text-lg leading-normal text-primary-dark! dark:text-white!'>
                   {partner.name}
                 </Heading>
-                <Text size='xs' weight='medium' className='text-primary-dark/35! dark:text-white/35!'>
+                <Text weight='medium' className='text-xs leading-normal text-primary-dark/35! dark:text-white/35!'>
                   {partner.website}
                 </Text>
               </div>

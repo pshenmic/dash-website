@@ -9,13 +9,14 @@ export function FastPassInfo (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='flex flex-col items-start gap-10 lg:flex-row lg:items-center lg:justify-between'>
         {/* Left — ambassador image */}
-        <Image
-          src='/images/fastpass/ambassador.png'
-          alt='Dash FastPass Ambassador'
-          width={523}
-          height={292}
-          className='w-full shrink-0 rounded-4xl object-cover lg:w-[42%]'
-        />
+        <div className='relative aspect-video w-full shrink-0 overflow-hidden rounded-4xl lg:w-[42%]'>
+          <Image
+            src='/images/fastpass/ambassador.png'
+            alt='Dash FastPass Ambassador'
+            fill
+            className='object-cover'
+          />
+        </div>
 
         {/* Right — text */}
         <div className='flex max-w-xl flex-col gap-4'>

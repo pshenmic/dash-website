@@ -1,5 +1,11 @@
-<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 21.1282 21.1282" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Quadency-Logo">
-<path id="Combined-Shape" d="M17.518 19.0154L14.6051 16.1026H5.02564V5.02564H16.1026V14.6256L19.0154 17.5385V2.13333H2.11282V19.0359H17.518V19.0154ZM0 0H21.1282V21.1282H0V0ZM7.13846 13.9897H14.0103V7.11795H7.13846V13.9897Z" fill="var(--fill-0, white)"/>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_319_8868)">
+<path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="black"/>
+<path d="M22.9535 24.4509L20.0407 21.5381H10.4612V10.4612H21.5381V20.0612L24.4509 22.974V7.56888H7.54836V24.4714H22.9535V24.4509ZM5.43555 5.43555H26.5638V26.5638H5.43555V5.43555ZM12.574 19.4253H19.4458V12.5535H12.574V19.4253Z" fill="white"/>
 </g>
+<defs>
+<clipPath id="clip0_319_8868">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+</defs>
 </svg>

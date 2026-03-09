@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Badge } from 'dash-ui-kit/react'
+import { Badge, Text } from 'dash-ui-kit/react'
 
 export function FastPassHero (): React.ReactNode {
   const t = useTranslations('fastpassPage.hero')
@@ -10,7 +10,7 @@ export function FastPassHero (): React.ReactNode {
     <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark'>
       <Image
         src='/images/fastpass/hero-bg.png'
-        alt=''
+        alt='FastPass hero background'
         width={1920}
         height={1920}
         className='pointer-events-none absolute top-[-48.86%] left-0 h-[200.46%] w-full max-w-none object-contain'
@@ -33,18 +33,18 @@ export function FastPassHero (): React.ReactNode {
               priority
             />
           </div>
-          <p className='max-w-full animate-fade-in-up-3 text-center text-base leading-snug font-medium text-primary-white sm:text-lg lg:max-w-212 lg:text-xl lg:tracking-tight'>
+          <Text className='max-w-full animate-fade-in-up-3 text-center text-lg leading-normal font-medium text-primary-white sm:text-xl lg:max-w-[900px] lg:text-[28px] lg:tracking-[-0.84px]'>
             {t('subtitle')}
-          </p>
+          </Text>
         </div>
 
-        <div className='flex animate-fade-in-up-4 gap-4'>
-          <button className='flex h-16 items-center justify-center rounded-full bg-white px-9 text-base font-semibold text-primary-dark backdrop-blur-sm transition-opacity hover:opacity-90'>
+        <div className='flex animate-fade-in-up-4 gap-3.75'>
+          <button className='flex h-16.25 items-center justify-center rounded-full bg-white px-8.75 text-lg font-semibold text-primary-blue backdrop-blur-sm transition-opacity hover:opacity-90'>
             {t('partnersButton')}
           </button>
-          <button className='flex items-center gap-4 rounded-full bg-white/15 px-3 py-2.5 text-base font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90'>
-            {t('educationButton')}
-            <div className='flex size-11 items-center justify-center rounded-full bg-primary-white'>
+          <button className='flex h-16.25 items-center gap-3.75 rounded-full bg-white/15 p-2.5 text-lg font-semibold text-white backdrop-blur-[5px] transition-opacity hover:opacity-90'>
+            <span className='pl-6.25'>{t('educationButton')}</span>
+            <div className='flex size-11.25 items-center justify-center rounded-full bg-primary-white'>
               <ArrowRight className='size-4 text-primary-blue' />
             </div>
           </button>

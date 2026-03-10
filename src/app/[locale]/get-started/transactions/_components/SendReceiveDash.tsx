@@ -12,7 +12,7 @@ export function SendReceiveDash (): React.ReactNode {
           {/* Left — phone mockups, rotated 30deg */}
           <div className='relative hidden min-h-100 w-full shrink-0 lg:block lg:w-[45%]'>
             <Image
-              src='/images/transactions/phones-mockup.png'
+              src='/images/get-started/phones-mockup.webp'
               alt='DashPay app mockup'
               width={747}
               height={718}

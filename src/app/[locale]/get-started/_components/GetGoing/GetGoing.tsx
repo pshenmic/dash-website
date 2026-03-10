@@ -25,9 +25,9 @@ const spendCards = [
 ]
 
 const retailers = [
-  { name: 'Travala', url: 'travala.com', logo: '/images/get-started/get-going/retailers/travala.png' },
-  { name: 'Bitrefill', url: 'bitrefill.com', logo: '/images/get-started/get-going/retailers/bitrefill.svg' },
-  { name: 'Mobile Topup', url: 'mobiletopup.com', logo: '/images/get-started/get-going/retailers/mobiletopup.svg' }
+  { name: 'Travala', url: 'travala.com', logo: '/images/shared/logos/travala.png' },
+  { name: 'Bitrefill', url: 'bitrefill.com', logo: '/images/shared/logos/bitrefill.svg' },
+  { name: 'Mobile Topup', url: 'mobiletopup.com', logo: '/images/shared/logos/mobiletopup.svg' }
 ]
 
 export function GetGoing (): React.ReactNode {

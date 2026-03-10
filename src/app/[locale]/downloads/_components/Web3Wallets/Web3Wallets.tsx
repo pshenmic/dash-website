@@ -2,8 +2,8 @@
 
 import { useTranslations } from 'next-intl'
 import { Heading, Text } from 'dash-ui-kit/react'
-import { WalletCard } from '../WalletShowcase/WalletCard'
-import { MasonryGrid } from '../WalletShowcase/MasonryGrid'
+import { WalletCard } from '@/app/_components/WalletShowcase/WalletCard'
+import { MasonryGrid } from '@/app/_components/WalletShowcase/MasonryGrid'
 
 export function Web3Wallets (): React.ReactNode {
   const t = useTranslations('web3Wallets')

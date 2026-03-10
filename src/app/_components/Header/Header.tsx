@@ -21,7 +21,7 @@ export function Header (): React.ReactNode {
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
-  const GET_STARTED_ROUTES = ['/get-started', '/get-started/payments', '/downloads', '/get-started/buy-online', '/get-started/spend', '/get-started/transactions']
+  const GET_STARTED_ROUTES = ['/get-started', '/get-started/take-control', '/downloads', '/get-started/buy-online', '/get-started/spend', '/get-started/transactions']
   const INSTITUTIONS_ROUTES = ['/institutions', '/institutions/traders', '/institutions/financial-services', '/institutions/regulatory', '/institutions/fastpass']
   const DEVELOPERS_ROUTES = ['/build', '/developers/platform', '/discover', '/developers/contributing', '/developers/tools', '/developers/roadmap']
 
@@ -97,7 +97,7 @@ export function Header (): React.ReactNode {
 
               <NavDropdown label={t('getStarted')} isActive={isGetStartedActive}>
                 <NavDropdownLink href='/get-started'>{t('aboutDash')}</NavDropdownLink>
-                <NavDropdownLink href='/get-started/payments'>{t('takeControl')}</NavDropdownLink>
+                <NavDropdownLink href='/get-started/take-control'>{t('takeControl')}</NavDropdownLink>
                 <NavDropdownLink href='/downloads'>{t('downloads')}</NavDropdownLink>
                 <NavDropdownLink href='/get-started/buy-online'>{t('buyOnline')}</NavDropdownLink>
                 <NavDropdownLink href='/get-started/spend'>{t('whereToSpend')}</NavDropdownLink>

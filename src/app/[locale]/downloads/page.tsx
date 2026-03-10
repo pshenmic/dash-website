@@ -1,10 +1,10 @@
 import { setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
-import { DownloadsHero } from '../../_components/DownloadsHero'
-import { WalletShowcase } from '../../_components/WalletShowcase'
-import { DesktopWallets } from '../../_components/DesktopWallets'
-import { HardwareWallets } from '../../_components/HardwareWallets'
-import { Web3Wallets } from '../../_components/Web3Wallets'
+import { DownloadsHero } from './_components/DownloadsHero'
+import { WalletShowcase } from '@/app/_components/WalletShowcase'
+import { DesktopWallets } from './_components/DesktopWallets'
+import { HardwareWallets } from './_components/HardwareWallets'
+import { Web3Wallets } from './_components/Web3Wallets'
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((locale) => ({ locale }))

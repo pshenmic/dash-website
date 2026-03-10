@@ -27,7 +27,7 @@ export default async function TradersPage ({
   ]
 
   const marginCards = [
-    { name: 'Kraken', subtitle: t('cards.marginTrading'), logo: '/images/traders/logo-kraken-margin.svg' },
+    { name: 'Kraken', subtitle: t('cards.marginTrading'), logo: '/images/get-started/exchanges/kraken.svg' },
     { name: 'HitBTC', subtitle: t('cards.marginTrading'), logo: '/images/traders/logo-hitbtc.svg' },
     { name: 'CoinDCX', subtitle: t('cards.marginTrading'), logo: '/images/traders/logo-coindcx.svg' },
     { name: 'KuCoin', subtitle: t('cards.marginTrading'), logo: '/images/traders/logo-kucoin.svg' }

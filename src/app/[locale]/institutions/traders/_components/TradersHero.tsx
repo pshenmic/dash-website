@@ -9,7 +9,7 @@ export function TradersHero (): React.ReactNode {
   return (
     <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark'>
       <Image
-        src='/images/traders/hero-bg.png'
+        src='/images/institutions/hero-bg.png'
         alt='Traders hero background'
         width={2048}
         height={2048}

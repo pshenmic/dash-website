@@ -38,7 +38,7 @@ export function SecuritySection (): React.ReactNode {
         {/* Right — padlock */}
         <div className='relative size-64 shrink-0 lg:size-80'>
           <Image
-            src='/images/regulatory/padlock-3d.png'
+            src='/images/get-started/icon-secure.png'
             alt='Security padlock'
             width={334}
             height={340}

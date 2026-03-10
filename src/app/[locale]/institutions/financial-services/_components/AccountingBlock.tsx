@@ -9,7 +9,7 @@ export function AccountingBlock (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='relative overflow-hidden rounded-3xl bg-primary-blue lg:rounded-4xl'>
         <Image
-          src='/images/financial-services/accounting-bg.png'
+          src='/images/shared/3d/smart-contracts.png'
           alt='Accounting block background'
           width={1024}
           height={1024}

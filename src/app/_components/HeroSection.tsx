@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Chip } from '@/components/ui/Chip'
-import { Button } from '@/components/ui/Button'
+import { Badge, Button } from 'dash-ui-kit/react'
 
 export function HeroSection (): React.ReactNode {
   const t = useTranslations('hero')
@@ -21,7 +20,7 @@ export function HeroSection (): React.ReactNode {
       <div className='relative z-10 flex flex-col items-center gap-9 px-6 py-12 lg:max-w-7xl lg:px-16'>
         <div className='flex max-w-full flex-col items-center gap-4'>
           <div className='animate-fade-in-up-1'>
-            <Chip>{t('chip')}</Chip>
+            <Badge variant='bordered' color='white' size='sm'>{t('chip')}</Badge>
           </div>
           <h1 className='max-w-full animate-fade-in-up-2 text-center text-4xl leading-tight font-extrabold tracking-tight whitespace-pre-line text-primary-white sm:text-4xl sm:leading-tight lg:text-6xl lg:whitespace-pre xl:text-7xl 2xl:text-8xl'>
             {t('title')}
@@ -32,21 +31,13 @@ export function HeroSection (): React.ReactNode {
         </div>
 
         <div className='flex animate-fade-in-up-4 flex-col items-center gap-2.5 lg:flex-row lg:gap-4'>
-          <div className='transition-transform duration-200 hover:scale-105'>
-            <Button variant='primary'>{t('downloadWallet')}</Button>
-          </div>
-          <div className='transition-transform duration-200 hover:scale-105'>
-            <Button
-              variant='secondary'
-              icon={
-                <div className='flex size-11 items-center justify-center rounded-full bg-primary-white'>
-                  <ArrowRight className='size-4 text-primary-blue' />
-                </div>
-              }
-            >
-              {t('documentation')}
-            </Button>
-          </div>
+          <Button variant='solid' colorScheme='brand'>{t('downloadWallet')}</Button>
+          <Button variant='outline' colorScheme='brand' className='gap-4'>
+            {t('documentation')}
+            <div className='flex size-11 items-center justify-center rounded-full bg-primary-white'>
+              <ArrowRight className='size-4 text-primary-blue' />
+            </div>
+          </Button>
         </div>
       </div>
     </section>

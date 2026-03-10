@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
-/* Dark mode with class selector (for next-themes) */
-@custom-variant dark (&:where(.dark, .dark *));
+
+/* Dark mode for dash-ui-kit */
+@variant dark (&:is(.dark *));
 
 @theme {
   /* Primary Colors */
@@ -94,11 +95,6 @@ body {
   animation: page-fade-in 200ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-/* Header stays in place without animation */
-::view-transition-old(header),
-::view-transition-new(header) {
-  animation: none;
-}
 
 @keyframes page-fade-out {
   from {
@@ -190,6 +186,7 @@ body {
     transition-duration: var(--duration-normal);
     transition-timing-function: var(--ease-out-expo);
   }
+
 }
 
 /* Hide scrollbar for horizontal scroll containers */
@@ -211,3 +208,4 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { cn } from '@/lib/cn'
+import { DashLogo } from 'dash-ui-kit/react'
 
 interface Tag {
   label: string
@@ -32,12 +33,11 @@ export function NewsCard ({
     >
       {/* Dash Logo */}
       <div className='absolute top-6 left-6 z-10 lg:top-9 lg:left-8'>
-        <Image
-          src='/images/home/developers/logo-dash-small.svg'
-          alt='Dash'
-          width={37}
-          height={30}
-          className='h-6 w-auto lg:h-8'
+        <DashLogo
+          className={cn(
+            'h-6 w-auto lg:h-8',
+            isVideo ? 'text-white' : 'text-primary-dark dark:text-white'
+          )}
         />
       </div>
 

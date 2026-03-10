@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Chip } from '@/components/ui/Chip'
-import { Button } from '@/components/ui/Button'
+import { Button, Badge, Heading, Text } from 'dash-ui-kit/react'
 
 export function FutureOfMoney (): React.ReactNode {
   const t = useTranslations('futureOfMoney')
@@ -12,13 +11,13 @@ export function FutureOfMoney (): React.ReactNode {
         <div className='flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between'>
           <div className='flex max-w-117 flex-col gap-9'>
             <div className='flex flex-col gap-4'>
-              <Chip variant='outline'>{t('chip')}</Chip>
-              <h2 className='text-4xl leading-10 font-extrabold tracking-tight text-primary-dark lg:text-4xl dark:text-primary-white'>
+              <Badge variant='bordered' color='blue' size='sm'>{t('chip')}</Badge>
+              <Heading as='h2' size='2xl' weight='extrabold' className='leading-10 tracking-tight dark:text-white lg:text-4xl'>
                 {t('title')}
-              </h2>
-              <p className='max-w-99 text-lg font-medium text-primary-dark dark:text-primary-white/80'>
+              </Heading>
+              <Text size='lg' weight='medium' opacity={80} className='max-w-99 dark:text-white'>
                 {t('description')}
-              </p>
+              </Text>
             </div>
 
             <div className='flex gap-4'>
@@ -42,14 +41,15 @@ export function FutureOfMoney (): React.ReactNode {
 
             <div className='flex w-full flex-col gap-2.5 lg:w-auto lg:flex-row lg:gap-4'>
               <Button
-                variant='primary'
-                inverted
+                variant='solid'
+                colorScheme='brand'
                 className='h-12 w-full lg:h-16 lg:w-auto'
               >
                 {t('connectTestnet')}
               </Button>
               <Button
                 variant='outline'
+                colorScheme='brand'
                 className='h-12 w-full lg:h-16 lg:w-auto'
               >
                 {t('learnMore')}

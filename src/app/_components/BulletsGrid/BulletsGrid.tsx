@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { CircleCheck, Lock, Users, MessageSquare } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { Chip } from '@/components/ui/Chip'
+import { Badge, DashLogo } from 'dash-ui-kit/react'
 import { Card } from '@/components/ui/Card'
 import { DashPriceCard } from '@/components/ui/DashPriceCard'
 
@@ -27,16 +27,13 @@ export function BulletsGrid (): React.ReactNode {
               />
             </div>
             <div className='absolute bottom-4 left-4 lg:bottom-9 lg:left-9'>
-              <Image
-                src='/images/home/bullets/logo-dash-white.svg'
-                alt='Dash'
-                width={191}
-                height={51}
+              <DashLogo
+                color="white"
                 className='h-7 w-auto lg:h-13'
               />
             </div>
             <div className='absolute top-1/2 left-4 -translate-y-1/2 lg:left-9'>
-              <Chip>{t('mainCard.chip')}</Chip>
+              <Badge variant='bordered' color='white' size='sm'>{t('mainCard.chip')}</Badge>
             </div>
           </Card>
 
@@ -110,11 +107,8 @@ export function BulletsGrid (): React.ReactNode {
             className='relative order-8 col-span-1 flex h-25 flex-col justify-end p-4 lg:col-start-4 lg:row-start-3 lg:h-auto lg:p-9'
           >
             <div className='absolute top-4 right-4 lg:top-9 lg:right-9'>
-              <Image
-                src='/images/home/bullets/logo-dash-blue.svg'
-                alt='Dash'
-                width={135}
-                height={110}
+              <DashLogo
+                color="#4C7EFF"
                 className='h-12 w-auto lg:h-23'
               />
             </div>

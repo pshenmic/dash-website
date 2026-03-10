@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { Heading, Text } from 'dash-ui-kit/react'
 import { ArrowUpRight } from 'lucide-react'
 
 export function DownloadsHero (): React.ReactNode {
@@ -27,11 +28,11 @@ export function DownloadsHero (): React.ReactNode {
         <div className='flex flex-col gap-4 lg:gap-6'>
           {/* Title + CTA in one row */}
           <div className='flex items-start justify-between gap-4'>
-            <h1 className='animate-fade-in-up-1 text-4xl font-extrabold leading-tight tracking-tight text-primary-dark dark:text-white lg:text-8xl lg:leading-none'>
+            <Heading as='h1' size='3xl' weight='extrabold' className='animate-fade-in-up-1 text-4xl leading-tight tracking-tight dark:text-white lg:text-8xl lg:leading-none'>
               {t('title')}
-            </h1>
+            </Heading>
             <div className='shrink-0 animate-fade-in-up-2'>
-              <button className='flex h-10 items-center gap-2 rounded-full bg-white/80 shadow-sm pl-4 pr-1.5 backdrop-blur-md transition-smooth hover-scale hover:bg-white active-press dark:bg-primary-dark/80 dark:hover:bg-primary-dark lg:h-16 lg:gap-4 lg:pl-9 lg:pr-2.5'>
+              <button className='flex h-10 items-center gap-2 rounded-full bg-white/80 shadow-sm pl-4 pr-1.5 backdrop-blur-md transition-smooth  hover:bg-white active-press dark:bg-primary-dark/80 dark:hover:bg-primary-dark lg:h-16 lg:gap-4 lg:pl-9 lg:pr-2.5'>
                 <span className='text-sm font-semibold text-primary-dark dark:text-white lg:text-lg'>
                   {t('learnMore')}
                 </span>
@@ -42,9 +43,9 @@ export function DownloadsHero (): React.ReactNode {
             </div>
           </div>
           {/* Description */}
-          <p className='animate-fade-in-up-3 max-w-3xl text-base font-light text-primary-dark dark:text-white/80 lg:text-lg'>
+          <Text size='base' weight='light' className='animate-fade-in-up-3 max-w-3xl dark:text-white/80 lg:text-lg'>
             {t('description')}
-          </p>
+          </Text>
         </div>
 
         {/* Mobile Wallets Section */}
@@ -52,25 +53,25 @@ export function DownloadsHero (): React.ReactNode {
           <div className='flex flex-col gap-3 lg:gap-4'>
             {/* Title + Filters in one row */}
             <div className='flex items-center justify-between gap-4'>
-              <h2 className='animate-fade-in-up-4 text-xl font-extrabold leading-tight text-primary-dark dark:text-white lg:text-3xl'>
+              <Heading as='h2' size='xl' weight='extrabold' className='animate-fade-in-up-4 leading-tight dark:text-white lg:text-3xl'>
                 {t('mobileWallets.title')}
-              </h2>
+              </Heading>
               <div className='flex shrink-0 gap-2 lg:gap-3'>
-                <button className='h-8 rounded-xl bg-primary-blue/15 px-4 text-sm font-medium text-primary-blue backdrop-blur-md transition-smooth hover-scale hover:bg-primary-turquoise/25 hover:text-primary-turquoise active-press dark:text-primary-turquoise lg:px-6'>
+                <button className='h-8 rounded-xl bg-primary-blue/15 px-4 text-sm font-medium text-primary-blue backdrop-blur-md transition-smooth  hover:bg-primary-turquoise/25 hover:text-primary-turquoise active-press dark:text-primary-turquoise lg:px-6'>
                   Android
                 </button>
-                <button className='h-8 rounded-xl bg-primary-blue/15 px-4 text-sm font-medium text-primary-blue backdrop-blur-md transition-smooth hover-scale hover:bg-primary-turquoise/25 hover:text-primary-turquoise active-press dark:text-primary-turquoise lg:px-6'>
+                <button className='h-8 rounded-xl bg-primary-blue/15 px-4 text-sm font-medium text-primary-blue backdrop-blur-md transition-smooth  hover:bg-primary-turquoise/25 hover:text-primary-turquoise active-press dark:text-primary-turquoise lg:px-6'>
                   iOS
                 </button>
               </div>
             </div>
             {/* Description */}
-            <p className='text-sm font-medium text-primary-dark/50 dark:text-white/50'>
+            <Text size='sm' weight='medium' className='text-primary-dark/50 dark:text-white/50'>
               {t('mobileWallets.description1')}
               <br className='hidden lg:block' />
               <span className='lg:hidden'> </span>
               {t('mobileWallets.description2')}
-            </p>
+            </Text>
           </div>
         </div>
 
@@ -97,7 +98,7 @@ export function DownloadsHero (): React.ReactNode {
                   href='https://play.google.com/store/apps/details?id=hashengineering.darkcoin.wallet'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex h-12 items-center justify-center rounded-xl bg-white px-6 text-base font-semibold text-primary-dark transition-smooth hover-scale hover:bg-white/90 active-press lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'
+                  className='flex h-12 items-center justify-center rounded-xl bg-white px-6 text-base font-semibold text-primary-dark transition-smooth  hover:bg-white/90 active-press lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'
                 >
                   {t('dashPayApp.android')}
                 </a>
@@ -105,7 +106,7 @@ export function DownloadsHero (): React.ReactNode {
                   href='https://apps.apple.com/app/dash-wallet/id1206647026'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='flex h-12 items-center justify-center rounded-xl bg-white/15 px-6 text-base font-semibold text-white backdrop-blur-md transition-smooth hover-scale hover:bg-white/25 active-press lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'
+                  className='flex h-12 items-center justify-center rounded-xl bg-white/15 px-6 text-base font-semibold text-white backdrop-blur-md transition-smooth  hover:bg-white/25 active-press lg:h-16 lg:rounded-2xl lg:px-9 lg:text-lg'
                 >
                   {t('dashPayApp.ios')}
                 </a>

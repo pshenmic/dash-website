@@ -6,6 +6,7 @@ import { RUFlag } from '@/components/icons/RUFlag'
 import { useLocale } from 'next-intl'
 import { useRouter, usePathname } from '@/i18n/navigation'
 import { ChevronDown } from 'lucide-react'
+import { cn } from '@/lib/cn'
 
 const LANGUAGES = [
   { code: 'en', label: 'EN', flag: USFlag, title: 'English' },
@@ -55,17 +56,17 @@ export function LanguageSelector (): React.ReactNode {
             className='h-full w-full object-cover'
           />
         </div>
-        <span className='text-sm font-bold text-primary-blue'>
+        <span className='text-sm font-bold text-primary-blue dark:text-primary-turquoise'>
           {currentLang.label}
         </span>
         <ChevronDown
-          className={`h-3 w-3 text-primary-blue transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={cn('h-3 w-3 text-primary-blue dark:text-primary-turquoise transition-transform', isOpen && 'rotate-180')}
         />
       </button>
 
       {isOpen && (
         <div
-          className='absolute top-full left-0 z-50 mt-2 min-w-full overflow-hidden rounded-xl bg-primary-white shadow-lg'
+          className='absolute top-full left-0 z-50 mt-2 min-w-full overflow-hidden rounded-xl bg-primary-white dark:bg-primary-dark shadow-lg dark:shadow-primary-dark/20'
           role='listbox'
         >
           {LANGUAGES.map((lang) => {
@@ -74,9 +75,10 @@ export function LanguageSelector (): React.ReactNode {
               <button
                 key={lang.code}
                 onClick={() => changeLocale(lang.code)}
-                className={`flex w-full items-center gap-2 px-3 py-2 transition-colors hover:bg-primary-blue/10 focus:outline-none focus-visible:bg-primary-blue/15 ${
-                  lang.code === locale ? 'bg-primary-blue/15' : ''
-                }`}
+                className={cn(
+                  'flex w-full items-center gap-2 px-3 py-2 transition-colors hover:bg-primary-blue/10 dark:hover:bg-primary-blue/20 focus:outline-none focus-visible:bg-primary-blue/15',
+                  lang.code === locale && 'bg-primary-blue/15'
+                )}
                 role='option'
                 aria-selected={lang.code === locale}
               >
@@ -86,7 +88,7 @@ export function LanguageSelector (): React.ReactNode {
                     className='h-full w-full object-cover'
                   />
                 </div>
-                <span className='text-sm font-bold text-primary-blue'>
+                <span className='text-sm font-bold text-primary-blue dark:text-primary-turquoise'>
                   {lang.label}
                 </span>
               </button>

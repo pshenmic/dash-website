@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
-import { Button } from '@/components/ui/Button'
+import { Button, Heading, Text } from 'dash-ui-kit/react'
 import { LinkCard } from '@/components/ui/LinkCard'
 import { SpendCard } from './SpendCard'
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
@@ -71,33 +71,31 @@ export function GetGoing (): React.ReactNode {
             </div>
 
             {/* Title */}
-            <h2 className='text-4xl font-extrabold tracking-tight text-white lg:text-5xl lg:leading-12'>
+            <Heading as='h2' size='2xl' weight='extrabold' className='tracking-tight text-white lg:text-5xl lg:leading-12'>
               {t('title')}
-            </h2>
+            </Heading>
 
             {/* Description */}
-            <p className='max-w-md text-base font-medium tracking-tight text-white lg:text-lg'>
+            <Text size='base' weight='medium' className='max-w-md tracking-tight text-white lg:text-lg'>
               {t('description')}
-            </p>
+            </Text>
 
             {/* Buttons */}
             <div className='flex flex-col gap-3 sm:flex-row sm:gap-4'>
               <Button
-                variant='secondary'
-                className='h-12 rounded-full px-8 text-base font-semibold sm:h-16 sm:px-9 sm:text-lg'
+                variant='solid'
+                className='h-12 rounded-full px-8 text-base font-semibold bg-white! text-primary-blue! hover:bg-white/90! sm:h-16 sm:px-9 sm:text-lg'
               >
                 {t('useYourDash')}
               </Button>
               <Button
                 variant='outline'
-                icon={
-                  <div className='flex size-9 items-center justify-center rounded-full bg-white sm:size-11'>
-                    <ArrowUpRight className='size-4 text-primary-blue sm:size-5' strokeWidth={2.5} />
-                  </div>
-                }
-                className='h-12 rounded-full bg-white/15 pl-6 pr-1.5 text-base font-semibold text-white hover:bg-white/25 sm:h-16 sm:pl-7 sm:pr-2.5 sm:text-lg'
+                className='h-12 rounded-full bg-white/15! pl-6 pr-1.5 text-base font-semibold text-white! border-transparent! hover:bg-white/25! sm:h-16 sm:pl-7 sm:pr-2.5 sm:text-lg'
               >
                 {t('learnMore')}
+                <div className='flex size-9 items-center justify-center rounded-full bg-white sm:size-11'>
+                  <ArrowUpRight className='size-4 text-primary-blue sm:size-5' strokeWidth={2.5} />
+                </div>
               </Button>
             </div>
           </div>
@@ -158,11 +156,12 @@ export function GetGoing (): React.ReactNode {
         <div className='mt-12 flex flex-col gap-6 lg:mt-16 lg:gap-8'>
           {/* Header */}
           <div className='flex items-center justify-between'>
-            <h3 className='text-2xl font-extrabold leading-tight text-white sm:text-3xl sm:leading-9'>
+            <Heading as='h3' size='xl' weight='extrabold' className='leading-tight text-white sm:text-3xl sm:leading-9'>
               {t('retailers.title')}
-            </h3>
+            </Heading>
             <Button
-              variant='secondary'
+              variant='outline'
+              colorScheme='brand'
               className='hidden h-14 rounded-2xl px-9 text-lg font-semibold sm:flex sm:h-16'
             >
               {t('retailers.seeAll')}
@@ -184,7 +183,8 @@ export function GetGoing (): React.ReactNode {
 
           {/* Mobile See All Button */}
           <Button
-            variant='secondary'
+            variant='outline'
+            colorScheme='brand'
             className='h-12 w-full rounded-2xl text-base font-semibold sm:hidden'
           >
             {t('retailers.seeAll')}
@@ -206,15 +206,16 @@ export function GetGoing (): React.ReactNode {
           {/* Content */}
           <div className='relative z-10 flex flex-col gap-6 px-6 py-8 sm:gap-8 sm:px-10 sm:py-12 lg:gap-9 lg:px-25 lg:py-12'>
             <div className='flex flex-col gap-3 sm:gap-4'>
-              <h3 className='whitespace-nowrap text-2xl font-extrabold leading-10 tracking-tight text-white sm:text-3xl lg:text-4xl'>
+              <Heading as='h3' size='xl' weight='extrabold' className='lg:whitespace-nowrap leading-10 tracking-tight text-white sm:text-3xl lg:text-4xl'>
                 {t('platform.title')}
-              </h3>
-              <p className='w-70 text-base font-medium text-white sm:w-100 sm:text-lg'>
+              </Heading>
+              <Text size='base' weight='medium' className='w-70 text-white sm:w-100 sm:text-lg'>
                 {t('platform.description')}
-              </p>
+              </Text>
             </div>
             <Button
-              variant='secondary'
+              variant='outline'
+              colorScheme='brand'
               className='h-12 w-fit rounded-2xl px-8 text-base font-semibold sm:h-16 sm:px-9 sm:text-lg'
             >
               {t('platform.learnMore')}

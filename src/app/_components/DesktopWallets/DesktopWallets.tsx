@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { Heading, Text } from 'dash-ui-kit/react'
 import { WalletCard } from '../WalletShowcase/WalletCard'
 import { MasonryGrid } from '../WalletShowcase/MasonryGrid'
 
@@ -87,12 +88,12 @@ export function DesktopWallets (): React.ReactNode {
       <div className='mb-8 flex flex-col gap-6 lg:mb-12 lg:flex-row lg:items-center lg:justify-between lg:gap-8'>
         {/* Left: Title and Description */}
         <div className='flex flex-col gap-2.5'>
-          <h2 className='animate-fade-in-up text-3xl font-extrabold leading-9 tracking-tight text-primary-dark dark:text-white'>
+          <Heading as='h2' size='2xl' weight='extrabold' className='animate-fade-in-up leading-9 tracking-tight dark:text-white'>
             {t('title')}
-          </h2>
-          <p className='animate-fade-in-up-1 text-sm font-medium text-primary-dark/50 dark:text-white/50'>
+          </Heading>
+          <Text size='sm' weight='medium' className='animate-fade-in-up-1 text-primary-dark/50 dark:text-white/50'>
             {t('description')}
-          </p>
+          </Text>
         </div>
 
         {/* Right: Platform Filters */}
@@ -104,7 +105,7 @@ export function DesktopWallets (): React.ReactNode {
               className={`flex h-8 shrink-0 items-center justify-center whitespace-nowrap rounded-xl px-6 py-2.5 text-sm font-medium leading-normal backdrop-blur-md transition-smooth ${
                 selectedPlatform === platform.id
                   ? 'bg-primary-turquoise/25 text-primary-turquoise hover:bg-primary-turquoise/30 dark:text-primary-turquoise'
-                  : 'bg-primary-blue/15 text-primary-blue hover:bg-primary-blue/20 dark:text-white dark:hover:bg-white/10 hover-scale active-press'
+                  : 'bg-primary-blue/15 text-primary-blue hover:bg-primary-blue/20 dark:text-white dark:hover:bg-white/10 active-press'
               }`}
             >
               {t(`platforms.${platform.label}`)}

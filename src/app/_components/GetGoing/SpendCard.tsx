@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { DashLogo } from 'dash-ui-kit/react'
 
 interface SpendCardProps {
   label: string
@@ -11,10 +12,8 @@ export function SpendCard ({ label, title, icon }: SpendCardProps): React.ReactN
     <div className='relative h-50 w-75 shrink-0 overflow-hidden rounded-3xl border border-white/15 bg-white/15 shadow-card hover-lift sm:h-66 sm:w-100 sm:rounded-4xl'>
       {/* Dash Logo - top left */}
       <div className='absolute left-5 top-5 h-5.5 w-7 sm:left-7 sm:top-9 sm:h-7.5 sm:w-9'>
-        <Image
-          src='/images/get-started/get-going/spend/dash-logo-white.svg'
-          alt='Dash'
-          fill
+        <DashLogo
+          color="white"
           className='object-contain'
         />
       </div>

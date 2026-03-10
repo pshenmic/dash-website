@@ -15,12 +15,39 @@
   },
   "nav": {
     "home": "Home",
+    "buildWithDash": "Build with Dash",
+    "buildNextGen": "Build Next Generation Apps",
+    "dashPlatform": "Dash Platform",
+    "discoverDash": "Discover Dash",
+    "contributing": "Contributing to Dash",
+    "providersTools": "Providers and Tools",
+    "dashRoadmap": "Dash Roadmap",
     "getStarted": "Get Started",
     "aboutDash": "About Dash",
     "downloads": "Downloads",
     "institutions": "Institutions",
+    "operateWithConfidence": "Operate With Confidence",
+    "tradeWithConfidence": "Trade With Confidence",
+    "financialServices": "Financial Services",
+    "regulatory": "Regulatory",
+    "fastPass": "FastPass",
     "developers": "Developers",
     "community": "Community",
+    "individuals": "Individuals",
+    "businesses": "Businesses",
+    "buyOnline": "Buy Online",
+    "whereToSpend": "Where to Spend",
+    "newMerchantKit": "New Merchant Kit",
+    "documentation": "Documentation",
+    "bugBounty": "Bug Bounty Program",
+    "learningResources": "Learning Resources",
+    "connectWithUs": "Connect With Us",
+    "forum": "Forum",
+    "masternodes": "Masternodes",
+    "mining": "Mining",
+    "blog": "Blog",
+    "takeControl": "Take Control",
+    "easyTransactions": "Easy Transactions",
     "buyDash": "Buy Dash"
   },
   "footer": {
@@ -49,9 +76,16 @@
         "individuals": "Individuals",
         "businesses": "Businesses",
         "downloads": "Downloads",
+        "newMerchantKit": "New Merchant Kit"
+      },
+      "getStarted": {
+        "title": "Get Started",
+        "aboutDash": "About Dash",
+        "takeControl": "Take Control",
+        "downloads": "Downloads",
         "buyOnline": "Buy Online",
         "whereToSpend": "Where to Spend",
-        "newMerchantKit": "New Merchant Kit"
+        "easyTransactions": "Easy Transactions"
       },
       "institutions": {
         "title": "Institutions",
@@ -495,6 +529,37 @@
   "buyDashOnline": {
     "title": "Places to Buy Dash Online",
     "seeAll": "See All"
+  },
+  "buyOnline": {
+    "hero": {
+      "chip": "Buy Online",
+      "title": "Buying Dash online",
+      "subtitle": "Dash quotes are provided by TradingView, a global charting platform where you can watch cryptocurrency prices, analyze market movements, and prepare for trades with the latest news and insights from fellow traders.",
+      "listOfExchanges": "List of Exchanges",
+      "learnMore": "Learn More"
+    },
+    "chart": {
+      "dashUsd": "DASHUSD",
+      "dashEur": "DASHEUR",
+      "pairLabel": "Dash | US Dollar",
+      "pairLabelEur": "Dash | Euro",
+      "error": "Unable to load price data. Please try again later."
+    },
+    "exchanges": {
+      "title": "Where to Purchase Dash?",
+      "subtitle": "A big list of officially approved places where you can buy Dash.",
+      "filters": {
+        "exchange": "Exchange",
+        "onramp": "Onramp",
+        "dex": "DEX",
+        "swap": "Swap"
+      },
+      "labels": {
+        "features": "Features",
+        "time": "Time",
+        "pairs": "Pairs"
+      }
+    }
   },
   "downloadsHero": {
     "title": "Downloads",

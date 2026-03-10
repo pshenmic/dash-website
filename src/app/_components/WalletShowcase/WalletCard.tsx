@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { Button } from '@/components/ui/Button'
+import { Button, Heading, Text } from 'dash-ui-kit/react'
+import { cn } from '@/lib/cn'
 
 interface WalletCardButton {
   label: string
@@ -8,6 +9,31 @@ interface WalletCardButton {
   href?: string
   customClassName?: string
   disabled?: boolean
+}
+
+// Simple mapping: all buttons use 'gray' colorScheme
+function mapVariant(variant: 'primary' | 'secondary' | 'outline'): {
+  variant: 'solid' | 'outline'
+  colorScheme: 'gray'
+} {
+  return {
+    variant: variant === 'outline' ? 'outline' : 'solid',
+    colorScheme: 'gray'
+  }
+}
+
+// Generate button-like classes for <a> tags
+function getButtonLinkClasses(variant: 'solid' | 'outline', customClassName?: string) {
+  return cn(
+    // Base button styles
+    'inline-flex items-center justify-center',
+    'font-semibold transition-colors',
+    // Variant styles
+    variant === 'solid' && 'bg-primary-blue text-white hover:bg-primary-blue/90 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500',
+    variant === 'outline' && 'border border-primary-blue text-primary-blue hover:bg-primary-blue/10 dark:border-gray-500 dark:text-gray-300 dark:hover:bg-gray-700/50',
+    // Custom classes (includes size, rounded, etc.)
+    customClassName || 'h-12 rounded-xl px-6 text-lg'
+  )
 }
 
 interface WalletCardProps {
@@ -41,33 +67,53 @@ export function WalletCard ({
       <div className='flex flex-col gap-6'>
         {/* Text Content */}
         <div className='flex flex-col gap-4'>
-          <h3 className='text-3xl leading-9 font-extrabold tracking-tight text-primary-dark dark:text-white'>
+          <Heading as='h3' size='2xl' weight='extrabold' className='leading-9 tracking-tight dark:text-white'>
             {title.split('\n').map((line, i, arr) => (
               <span key={i}>
                 {line}
                 {i < arr.length - 1 && <br />}
               </span>
             ))}
-          </h3>
-          <p className='text-sm leading-normal font-medium text-primary-dark dark:text-white'>
+          </Heading>
+          <Text size='sm' weight='medium' className='leading-normal dark:text-white'>
             {description}
-          </p>
+          </Text>
         </div>
 
         {/* Action Buttons */}
         <div className='flex flex-col gap-2.5'>
-          {buttons.map((button, index) => (
-            <Button
-              key={index}
-              variant={button.variant}
-              inverted={button.inverted}
-              href={button.href}
-              disabled={button.disabled}
-              className={button.customClassName || 'h-12 rounded-xl px-6 text-lg hover-scale'}
-            >
-              {button.label}
-            </Button>
-          ))}
+          {buttons.map((button, index) => {
+            const { variant, colorScheme } = mapVariant(button.variant)
+
+            // If button has href, render as styled link
+            if (button.href && !button.disabled) {
+              return (
+                <a
+                  key={index}
+                  href={button.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={getButtonLinkClasses(variant, button.customClassName)}
+                >
+                  {button.label}
+                </a>
+              )
+            }
+
+            // Regular button
+            const className = button.customClassName || 'h-12 rounded-xl px-6 text-lg'
+            return (
+              <Button
+                key={index}
+                variant={variant}
+                colorScheme={colorScheme}
+                disabled={button.disabled}
+                className={className}
+              >
+                {button.label}
+              </Button>
+            )
+          })}
         </div>
       </div>
     </div>

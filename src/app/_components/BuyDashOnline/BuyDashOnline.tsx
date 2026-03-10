@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { Button } from '@/components/ui/Button'
+import { Button, Heading } from 'dash-ui-kit/react'
 import { LinkCard } from '@/components/ui/LinkCard'
 
 const exchanges = [
@@ -20,12 +20,12 @@ export function BuyDashOnline (): React.ReactNode {
       <div className='mx-auto max-w-7xl'>
         {/* Header */}
         <div className='mb-6 flex items-center justify-between lg:mb-8'>
-          <h2 className='text-2xl font-extrabold leading-tight tracking-tight text-primary-dark dark:text-white sm:text-3xl sm:leading-9'>
+          <Heading as='h2' size='xl' weight='extrabold' className='leading-tight tracking-tight dark:text-white sm:text-3xl sm:leading-9'>
             {t('title')}
-          </h2>
+          </Heading>
           <Button
-            variant='primary'
-            inverted
+            variant='solid'
+            colorScheme='brand'
             className='hidden h-12 rounded-2xl px-6 text-base sm:flex sm:h-16 sm:rounded-2xl sm:px-9 sm:text-lg'
           >
             {t('seeAll')}
@@ -50,8 +50,8 @@ export function BuyDashOnline (): React.ReactNode {
         {/* Mobile See All Button */}
         <div className='mt-5 sm:hidden'>
           <Button
-            variant='primary'
-            inverted
+            variant='solid'
+            colorScheme='brand'
             className='h-12 w-full rounded-2xl text-base'
           >
             {t('seeAll')}

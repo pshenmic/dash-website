@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Card } from './Card'
+import { DashLogo } from 'dash-ui-kit/react'
 
 interface PriceData {
   price: number
@@ -110,12 +111,8 @@ export function DashPriceCard ({
       </svg>
 
       <div className='absolute top-4 left-5 lg:top-8 lg:left-9'>
-        <Image
-          src='/images/home/bullets/logo-dash-icon.svg'
-          alt='Dash'
-          width={34}
-          height={28}
-          className='h-5 w-auto lg:h-7'
+        <DashLogo
+          className='h-5 w-auto lg:h-7 text-primary-dark dark:text-white'
         />
       </div>
 

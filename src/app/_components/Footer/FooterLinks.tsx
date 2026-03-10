@@ -19,9 +19,18 @@ const linkColumns: LinkColumn[] = [
       { key: 'individuals', href: '/individuals' },
       { key: 'businesses', href: '/businesses' },
       { key: 'downloads', href: '/downloads' },
-      { key: 'buyOnline', href: '/buy' },
-      { key: 'whereToSpend', href: '/spend' },
       { key: 'newMerchantKit', href: '/merchant-kit' }
+    ]
+  },
+  {
+    titleKey: 'getStarted',
+    links: [
+      { key: 'aboutDash', href: '/get-started' },
+      { key: 'takeControl', href: '/get-started/payments' },
+      { key: 'downloads', href: '/downloads' },
+      { key: 'buyOnline', href: '/get-started/buy-online' },
+      { key: 'whereToSpend', href: '/get-started/spend' },
+      { key: 'easyTransactions', href: '/get-started/transactions' }
     ]
   },
   {
@@ -61,7 +70,7 @@ export function FooterLinks (): React.ReactNode {
   const t = useTranslations('footer.links')
 
   return (
-    <div className='grid grid-cols-2 gap-x-10 gap-y-8 lg:grid-cols-4 lg:gap-x-16'>
+    <div className='grid grid-cols-2 gap-x-10 gap-y-8 lg:grid-cols-5 lg:gap-x-12'>
       {linkColumns.map((column, columnIndex) => (
         <div
           key={column.titleKey}
@@ -76,7 +85,7 @@ export function FooterLinks (): React.ReactNode {
               <li key={link.key}>
                 <a
                   href={link.href}
-                  className='inline-block text-sm font-medium text-white/50 transition-all duration-300 hover:translate-x-1 hover:text-primary-turquoise focus:outline-none focus-visible:text-primary-turquoise focus-visible:underline'
+                  className='inline-block text-sm font-medium text-white/50 transition-colors duration-300 hover:text-primary-turquoise focus:outline-none focus-visible:text-primary-turquoise focus-visible:underline'
                 >
                   {t(`${column.titleKey}.${link.key}`)}
                 </a>

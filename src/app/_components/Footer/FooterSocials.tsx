@@ -37,7 +37,7 @@ export function FooterSocials (): React.ReactNode {
             href={social.href}
             target='_blank'
             rel='noopener noreferrer'
-            className='flex size-10 items-center justify-center rounded-xl bg-white/10 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-primary-turquoise/20 hover:shadow-md hover:shadow-primary-turquoise/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise/50'
+            className='flex size-10 items-center justify-center rounded-xl bg-white/10 backdrop-blur-md transition-all duration-300  hover:bg-primary-turquoise/20 hover:shadow-md hover:shadow-primary-turquoise/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-turquoise/50'
             aria-label={social.name}
             style={{ animationDelay: `${index * 0.05}s` }}
           >

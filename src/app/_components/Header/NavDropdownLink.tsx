@@ -18,11 +18,12 @@ export function NavDropdownLink ({
   return (
     <Link
       href={href}
+      prefetch={false}
       className={cn(
-        'block rounded-xl px-4 py-2.5 text-sm lg:text-base transition-all duration-200 transform',
+        'block rounded-xl px-4 py-2.5 text-sm lg:text-base transition-colors duration-200',
         isActive
-          ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-semibold text-primary-blue dark:text-primary-turquoise scale-[0.98]'
-          : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5 hover:scale-[1.02] hover:translate-x-1'
+          ? 'bg-primary-blue/10 dark:bg-primary-blue/20 font-medium text-primary-blue dark:text-primary-turquoise'
+          : 'font-medium text-primary-dark dark:text-white hover:bg-primary-blue/5 dark:hover:bg-white/5'
       )}
     >
       {children}

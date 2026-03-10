@@ -6,6 +6,8 @@ import { routing } from '@/i18n/routing'
 import { Header } from '../_components/Header'
 import { Footer } from '../_components/Footer'
 import { ThemeProvider } from '../_components/ThemeProvider'
+import 'dash-ui-kit/theme'
+import 'dash-ui-kit/styles'
 import '../globals.css'
 
 const manrope = Manrope({

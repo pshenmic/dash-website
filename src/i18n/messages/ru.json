@@ -15,12 +15,39 @@
   },
   "nav": {
     "home": "Главная",
+    "buildWithDash": "Создавайте с Dash",
+    "buildNextGen": "Приложения нового поколения",
+    "dashPlatform": "Платформа Dash",
+    "discoverDash": "Откройте для себя Dash",
+    "contributing": "Вклад в Dash",
+    "providersTools": "Провайдеры и инструменты",
+    "dashRoadmap": "Дорожная карта Dash",
     "getStarted": "Начать",
     "aboutDash": "О Dash",
     "downloads": "Загрузки",
     "institutions": "Бизнесу",
+    "operateWithConfidence": "Уверенность в операциях",
+    "tradeWithConfidence": "Торгуйте уверенно",
+    "financialServices": "Финансовые услуги",
+    "regulatory": "Регулирование",
+    "fastPass": "FastPass",
     "developers": "Разработка",
     "community": "Комьюнити",
+    "individuals": "Частным лицам",
+    "businesses": "Бизнесу",
+    "buyOnline": "Купить онлайн",
+    "whereToSpend": "Где потратить",
+    "newMerchantKit": "Комплект для продавцов",
+    "documentation": "Документация",
+    "bugBounty": "Программа Bug Bounty",
+    "learningResources": "Обучающие ресурсы",
+    "connectWithUs": "Связаться с нами",
+    "forum": "Форум",
+    "masternodes": "Мастерноды",
+    "mining": "Майнинг",
+    "blog": "Блог",
+    "takeControl": "Управляйте платежами",
+    "easyTransactions": "Простые транзакции",
     "buyDash": "Купить"
   },
   "footer": {
@@ -49,9 +76,16 @@
         "individuals": "Частным лицам",
         "businesses": "Бизнесу",
         "downloads": "Загрузки",
+        "newMerchantKit": "Комплект для продавцов"
+      },
+      "getStarted": {
+        "title": "Начать",
+        "aboutDash": "О Dash",
+        "takeControl": "Управляйте платежами",
+        "downloads": "Загрузки",
         "buyOnline": "Купить онлайн",
         "whereToSpend": "Где потратить",
-        "newMerchantKit": "Комплект для продавцов"
+        "easyTransactions": "Простые транзакции"
       },
       "institutions": {
         "title": "Институции",
@@ -495,6 +529,37 @@
   "buyDashOnline": {
     "title": "Где купить Dash онлайн",
     "seeAll": "Смотреть все"
+  },
+  "buyOnline": {
+    "hero": {
+      "chip": "Купить онлайн",
+      "title": "Покупка Dash онлайн",
+      "subtitle": "Котировки Dash предоставлены TradingView — глобальной платформой графиков, где можно отслеживать цены криптовалют, анализировать рыночные движения и готовиться к сделкам с помощью новостей и аналитики от трейдеров.",
+      "listOfExchanges": "Список бирж",
+      "learnMore": "Узнать больше"
+    },
+    "chart": {
+      "dashUsd": "DASHUSD",
+      "dashEur": "DASHEUR",
+      "pairLabel": "Dash | Доллар США",
+      "pairLabelEur": "Dash | Евро",
+      "error": "Не удалось загрузить данные о цене. Попробуйте позже."
+    },
+    "exchanges": {
+      "title": "Где купить Dash?",
+      "subtitle": "Большой список официально одобренных площадок для покупки Dash.",
+      "filters": {
+        "exchange": "Биржи",
+        "onramp": "Onramp",
+        "dex": "DEX",
+        "swap": "Swap"
+      },
+      "labels": {
+        "features": "Функции",
+        "time": "Время",
+        "pairs": "Пары"
+      }
+    }
   },
   "downloadsHero": {
     "title": "Загрузки",

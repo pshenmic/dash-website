@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Play } from 'lucide-react'
-import { DashLogo } from 'dash-ui-kit/react'
+import { DashLogo, Heading } from 'dash-ui-kit/react'
 
 export interface VideoCardData {
   id: string
@@ -36,13 +36,13 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
         </div>
 
         <div className='absolute top-23 left-6'>
-          <h3 className='text-3xl leading-9 font-extrabold tracking-tight text-primary-dark'>
+          <Heading as='h3' weight='extrabold' className='text-3xl leading-9 tracking-tight text-primary-dark!'>
             {title.split('\n').map((line, i) => (
               <span key={i} className='block'>
                 {line}
               </span>
             ))}
-          </h3>
+          </Heading>
         </div>
 
         <div className='absolute bottom-4 left-6'>
@@ -85,13 +85,13 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
         </div>
 
         <div className='absolute bottom-6 left-6'>
-          <h3 className='text-3xl leading-7 font-extrabold tracking-tight text-primary-white'>
+          <Heading as='h3' weight='extrabold' className='text-3xl leading-7 tracking-tight text-primary-white!'>
             {title.split('\n').map((line, i) => (
               <span key={i} className='block'>
                 {line}
               </span>
             ))}
-          </h3>
+          </Heading>
         </div>
 
         <PlayButton />
@@ -121,9 +121,9 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
         </div>
 
         <div className='absolute top-1/2 left-6 w-36 -translate-y-1/2'>
-          <h3 className='text-3xl leading-7 font-extrabold tracking-tight text-primary-white'>
+          <Heading as='h3' weight='extrabold' className='text-3xl leading-7 tracking-tight text-primary-white!'>
             {title}
-          </h3>
+          </Heading>
           {subtitle != null && subtitle !== '' && (
             <p className='mt-1 text-xs leading-4 text-primary-white/75'>
               {subtitle}
@@ -165,13 +165,13 @@ export function VideoCard ({ video }: VideoCardProps): React.ReactNode {
       </div>
 
       <div className='absolute bottom-6 left-6'>
-        <h3 className='text-3xl leading-7 font-extrabold tracking-tight text-primary-dark'>
+        <Heading as='h3' weight='extrabold' className='text-3xl leading-7 tracking-tight text-primary-dark!'>
           {title.split('\n').map((line, i) => (
             <span key={i} className='block'>
               {line}
             </span>
           ))}
-        </h3>
+        </Heading>
       </div>
 
       <PlayButton />

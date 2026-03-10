@@ -1,3 +1,5 @@
+import { Heading, Text } from 'dash-ui-kit/react'
+
 interface NodeCardProps {
   title: string
   description: React.ReactNode
@@ -18,19 +20,19 @@ export function NodeCard ({
       }`}
     >
       {/* Title */}
-      <h4 className='mb-4 text-2xl leading-tight font-extrabold text-primary-blue lg:mb-5 lg:text-3xl lg:leading-9'>
+      <Heading as='h4' weight='extrabold' className='mb-4 text-2xl leading-tight text-primary-blue! lg:mb-5 lg:text-3xl lg:leading-9'>
         {title}
-      </h4>
+      </Heading>
 
       {/* Description */}
-      <p className='max-w-2xl text-sm leading-normal font-medium text-white lg:text-lg'>
+      <Text weight='medium' className='max-w-2xl text-sm leading-normal text-white lg:text-lg'>
         {description}
-      </p>
+      </Text>
 
       {/* Number */}
-      <p className='absolute right-4 bottom-2.5 text-xl font-extrabold text-primary-blue lg:right-9 lg:bottom-6 lg:text-3xl lg:leading-9'>
+      <Text weight='extrabold' className='absolute right-4 bottom-2.5 text-xl text-primary-blue! lg:right-9 lg:bottom-6 lg:text-3xl lg:leading-9'>
         {number}
-      </p>
+      </Text>
     </div>
   )
 }

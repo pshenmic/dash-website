@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import { Heading } from 'dash-ui-kit/react'
 import { WalletCard } from './WalletCard'
 
 export function WalletShowcase (): React.ReactNode {
@@ -99,9 +100,9 @@ export function WalletShowcase (): React.ReactNode {
   return (
     <div className='mx-auto max-w-7xl px-4 lg:px-6'>
       {/* Section Title */}
-      <h2 className='mb-8 animate-fade-in-up text-3xl font-extrabold leading-tight tracking-tight text-primary-dark dark:text-white lg:mb-12 lg:text-4xl lg:leading-10'>
+      <Heading as='h2' weight='extrabold' className='mb-8 animate-fade-in-up text-3xl leading-tight tracking-tight dark:text-white lg:mb-12 lg:text-4xl lg:leading-10'>
         {t('title')}
-      </h2>
+      </Heading>
 
       {/* 4-Column Grid */}
       <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4'>

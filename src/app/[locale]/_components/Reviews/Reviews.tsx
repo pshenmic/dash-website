@@ -3,6 +3,7 @@
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useTranslations } from 'next-intl'
+import { Heading, Text } from 'dash-ui-kit/react'
 import { ReviewCard, type ReviewData } from './ReviewCard'
 import { cn } from '@/lib/cn'
 import { styles } from '@/lib/styles'
@@ -29,10 +30,10 @@ export function Reviews (): React.ReactNode {
           <p className='text-sm font-extrabold text-primary-blue lg:text-lg'>
             {t('chip')}
           </p>
-          <h2 className='text-2xl leading-tight font-extrabold text-primary-dark dark:text-white lg:text-3xl lg:leading-9'>
+          <Heading as='h2' weight='extrabold' className='text-2xl leading-tight dark:text-white lg:text-3xl lg:leading-9'>
             {t('title')}
-          </h2>
-          <p className='text-xs font-medium text-primary-dark dark:text-white/70 lg:text-sm'>
+          </Heading>
+          <Text size='sm' weight='medium' className='text-xs dark:text-white/70 lg:text-sm'>
             {t('subtitle')}{' '}
             <a
               href={TRUSTPILOT_URL}
@@ -42,7 +43,7 @@ export function Reviews (): React.ReactNode {
             >
               {t('trustpilotLink')}
             </a>
-          </p>
+          </Text>
         </div>
 
         {/* Slider */}

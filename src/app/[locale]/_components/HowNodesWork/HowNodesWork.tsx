@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import { Heading } from 'dash-ui-kit/react'
 import { NodeCard } from './NodeCard'
 
 export function HowNodesWork (): React.ReactNode {
@@ -17,9 +18,9 @@ export function HowNodesWork (): React.ReactNode {
             <p className='text-base font-extrabold text-primary-blue lg:text-lg'>
               {t('chip')}
             </p>
-            <h2 className='text-3xl leading-tight font-extrabold text-white lg:text-3xl lg:leading-9'>
+            <Heading as='h2' weight='extrabold' className='text-3xl leading-tight text-white lg:text-3xl lg:leading-9'>
               {t('title')}
-            </h2>
+            </Heading>
           </div>
 
           {/* Globe Image - desktop version, absolutely positioned */}

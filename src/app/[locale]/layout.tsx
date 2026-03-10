@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Manrope } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   title: 'Dash - Digital Cash',
   description:
     'Money without borders: moving it instantly, transparently, conveniently, and almost for free'
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
+    { media: '(prefers-color-scheme: dark)', color: '#0C1C33' }
+  ]
 }
 
 export function generateStaticParams (): Array<{ locale: string }> {

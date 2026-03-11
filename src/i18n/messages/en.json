@@ -1196,5 +1196,43 @@
       "quickStart": "Quick Start",
       "jsSdk": "JS SDK"
     }
+  },
+  "tradersPage": {
+    "hero": {
+      "chip": "Traders",
+      "title": "Trade With Confidence",
+      "subtitle": "The leading service providers in the cryptocurrency trading ecosystem work with Dash to service the needs of professional traders. These services include OTC trading with tight spreads, derivatives, and custodial solutions to name a few. For services such as lending and staking, please see the Financial Services page.",
+      "button": "Financial Services"
+    },
+    "otcBlock": {
+      "title": "High Volume Over The\nCounter (OTC) Trades",
+      "description": "Best for users looking to conduct high volume trades, our OTC partners provide exceptional service at optimal rates. Many of our OTC partners provide additional services such as derivatives trading, spot exchanges, staking, and more. Contact our support desk if you need assistance in connecting with an OTC partner.",
+      "lgoTitle": "LGO Group",
+      "lgoDescription": "LGO is proud to offer Dash users and holders access to its leading institutional liquidity services to trade OTC without minimums. Enjoy white glove institutional customer service and save on fees and execution costs."
+    },
+    "otcVendors": {
+      "title": "OTC Vendors"
+    },
+    "derivatives": {
+      "title": "Hedge Risk with Derivatives",
+      "description": "Dash is one of the few cryptocurrencies used in derivatives markets. Whether to speculate or hedge, these institutions provide plenty of options for the most complex trading strategies.",
+      "seeAll": "See All"
+    },
+    "margin": {
+      "title": "Margin Trading",
+      "description": "Margin trading allows you to borrow from a broker to use leverage in your trading. This allows you to trade with multiples of your actual capital, but comes with increased risk.",
+      "seeAll": "See All"
+    },
+    "investment": {
+      "title": "Investment Options",
+      "description": "Manage your Dash and crypto investments in a trusted environment with these top-of-the-line platforms.",
+      "seeAll": "See All"
+    },
+    "cards": {
+      "perpetualSwap": "Perpetual Swap",
+      "futures": "Futures",
+      "marginTrading": "Margin Trading",
+      "investments": "Investments"
+    }
   }
 }

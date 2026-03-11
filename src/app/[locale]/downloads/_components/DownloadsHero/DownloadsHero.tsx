@@ -58,10 +58,10 @@ export function DownloadsHero (): React.ReactNode {
               </Heading>
               <div className='flex shrink-0 gap-2 lg:gap-3'>
                 <button className='h-8 rounded-xl bg-primary-blue/15 px-4 text-sm font-medium text-primary-blue backdrop-blur-md transition-smooth  hover:bg-primary-turquoise/25 hover:text-primary-turquoise active-press dark:text-primary-turquoise lg:px-6'>
-                  Android
+                  {t('mobileWallets.filterAndroid')}
                 </button>
                 <button className='h-8 rounded-xl bg-primary-blue/15 px-4 text-sm font-medium text-primary-blue backdrop-blur-md transition-smooth  hover:bg-primary-turquoise/25 hover:text-primary-turquoise active-press dark:text-primary-turquoise lg:px-6'>
-                  iOS
+                  {t('mobileWallets.filterIos')}
                 </button>
               </div>
             </div>

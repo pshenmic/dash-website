@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { Heading } from 'dash-ui-kit/react'
+import { Heading, Text } from 'dash-ui-kit/react'
 import { AccordionItem } from './AccordionItem'
 
 export function FAQ (): React.ReactNode {
@@ -18,10 +18,10 @@ export function FAQ (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       {/* Header */}
       <div className='mb-8 flex flex-col gap-1 lg:mb-9'>
-        <p className='text-base font-extrabold text-primary-blue lg:text-lg'>
+        <Text className='text-base font-extrabold text-primary-blue lg:text-lg'>
           {t('chip')}
-        </p>
-        <Heading as='h2' weight='extrabold' className='text-3xl leading-tight text-white lg:text-3xl lg:leading-9'>
+        </Text>
+        <Heading as='h2' className='text-3xl leading-tight font-extrabold text-white lg:text-3xl lg:leading-9'>
           {t('title')}
         </Heading>
       </div>

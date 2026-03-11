@@ -1294,5 +1294,50 @@
       "chip": "Digital Cash",
       "title": "Accounting &\nTax Solutions"
     }
+  },
+  "regulatoryPage": {
+    "hero": {
+      "chip": "Regulatory",
+      "title": "Regulatory Information",
+      "subtitle": "Dash is not a security and offers greater transparency and less risk than Bitcoin with regards to privacy. Learn more about how legal regulations apply to Dash.",
+      "button": "Learn More"
+    },
+    "fincen": {
+      "chip": "Information",
+      "title": "DCG response\nto FinCEN",
+      "description": "Dash Core Group supplements the original Financial Crimes Enforcement Network ('FinCEN') with this additional information with respect to the Notice of Proposed Rulemaking, published on December 23, 2020, titled, 'Requirements for Certain Transactions Involving Convertible Virtual Currency or Digital Assets'.",
+      "primaryButton": "Original Letter to FinCEN",
+      "secondaryButton": "Supplementary Response to FinCEN"
+    },
+    "fatf": {
+      "title": "Dash Complies with\nthe FATF Rule",
+      "description": "The Financial Action Task Force (FATF) released their guidelines for countries' regulations of the cryptocurrency industry in 2019, including the Travel Rule. Dash is in full compliance with the FATF guidelines. For more information, please contact us at",
+      "email": "compliance@dash.org",
+      "button": "FATF Statement"
+    },
+    "security": {
+      "chip": "Information",
+      "title": "Dash is Not a Security",
+      "description": "The status of Dash as \"not a security\" has been validated by many entities, most recently the Crypto Rating Council which provided the best possible score of 1.0, equivalent to the score for Bitcoin. The score takes into account various points within the Howey Test to conclude that Dash has few characteristics that are consistent with being a security.",
+      "secondParagraph": "Business compliance officers and regulators interested in speaking with Dash Core Group and/or requesting our legal opinions on the matter, please reach out to us at",
+      "email": "compliance@dash.org",
+      "button": "Crypto Rating Council Asset Ratings"
+    },
+    "kycamlBlock": {
+      "title": "KYC/AML Services",
+      "description": "Day-to-day compliance requirements can be difficult to scale for many businesses within the cryptocurrency industry, such as KYC/AML compliance for exchanges. The largest names in KYC/AML for cryptocurrency help ensure that businesses remain in compliance. Our partners in this space provide state of the art KYC/AML services to some of the best known cryptocurrency companies, law enforcement agencies, and financial institutions around the globe.",
+      "blockchainIntel": {
+        "name": "Blockchain\nIntel",
+        "description": "BlockchainIntel offers a REST API that provides a risk score and corresponding reasons for blockchain wallet addresses. The score is based on known profiles tied to the address owner and behavioral data such as geographic location, links to fraud, scams and known merchants."
+      },
+      "chainalysis": {
+        "name": "Chainalysis",
+        "description": "Chainalysis works to create transparency for a global economy built on blockchains, enabling banks, business, and governments to have a common understanding of how people use cryptocurrency."
+      }
+    },
+    "kycamlPartners": {
+      "chip": "Regulations",
+      "title": "KYC/AML Services"
+    }
   }
 }

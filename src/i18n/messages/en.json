@@ -1234,5 +1234,65 @@
       "marginTrading": "Margin Trading",
       "investments": "Investments"
     }
+  },
+  "financialServicesPage": {
+    "hero": {
+      "chip": "Financial Services",
+      "title": "Professional Financial Services\nFor The Dash Ecosystem",
+      "subtitle": "Dash-integrated companies provide services in lending, staking, accounting, taxes, and custodial solutions.",
+      "button": "Learn More"
+    },
+    "interest": {
+      "chip": "Use Dash",
+      "title": "Borrow or Earn Interest with Dash",
+      "description": "The top cryptocurrency loan service providers allow users to earn or borrow Dash.",
+      "bankera": {
+        "name": "Bankera",
+        "apr": "6.95% APR",
+        "description": "Bankera is building a digital bank for the blockchain era. With traditional banking services and interoperability with the blockchain ecosystem."
+      },
+      "youhodler": {
+        "name": "YouHodler",
+        "apr": "5.00% APR",
+        "description": "YouHodler is a crypto lending platform that lets you borrow against your crypto holdings or earn interest on deposits."
+      }
+    },
+    "stakingBlock": {
+      "title": "Stake Your Dash and\nWork for the Network",
+      "description": "Dash is not a Proof of Stake protocol, but it pays part of the block reward to masternodes to perform certain work for the network. Thanks to this, some popular staking services also work with Dash. You can deposit your Dash in any one of these staking services and obtain a return in exchange for the work your coins will do for the network through these services. If you have 1,000 Dash or more, you may also want to consider starting a masternode instead and work for the network directly.",
+      "button": "Masternode Information"
+    },
+    "stakingProviders": {
+      "title": "Staking Providers"
+    },
+    "defi": {
+      "title": "DeFi",
+      "description": "DeFi, or Decentralized Finance, offers a way to participate in financial services without a centralized intermediary. Dash is available in a growing number of DeFi platforms.",
+      "seeAll": "See All"
+    },
+    "custodyBlock": {
+      "title": "Custody Solutions\nfor Peace of Mind",
+      "description": "BitGo and CYBAVO provide best-in-class custody and multi-sig security solutions for Dash. Whether you are a business, fund, or high-net-worth individual, these providers offer institutional-grade asset protection.",
+      "bitgo": {
+        "name": "BitGo",
+        "description": "BitGo provides a simple and secure REST API to integrate multi-signature wallets with support for Dash's InstantSend. Multi-Sig HD Wallets enable enterprise-grade security."
+      },
+      "cybavo": {
+        "name": "CYBAVO",
+        "description": "CYBAVO provides an enterprise wallet and custody platform for digital assets, helping businesses securely manage and transfer cryptocurrency."
+      }
+    },
+    "selfCustodial": {
+      "chip": "Self-Custodial",
+      "title": "Personal\nSelf-Custodial Solutions"
+    },
+    "accountingBlock": {
+      "title": "Accounting & Tax",
+      "description": "Some of the best-known names in cryptocurrency accounting and tax services work with Dash. They provide cost-effective and easy to use platforms to comply with local tax reporting requirements."
+    },
+    "accountingProviders": {
+      "chip": "Digital Cash",
+      "title": "Accounting &\nTax Solutions"
+    }
   }
 }

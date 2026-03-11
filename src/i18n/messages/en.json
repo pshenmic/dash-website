@@ -1115,5 +1115,42 @@
       "description": "Fill the form and we add you to our listing of Dash accepting merchants",
       "fillForm": "Fill the Form"
     }
+  },
+  "fastpassPage": {
+    "hero": {
+      "chip": "Dash FastPass",
+      "subtitle": "The FastPass designation recognizes partner services which provide an enhanced user experience within the Dash trading ecosystem by integrating InstantSend, ChainLocks or offering a unique service for traders. If you see the FastPass badge, you know you're in good hands.",
+      "partnersButton": "Partners",
+      "educationButton": "Education"
+    },
+    "info": {
+      "chip": "Information",
+      "title": "What is Dash FastPass?",
+      "description1": "FastPass helps you leverage the speed of Dash across exchanges and platforms with Dash features enabled to maximize your ROI. With FastPass, a trader can complete routine deposits or withdrawals in minutes or seconds, instead of hours or more. This speed and security presents a number of use cases, such as rapidly moving Dash across exchanges or from custody into a trading platform to leverage market opportunities before others.",
+      "description2": "FastPass also encompasses an effort together with our partners to provide traders and enthusiasts with information and analysis on the latest trends and topics within the cryptocurrency trading ecosystem. Whether you are a spot trader looking for a deeper understanding of derivatives, or a hodler interested in staking, Dash and our participating partners will provide you with all the information and tools you need to take your trading to the next level."
+    },
+    "features": {
+      "speed": {
+        "title": "Speed",
+        "description": "Rapidly move value between connected services to take advantage of optimal market conditions for any asset on supported exchange platforms."
+      },
+      "security": {
+        "title": "Security",
+        "description": "Reposition your assets for secure overnight storage off exchange platforms without needing to wait for lengthy repositioning processes each morning."
+      },
+      "agility": {
+        "title": "Agility",
+        "description": "Outmaneuver other traders with the speed of Dash. Whatever your trading strategy, FastPass helps you efficiently position your trades ahead of the crowd."
+      },
+      "diversity": {
+        "title": "Diversity",
+        "description": "Choose from a wide range of partners across the Dash and FastPass network. Find services to match your strategy and trading experience."
+      }
+    },
+    "partners": {
+      "title": "FastPass Accredited Partners",
+      "description": "List of service providers accredited with the FastPass badge.",
+      "seeAll": "See All"
+    }
   }
 }

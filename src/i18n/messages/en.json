@@ -1339,5 +1339,34 @@
       "chip": "Regulations",
       "title": "KYC/AML Services"
     }
+  },
+  "discoverPage": {
+    "hero": {
+      "chip": "Dash Docs",
+      "title": "Discover Dash",
+      "subtitle": "Learn how to implement Dash in Web3 and everyday life",
+      "primaryButton": "Learn More",
+      "secondaryButton": "Dash Documentation"
+    },
+    "core": {
+      "title": "Core",
+      "description": "Find all necessary information on Dash Core and its blockchain, along with general usage and RPC reference material.",
+      "button": "Learn More"
+    },
+    "platform": {
+      "title": "Platform",
+      "description": "Start working with Dash Platform and discover a variety of ways to implement it into your project.",
+      "button": "Learn More"
+    },
+    "users": {
+      "title": "Users",
+      "description": "What is Dash and how does it work? Find out why Digital Cash is the best crypto you can start using now.",
+      "button": "Learn More"
+    },
+    "bugBounty": {
+      "title": "Bug Bounty Program",
+      "description": "The Dash Core Group Bug Bounty Program allows developers to discover and resolve bugs before the general public is aware of such bugs, preventing incidents of widespread abuse.",
+      "button": "Quick Start"
+    }
   }
 }

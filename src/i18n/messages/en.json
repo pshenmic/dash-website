@@ -1339,5 +1339,156 @@
       "chip": "Regulations",
       "title": "KYC/AML Services"
     }
+  },
+  "roadmapPage": {
+    "hero": {
+      "title": "Dash Roadmap",
+      "description": "Dash has a long history of innovation and development, with multiple significant products and features released over the years. Launched on 18 January 2014, Dash quickly developed new features focused on speed, privacy and usability, making it ideal for use as a digital currency. Built to deliver financial freedom and shape the future of payments for people around the world, Dash has an ambitious roadmap and proven history of delivery.",
+      "button": "Jump to Latest"
+    },
+    "timeline": {
+      "eras": [
+        {
+          "year": "2014",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Launch and Masternodes",
+              "description": "Dash was launched by Evan Duffield with the unique X11 hashing algorithm as its defining feature, and initial development focused on dynamic adjustment of mining difficulty, known as Dark Gravity Wave. This was soon followed by masternodes, providing a powerful and incentivized second-layer network.",
+              "tags": ["X11", "Dark Gravity Wave", "Masternodes", "Sporks", "Android Wallet"]
+            }
+          ]
+        },
+        {
+          "year": "2015",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Budget System",
+              "description": "While initially based on the Litecoin project, Dash rebased to Bitcoin in early 2015. InstantSend, a method of locking transactions secured using the second-layer masternode architecture, was released soon afterwards. Work continued throughout the year to build a decentralized governance and budget system.",
+              "tags": ["Code rebase", "iOS wallet", "InstantSend", "Governance system"]
+            }
+          ]
+        },
+        {
+          "year": "2016",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Sentinel and Evolution",
+              "description": "The year began with a major rebrand from Darkcoin to Dash, reflecting the project's focus on digital cash. Sentinel, an autonomous agent watchdog for the masternode network, was released alongside v12.1, introducing significant governance improvements. Early planning for Evolution began.",
+              "tags": ["Rebrand to Dash", "Sentinel", "v12.1", "Evolution planning"]
+            }
+          ]
+        },
+        {
+          "year": "2017",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Scaling and Growth",
+              "description": "Dash experienced significant growth with the release of v12.2, featuring improved PrivateSend mixing and network performance. The DashPay wallet concept was introduced, and the project focused on scaling solutions to handle increasing transaction volumes.",
+              "tags": ["v12.2", "PrivateSend improvements", "DashPay concept", "Scaling"]
+            }
+          ]
+        },
+        {
+          "year": "2018",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Deterministic Masternode Lists",
+              "description": "Core v0.13 introduced deterministic masternode lists, a fundamental architectural improvement that replaced the old masternode list system with on-chain registration. This laid the groundwork for Long Living Masternode Quorums (LLMQs) and future features like ChainLocks.",
+              "tags": ["v0.13", "Deterministic MN Lists", "Automatic InstantSend", "DIP system"]
+            }
+          ]
+        },
+        {
+          "year": "2019",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "ChainLocks and LLMQs",
+              "description": "The release of v0.14 brought ChainLocks, which uses LLMQs to provide 51% attack resistance by locking in blocks as soon as they are mined. This made Dash the first cryptocurrency to solve the 51% attack problem. Evo testnet launched.",
+              "tags": ["ChainLocks", "LLMQs", "v0.14", "51% attack protection", "Evo testnet"]
+            }
+          ]
+        },
+        {
+          "year": "2020",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "CoinJoin and Platform Development",
+              "description": "PrivateSend was rebranded to CoinJoin, reflecting its actual implementation. Dash Platform development continued with multiple testnet releases, bringing decentralized storage, usernames, and DAPIs closer to reality. Core v0.16 introduced network performance improvements.",
+              "tags": ["CoinJoin rebrand", "Platform testnet", "v0.16", "DashPay alpha"]
+            }
+          ]
+        },
+        {
+          "year": "2021",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Asset Locks and v18",
+              "description": "Core v0.17 and v18 brought significant improvements including enhanced CoinJoin, governance system updates, and the introduction of asset lock transactions. These asset locks enabled users to move Dash between the core blockchain and the Platform sidechain.",
+              "tags": ["v0.17", "v18", "Asset Locks", "Enhanced CoinJoin", "Governance updates"]
+            }
+          ]
+        },
+        {
+          "year": "2022",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Platform Testnet Progress",
+              "description": "Multiple Platform testnet releases demonstrated data contracts, identity management, and the DAPI system. Core v18 maintenance releases improved network stability. The community voted on key governance proposals shaping Dash's future direction.",
+              "tags": ["Platform testnets", "Data contracts", "DAPI", "Identity system"]
+            }
+          ]
+        },
+        {
+          "year": "2023",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Core v20 and Platform Mainnet Prep",
+              "description": "Core v19 and v20 introduced major improvements including HD wallets by default, improved quorum rotation, and Treasury reallocation. Dash Platform moved through final testnet stages in preparation for mainnet activation, with extensive community testing.",
+              "tags": ["v19", "v20", "HD wallets", "Quorum rotation", "Platform mainnet prep"]
+            }
+          ]
+        },
+        {
+          "year": "2024",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Dash Platform Mainnet",
+              "description": "Dash Platform launched on mainnet, bringing decentralized usernames, data contracts, and a decentralized API to production. This milestone represented years of development, creating a decentralized cloud storage and application layer built on top of the Dash network.",
+              "tags": ["Platform mainnet", "Usernames", "Data contracts", "DAPI mainnet", "Credit system"]
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "status": "in-progress",
+          "cards": [
+            {
+              "title": "Evolution Ecosystem Growth",
+              "description": "Focus shifts to building the developer ecosystem around Dash Platform, with improved SDKs, documentation, and developer tools. Core v21 is planned with performance improvements and additional Platform integration features. DashPay wallet development continues.",
+              "tags": ["Ecosystem growth", "Developer tools", "v21", "DashPay wallet", "SDK improvements"]
+            }
+          ]
+        }
+      ]
+    },
+    "bugBounty": {
+      "title": "Bug Bounty Program",
+      "description": "The Dash Core Group Bug Bounty Program allows developers to discover and resolve bugs before the general public is aware of such bugs, preventing incidents of widespread abuse.",
+      "button": "Quick Start"
+    },
+    "readAll": "Read All",
+    "complete": "Complete",
+    "inProgress": "In Progress"
   }
 }

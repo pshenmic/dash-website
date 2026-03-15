@@ -1,6 +1,29 @@
 import { setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
-import { PlaceholderPage } from '@/app/_components/PlaceholderPage/PlaceholderPage'
+import { ContributingHero } from './_components/ContributingHero'
+import { ProtocolDevelopment } from './_components/ProtocolDevelopment'
+import { FeaturedRepos } from './_components/FeaturedRepos'
+import { PlatformDevelopment } from './_components/PlatformDevelopment'
+import { DashPaySection } from './_components/DashPaySection'
+import { ContributingBugBounty } from './_components/ContributingBugBounty'
+
+const protocolRepos = [
+  { name: 'Dash Core', icon: 'dashcore' as const, url: 'https://github.com/dashpay/dash' },
+  { name: 'Dash Sdk', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'DPP', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'Drive', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'DAPI', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'wallet-lib', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'dashcore-lib', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'Dashmate', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'test-suite', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'network-deploy', icon: 'github' as const, url: 'https://github.com/dashpay/platform' }
+]
+
+const walletRepos = [
+  { name: 'iOS Wallet', icon: 'apple' as const, url: 'https://github.com/dashpay/dashwallet-ios' },
+  { name: 'Android Wallet', icon: 'android' as const, url: 'https://github.com/dashpay/dash-wallet' }
+]
 
 export function generateStaticParams (): Array<{ locale: string }> {
   return routing.locales.map((locale) => ({ locale }))
@@ -14,5 +37,33 @@ export default async function ContributingPage ({
   const { locale } = await _params
   setRequestLocale(locale)
 
-  return <PlaceholderPage title='Contributing to Dash' />
+  return (
+    <main>
+      <ContributingHero />
+
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+        <ProtocolDevelopment />
+      </section>
+
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+        <FeaturedRepos repos={protocolRepos} />
+      </section>
+
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+        <PlatformDevelopment />
+      </section>
+
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+        <DashPaySection />
+      </section>
+
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+        <FeaturedRepos repos={walletRepos} />
+      </section>
+
+      <section className='bg-primary-blue py-10 dark:bg-primary-dark lg:py-16'>
+        <ContributingBugBounty />
+      </section>
+    </main>
+  )
 }

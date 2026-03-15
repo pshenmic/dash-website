@@ -23,7 +23,7 @@ export function Header (): React.ReactNode {
 
   const GET_STARTED_ROUTES = ['/get-started', '/get-started/take-control', '/downloads', '/get-started/buy-online', '/get-started/spend', '/get-started/transactions']
   const INSTITUTIONS_ROUTES = ['/institutions', '/institutions/traders', '/institutions/financial-services', '/institutions/regulatory', '/institutions/fastpass']
-  const DEVELOPERS_ROUTES = ['/build', '/developers/platform', '/discover', '/developers/contributing', '/developers/tools', '/developers/roadmap']
+  const DEVELOPERS_ROUTES = ['/build', '/developers/platform', '/developers/discover', '/developers/contributing', '/developers/tools', '/developers/roadmap']
 
   const isGetStartedActive = GET_STARTED_ROUTES.includes(pathname)
   const isInstitutionsActive = INSTITUTIONS_ROUTES.includes(pathname)
@@ -115,7 +115,7 @@ export function Header (): React.ReactNode {
               <NavDropdown label={t('developers')} isActive={isDevelopersActive} className='min-w-64'>
                 <NavDropdownLink href='/build'>{t('buildNextGen')}</NavDropdownLink>
                 <NavDropdownLink href='/developers/platform'>{t('dashPlatform')}</NavDropdownLink>
-                <NavDropdownLink href='/discover'>{t('discoverDash')}</NavDropdownLink>
+                <NavDropdownLink href='/developers/discover'>{t('discoverDash')}</NavDropdownLink>
                 <NavDropdownLink href='/developers/contributing'>{t('contributing')}</NavDropdownLink>
                 <NavDropdownLink href='/developers/tools'>{t('providersTools')}</NavDropdownLink>
                 <NavDropdownLink href='/developers/roadmap'>{t('dashRoadmap')}</NavDropdownLink>

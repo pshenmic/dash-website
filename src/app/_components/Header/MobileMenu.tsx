@@ -16,7 +16,7 @@ interface MobileMenuProps {
 
 const GET_STARTED_ROUTES = ['/get-started', '/get-started/take-control', '/downloads', '/get-started/buy-online', '/get-started/spend', '/get-started/transactions']
 const INSTITUTIONS_ROUTES = ['/institutions', '/institutions/traders', '/institutions/financial-services', '/institutions/regulatory', '/institutions/fastpass']
-const DEVELOPERS_ROUTES = ['/build', '/developers/platform', '/discover', '/developers/contributing', '/developers/tools', '/developers/roadmap']
+const DEVELOPERS_ROUTES = ['/build', '/developers/platform', '/developers/discover', '/developers/contributing', '/developers/tools', '/developers/roadmap']
 
 export function MobileMenu ({
   onClose,
@@ -150,7 +150,7 @@ export function MobileMenu ({
             <div className='flex flex-col gap-1 pr-4'>
               <MobileNavLink href='/build' onClose={onClose}>{t('buildNextGen')}</MobileNavLink>
               <MobileNavLink href='/developers/platform' onClose={onClose}>{t('dashPlatform')}</MobileNavLink>
-              <MobileNavLink href='/discover' onClose={onClose}>{t('discoverDash')}</MobileNavLink>
+              <MobileNavLink href='/developers/discover' onClose={onClose}>{t('discoverDash')}</MobileNavLink>
               <MobileNavLink href='/developers/contributing' onClose={onClose}>{t('contributing')}</MobileNavLink>
               <MobileNavLink href='/developers/tools' onClose={onClose}>{t('providersTools')}</MobileNavLink>
               <MobileNavLink href='/developers/roadmap' onClose={onClose}>{t('dashRoadmap')}</MobileNavLink>

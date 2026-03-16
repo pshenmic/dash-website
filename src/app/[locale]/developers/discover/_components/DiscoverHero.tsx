@@ -32,7 +32,7 @@ export function DiscoverHero (): React.ReactNode {
         </div>
 
         <div className='animate-fade-in-up-4 flex flex-col gap-4 sm:flex-row'>
-          <button className='flex h-16 items-center justify-center rounded-full bg-white px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
+          <button className='flex h-16 items-center justify-center rounded-full bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
             {t('primaryButton')}
           </button>
           <button className='flex items-center gap-4 rounded-full bg-white/15 px-3 py-2.5 text-lg font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90'>

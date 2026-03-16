@@ -9,15 +9,15 @@ import { ContributingBugBounty } from './_components/ContributingBugBounty'
 
 const protocolRepos = [
   { name: 'Dash Core', icon: 'dashcore' as const, url: 'https://github.com/dashpay/dash' },
-  { name: 'Dash Sdk', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'DPP', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'Drive', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'DAPI', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'wallet-lib', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'dashcore-lib', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'Dashmate', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'test-suite', icon: 'github' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'network-deploy', icon: 'github' as const, url: 'https://github.com/dashpay/platform' }
+  { name: 'Dash Sdk', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'DPP', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'Drive', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'DAPI', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'wallet-lib', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'dashcore-lib', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'Dashmate', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'test-suite', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
+  { name: 'network-deploy', icon: 'js' as const, url: 'https://github.com/dashpay/platform' }
 ]
 
 const walletRepos = [

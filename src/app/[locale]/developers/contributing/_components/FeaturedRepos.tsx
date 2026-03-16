@@ -4,7 +4,7 @@ import { Heading, Text } from 'dash-ui-kit/react'
 
 const ICON_MAP = {
   dashcore: { src: '/images/developers/contributing/icons/dash-core.svg', width: 36, height: 22 },
-  github: { src: '/images/developers/contributing/icons/github.svg', width: 34, height: 24 },
+  js: { src: '/images/developers/contributing/icons/js.svg', width: 34, height: 24 },
   apple: { src: '/images/developers/contributing/icons/apple.svg', width: 28, height: 32 },
   android: { src: '/images/developers/contributing/icons/android.svg', width: 30, height: 34 }
 } as const

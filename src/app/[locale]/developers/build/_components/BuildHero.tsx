@@ -23,7 +23,7 @@ export function BuildHero (): React.ReactNode {
           <div className='animate-fade-in-up-1'>
             <Badge variant='bordered' color='white' size='sm'>{t('chip')}</Badge>
           </div>
-          <Heading as='h1' className='max-w-full animate-fade-in-up-2 text-center text-4xl leading-tight font-extrabold tracking-tight text-primary-white sm:text-5xl sm:leading-tight lg:text-7xl xl:text-8xl xl:leading-[98px]'>
+          <Heading as='h1' className='max-w-full animate-fade-in-up-2 text-center text-4xl leading-tight font-extrabold tracking-tight text-primary-white sm:text-5xl sm:leading-tight lg:text-7xl xl:text-8xl xl:leading-[98px] xl:whitespace-nowrap'>
             {t('title')}
           </Heading>
           <Text className='max-w-full animate-fade-in-up-3 text-center text-base leading-snug font-medium text-primary-white sm:text-lg lg:max-w-212 lg:text-xl xl:text-[28px] lg:tracking-tight'>
@@ -31,7 +31,7 @@ export function BuildHero (): React.ReactNode {
           </Text>
         </div>
 
-        <div className='animate-fade-in-up-4 flex flex-col gap-4 sm:flex-row'>
+        <div className='flex animate-fade-in-up-4 flex-col items-center gap-2.5 lg:flex-row lg:gap-4'>
           <button className='flex h-16 items-center justify-center rounded-full bg-white px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
             {t('primaryButton')}
           </button>

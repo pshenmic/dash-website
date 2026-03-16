@@ -7,22 +7,32 @@ import { PlatformDevelopment } from './_components/PlatformDevelopment'
 import { DashPaySection } from './_components/DashPaySection'
 import { ContributingBugBounty } from './_components/ContributingBugBounty'
 
-const protocolRepos = [
-  { name: 'Dash Core', icon: 'dashcore' as const, url: 'https://github.com/dashpay/dash' },
-  { name: 'Dash Sdk', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'DPP', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'Drive', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'DAPI', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'wallet-lib', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'dashcore-lib', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'Dashmate', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'test-suite', icon: 'js' as const, url: 'https://github.com/dashpay/platform' },
-  { name: 'network-deploy', icon: 'js' as const, url: 'https://github.com/dashpay/platform' }
+import type { RepoItem } from './_components/FeaturedRepos'
+
+const protocolRepoRows: RepoItem[][] = [
+  [
+    { name: 'Dash Core', icon: 'dashcore', fill: true, url: 'https://github.com/dashpay/dash' },
+    { name: 'Dash Sdk', icon: 'js', fill: true, url: 'https://github.com/dashpay/platform' },
+    { name: 'DPP', icon: 'js', url: 'https://github.com/dashpay/platform' },
+    { name: 'Drive', icon: 'js', url: 'https://github.com/dashpay/platform' }
+  ],
+  [
+    { name: 'DAPI', icon: 'js', fill: true, url: 'https://github.com/dashpay/platform' },
+    { name: 'wallet-lib', icon: 'js', url: 'https://github.com/dashpay/platform' },
+    { name: 'dashcore-lib', icon: 'js', url: 'https://github.com/dashpay/platform' },
+    { name: 'Dashmate', icon: 'js', url: 'https://github.com/dashpay/platform' }
+  ],
+  [
+    { name: 'test-suite', icon: 'js', url: 'https://github.com/dashpay/platform' },
+    { name: 'network-deploy', icon: 'js', url: 'https://github.com/dashpay/platform' }
+  ]
 ]
 
-const walletRepos = [
-  { name: 'iOS Wallet', icon: 'apple' as const, url: 'https://github.com/dashpay/dashwallet-ios' },
-  { name: 'Android Wallet', icon: 'android' as const, url: 'https://github.com/dashpay/dash-wallet' }
+const walletRepoRows: RepoItem[][] = [
+  [
+    { name: 'iOS Wallet', icon: 'apple', url: 'https://github.com/dashpay/dashwallet-ios' },
+    { name: 'Android Wallet', icon: 'android', url: 'https://github.com/dashpay/dash-wallet' }
+  ]
 ]
 
 export function generateStaticParams (): Array<{ locale: string }> {
@@ -46,7 +56,7 @@ export default async function ContributingPage ({
       </section>
 
       <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
-        <FeaturedRepos repos={protocolRepos} />
+        <FeaturedRepos rows={protocolRepoRows} />
       </section>
 
       <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
@@ -58,7 +68,7 @@ export default async function ContributingPage ({
       </section>
 
       <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
-        <FeaturedRepos repos={walletRepos} />
+        <FeaturedRepos rows={walletRepoRows} />
       </section>
 
       <section className='bg-primary-blue py-10 dark:bg-primary-dark lg:py-16'>

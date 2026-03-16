@@ -11,17 +11,18 @@ const ICON_MAP = {
 
 type IconType = keyof typeof ICON_MAP
 
-interface RepoItem {
+export interface RepoItem {
   name: string
   icon: IconType
   url?: string
+  fill?: boolean
 }
 
 interface FeaturedReposProps {
-  repos: RepoItem[]
+  rows: RepoItem[][]
 }
 
-export function FeaturedRepos ({ repos }: FeaturedReposProps): React.ReactNode {
+export function FeaturedRepos ({ rows }: FeaturedReposProps): React.ReactNode {
   const t = useTranslations('contributingPage.featuredRepos')
 
   return (
@@ -36,35 +37,39 @@ export function FeaturedRepos ({ repos }: FeaturedReposProps): React.ReactNode {
         </button>
       </div>
 
-      {/* Repo cards grid */}
-      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4'>
-        {repos.map((repo) => {
-          const icon = ICON_MAP[repo.icon]
-          return (
-            <a
-              key={repo.name}
-              href={repo.url ?? '#'}
-              className='hover-lift flex items-center gap-6 rounded-[25px] border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet'
-            >
-              <div className='flex size-17 shrink-0 items-center justify-center rounded-2xl bg-primary-dark/5 dark:bg-white/10'>
-                <Image
-                  src={icon.src}
-                  alt=''
-                  width={icon.width}
-                  height={icon.height}
-                />
-              </div>
-              <div className='flex flex-col gap-2.5'>
-                <Heading as='h4' weight='extrabold' className='text-2xl leading-10 tracking-tight text-primary-dark! dark:text-white! lg:text-[32px]'>
-                  {repo.name}
-                </Heading>
-                <Text size='sm' weight='medium' className='text-primary-dark! dark:text-white!'>
-                  {t('github')}
-                </Text>
-              </div>
-            </a>
-          )
-        })}
+      {/* Repo cards rows */}
+      <div className='flex flex-col gap-5'>
+        {rows.map((row, i) => (
+          <div key={i} className='flex flex-wrap gap-5'>
+            {row.map((repo) => {
+              const icon = ICON_MAP[repo.icon]
+              return (
+                <a
+                  key={repo.name}
+                  href={repo.url ?? '#'}
+                  className={`hover-lift flex items-center gap-6 rounded-[25px] border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet ${repo.fill ? 'flex-1' : ''}`}
+                >
+                  <div className='flex size-17 shrink-0 items-center justify-center rounded-2xl bg-primary-dark/5 dark:bg-white/10'>
+                    <Image
+                      src={icon.src}
+                      alt=''
+                      width={icon.width}
+                      height={icon.height}
+                    />
+                  </div>
+                  <div className='flex flex-col gap-2.5'>
+                    <Heading as='h4' weight='extrabold' className='whitespace-nowrap text-2xl leading-10 tracking-tight text-primary-dark! dark:text-white! lg:text-[32px]'>
+                      {repo.name}
+                    </Heading>
+                    <Text size='sm' weight='medium' className='text-primary-dark! dark:text-white!'>
+                      {t('github')}
+                    </Text>
+                  </div>
+                </a>
+              )
+            })}
+          </div>
+        ))}
       </div>
     </div>
   )

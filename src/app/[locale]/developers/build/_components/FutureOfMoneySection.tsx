@@ -6,53 +6,61 @@ export function FutureOfMoneySection (): React.ReactNode {
   const t = useTranslations('buildPage.futureOfMoney')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div className='flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between'>
+    <div className='mx-auto max-w-7xl px-4 lg:px-6'>
+      <div className='flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between'>
         {/* Left — text content */}
-        <div className='flex flex-col gap-9 lg:max-w-[470px]'>
+        <div className='flex max-w-117 flex-col gap-9'>
           <div className='flex flex-col gap-4'>
-            <Badge variant='bordered' color='gray' size='sm' className='w-fit'>{t('chip')}</Badge>
-            <Heading as='h2' weight='extrabold' className='text-2xl leading-tight tracking-tight dark:text-white lg:text-4xl lg:leading-10'>
+            <Badge variant='bordered' color='blue' size='sm'>{t('chip')}</Badge>
+            <Heading as='h2' size='2xl' weight='extrabold' className='leading-10 tracking-tight dark:text-white lg:text-4xl'>
               {t('title')}
             </Heading>
-            <Text weight='medium' className='text-base leading-normal dark:text-white lg:text-lg'>
+            <Text size='lg' weight='medium' opacity={80} className='max-w-99 dark:text-white'>
               {t('description')}
             </Text>
           </div>
 
           {/* Stats */}
           <div className='flex gap-4'>
-            <div className='flex flex-1 flex-col gap-1 overflow-hidden rounded-[36px] border border-primary-blue px-7 py-6 lg:py-9'>
-              <Text weight='medium' className='text-xs text-primary-blue lg:text-sm'>
+            <div className='flex h-28 flex-1 flex-col justify-center rounded-3xl border border-primary-blue px-7 lg:h-36 dark:border-0 dark:bg-primary-blue/15'>
+              <span className='text-sm font-medium text-primary-blue'>
                 {t('stats.speed.label')}
-              </Text>
-              <Heading as='h3' weight='extrabold' className='text-2xl tracking-tight text-primary-blue lg:text-4xl lg:leading-10'>
+              </span>
+              <span className='text-4xl leading-10 font-extrabold tracking-tight text-primary-blue'>
                 {t('stats.speed.value')}
-              </Heading>
+              </span>
             </div>
-            <div className='flex flex-1 flex-col gap-1 overflow-hidden rounded-[36px] border border-primary-blue px-7 py-6 lg:py-9'>
-              <Text weight='medium' className='text-xs text-primary-blue lg:text-sm'>
+            <div className='flex h-28 flex-1 flex-col justify-center rounded-3xl border border-primary-blue px-7 lg:h-36 dark:border-0 dark:bg-primary-blue/15'>
+              <span className='text-sm font-medium text-primary-blue'>
                 {t('stats.cost.label')}
-              </Text>
-              <Heading as='h3' weight='extrabold' className='text-2xl tracking-tight text-primary-blue lg:text-4xl lg:leading-10'>
+              </span>
+              <span className='text-4xl leading-10 font-extrabold tracking-tight text-primary-blue'>
                 {t('stats.cost.value')}
-              </Heading>
+              </span>
             </div>
           </div>
 
           {/* Buttons */}
-          <div className='flex flex-wrap gap-4'>
-            <Button variant='solid' colorScheme='brand'>
+          <div className='flex w-full flex-col gap-2.5 lg:w-auto lg:flex-row lg:gap-4'>
+            <Button
+              variant='solid'
+              colorScheme='brand'
+              className='h-12 w-full lg:h-16 lg:w-auto'
+            >
               {t('primaryButton')}
             </Button>
-            <Button variant='outline' colorScheme='brand'>
+            <Button
+              variant='outline'
+              colorScheme='brand'
+              className='h-12 w-full lg:h-16 lg:w-auto'
+            >
               {t('secondaryButton')}
             </Button>
           </div>
         </div>
 
         {/* Right — 3D coin image */}
-        <div className='relative h-72 w-full lg:h-140 lg:w-[596px]'>
+        <div className='relative hidden w-full max-w-149 lg:block lg:h-138'>
           <Image
             src='/images/developers/build/coin-3d.png'
             alt='Dash coin'

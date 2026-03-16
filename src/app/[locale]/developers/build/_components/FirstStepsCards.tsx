@@ -25,12 +25,12 @@ function FirstStepCard ({
       </div>
 
       {/* 3D Image */}
-      <div className='relative h-44 w-full lg:h-80'>
+      <div className='relative h-44 w-full overflow-hidden lg:h-80'>
         <Image
           src={image}
           alt={title}
           fill
-          className='object-contain object-center'
+          className='-rotate-90 scale-150 object-contain'
         />
       </div>
 

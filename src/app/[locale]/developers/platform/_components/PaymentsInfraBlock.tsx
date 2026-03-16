@@ -9,7 +9,7 @@ export function PaymentsInfraBlock (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='relative overflow-hidden rounded-[35px] bg-primary-blue dark:border dark:border-white/15 dark:bg-secondary-space-cadet'>
         {/* 3D Image — right side */}
-        <div className='pointer-events-none absolute -right-[10%] -bottom-[30%] hidden h-[160%] w-[55%] lg:block'>
+        <div className='pointer-events-none absolute -top-[25%] right-0 hidden h-[130%] w-[55%] lg:block' style={{ filter: 'drop-shadow(0px 0px 125px rgba(0,0,0,0.15))' }}>
           <Image
             src='/images/developers/platform/payments-infra.png'
             alt='Payments infrastructure'
@@ -19,7 +19,7 @@ export function PaymentsInfraBlock (): React.ReactNode {
         </div>
 
         {/* Content — left side */}
-        <div className='relative z-10 flex flex-col gap-9 p-8 lg:max-w-[50%] lg:p-24'>
+        <div className='relative z-10 flex flex-col gap-9 p-8 lg:max-w-[50%] lg:px-25 lg:py-16'>
           <div className='flex flex-col gap-4'>
             <Heading as='h2' weight='extrabold' className='whitespace-pre-line text-2xl leading-tight tracking-tight text-white lg:text-4xl lg:leading-10'>
               {t('title')}

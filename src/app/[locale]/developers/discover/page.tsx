@@ -25,7 +25,7 @@ export default async function DiscoverDashPage ({
           translationKey='discoverPage.core'
           imageSrc='/images/developers/discover/core-3d.png'
           imageAlt='Dash Core'
-          imagePosition='right'
+          variant='core'
         />
       </section>
 
@@ -34,7 +34,7 @@ export default async function DiscoverDashPage ({
           translationKey='discoverPage.platform'
           imageSrc='/images/developers/discover/platform-3d.png'
           imageAlt='Dash Platform'
-          imagePosition='left'
+          variant='platform'
         />
       </section>
 
@@ -43,7 +43,7 @@ export default async function DiscoverDashPage ({
           translationKey='discoverPage.users'
           imageSrc='/images/developers/discover/users-3d.png'
           imageAlt='Dash Users'
-          imagePosition='right'
+          variant='users'
         />
       </section>
 

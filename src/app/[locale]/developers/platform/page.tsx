@@ -26,7 +26,7 @@ export default async function DashPlatformPage ({
     <main>
       <PlatformHero />
 
-      <section className='-mt-16 relative z-10 bg-primary-white pt-26 pb-10 dark:bg-primary-dark lg:pb-16'>
+      <section className='relative z-20 -mt-16 pb-10 lg:-mt-28 lg:pb-16'>
         <ActionCards />
       </section>
 

@@ -11,9 +11,9 @@ export function PlatformHero (): React.ReactNode {
       <Image
         src='/images/developers/platform/hero-bg.png'
         alt='Dash Platform hero background'
-        width={1920}
-        height={1920}
-        className='pointer-events-none absolute top-[-50%] left-1/2 h-[200%] w-auto -translate-x-1/2 object-contain'
+        width={2048}
+        height={2048}
+        className='pointer-events-none absolute top-[-50%] left-[-50%] h-[200%] w-[200%] max-w-none rotate-90 object-contain'
         priority
       />
       <div className='absolute inset-0 bg-linear-to-t from-primary-blue/30 to-transparent dark:from-primary-dark/50' />

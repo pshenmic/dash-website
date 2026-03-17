@@ -7,12 +7,12 @@ export function DeveloperSDKs (): React.ReactNode {
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div className='relative overflow-hidden rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft lg:rounded-4xl lg:p-9'>
+      <div className='relative overflow-hidden rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet lg:rounded-4xl lg:p-9'>
         <div className='flex flex-col gap-4 lg:max-w-[45%]'>
-          <Heading as='h3' weight='extrabold' className='text-2xl leading-tight tracking-tight text-primary-dark! lg:text-4xl lg:leading-10'>
+          <Heading as='h3' weight='extrabold' className='text-2xl leading-tight tracking-tight text-primary-dark dark:text-white lg:text-4xl lg:leading-10'>
             {t('title')}
           </Heading>
-          <Text size='xs' weight='medium' className='text-primary-dark! lg:text-sm'>
+          <Text size='xs' weight='medium' className='text-primary-dark dark:text-white lg:text-sm'>
             {t('description')}
           </Text>
         </div>

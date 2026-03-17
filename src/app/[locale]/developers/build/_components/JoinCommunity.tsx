@@ -1,6 +1,8 @@
 import { ArrowRight } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { Badge, Heading, Text } from 'dash-ui-kit/react'
+import { GithubIcon } from '@/components/icons/GithubIcon'
+import { ForumIcon } from '@/components/icons/ForumIcon'
 
 interface CommunityCardProps {
   icon: React.ReactNode
@@ -26,32 +28,15 @@ function CommunityCard ({
     >
       <div className='flex items-center gap-6'>
         {icon}
-        <p className='text-2xl tracking-tight text-white'>
+        <Text className='text-2xl tracking-tight text-white'>
           <span className='font-extrabold'>{name} </span>
           <span className='font-medium'>{suffix}</span>
-        </p>
+        </Text>
       </div>
-      <button className='flex h-16 w-[155px] items-center justify-center rounded-[20px] bg-white text-lg font-semibold text-primary-blue'>
+      <button className='flex h-16 w-40 items-center justify-center rounded-2xl bg-white text-lg font-semibold text-primary-blue'>
         {buttonText}
       </button>
     </a>
-  )
-}
-
-function GithubIcon (): React.ReactNode {
-  return (
-    <svg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-      <path d='M12.5 0C5.596 0 0 5.596 0 12.5c0 5.525 3.58 10.21 8.547 11.867.625.115.853-.271.853-.604 0-.298-.011-1.084-.017-2.129-3.477.756-4.212-1.676-4.212-1.676-.569-1.444-1.388-1.829-1.388-1.829-1.135-.775.086-.76.086-.76 1.255.088 1.916 1.289 1.916 1.289 1.115 1.912 2.926 1.359 3.64 1.039.113-.808.436-1.36.794-1.672-2.776-.316-5.694-1.388-5.694-6.178 0-1.365.487-2.48 1.287-3.353-.129-.316-.558-1.587.122-3.308 0 0 1.05-.336 3.437 1.281A11.99 11.99 0 0 1 12.5 5.968c1.063.005 2.133.144 3.13.422 2.387-1.617 3.434-1.281 3.434-1.281.682 1.721.253 2.992.124 3.308.802.873 1.285 1.988 1.285 3.353 0 4.802-2.923 5.858-5.706 6.167.449.387.849 1.15.849 2.317 0 1.672-.015 3.021-.015 3.432 0 .335.226.724.86.601C21.424 22.705 25 18.022 25 12.5 25 5.596 19.404 0 12.5 0z' fill='white' />
-    </svg>
-  )
-}
-
-function ForumIcon (): React.ReactNode {
-  return (
-    <svg width='54' height='25' viewBox='0 0 54 25' fill='none' xmlns='http://www.w3.org/2000/svg'>
-      <path d='M0 12.5C0 5.596 5.596 0 12.5 0h29C48.404 0 54 5.596 54 12.5S48.404 25 41.5 25h-29C5.596 25 0 19.404 0 12.5z' fill='white' fillOpacity='0.15' />
-      <text x='27' y='16' textAnchor='middle' fill='white' fontSize='10' fontFamily='Manrope' fontWeight='800'>FORUM</text>
-    </svg>
   )
 }
 
@@ -89,7 +74,7 @@ export function JoinCommunity (): React.ReactNode {
         {/* Right — community link cards */}
         <div className='flex w-full flex-col gap-5 lg:w-[460px]'>
           <CommunityCard
-            icon={<GithubIcon />}
+            icon={<GithubIcon className='text-white' />}
             name={t('links.dashpayGithub')}
             suffix={t('links.dashpayGithubSuffix')}
             href='https://github.com/dashpay'
@@ -103,7 +88,7 @@ export function JoinCommunity (): React.ReactNode {
             buttonText={t('continueButton')}
           />
           <CommunityCard
-            icon={<GithubIcon />}
+            icon={<GithubIcon className='text-white' />}
             name={t('links.dashevoGithub')}
             suffix={t('links.dashevoGithubSuffix')}
             href='https://github.com/dashevo'

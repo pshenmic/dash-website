@@ -28,7 +28,7 @@ export function BuildBugBounty (): React.ReactNode {
               {t('description')}
             </Text>
           </div>
-          <button className='flex h-16 w-fit items-center justify-center rounded-[20px] bg-white px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
+          <button className='flex h-16 w-fit items-center justify-center rounded-2xl bg-white px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
             {t('button')}
           </button>
         </div>

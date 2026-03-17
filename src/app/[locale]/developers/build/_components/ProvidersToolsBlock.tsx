@@ -7,7 +7,7 @@ export function ProvidersToolsBlock (): React.ReactNode {
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div className='relative overflow-hidden rounded-[35px] bg-primary-blue dark:border dark:border-white/15 dark:bg-secondary-space-cadet'>
+      <div className='relative overflow-hidden rounded-4xl bg-primary-blue dark:border dark:border-white/15 dark:bg-secondary-space-cadet'>
         {/* 3D Image — left side */}
         <div className='pointer-events-none absolute -left-[10%] -top-[10%] hidden h-[130%] w-[50%] lg:block'>
           <Image
@@ -29,7 +29,7 @@ export function ProvidersToolsBlock (): React.ReactNode {
             </Text>
           </div>
 
-          <button className='flex h-16 w-fit items-center justify-center rounded-[20px] bg-white px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
+          <button className='flex h-16 w-fit items-center justify-center rounded-2xl bg-white px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
             {t('button')}
           </button>
         </div>

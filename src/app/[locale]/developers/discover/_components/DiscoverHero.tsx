@@ -23,10 +23,10 @@ export function DiscoverHero (): React.ReactNode {
           <div className='animate-fade-in-up-1'>
             <Badge variant='bordered' color='white' size='sm'>{t('chip')}</Badge>
           </div>
-          <Heading as='h1' className='max-w-full animate-fade-in-up-2 text-center text-4xl leading-tight font-extrabold tracking-tight text-primary-white sm:text-5xl sm:leading-tight lg:text-7xl xl:text-8xl xl:leading-[98px]'>
+          <Heading as='h1' className='max-w-full animate-fade-in-up-2 text-center text-4xl leading-tight font-extrabold tracking-tight text-primary-white sm:text-5xl sm:leading-tight lg:text-7xl xl:text-8xl xl:leading-tight'>
             {t('title')}
           </Heading>
-          <Text className='max-w-full animate-fade-in-up-3 text-center text-base leading-snug font-medium text-primary-white sm:text-lg lg:max-w-212 lg:text-xl xl:text-[28px] lg:tracking-tight'>
+          <Text className='max-w-full animate-fade-in-up-3 text-center text-base leading-snug font-medium text-primary-white sm:text-lg lg:max-w-212 lg:text-xl xl:text-3xl lg:tracking-tight'>
             {t('subtitle')}
           </Text>
         </div>

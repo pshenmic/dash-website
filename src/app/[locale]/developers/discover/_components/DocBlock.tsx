@@ -60,7 +60,7 @@ export function DocBlock ({
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div className='relative overflow-hidden rounded-[35px] border border-primary-dark/15 bg-white shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet lg:h-88'>
+      <div className='relative overflow-hidden rounded-4xl border border-primary-dark/15 bg-white shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet lg:h-88'>
         {/* 3D Image — desktop */}
         {variant === 'core' && <CoreImage src={imageSrc} alt={imageAlt} />}
         {variant === 'platform' && <PlatformImage src={imageSrc} alt={imageAlt} />}
@@ -86,7 +86,7 @@ export function DocBlock ({
             </Text>
           </div>
 
-          <button className='flex h-16 w-fit items-center justify-center rounded-[20px] bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
+          <button className='flex h-16 w-fit items-center justify-center rounded-2xl bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
             {t('button')}
           </button>
         </div>

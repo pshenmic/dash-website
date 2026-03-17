@@ -17,7 +17,7 @@ export function ActionCards (): React.ReactNode {
               {t('documentation.description')}
             </Text>
           </div>
-          <button className='flex h-16 shrink-0 items-center justify-center rounded-[20px] bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
+          <button className='flex h-16 shrink-0 items-center justify-center rounded-2xl bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
             {t('documentation.button')}
           </button>
         </div>
@@ -32,7 +32,7 @@ export function ActionCards (): React.ReactNode {
               {t('testnet.description')}
             </Text>
           </div>
-          <button className='flex h-16 shrink-0 items-center justify-center rounded-[20px] bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
+          <button className='flex h-16 shrink-0 items-center justify-center rounded-2xl bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
             {t('testnet.button')}
           </button>
         </div>

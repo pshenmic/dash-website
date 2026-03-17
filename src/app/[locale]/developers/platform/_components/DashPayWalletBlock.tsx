@@ -7,7 +7,7 @@ export function DashPayWalletBlock (): React.ReactNode {
 
   return (
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-      <div className='relative overflow-hidden rounded-[35px] bg-primary-blue dark:border dark:border-white/15 dark:bg-secondary-space-cadet'>
+      <div className='relative overflow-hidden rounded-4xl bg-primary-blue dark:border dark:border-white/15 dark:bg-secondary-space-cadet'>
         {/* Phone image — left side */}
         <div className='pointer-events-none absolute -left-[15%] -bottom-[30%] hidden h-[160%] w-[55%] rotate-[30deg] lg:block'>
           <Image
@@ -30,10 +30,10 @@ export function DashPayWalletBlock (): React.ReactNode {
           </div>
 
           <div className='flex flex-wrap gap-4'>
-            <button className='flex h-16 items-center justify-center rounded-[20px] bg-white px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
+            <button className='flex h-16 items-center justify-center rounded-2xl bg-white px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
               {t('primaryButton')}
             </button>
-            <button className='flex h-16 items-center justify-center rounded-[20px] bg-white/15 px-9 text-lg font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90'>
+            <button className='flex h-16 items-center justify-center rounded-2xl bg-white/15 px-9 text-lg font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90'>
               {t('secondaryButton')}
             </button>
           </div>

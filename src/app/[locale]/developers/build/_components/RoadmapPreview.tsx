@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Button } from 'dash-ui-kit/react'
+import { Button, Heading, Text } from 'dash-ui-kit/react'
 
 interface ReleaseItem {
   tag: string
@@ -75,9 +75,9 @@ export function RoadmapPreview (): React.ReactNode {
                       </span>
                     )}
                   </div>
-                  <h4 className='mb-4 text-3xl font-extrabold text-white'>
+                  <Heading as='h4' weight='extrabold' className='mb-4 text-3xl text-white'>
                     {release.title}
-                  </h4>
+                  </Heading>
                   <ul className='space-y-3'>
                     {release.items.map((item, i) => (
                       <li key={i} className='ml-6 list-disc text-base font-medium text-white'>
@@ -113,9 +113,9 @@ export function RoadmapPreview (): React.ReactNode {
                     </span>
                   )}
                 </div>
-                <h4 className='mb-2.5 text-2xl font-extrabold text-white'>
+                <Heading as='h4' weight='extrabold' className='mb-2.5 text-2xl text-white'>
                   {release.title}
-                </h4>
+                </Heading>
                 <ul className='space-y-1.5'>
                   {release.items.map((item, i) => (
                     <li key={i} className='ml-5 list-disc text-sm font-medium text-white'>
@@ -131,12 +131,12 @@ export function RoadmapPreview (): React.ReactNode {
           <div className='flex flex-col justify-center p-6 lg:absolute lg:right-0 lg:top-1/2 lg:w-lg lg:-translate-y-1/2 lg:p-0 lg:pr-12'>
             <div className='flex flex-col gap-6 lg:gap-9'>
               <div className='flex flex-col gap-2.5 lg:gap-4'>
-                <h3 className='whitespace-pre-line text-3xl leading-tight font-extrabold tracking-tight text-primary-dark lg:text-4xl lg:leading-10 dark:text-white'>
+                <Heading as='h3' weight='extrabold' className='whitespace-pre-line text-3xl leading-tight tracking-tight dark:text-white lg:text-4xl lg:leading-10'>
                   {t('title')}
-                </h3>
-                <p className='max-w-sm text-sm leading-normal font-medium text-primary-dark lg:text-lg dark:text-white'>
+                </Heading>
+                <Text weight='medium' className='max-w-sm text-sm leading-normal dark:text-white lg:text-lg'>
                   {t('description')}
-                </p>
+                </Text>
 
                 <ul className='mt-1 space-y-1'>
                   {features.map((feature, index) => (

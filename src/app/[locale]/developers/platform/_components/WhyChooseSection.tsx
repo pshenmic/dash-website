@@ -4,7 +4,7 @@ import { DashLogo, Heading, Text } from 'dash-ui-kit/react'
 
 function CodeBlock ({ children }: { children: React.ReactNode }): React.ReactNode {
   return (
-    <div className='relative flex h-[235px] w-full flex-col overflow-hidden rounded-[35px] bg-primary-dark shadow-card'>
+    <div className='relative flex h-60 w-full flex-col overflow-hidden rounded-4xl bg-primary-dark shadow-card'>
       {/* Header bar */}
       <div className='flex items-center justify-between px-7 pt-3 pb-2'>
         <DashLogo className='h-4 w-auto text-white/50' />
@@ -15,7 +15,7 @@ function CodeBlock ({ children }: { children: React.ReactNode }): React.ReactNod
 
       {/* Code content */}
       <div className='flex-1 bg-white/15 px-7 py-3'>
-        <pre className='font-mono text-[13px] leading-snug text-white'>
+        <pre className='font-mono text-xs leading-snug text-white'>
           {children}
         </pre>
       </div>
@@ -70,9 +70,9 @@ export function WhyChooseSection (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       {/* Section Header */}
       <div className='mb-10 flex flex-col gap-1 lg:mb-16'>
-        <p className='text-sm font-extrabold text-primary-blue lg:text-lg'>
+        <Text size='sm' weight='extrabold' className='text-primary-blue lg:text-lg'>
           {t('chip')}
-        </p>
+        </Text>
         <Heading as='h2' size='xl' weight='extrabold' className='leading-tight dark:text-white lg:text-3xl lg:leading-9'>
           {t('title')}
         </Heading>

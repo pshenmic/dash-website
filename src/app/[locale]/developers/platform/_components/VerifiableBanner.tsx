@@ -8,7 +8,7 @@ export function VerifiableBanner (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='flex flex-col gap-6 rounded-[35px] bg-primary-blue px-8 py-9 dark:border dark:border-white/15 dark:bg-secondary-space-cadet lg:flex-row lg:items-center lg:gap-4 lg:px-25 lg:py-9'>
         <div className='flex flex-1 flex-col gap-4'>
-          <Badge variant='bordered' color='white' size='sm'>{t('chip')}</Badge>
+          <Badge variant='bordered' color='white' size='sm' className='w-fit'>{t('chip')}</Badge>
           <Heading as='h2' weight='extrabold' className='text-2xl leading-tight tracking-tight text-white lg:text-4xl lg:leading-10'>
             {t('title')}
           </Heading>

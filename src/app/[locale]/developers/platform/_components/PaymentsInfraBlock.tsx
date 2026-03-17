@@ -19,7 +19,7 @@ export function PaymentsInfraBlock (): React.ReactNode {
         </div>
 
         {/* Content — left side */}
-        <div className='relative z-10 flex flex-col gap-9 p-8 lg:max-w-[50%] lg:px-25 lg:py-16'>
+        <div className='relative z-10 flex flex-col gap-9 p-8 lg:max-w-[55%] lg:px-25 lg:py-16'>
           <div className='flex flex-col gap-4'>
             <Heading as='h2' weight='extrabold' className='whitespace-pre-line text-2xl leading-tight tracking-tight text-white lg:text-4xl lg:leading-10'>
               {t('title')}

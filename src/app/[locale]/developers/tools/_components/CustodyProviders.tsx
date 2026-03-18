@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-import { Heading } from 'dash-ui-kit/react'
+import { Heading, Text } from 'dash-ui-kit/react'
 import { ProviderCard, type ProviderButton } from './ProviderCard'
 
 const CARDS_CONFIG = [
@@ -67,9 +67,9 @@ export function CustodyProviders (): React.ReactNode {
     <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       {/* Section Header */}
       <div className='mb-10 flex flex-col gap-1 lg:mb-16'>
-        <p className='text-sm font-extrabold text-primary-blue lg:text-lg'>
+        <Text size='sm' weight='extrabold' className='text-primary-blue lg:text-lg'>
           {t('chip')}
-        </p>
+        </Text>
         <Heading as='h2' size='xl' weight='extrabold' className='leading-tight dark:text-white lg:text-3xl lg:leading-9'>
           {t('title')}
         </Heading>

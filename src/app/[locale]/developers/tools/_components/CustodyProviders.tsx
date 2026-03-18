@@ -6,6 +6,7 @@ const CARDS_CONFIG = [
   {
     key: 'bitgo',
     image: '/images/developers/tools/bitgo.svg',
+    darkImage: '/images/developers/tools/bitgo-dark.svg',
     hasApi: true
   },
   {
@@ -16,6 +17,7 @@ const CARDS_CONFIG = [
   {
     key: 'lukka',
     image: '/images/developers/tools/lukka.svg',
+    darkImage: '/images/developers/tools/lukka-dark.svg',
     hasApi: false
   },
   {
@@ -79,6 +81,7 @@ export function CustodyProviders (): React.ReactNode {
           <ProviderCard
             key={card.key}
             image={card.image}
+            darkImage={card.darkImage}
             name={card.name}
             description={card.description}
             buttons={card.buttons}

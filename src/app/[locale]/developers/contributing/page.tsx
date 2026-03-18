@@ -11,13 +11,13 @@ import type { RepoItem } from './_components/FeaturedRepos'
 
 const protocolRepoRows: RepoItem[][] = [
   [
-    { name: 'Dash Core', icon: 'dashcore', fill: true, url: 'https://github.com/dashpay/dash' },
-    { name: 'Dash Sdk', icon: 'js', fill: true, url: 'https://github.com/dashpay/platform' },
+    { name: 'Dash Core', icon: 'dashcore', url: 'https://github.com/dashpay/dash' },
+    { name: 'Dash Sdk', icon: 'js', url: 'https://github.com/dashpay/platform' },
     { name: 'DPP', icon: 'js', url: 'https://github.com/dashpay/platform' },
     { name: 'Drive', icon: 'js', url: 'https://github.com/dashpay/platform' }
   ],
   [
-    { name: 'DAPI', icon: 'js', fill: true, url: 'https://github.com/dashpay/platform' },
+    { name: 'DAPI', icon: 'js', url: 'https://github.com/dashpay/platform' },
     { name: 'wallet-lib', icon: 'js', url: 'https://github.com/dashpay/platform' },
     { name: 'dashcore-lib', icon: 'js', url: 'https://github.com/dashpay/platform' },
     { name: 'Dashmate', icon: 'js', url: 'https://github.com/dashpay/platform' }
@@ -71,7 +71,7 @@ export default async function ContributingPage ({
         <FeaturedRepos rows={walletRepoRows} />
       </section>
 
-      <section className='bg-primary-blue py-10 dark:bg-primary-dark lg:py-16'>
+      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
         <ContributingBugBounty />
       </section>
     </main>

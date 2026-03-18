@@ -72,7 +72,7 @@ export function ProviderCard ({
                 href={button.href}
                 target='_blank'
                 rel='noopener noreferrer'
-                className={`flex h-16 items-center justify-center rounded-[20px] text-lg font-semibold transition-opacity hover:opacity-90 ${
+                className={`flex h-16 items-center justify-center rounded-2xl text-lg font-semibold transition-opacity hover:opacity-90 ${
                   button.variant === 'solid'
                     ? 'bg-primary-blue text-white'
                     : 'bg-primary-blue/15 text-primary-blue'

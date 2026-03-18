@@ -1,49 +1,43 @@
+import Image from 'next/image'
+import { highlight } from 'sugar-high'
 import { useTranslations } from 'next-intl'
-import { Heading, Text } from 'dash-ui-kit/react'
+import { Heading, Text, DashLogo } from 'dash-ui-kit/react'
+
+const CODE_SNIPPET = `const DapiClient = require('dapi-client');
+
+const dapi = new DapiClient();
+const dapId = '9ae7bb6e437218be36b04843f63a135491c8';
+
+// fetch user and DashPay user profile
+const bob = dapi.getUserByName('bob');
+const bobProfile = dapi.fetchDapObjects(dapId, 'user', {
+  where: { data: { userId: bob.id } }
+});
+
+console.log(bobProfile.status);
+
+// >> "Super excited to be using DashPay!!"`
 
 function CodeSnippet (): React.ReactNode {
   return (
-    <div className='relative overflow-hidden rounded-3xl bg-primary-dark shadow-[0px_0px_75px_0px_rgba(0,0,0,0.1)]'>
-      {/* Window dots */}
-      <div className='flex gap-2 px-7 pt-4'>
-        <div className='size-3 rounded-full bg-[#FF5F57]' />
-        <div className='size-3 rounded-full bg-[#FFBD2E]' />
-        <div className='size-3 rounded-full bg-[#28C840]' />
+    <div className='flex h-full flex-col overflow-hidden rounded-3xl bg-primary-dark shadow-[0px_0px_75px_0px_rgba(0,0,0,0.1)]'>
+      {/* Header: Dash D logo + copy icon */}
+      <div className='flex items-center justify-between px-7 py-4'>
+        <DashLogo color='white' size={22} />
+        <Image
+          src='/images/home/developers/icon-copy.svg'
+          alt=''
+          width={20}
+          height={20}
+        />
       </div>
 
-      {/* Code line highlight */}
-      <div className='mt-4 h-[calc(100%-40px)] bg-white/15' />
-
       {/* Code content */}
-      <pre className='absolute inset-x-0 top-14 overflow-hidden px-7 pb-7 font-["Space_Grotesk"] text-sm leading-relaxed text-white'>
-        <code>
-          <span className='text-syntax-keyword'>const</span>{' DapiClient = '}
-          <span className='text-syntax-keyword'>require</span>
-          <span className='text-syntax-punctuation'>{'(\'dapi-client\')'}</span>
-          {';\n\n'}
-          <span className='text-syntax-keyword'>const</span>{' dapi = new '}
-          <span className='text-syntax-string'>DapiClient()</span>
-          {';\n'}
-          <span className='text-syntax-keyword'>const</span>{' dapId = \'9ae7bb6e437218be36b04843f63a135491c8\';\n\n'}
-          <span className='text-white/35'>{'//fetch user and DashPay user profile'}</span>
-          {'\n'}
-          <span className='text-syntax-keyword'>const</span>{' bob = dapi.'}
-          <span className='text-syntax-string'>getUserByName</span>
-          {'(\'bob\');\n'}
-          <span className='text-syntax-keyword'>const</span>{' bobProfile = dapi.'}
-          <span className='text-syntax-string'>fetchDapObjects</span>
-          {'(dapId, \'user\', {\n'}
-          <span className='text-syntax-keyword'>where</span>
-          {': {data.'}
-          <span className='text-syntax-string'>userId</span>
-          {': bob.id}});\n\n'}
-          <span className='text-syntax-keyword'>console</span>
-          {'.'}
-          <span className='text-syntax-string'>log</span>
-          {'(bobProfile.status);\n\n'}
-          <span className='text-[#d1ce72]'>{'>> "Super excited to be using DashPay!!"'}</span>
-        </code>
-      </pre>
+      <div className='flex-1 overflow-auto bg-white/15 px-7 py-4'>
+        <pre className='font-["Space_Grotesk"] text-sm leading-relaxed text-white'>
+          <code dangerouslySetInnerHTML={{ __html: highlight(CODE_SNIPPET) }} />
+        </pre>
+      </div>
     </div>
   )
 }
@@ -56,7 +50,7 @@ export function PlatformDevelopment (): React.ReactNode {
       <div className='overflow-hidden rounded-3xl border border-primary-dark/15 bg-white shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet lg:rounded-4xl'>
         <div className='flex flex-col lg:flex-row lg:items-center'>
           {/* Left — Text Content */}
-          <div className='flex flex-col gap-9 p-6 lg:max-w-[430px] lg:py-16 lg:pl-24'>
+          <div className='flex flex-col gap-9 p-6 lg:max-w-[530px] lg:py-16 lg:pl-24'>
             <div className='flex flex-col gap-4'>
               <Heading as='h2' weight='extrabold' className='text-2xl leading-tight tracking-tight text-primary-dark! dark:text-white! lg:text-4xl lg:leading-10'>
                 {t('title')}
@@ -68,10 +62,10 @@ export function PlatformDevelopment (): React.ReactNode {
 
             {/* Buttons */}
             <div className='flex flex-col gap-4'>
-              <button className='flex h-16 items-center justify-center rounded-[20px] bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
+              <button className='flex h-16 items-center justify-center whitespace-nowrap rounded-2xl bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
                 {t('primaryButton')}
               </button>
-              <button className='flex h-16 items-center justify-center rounded-[20px] bg-primary-blue/15 px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
+              <button className='flex h-16 items-center justify-center whitespace-nowrap rounded-2xl bg-primary-blue/15 px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
                 {t('secondaryButton')}
               </button>
             </div>

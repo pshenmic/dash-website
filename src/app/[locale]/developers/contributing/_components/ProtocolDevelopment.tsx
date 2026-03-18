@@ -59,7 +59,7 @@ export function ProtocolDevelopment (): React.ReactNode {
         <div className='flex flex-col lg:flex-row lg:items-center'>
           {/* Left — Branch Diagram */}
           <div className='hidden h-[780px] flex-1 items-center justify-center overflow-hidden p-10 lg:flex'>
-            <div className='h-full w-auto origin-center rotate-[30deg] scale-75'>
+            <div className='h-full w-auto origin-center rotate-30 scale-75'>
               <BranchDiagram />
             </div>
           </div>
@@ -90,10 +90,10 @@ export function ProtocolDevelopment (): React.ReactNode {
 
             {/* Buttons */}
             <div className='flex flex-col gap-4'>
-              <button className='flex h-16 items-center justify-center rounded-[20px] bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
+              <button className='flex h-16 items-center justify-center rounded-2xl bg-primary-blue px-9 text-lg font-semibold text-white transition-opacity hover:opacity-90'>
                 {t('primaryButton')}
               </button>
-              <button className='flex h-16 items-center justify-center rounded-[20px] bg-primary-blue/15 px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
+              <button className='flex h-16 items-center justify-center rounded-2xl bg-primary-blue/15 px-9 text-lg font-semibold text-primary-blue transition-opacity hover:opacity-90'>
                 {t('secondaryButton')}
               </button>
             </div>

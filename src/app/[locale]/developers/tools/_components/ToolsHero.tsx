@@ -8,11 +8,11 @@ export function ToolsHero (): React.ReactNode {
   return (
     <section className='relative flex min-h-[500px] items-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark lg:min-h-[635px]'>
       <Image
-        src='/images/developers/build/hero-bg.png'
+        src='/images/developers/tools/hero-bg.png'
         alt='Tools hero background'
         width={1920}
         height={1920}
-        className='pointer-events-none absolute top-[-50%] left-1/2 h-[200%] w-auto -translate-x-1/2 object-contain'
+        className='pointer-events-none absolute top-[-60%] left-[39%] h-[228%] w-[84%] object-contain'
         priority
       />
       <div className='absolute inset-0 bg-linear-to-t from-primary-blue/30 to-transparent dark:from-primary-dark/50' />

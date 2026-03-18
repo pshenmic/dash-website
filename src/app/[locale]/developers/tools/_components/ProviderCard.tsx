@@ -8,6 +8,7 @@ export interface ProviderButton {
 
 interface ProviderCardProps {
   image: string
+  darkImage?: string
   category?: string
   name: string
   description: string
@@ -16,16 +17,17 @@ interface ProviderCardProps {
 
 export function ProviderCard ({
   image,
+  darkImage,
   category,
   name,
   description,
   buttons
 }: ProviderCardProps): React.ReactNode {
   return (
-    <div className='relative flex h-155 w-full flex-col overflow-hidden rounded-3xl border border-primary-dark/15 bg-white shadow-soft lg:rounded-4xl'>
+    <div className='relative flex h-155 w-full flex-col overflow-hidden rounded-3xl border border-primary-dark/15 bg-white shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none lg:rounded-4xl'>
       {/* Dash Logo */}
       <div className='absolute top-5 left-5 z-10 lg:top-9 lg:left-8'>
-        <DashLogo className='h-5 w-auto text-primary-dark lg:h-8' />
+        <DashLogo className='h-5 w-auto lg:h-8' />
       </div>
 
       {/* Provider Logo */}
@@ -34,8 +36,16 @@ export function ProviderCard ({
         <img
           src={image}
           alt={name}
-          className='max-h-16 max-w-48 object-contain lg:max-h-28 lg:max-w-60'
+          className={`max-h-16 max-w-48 object-contain lg:max-h-28 lg:max-w-60${darkImage != null ? ' dark:hidden' : ''}`}
         />
+        {darkImage != null && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={darkImage}
+            alt={name}
+            className='hidden max-h-16 max-w-48 object-contain lg:max-h-28 lg:max-w-60 dark:block'
+          />
+        )}
       </div>
 
       {/* Card Content */}
@@ -47,10 +57,10 @@ export function ProviderCard ({
                 {category}
               </p>
             )}
-            <Heading as='h3' size='xl' weight='extrabold' className='leading-tight tracking-tight text-primary-dark! lg:text-4xl lg:leading-10'>
+            <Heading as='h3' size='xl' weight='extrabold' className='leading-tight tracking-tight text-primary-dark! dark:text-white! lg:text-4xl lg:leading-10'>
               {name}
             </Heading>
-            <Text size='xs' weight='medium' className='leading-normal text-primary-dark! lg:text-sm'>
+            <Text size='xs' weight='medium' className='leading-normal text-primary-dark! dark:text-white! lg:text-sm'>
               {description}
             </Text>
           </div>

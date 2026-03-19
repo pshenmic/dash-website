@@ -20,7 +20,7 @@ interface TimelineEra {
 
 function InfoCard ({ card }: { card: TimelineCard }): React.ReactNode {
   return (
-    <div className='flex min-h-[480px] flex-col overflow-hidden rounded-4xl border border-white/15 bg-white/15 backdrop-blur-sm'>
+    <div className='flex min-h-120 flex-col overflow-hidden rounded-4xl border border-white/15 bg-white/15 backdrop-blur-sm'>
       {/* Header — Logo + Tags */}
       <div className='flex items-center justify-between gap-3 p-5 lg:p-7'>
         <DashLogo color='white' className='h-5 w-auto shrink-0' />
@@ -48,7 +48,7 @@ function InfoCard ({ card }: { card: TimelineCard }): React.ReactNode {
             {card.description}
           </Text>
         </div>
-        <button className='flex h-14 w-full items-center justify-center rounded-[20px] bg-white/15 text-base font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90 lg:h-16 lg:text-lg'>
+        <button className='flex h-14 w-full items-center justify-center rounded-2xl bg-white/15 text-base font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90 lg:h-16 lg:text-lg'>
           {t('readAll')}
         </button>
       </div>

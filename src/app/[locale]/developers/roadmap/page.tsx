@@ -20,11 +20,11 @@ export default async function RoadmapPage ({
     <main>
       <RoadmapHero />
 
-      <section className='bg-primary-blue pb-10 dark:bg-primary-dark lg:pb-16'>
+      <section className='bg-primary-blue pb-20 dark:bg-primary-dark lg:pb-24'>
         <RoadmapTimeline />
       </section>
 
-      <section className='bg-primary-white py-10 dark:bg-primary-dark lg:py-16'>
+      <section className='relative z-10 -mt-10 rounded-t-[35px] bg-primary-white py-10 dark:bg-primary-dark lg:-mt-14 lg:py-16'>
         <RoadmapBugBounty />
       </section>
     </main>

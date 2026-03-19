@@ -18,7 +18,7 @@ interface TimelineEra {
   cards: TimelineCard[]
 }
 
-function InfoCard ({ card }: { card: TimelineCard }): React.ReactNode {
+function InfoCard ({ card, buttonLabel }: { card: TimelineCard, buttonLabel: string }): React.ReactNode {
   return (
     <div className='flex min-h-120 flex-col overflow-hidden rounded-4xl border border-white/15 bg-white/15 backdrop-blur-sm'>
       {/* Header — Logo + Tags */}
@@ -49,7 +49,7 @@ function InfoCard ({ card }: { card: TimelineCard }): React.ReactNode {
           </Text>
         </div>
         <button className='flex h-14 w-full items-center justify-center rounded-2xl bg-white/15 text-base font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90 lg:h-16 lg:text-lg'>
-          {t('readAll')}
+          {buttonLabel}
         </button>
       </div>
     </div>
@@ -173,7 +173,7 @@ export function RoadmapTimeline (): React.ReactNode {
               </div>
 
               {/* Single card */}
-              <InfoCard card={slide} />
+              <InfoCard card={slide} buttonLabel={t('readAll')} />
             </div>
           ))}
           {/* End card — Coming Soon + Last Updated */}

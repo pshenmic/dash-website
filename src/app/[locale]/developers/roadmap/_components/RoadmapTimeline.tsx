@@ -47,7 +47,7 @@ function InfoCard ({ card }: { card: TimelineCard }): React.ReactNode {
           </Text>
         </div>
         <button className='flex h-14 w-full items-center justify-center rounded-[20px] bg-white/15 text-base font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90 lg:h-16 lg:text-lg'>
-          Read All
+          {t('readAll')}
         </button>
       </div>
     </div>

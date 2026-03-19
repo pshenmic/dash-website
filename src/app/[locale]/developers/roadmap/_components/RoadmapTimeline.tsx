@@ -1,12 +1,12 @@
 'use client'
 
 import useEmblaCarousel from 'embla-carousel-react'
-import { useCallback, useEffect, useState } from 'react'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { useCallback, useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { DashLogo, Heading, Text } from 'dash-ui-kit/react'
 
 interface TimelineCard {
+  date?: string
   title: string
   description: string
   tags: string[]
@@ -20,15 +20,15 @@ interface TimelineEra {
 
 function InfoCard ({ card }: { card: TimelineCard }): React.ReactNode {
   return (
-    <div className='flex h-[480px] flex-col overflow-hidden rounded-4xl border border-white/15 bg-white/15 backdrop-blur-sm'>
+    <div className='flex min-h-[480px] flex-col overflow-hidden rounded-4xl border border-white/15 bg-white/15 backdrop-blur-sm'>
       {/* Header — Logo + Tags */}
-      <div className='flex items-start justify-between p-7'>
+      <div className='flex items-center justify-between gap-3 p-5 lg:p-7'>
         <DashLogo color='white' className='h-5 w-auto shrink-0' />
-        <div className='flex flex-wrap justify-end gap-2.5'>
-          {card.tags.map((tag) => (
+        <div className='flex gap-2'>
+          {card.tags.slice(0, 2).map((tag) => (
             <span
               key={tag}
-              className='rounded-full border border-white px-6 py-2.5 text-sm font-medium text-white'
+              className='rounded-full border border-white/50 px-3 py-1.5 text-xs font-medium text-white'
             >
               {tag}
             </span>
@@ -37,16 +37,16 @@ function InfoCard ({ card }: { card: TimelineCard }): React.ReactNode {
       </div>
 
       {/* Content — pushed to bottom */}
-      <div className='mt-auto flex flex-col gap-7 p-7 pt-0'>
-        <div className='flex flex-col gap-5'>
-          <Heading as='h3' weight='extrabold' className='text-3xl leading-10 tracking-tight text-white lg:text-4xl'>
+      <div className='mt-auto flex flex-col gap-5 p-5 pt-0 lg:gap-7 lg:p-7 lg:pt-0'>
+        <div className='flex flex-col gap-3 lg:gap-5'>
+          <Heading as='h3' weight='extrabold' className='text-2xl leading-8 tracking-tight text-white lg:text-4xl lg:leading-10'>
             {card.title}
           </Heading>
-          <Text weight='medium' className='line-clamp-4 text-base leading-normal text-white lg:text-lg'>
+          <Text weight='medium' className='text-sm leading-normal text-white lg:text-base'>
             {card.description}
           </Text>
         </div>
-        <button className='flex h-16 w-full items-center justify-center rounded-[20px] bg-white/15 text-lg font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90'>
+        <button className='flex h-14 w-full items-center justify-center rounded-[20px] bg-white/15 text-base font-semibold text-white backdrop-blur-sm transition-opacity hover:opacity-90 lg:h-16 lg:text-lg'>
           Read All
         </button>
       </div>
@@ -54,107 +54,135 @@ function InfoCard ({ card }: { card: TimelineCard }): React.ReactNode {
   )
 }
 
+interface TimelineSlide extends TimelineCard {
+  year: string
+  status: string
+  isFirst: boolean
+  showDate: boolean
+}
+
 export function RoadmapTimeline (): React.ReactNode {
   const t = useTranslations('roadmapPage')
   const eras = t.raw('timeline.eras') as TimelineEra[]
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: 'start',
-    slidesToScroll: 1,
-    containScroll: 'trimSnaps'
+  const flat = eras.flatMap((era) =>
+    era.cards.map((card, i) => ({ ...card, year: era.year, status: era.status, isFirst: i === 0 }))
+  )
+  const slides: TimelineSlide[] = flat.map((slide, idx) => {
+    const prev = idx > 0 ? flat[idx - 1] : null
+    const showDate = !slide.isFirst && slide.date != null && (prev == null || prev.date !== slide.date || prev.year !== slide.year)
+    return { ...slide, showDate }
   })
 
-  const [canScrollPrev, setCanScrollPrev] = useState(false)
-  const [canScrollNext, setCanScrollNext] = useState(true)
-
-  const onSelect = useCallback((): void => {
-    if (emblaApi == null) return
-    setCanScrollPrev(emblaApi.canScrollPrev())
-    setCanScrollNext(emblaApi.canScrollNext())
-  }, [emblaApi])
-
-  useEffect(() => {
-    if (emblaApi == null) return
-    emblaApi.on('select', onSelect)
-    onSelect()
-  }, [emblaApi, onSelect])
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { align: 'start', slidesToScroll: 1, containScroll: 'trimSnaps' },
+  )
 
   const scrollToEnd = useCallback((): void => {
     if (emblaApi == null) return
-    emblaApi.scrollTo(eras.length - 1)
-  }, [emblaApi, eras.length])
+    const lastYear = eras[eras.length - 1].year
+    const lastYearIdx = slides.findIndex(s => s.isFirst && s.year === lastYear)
+    emblaApi.scrollTo(lastYearIdx >= 0 ? lastYearIdx : slides.length - 1)
+  }, [emblaApi, eras, slides])
+
+  // Trackpad/wheel → scroll slides with debounce
+  const wheelTimeout = useRef<ReturnType<typeof setTimeout>>(null)
+  useEffect(() => {
+    const root = emblaApi?.rootNode()
+    if (root == null) return
+
+    const onWheel = (e: WheelEvent): void => {
+      if (emblaApi == null) return
+      const dx = Math.abs(e.deltaX)
+      const dy = Math.abs(e.deltaY)
+      // Vertical-dominant scroll → let page scroll normally
+      if (dy > dx) return
+      // Any horizontal gesture → prevent browser back/forward navigation
+      if (dx > 1) e.preventDefault()
+      if (wheelTimeout.current != null) return // debounce active
+      if (dx < 3) return // ignore micro-movements
+      if (e.deltaX > 0) { emblaApi.scrollNext() } else { emblaApi.scrollPrev() }
+      wheelTimeout.current = setTimeout(() => { wheelTimeout.current = null }, 300)
+    }
+
+    root.addEventListener('wheel', onWheel, { passive: false })
+    return () => { root.removeEventListener('wheel', onWheel) }
+  }, [emblaApi])
+
+  useEffect(() => {
+    const handler = (): void => { scrollToEnd() }
+    window.addEventListener('roadmap-jump-to-latest', handler)
+    return () => { window.removeEventListener('roadmap-jump-to-latest', handler) }
+  }, [scrollToEnd])
 
   return (
-    <div className='mx-auto max-w-[1728px] px-4 sm:px-6 lg:px-8'>
-      {/* Navigation arrows */}
-      <div className='mb-8 flex items-center justify-between'>
-        <div className='flex items-center gap-3'>
-          <button
-            onClick={() => emblaApi?.scrollPrev()}
-            disabled={!canScrollPrev}
-            className='flex size-11 items-center justify-center rounded-full bg-white/15 transition-all hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white disabled:opacity-40'
-            aria-label='Previous era'
-          >
-            <ArrowLeft className='size-5 text-white' />
-          </button>
-          <button
-            onClick={() => emblaApi?.scrollNext()}
-            disabled={!canScrollNext}
-            className='flex size-11 items-center justify-center rounded-full bg-white/15 transition-all hover:bg-white/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-white disabled:opacity-40'
-            aria-label='Next era'
-          >
-            <ArrowRight className='size-5 text-white' />
-          </button>
-        </div>
-        <button
-          onClick={scrollToEnd}
-          className='text-sm font-semibold text-white/60 transition-colors hover:text-white'
-        >
-          Jump to Latest →
-        </button>
-      </div>
-
-      {/* Carousel */}
+    <div id='roadmap-timeline' className='scroll-mt-24'>
+      {/* Carousel — edge-bleed: left aligned with content, right bleeds to viewport */}
       <div
         ref={emblaRef}
-        className='overflow-hidden'
+        className='overflow-hidden overscroll-x-contain'
         role='region'
         aria-label='Roadmap timeline'
       >
-        <div className='flex gap-10'>
-          {eras.map((era) => (
+        <div className='flex gap-5 pl-4 sm:pl-6 lg:gap-10 lg:pl-[calc((100vw-80rem)/2+2rem)]'>
+          {slides.map((slide) => (
             <div
-              key={era.year}
-              className='min-w-0 flex-[0_0_85%] sm:flex-[0_0_70%] lg:flex-[0_0_672px]'
+              key={`${slide.year}-${slide.title}`}
+              className='min-w-0 flex-[0_0_85%] sm:flex-[0_0_45%] lg:flex-[0_0_400px]'
             >
-              {/* Year + Status badge */}
-              <div className='mb-4 flex items-center gap-6'>
-                <span className='text-5xl font-semibold text-white'>
-                  {era.year}
-                </span>
-                <span className={`rounded-full px-4 py-1.5 text-sm font-medium ${
-                  era.status === 'complete'
-                    ? 'bg-primary-turquoise text-primary-dark'
-                    : 'bg-white/15 text-white'
-                }`}>
-                  {era.status === 'complete' ? t('complete') : t('inProgress')}
-                </span>
+              {/* Year or date label */}
+              <div className='mb-4 flex h-12 items-center gap-6'>
+                {slide.isFirst ? (
+                  <>
+                    <span className='text-5xl font-semibold text-white'>
+                      {slide.year}
+                    </span>
+                    <span className={`rounded-full px-4 py-1.5 text-sm font-medium ${
+                      slide.status === 'complete'
+                        ? 'bg-primary-turquoise text-primary-dark'
+                        : 'bg-white/15 text-white'
+                    }`}>
+                      {slide.status === 'complete' ? t('complete') : t('inProgress')}
+                    </span>
+                  </>
+                ) : slide.showDate ? (
+                  <span className='text-5xl font-semibold text-white'>
+                    {slide.date}
+                  </span>
+                ) : null}
               </div>
 
               {/* Timeline dot + line */}
               <div className='relative mb-8 h-5'>
-                <div className='absolute top-1/2 right-0 left-0 h-px -translate-y-1/2 bg-white/25' />
-                <div className='absolute top-1/2 left-1/2 size-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white' />
+                <div className={`absolute top-1/2 right-0 left-0 h-px -translate-y-1/2 ${
+                  slide.status === 'complete'
+                    ? 'bg-primary-turquoise/50'
+                    : slide.status === 'in-progress'
+                      ? 'bg-primary-white/25'
+                      : 'bg-white/10'
+                }`} />
+                <div className={`absolute top-1/2 left-1/2 size-5 -translate-x-1/2 -translate-y-1/2 rounded-full ${
+                  slide.status === 'complete'
+                    ? 'bg-primary-turquoise'
+                    : slide.status === 'in-progress'
+                      ? 'bg-primary-white'
+                      : 'bg-white/30'
+                }`} />
               </div>
 
-              {/* Info cards */}
-              <div className='flex flex-col gap-6'>
-                {era.cards.map((card) => (
-                  <InfoCard key={card.title} card={card} />
-                ))}
-              </div>
+              {/* Single card */}
+              <InfoCard card={slide} />
             </div>
           ))}
+          {/* End card — Coming Soon + Last Updated */}
+          <div className='flex min-w-0 flex-[0_0_85%] shrink-0 flex-col items-center justify-center sm:flex-[0_0_45%] lg:flex-[0_0_400px]'>
+            <span className='text-5xl font-extrabold tracking-tight text-white/20'>
+              {t('comingSoon')}
+            </span>
+            <span className='mt-4 text-sm font-medium text-white/40'>
+              {t('lastUpdated')}
+            </span>
+          </div>
         </div>
       </div>
     </div>

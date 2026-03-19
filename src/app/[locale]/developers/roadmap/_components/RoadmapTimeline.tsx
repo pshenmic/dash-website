@@ -26,12 +26,14 @@ function InfoCard ({ card }: { card: TimelineCard }): React.ReactNode {
         <DashLogo color='white' className='h-5 w-auto shrink-0' />
         <div className='flex gap-2'>
           {card.tags.slice(0, 2).map((tag) => (
-            <span
+            <Text
               key={tag}
-              className='rounded-full border border-white/50 px-3 py-1.5 text-xs font-medium text-white'
+              size='xs'
+              weight='medium'
+              className='rounded-full border border-white/50 px-3 py-1.5 text-white'
             >
               {tag}
-            </span>
+            </Text>
           ))}
         </div>
       </div>
@@ -134,21 +136,21 @@ export function RoadmapTimeline (): React.ReactNode {
               <div className='mb-4 flex h-12 items-center gap-6'>
                 {slide.isFirst ? (
                   <>
-                    <span className='text-5xl font-semibold text-white'>
+                    <Text weight='semibold' className='text-5xl text-white'>
                       {slide.year}
-                    </span>
-                    <span className={`rounded-full px-4 py-1.5 text-sm font-medium ${
+                    </Text>
+                    <Text size='sm' weight='medium' className={`rounded-full px-4 py-1.5 ${
                       slide.status === 'complete'
                         ? 'bg-primary-turquoise text-primary-dark'
                         : 'bg-white/15 text-white'
                     }`}>
                       {slide.status === 'complete' ? t('complete') : t('inProgress')}
-                    </span>
+                    </Text>
                   </>
                 ) : slide.showDate ? (
-                  <span className='text-5xl font-semibold text-white'>
+                  <Text weight='semibold' className='text-5xl text-white'>
                     {slide.date}
-                  </span>
+                  </Text>
                 ) : null}
               </div>
 
@@ -176,12 +178,12 @@ export function RoadmapTimeline (): React.ReactNode {
           ))}
           {/* End card — Coming Soon + Last Updated */}
           <div className='flex min-w-0 flex-[0_0_85%] shrink-0 flex-col items-center justify-center sm:flex-[0_0_45%] lg:flex-[0_0_400px]'>
-            <span className='text-5xl font-extrabold tracking-tight text-white/20'>
+            <Text weight='extrabold' className='text-5xl tracking-tight text-white/20'>
               {t('comingSoon')}
-            </span>
-            <span className='mt-4 text-sm font-medium text-white/40'>
+            </Text>
+            <Text size='sm' weight='medium' className='mt-4 text-white/40'>
               {t('lastUpdated')}
-            </span>
+            </Text>
           </div>
         </div>
       </div>

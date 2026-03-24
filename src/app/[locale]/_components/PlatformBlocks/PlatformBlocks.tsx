@@ -35,7 +35,7 @@ export function PlatformBlocks (): React.ReactNode {
                 {t('providers.description')}
               </Text>
             </div>
-            <Button variant='solid' colorScheme='brand' className='w-fit'>
+            <Button variant='solid' colorSchemeLight='white' colorSchemeDark='brand' size='xl' className='w-fit'>
               {t('providers.button')}
             </Button>
           </div>
@@ -59,10 +59,10 @@ export function PlatformBlocks (): React.ReactNode {
               </Text>
             </div>
             <div className='flex gap-4'>
-              <Button variant='solid' colorScheme='brand' className='w-fit'>
+              <Button variant='solid' colorSchemeLight='white' colorSchemeDark='brand' size='xl' className='w-fit'>
                 {t('libraries.quickStart')}
               </Button>
-              <Button variant='outline' colorScheme='brand' className='w-fit'>
+              <Button variant='solid' colorSchemeLight='halfWhite' colorSchemeDark='halfBlue' size='xl' className='w-fit'>
                 {t('libraries.jsSdk')}
               </Button>
             </div>

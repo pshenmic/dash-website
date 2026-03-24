@@ -10,8 +10,8 @@ export function FutureOfMoney (): React.ReactNode {
       <div className='mx-auto max-w-7xl px-4 lg:px-6'>
         <div className='flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between'>
           <div className='flex max-w-117 flex-col gap-9'>
-            <div className='flex flex-col gap-4'>
-              <Badge variant='bordered' color='blue' size='sm'>{t('chip')}</Badge>
+            <div className='flex flex-col items-start gap-4'>
+              <Badge variant='bordered' colorLight='gray' colorDark='white' size='sm'>{t('chip')}</Badge>
               <Heading as='h2' size='2xl' weight='extrabold' className='leading-10 tracking-tight dark:text-white lg:text-4xl'>
                 {t('title')}
               </Heading>
@@ -43,14 +43,16 @@ export function FutureOfMoney (): React.ReactNode {
               <Button
                 variant='solid'
                 colorScheme='brand'
-                className='h-12 w-full lg:h-16 lg:w-auto'
+                size='xl'
+                className='w-full lg:w-auto'
               >
                 {t('connectTestnet')}
               </Button>
               <Button
-                variant='outline'
-                colorScheme='brand'
-                className='h-12 w-full lg:h-16 lg:w-auto'
+                variant='solid'
+                colorScheme='halfBlue'
+                size='xl'
+                className='w-full lg:w-auto'
               >
                 {t('learnMore')}
               </Button>

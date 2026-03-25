@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { Button } from 'dash-ui-kit/react'
+import { Badge, Button } from 'dash-ui-kit/react'
 
 interface ReleaseItem {
   tag: string
@@ -34,9 +34,9 @@ export function RoadmapBlock (): React.ReactNode {
       <div className='relative overflow-visible rounded-3xl bg-white lg:h-148 lg:rounded-4xl dark:bg-secondary-space-cadet'>
         {/* Coming Soon chip */}
         <div className='absolute top-5 right-5 z-10 lg:top-6 lg:right-6'>
-          <span className='rounded-full border border-primary-dark px-6 py-2.5 text-xs font-medium text-primary-dark lg:px-9 lg:text-xs dark:border-white dark:text-white'>
+          <Badge variant='bordered' colorLight='gray' colorDark='white' size='sm'>
             {t('comingSoon')}
-          </span>
+          </Badge>
         </div>
 
         {/* Phone mockup with releases - positioned to overflow top */}
@@ -49,11 +49,11 @@ export function RoadmapBlock (): React.ReactNode {
               >
                 {/* Tags */}
                 <div className='mb-5 flex gap-2.5'>
-                  <span className='rounded-full bg-white px-5 py-2.5 text-base font-medium text-primary-blue'>
+                  <Badge variant='solid' color='white' size='sm'>
                     {release.tag}
-                  </span>
+                  </Badge>
                   {release.complete && (
-                    <span className='flex items-center gap-2.5 rounded-full bg-white/15 px-5 py-2.5 text-base font-bold text-white'>
+                    <Badge variant='flat' color='white' size='sm' className='gap-2.5 font-bold'>
                       <Image
                         src='/images/home/news/check-icon.svg'
                         alt='Complete'
@@ -61,7 +61,7 @@ export function RoadmapBlock (): React.ReactNode {
                         height={12}
                       />
                       {release.complete}
-                    </span>
+                    </Badge>
                   )}
                 </div>
 
@@ -95,11 +95,11 @@ export function RoadmapBlock (): React.ReactNode {
             >
               {/* Tags */}
               <div className='mb-4 flex flex-wrap gap-2'>
-                <span className='rounded-full bg-white px-4 py-2 text-sm font-medium text-primary-blue'>
+                <Badge variant='solid' color='white' size='xs'>
                   {release.tag}
-                </span>
+                </Badge>
                 {release.complete && (
-                  <span className='flex items-center gap-1.5 rounded-full bg-white/15 px-4 py-2 text-sm font-bold text-white'>
+                  <Badge variant='flat' color='white' size='xs' className='gap-1.5 font-bold'>
                     <Image
                       src='/images/home/news/check-icon.svg'
                       alt='Completed'
@@ -107,7 +107,7 @@ export function RoadmapBlock (): React.ReactNode {
                       height={10}
                     />
                     {release.complete}
-                  </span>
+                  </Badge>
                 )}
               </div>
 
@@ -158,10 +158,10 @@ export function RoadmapBlock (): React.ReactNode {
 
             {/* Buttons */}
             <div className='flex flex-col gap-2.5 lg:gap-4'>
-              <Button variant='solid' colorScheme='brand' className='w-full lg:h-16'>
+              <Button variant='solid' colorScheme='brand' size='xl' className='w-full'>
                 {t('seeFullRoadmap')}
               </Button>
-              <Button variant='outline' colorScheme='brand' className='w-full lg:h-16'>
+              <Button variant='solid' colorScheme='halfBlue' size='xl' className='w-full'>
                 {t('viewReleaseNotes')}
               </Button>
             </div>

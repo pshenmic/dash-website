@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { highlight } from 'sugar-high'
 import { useTranslations } from 'next-intl'
-import { Button, DashLogo, Heading, Text } from 'dash-ui-kit/react'
+import { Badge, Button, DashLogo, Heading, Text } from 'dash-ui-kit/react'
 import { Card } from '@/components/ui/Card'
 
 const CODE_SNIPPET = `const { dashPlatform } = window
@@ -18,9 +18,9 @@ export function ForDevelopers (): React.ReactNode {
       <div className='mx-auto max-w-7xl px-4 lg:px-6'>
         <div className='mb-8 flex flex-col items-start justify-between gap-4 lg:mb-5 lg:flex-row lg:items-center'>
           <div className='flex flex-col gap-1'>
-            <span className='text-lg font-extrabold text-primary-blue'>
+            <Text size='lg' weight='extrabold' color='blue'>
               {t('label')}
-            </span>
+            </Text>
             <Heading as='h2' size='2xl' weight='extrabold' className='max-w-80 leading-9 tracking-tight lg:max-w-none dark:text-white'>
               {t('title')}{' '}
               <span className='relative inline-block'>
@@ -93,9 +93,9 @@ function DeveloperCard ({
           className='h-5 w-auto lg:h-6'
         />
         <div className='mt-auto flex flex-col gap-2 lg:gap-3'>
-          <span className='w-fit rounded-full border border-white/50 px-3 py-1.5 text-xs font-medium text-white lg:px-9 lg:py-2.5 lg:text-xs'>
+          <Badge variant='bordered' color='white' size='sm' className='lg:px-9 lg:py-2.5'>
             {chip}
-          </span>
+          </Badge>
           <Text size='xl' weight='extrabold' className='leading-6 tracking-tight text-white lg:text-4xl lg:leading-10'>
             {title}
           </Text>

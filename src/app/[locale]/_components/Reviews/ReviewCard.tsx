@@ -35,10 +35,10 @@ export function ReviewCard ({ review }: ReviewCardProps): React.ReactNode {
       <StarRating />
 
       <div className='flex flex-1 flex-col gap-2.5 lg:gap-4'>
-        <Heading as='h4' weight='extrabold' className='text-sm dark:text-white lg:text-lg'>
+        <Heading as='h4' weight='extrabold' colorDark='white' className='text-sm lg:text-lg'>
           {review.title}
         </Heading>
-        <Text weight='medium' className='line-clamp-3 text-xs leading-snug dark:text-white/80 lg:text-sm'>
+        <Text weight='medium' colorDark='white' className='line-clamp-3 text-xs leading-snug lg:text-sm'>
           {review.text}
         </Text>
         <div className='mt-auto flex items-center gap-4'>

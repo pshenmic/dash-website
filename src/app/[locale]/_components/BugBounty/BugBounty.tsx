@@ -29,7 +29,7 @@ export function BugBounty (): React.ReactNode {
             </Text>
           </div>
           {/* Single button - works in both themes */}
-          <Button variant='solid' colorScheme='brand' className='w-fit'>
+          <Button variant='solid' colorSchemeLight='white' colorSchemeDark='brand' size='xl' className='w-fit'>
             {t('button')}
           </Button>
         </div>

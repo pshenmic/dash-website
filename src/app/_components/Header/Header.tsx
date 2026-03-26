@@ -1,9 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useTheme, DashLogo } from 'dash-ui-kit/react'
-import { Sun, Moon, Menu, Wallet } from 'lucide-react'
-import { useWalletContext } from '@/lib/dash-platform/wallet-context'
+import { useTheme, Button, DashLogo } from 'dash-ui-kit/react'
+import { Sun, Moon, Menu } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { usePathname } from '@/i18n/navigation'
 import { cn } from '@/lib/cn'
@@ -21,7 +20,7 @@ export function Header (): React.ReactNode {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
-  const { walletInfo, isConnecting, connect, disconnect } = useWalletContext()
+
 
   const GET_STARTED_ROUTES = ['/get-started', '/get-started/take-control', '/downloads', '/get-started/buy-online', '/get-started/spend', '/get-started/transactions']
   const INSTITUTIONS_ROUTES = ['/institutions', '/institutions/traders', '/institutions/financial-services', '/institutions/regulatory', '/institutions/fastpass']
@@ -124,14 +123,14 @@ export function Header (): React.ReactNode {
                 <NavDropdownDisabledItem>{t('documentation')}</NavDropdownDisabledItem>
               </NavDropdown>
 
-              <NavDropdown label={t('community')} isActive={false} align='right'>
+              <NavDropdown label={t('community')} isActive={pathname === '/blog'} align='right'>
                 <NavDropdownDisabledItem>{t('bugBounty')}</NavDropdownDisabledItem>
                 <NavDropdownDisabledItem>{t('learningResources')}</NavDropdownDisabledItem>
                 <NavDropdownDisabledItem>{t('connectWithUs')}</NavDropdownDisabledItem>
                 <NavDropdownDisabledItem>{t('forum')}</NavDropdownDisabledItem>
                 <NavDropdownDisabledItem>{t('masternodes')}</NavDropdownDisabledItem>
                 <NavDropdownDisabledItem>{t('mining')}</NavDropdownDisabledItem>
-                <NavDropdownDisabledItem>{t('blog')}</NavDropdownDisabledItem>
+                <NavDropdownLink href='/blog'>{t('blog')}</NavDropdownLink>
               </NavDropdown>
             </nav>
 
@@ -149,33 +148,13 @@ export function Header (): React.ReactNode {
                     <Sun className='size-5 lg:size-6 text-primary-dark dark:text-white transition-transform duration-300' />
                     )}
               </button>
-              {walletInfo.connected && walletInfo.currentIdentity != null
-                ? (
-                  <button
-                    onClick={disconnect}
-                    className='flex h-10 lg:h-12 w-24 lg:w-28 items-center justify-center gap-1.5 rounded-full bg-primary-turquoise/15 transition-all duration-300 hover:bg-primary-turquoise/25'
-                    title='Click to disconnect'
-                    aria-label='Disconnect wallet'
-                  >
-                    <span className='h-2 w-2 shrink-0 rounded-full bg-primary-turquoise' />
-                    <span className='text-xs font-medium text-primary-dark dark:text-white truncate'>
-                      {walletInfo.currentIdentity.slice(0, 4)}...{walletInfo.currentIdentity.slice(-4)}
-                    </span>
-                  </button>
-                  )
-                : (
-                  <button
-                    onClick={() => { void connect() }}
-                    disabled={isConnecting}
-                    className='flex h-10 lg:h-12 w-24 lg:w-28 items-center justify-center gap-1.5 rounded-full bg-primary-dark/10 dark:bg-white/10 transition-all duration-300 hover:bg-primary-dark/20 dark:hover:bg-white/20 disabled:opacity-50'
-                    aria-label='Connect wallet'
-                  >
-                    <Wallet className='size-4 shrink-0 text-primary-dark dark:text-white' />
-                    <span className='text-xs font-medium text-primary-dark dark:text-white'>
-                      {isConnecting ? '...' : 'Connect'}
-                    </span>
-                  </button>
-                  )}
+              <Button
+                variant='solid'
+                colorScheme='mint'
+                className='h-12 lg:h-14 min-w-30 shrink-0 rounded-xl px-5 lg:px-7 text-sm lg:text-base font-semibold whitespace-nowrap'
+              >
+                {t('buyDash')}
+              </Button>
             </div>
         </div>
       </header>

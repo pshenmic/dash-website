@@ -170,7 +170,7 @@ export function MobileMenu ({
               <MobileNavLink href='#' disabled>{t('forum')}</MobileNavLink>
               <MobileNavLink href='#' disabled>{t('masternodes')}</MobileNavLink>
               <MobileNavLink href='#' disabled>{t('mining')}</MobileNavLink>
-              <MobileNavLink href='#' disabled>{t('blog')}</MobileNavLink>
+              <MobileNavLink href='/blog'>{t('blog')}</MobileNavLink>
             </div>
           </div>
         </nav>

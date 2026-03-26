@@ -5,7 +5,9 @@ import { getMessages, setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import { Header } from '../_components/Header'
 import { Footer } from '../_components/Footer'
+import { AdminFab } from '../_components/AdminFab'
 import { ThemeProvider } from '../_components/ThemeProvider'
+import { WalletProvider } from '@/lib/dash-platform/wallet-context'
 import 'dash-ui-kit/theme'
 import 'dash-ui-kit/styles'
 import '../globals.css'
@@ -50,9 +52,12 @@ export default async function LocaleLayout ({
       >
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
-            <Header />
-            {children}
-            <Footer />
+            <WalletProvider>
+              <Header />
+              {children}
+              <Footer />
+              <AdminFab />
+            </WalletProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

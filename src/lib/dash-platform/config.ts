@@ -1,3 +1,5 @@
 export const NETWORK = 'testnet'
 export const DATA_CONTRACT_IDENTIFIER = '7tyexVc1ivSzep11v486bmUwTgMymUKvQxFeNEBtFVdN'
 export const DOCUMENT_TYPE = 'torrent'
+export const BLOG_CONTRACT_ID = '7f5mhHebj4ZW4cDmvQ8gj8CHv8A3gqAi8BjNpQgjfZWG'
+export const ARTICLE_DOCUMENT_TYPE = 'article'

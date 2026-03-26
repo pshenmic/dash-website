@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 
 function AdminSkeleton (): React.ReactNode {
   return (
-    <main className='mx-auto min-h-screen max-w-4xl px-4 pt-28 pb-16 sm:px-6 lg:pt-32 lg:px-8'>
+    <main className='mx-auto min-h-screen max-w-4xl px-4 pt-32 pb-16 sm:px-6 lg:pt-40 lg:px-8'>
       <div className='space-y-8'>
         <div className='space-y-3'>
           <div className='h-9 w-40 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-700' />

@@ -118,7 +118,7 @@ export function RoadmapTimeline (): React.ReactNode {
   }, [scrollToEnd])
 
   return (
-    <div id='roadmap-timeline' className='scroll-mt-24'>
+    <div data-testid='roadmap-timeline' id='roadmap-timeline' className='scroll-mt-24'>
       {/* Carousel — edge-bleed: left aligned with content, right bleeds to viewport */}
       <div
         ref={emblaRef}

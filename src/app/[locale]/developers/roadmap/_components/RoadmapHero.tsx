@@ -7,7 +7,7 @@ export function RoadmapHero (): React.ReactNode {
   const t = useTranslations('roadmapPage.hero')
 
   return (
-    <section className='relative overflow-hidden bg-primary-blue pt-24 pb-4 dark:bg-primary-dark sm:pt-32 lg:pt-40 lg:pb-6'>
+    <section data-testid='roadmap-hero' className='relative overflow-hidden bg-primary-blue pt-24 pb-4 dark:bg-primary-dark sm:pt-32 lg:pt-40 lg:pb-6'>
       <Image
         src='/images/developers/build/hero-bg.png'
         alt='Roadmap hero background'

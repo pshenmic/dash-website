@@ -6,7 +6,7 @@ export function PaymentsInfraBlock (): React.ReactNode {
   const t = useTranslations('platformPage.paymentsInfra')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='payments-infra-block' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='relative overflow-hidden rounded-4xl bg-primary-blue dark:border dark:border-white/15 dark:bg-secondary-space-cadet'>
         {/* 3D Image — right side */}
         <div className='pointer-events-none absolute -top-[25%] right-0 hidden h-[130%] w-[55%] lg:block' style={{ filter: 'drop-shadow(0px 0px 125px rgba(0,0,0,0.15))' }}>

@@ -40,7 +40,7 @@ export function SDKActionCards (): React.ReactNode {
   ]
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='sdk-action-cards' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='flex flex-col gap-5 sm:grid sm:grid-cols-2 lg:flex lg:flex-row'>
         {cards.map((card, index) => (
           <SDKCard key={index} {...card} isLast={index === cards.length - 1} />

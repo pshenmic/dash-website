@@ -5,7 +5,7 @@ export function ActionCards (): React.ReactNode {
   const t = useTranslations('platformPage.actionCards')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='action-cards' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='flex flex-col gap-6 lg:flex-row lg:gap-9'>
         {/* Documentation Card */}
         <div className='flex flex-1 flex-col gap-4 rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet sm:flex-row sm:items-center sm:justify-between lg:rounded-4xl lg:p-9'>

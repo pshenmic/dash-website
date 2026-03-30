@@ -44,7 +44,7 @@ export function JoinCommunity (): React.ReactNode {
   const t = useTranslations('buildPage.joinCommunity')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='join-community' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between'>
         {/* Left — text content */}
         <div className='flex flex-col gap-9 lg:max-w-[570px]'>

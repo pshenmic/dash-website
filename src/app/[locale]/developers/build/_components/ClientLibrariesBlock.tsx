@@ -6,7 +6,7 @@ export function ClientLibrariesBlock (): React.ReactNode {
   const t = useTranslations('buildPage.clientLibraries')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='client-libraries-block' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='relative overflow-hidden rounded-4xl bg-primary-blue dark:border dark:border-white/15 dark:bg-secondary-space-cadet'>
         {/* 3D Image — right side */}
         <div className='pointer-events-none absolute -right-[10%] -bottom-[30%] hidden h-[160%] w-[55%] lg:block'>

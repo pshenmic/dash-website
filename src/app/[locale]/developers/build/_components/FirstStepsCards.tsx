@@ -79,7 +79,7 @@ export function FirstStepsCards (): React.ReactNode {
   ]
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='first-steps-cards' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       {/* Section Header */}
       <div className='mb-10 flex flex-col gap-1 lg:mb-16'>
         <Text size='sm' weight='extrabold' className='text-primary-blue lg:text-lg'>

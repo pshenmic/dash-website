@@ -6,7 +6,7 @@ export function FutureOfMoneySection (): React.ReactNode {
   const t = useTranslations('buildPage.futureOfMoney')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 lg:px-6'>
+    <div data-testid='future-of-money-section' className='mx-auto max-w-7xl px-4 lg:px-6'>
       <div className='flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between'>
         {/* Left — text content */}
         <div className='flex max-w-117 flex-col gap-9'>

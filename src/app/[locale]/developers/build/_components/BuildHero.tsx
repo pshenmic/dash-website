@@ -7,7 +7,7 @@ export function BuildHero (): React.ReactNode {
   const t = useTranslations('buildPage.hero')
 
   return (
-    <section className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark'>
+    <section data-testid='build-hero' className='relative flex min-h-svh items-center justify-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark'>
       <Image
         src='/images/developers/build/hero-bg.png'
         alt='Build hero background'

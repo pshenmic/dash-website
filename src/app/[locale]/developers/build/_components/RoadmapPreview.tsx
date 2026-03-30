@@ -41,7 +41,7 @@ export function RoadmapPreview (): React.ReactNode {
   ]
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='roadmap-preview' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='relative mt-8 pt-16 lg:mt-12 lg:pt-0'>
         <div className='relative overflow-visible rounded-3xl border border-primary-dark/15 bg-white shadow-soft lg:h-148 lg:rounded-4xl dark:border-white/15 dark:bg-secondary-space-cadet'>
           {/* Coming Soon chip */}

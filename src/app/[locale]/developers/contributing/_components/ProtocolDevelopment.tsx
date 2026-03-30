@@ -54,7 +54,7 @@ export function ProtocolDevelopment (): React.ReactNode {
   const t = useTranslations('contributingPage.protocolDevelopment')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='protocol-development' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='overflow-hidden rounded-3xl border border-primary-dark/15 bg-white shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet lg:rounded-4xl'>
         <div className='flex flex-col lg:flex-row lg:items-center'>
           {/* Left — Branch Diagram */}

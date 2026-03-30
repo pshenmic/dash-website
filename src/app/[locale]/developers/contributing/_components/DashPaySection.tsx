@@ -6,7 +6,7 @@ export function DashPaySection (): React.ReactNode {
   const t = useTranslations('contributingPage.dashPay')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='dashpay-section' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-20'>
         {/* Left — Phone Image */}
         <div className='relative h-72 w-full shrink-0 lg:h-[425px] lg:w-[442px]'>

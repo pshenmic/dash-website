@@ -25,7 +25,7 @@ export function FeaturedRepos ({ rows }: FeaturedReposProps): React.ReactNode {
   const t = useTranslations('contributingPage.featuredRepos')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='featured-repos' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       {/* Header */}
       <div className='mb-6 flex items-center justify-between'>
         <Heading as='h3' weight='extrabold' className='text-2xl leading-tight tracking-tight dark:text-white lg:text-[32px] lg:leading-[34px]'>

@@ -91,7 +91,7 @@ export function PaymentProcessors (): React.ReactNode {
   })
 
   return (
-    <div>
+    <div data-testid='payment-processors'>
       {/* Section Header */}
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='mb-10 flex items-end justify-between lg:mb-16'>

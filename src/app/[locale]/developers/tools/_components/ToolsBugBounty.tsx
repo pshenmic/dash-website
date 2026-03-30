@@ -6,7 +6,7 @@ export function ToolsBugBounty (): React.ReactNode {
   const t = useTranslations('toolsPage.bugBounty')
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid='tools-bug-bounty' className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='relative flex h-72 flex-col justify-center overflow-hidden rounded-3xl bg-primary-blue px-5 py-6 dark:border dark:border-white/15 dark:bg-secondary-space-cadet lg:h-88 lg:rounded-4xl lg:px-0 lg:py-0'>
         {/* 3D Dash Logo — right side */}
         <div className='pointer-events-none absolute -bottom-[30%] -right-[20%] top-auto h-[160%] w-[70%] lg:-bottom-[50%] lg:-right-[5%] lg:h-[200%] lg:w-[55%]'>

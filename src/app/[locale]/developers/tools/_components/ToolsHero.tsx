@@ -6,7 +6,7 @@ export function ToolsHero (): React.ReactNode {
   const t = useTranslations('toolsPage.hero')
 
   return (
-    <section className='relative flex min-h-[500px] items-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark lg:min-h-[635px]'>
+    <section data-testid='tools-hero' className='relative flex min-h-[500px] items-center overflow-hidden rounded-b-3xl bg-primary-blue dark:bg-primary-dark lg:min-h-[635px]'>
       <Image
         src='/images/developers/tools/hero-bg.png'
         alt='Tools hero background'

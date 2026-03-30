@@ -73,7 +73,7 @@ export function SDKsAndTools (): React.ReactNode {
   })
 
   return (
-    <div>
+    <div data-testid='sdks-and-tools'>
       {/* Section Header */}
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='mb-10 flex items-end justify-between lg:mb-16'>

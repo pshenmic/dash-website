@@ -59,7 +59,7 @@ export function DocBlock ({
   const isTextRight = variant === 'platform'
 
   return (
-    <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+    <div data-testid={`doc-block-${variant}`} className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
       <div className='relative overflow-hidden rounded-4xl border border-primary-dark/15 bg-white shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet lg:h-88'>
         {/* 3D Image — desktop */}
         {variant === 'core' && <CoreImage src={imageSrc} alt={imageAlt} />}

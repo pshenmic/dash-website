@@ -7,16 +7,18 @@ interface CardProps {
   title: string
   description: string
   buttonText: string
+  testId?: string
 }
 
 function FirstStepCard ({
   image,
   title,
   description,
-  buttonText
+  buttonText,
+  testId
 }: CardProps): React.ReactNode {
   return (
-    <div className='relative flex h-100 w-full flex-col overflow-hidden rounded-3xl border border-primary-dark/15 bg-white shadow-soft lg:h-155 lg:w-100 lg:rounded-4xl'>
+    <div data-testid={testId} className='relative flex h-100 w-full flex-col overflow-hidden rounded-3xl border border-primary-dark/15 bg-white shadow-soft lg:h-155 lg:w-100 lg:rounded-4xl'>
       {/* Dash Logo */}
       <div className='absolute top-5 left-5 z-10 lg:top-9 lg:left-8'>
         <DashLogo
@@ -62,19 +64,22 @@ export function FirstStepsCards (): React.ReactNode {
       image: '/images/shared/3d/coins-stack.png',
       title: t('cards.identities.title'),
       description: t('cards.identities.description'),
-      buttonText: t('cards.identities.button')
+      buttonText: t('cards.identities.button'),
+      testId: 'first-step-card-identities'
     },
     {
       image: '/images/shared/3d/smart-contracts.png',
       title: t('cards.storage.title'),
       description: t('cards.storage.description'),
-      buttonText: t('cards.storage.button')
+      buttonText: t('cards.storage.button'),
+      testId: 'first-step-card-storage'
     },
     {
       image: '/images/shared/3d/coin.png',
       title: t('cards.developer.title'),
       description: t('cards.developer.description'),
-      buttonText: t('cards.developer.button')
+      buttonText: t('cards.developer.button'),
+      testId: 'first-step-card-developer'
     }
   ]
 
@@ -99,6 +104,7 @@ export function FirstStepsCards (): React.ReactNode {
             title={card.title}
             description={card.description}
             buttonText={card.buttonText}
+            testId={card.testId}
           />
         ))}
       </div>

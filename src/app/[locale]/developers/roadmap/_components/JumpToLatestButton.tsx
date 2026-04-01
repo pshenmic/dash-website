@@ -13,6 +13,7 @@ export function JumpToLatestButton ({ label }: { label: string }): React.ReactNo
   return (
     <button
       onClick={handleClick}
+      data-testid='jump-to-latest-button'
       className='flex items-center gap-2 rounded-full bg-white/15 p-1.5 backdrop-blur-sm transition-opacity hover:opacity-90 sm:gap-4 sm:px-3 sm:py-2.5'
     >
       <span className='hidden pl-6 text-lg font-semibold text-white sm:block'>{label}</span>

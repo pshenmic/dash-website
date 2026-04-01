@@ -94,7 +94,7 @@ export function ArticleList ({ refreshKey }: ArticleListProps): React.ReactNode 
   }
 
   return (
-    <div className='space-y-4'>
+    <div data-testid='article-list' className='space-y-4'>
       <p className='text-sm text-gray-500 dark:text-gray-400'>
         {articles.length} article{articles.length !== 1 ? 's' : ''} on blockchain
       </p>
@@ -102,6 +102,7 @@ export function ArticleList ({ refreshKey }: ArticleListProps): React.ReactNode 
       {articles.map((article) => (
         <div
           key={article.id}
+          data-testid={`article-item-${article.id}`}
           className='rounded-lg border border-gray-200 dark:border-gray-700 p-4 space-y-3'
         >
           {article.image != null && (

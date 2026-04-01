@@ -62,7 +62,7 @@ export function BlogPage (): React.ReactNode {
   }, [fetchArticles])
 
   return (
-    <main className='mx-auto min-h-screen max-w-7xl px-4 pt-32 pb-16 sm:px-6 lg:pt-40 lg:px-8'>
+    <main data-testid='blog-page' className='mx-auto min-h-screen max-w-7xl px-4 pt-32 pb-16 sm:px-6 lg:pt-40 lg:px-8'>
       <div className='space-y-10'>
         <div>
           <h1 className='text-4xl font-bold text-gray-900 dark:text-white'>

@@ -67,7 +67,7 @@ export function ArticlePage (): React.ReactNode {
 
   if (loading) {
     return (
-      <main className='mx-auto min-h-screen max-w-3xl px-4 pt-32 pb-16 sm:px-6 lg:pt-40 lg:px-8'>
+      <main data-testid='article-page-loading' className='mx-auto min-h-screen max-w-3xl px-4 pt-32 pb-16 sm:px-6 lg:pt-40 lg:px-8'>
         <div className='space-y-6'>
           <div className='h-6 w-32 animate-pulse rounded bg-gray-200 dark:bg-gray-700' />
           <div className='h-64 animate-pulse rounded-2xl bg-gray-200 dark:bg-gray-700' />
@@ -85,7 +85,7 @@ export function ArticlePage (): React.ReactNode {
 
   if (error !== null || article == null) {
     return (
-      <main className='mx-auto min-h-screen max-w-3xl px-4 pt-32 pb-16 sm:px-6 lg:pt-40 lg:px-8'>
+      <main data-testid='article-page-error' className='mx-auto min-h-screen max-w-3xl px-4 pt-32 pb-16 sm:px-6 lg:pt-40 lg:px-8'>
         <Link
           href='/blog'
           className='inline-flex items-center gap-1 text-sm text-primary-blue hover:underline mb-8'
@@ -101,7 +101,7 @@ export function ArticlePage (): React.ReactNode {
   }
 
   return (
-    <main className='mx-auto min-h-screen max-w-3xl px-4 pt-32 pb-16 sm:px-6 lg:pt-40 lg:px-8'>
+    <main data-testid='article-page' className='mx-auto min-h-screen max-w-3xl px-4 pt-32 pb-16 sm:px-6 lg:pt-40 lg:px-8'>
       <Link
         href='/blog'
         className='inline-flex items-center gap-1 text-sm text-primary-blue hover:underline mb-8'

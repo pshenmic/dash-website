@@ -17,6 +17,7 @@ export function ArticleCard ({ id, title, content, image, createdAt }: ArticleCa
   return (
     <Link
       href={`/blog/${id}`}
+      data-testid={`article-card-${id}`}
       className='group block rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden transition-all duration-300 hover-lift'
     >
       {image != null

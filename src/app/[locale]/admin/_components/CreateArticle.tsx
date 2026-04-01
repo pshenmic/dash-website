@@ -156,7 +156,7 @@ export function CreateArticle ({ walletInfo, onCreated }: CreateArticleProps): R
     fieldErrors.title == null && fieldErrors.content == null && fieldErrors.image == null
 
   return (
-    <section className='rounded-lg border border-gray-200 dark:border-gray-700 p-6 space-y-4'>
+    <section data-testid='create-article' className='rounded-lg border border-gray-200 dark:border-gray-700 p-6 space-y-4'>
       <h2 className='text-xl font-semibold text-gray-900 dark:text-white'>
         Create Article
       </h2>

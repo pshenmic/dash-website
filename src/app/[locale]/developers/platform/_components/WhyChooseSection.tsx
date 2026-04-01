@@ -4,7 +4,7 @@ import { DashLogo, Heading, Text } from 'dash-ui-kit/react'
 
 function CodeBlock ({ children }: { children: React.ReactNode }): React.ReactNode {
   return (
-    <div className='relative flex h-60 w-full flex-col overflow-hidden rounded-4xl bg-primary-dark shadow-card'>
+    <div data-testid='code-block' className='relative flex h-60 w-full flex-col overflow-hidden rounded-4xl bg-primary-dark shadow-card'>
       {/* Header bar */}
       <div className='flex items-center justify-between px-7 pt-3 pb-2'>
         <DashLogo className='h-4 w-auto text-white/50' />
@@ -81,7 +81,7 @@ export function WhyChooseSection (): React.ReactNode {
       {/* Cards */}
       <div className='flex flex-col gap-5 lg:flex-row'>
         {/* Application Data Storage */}
-        <div className='flex flex-1 flex-col gap-9 rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet lg:rounded-4xl lg:p-9'>
+        <div data-testid='why-choose-card-storage' className='flex flex-1 flex-col gap-9 rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet lg:rounded-4xl lg:p-9'>
           <div className='flex flex-1 flex-col gap-4'>
             <Heading as='h3' weight='extrabold' className='text-2xl leading-tight tracking-tight text-primary-dark dark:text-white lg:text-4xl lg:leading-10'>
               {t('cards.storage.title')}
@@ -94,7 +94,7 @@ export function WhyChooseSection (): React.ReactNode {
         </div>
 
         {/* Identities & Usernames */}
-        <div className='flex flex-1 flex-col gap-9 rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet lg:rounded-4xl lg:p-9'>
+        <div data-testid='why-choose-card-identities' className='flex flex-1 flex-col gap-9 rounded-3xl border border-primary-dark/15 bg-white p-6 shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet lg:rounded-4xl lg:p-9'>
           <div className='flex flex-1 flex-col gap-4'>
             <Heading as='h3' weight='extrabold' className='text-2xl leading-tight tracking-tight text-primary-dark dark:text-white lg:text-4xl lg:leading-10'>
               {t('cards.identities.title')}

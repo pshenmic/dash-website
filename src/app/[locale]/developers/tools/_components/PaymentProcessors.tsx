@@ -128,6 +128,7 @@ export function PaymentProcessors (): React.ReactNode {
       {/* Carousel — bleeds to right screen edge, py-[100px] gives shadow room inside overflow-hidden */}
       <div
         ref={emblaRef}
+        data-testid='payment-processors-carousel'
         className='-my-[100px] overflow-hidden py-[100px]'
         role='region'
         aria-label='Payment processors carousel'

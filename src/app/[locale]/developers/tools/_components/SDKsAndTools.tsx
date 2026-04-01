@@ -110,6 +110,7 @@ export function SDKsAndTools (): React.ReactNode {
       {/* Carousel — bleeds to right screen edge, py-[100px] gives shadow room inside overflow-hidden */}
       <div
         ref={emblaRef}
+        data-testid='sdks-and-tools-carousel'
         className='-my-[100px] overflow-hidden py-[100px]'
         role='region'
         aria-label='SDKs and tools carousel'

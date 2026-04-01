@@ -24,7 +24,7 @@ export function ProviderCard ({
   buttons
 }: ProviderCardProps): React.ReactNode {
   return (
-    <div className='relative flex h-155 w-full flex-col overflow-hidden rounded-3xl border border-primary-dark/15 bg-white shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none lg:rounded-4xl'>
+    <div data-testid={`provider-card-${name.toLowerCase().replace(/\s+/g, '-')}`} className='relative flex h-155 w-full flex-col overflow-hidden rounded-3xl border border-primary-dark/15 bg-white shadow-soft dark:border-white/15 dark:bg-secondary-space-cadet dark:shadow-none lg:rounded-4xl'>
       {/* Dash Logo */}
       <div className='absolute top-5 left-5 z-10 lg:top-9 lg:left-8'>
         <DashLogo className='h-5 w-auto lg:h-8' />

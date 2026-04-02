@@ -58,6 +58,15 @@ body {
   font-family: var(--font-family-sans);
 }
 
+/* dash-ui-kit DashLogo color override for dark theme */
+.dark {
+  --color-dash-brand: #ffffff;
+}
+
+.dark .text-dash-brand {
+  color: white !important;
+}
+
 /* Sugar-high syntax highlighting */
 :root {
   --sh-keyword: var(--color-syntax-keyword);

@@ -2408,6 +2408,383 @@
           ]
         }
       ]
+    }
+  },
+  "toolsPage": {
+    "hero": {
+      "title": "Providers and Tools",
+      "description": "The following providers offer a range of options that vary in terms of development effort required. Payment Processors provide a simple and quick way to begin accepting payments without any development skill required.\n\nCustody and API Providers enable blockchain interactions typically used by larger merchants and service providers."
+    },
+    "paymentProcessors": {
+      "chip": "Both Online and Point-of-sale Platforms",
+      "title": "Payment Processing Solutions",
+      "cards": {
+        "anypay": {
+          "category": "Point-of-Sale",
+          "name": "Anypay",
+          "description": "Anypay eCommerce, Point-of-Sale, Web & Mobile, APIs Anypay is an easy-to-use, multi-coin payment processor helping businesses accept Dash since 2016. A fully open-source suite of tools offers e-commerce plugins, POS integrations, web & mobile apps, and APIs for developers.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "btcpay": {
+          "category": "eCommerce",
+          "name": "BTCPay Server",
+          "description": "BTCPay Server is a free, self-hosted and fully open-source cryptocurrency payment processor designed with security, privacy and censorship-resistance at its core.",
+          "websiteButton": "Visit Website"
+        },
+        "coinpayments": {
+          "category": "eCommerce",
+          "name": "CoinPayments",
+          "description": "CoinPayments is an integrated payment gateway with a wide range of plugins available for popular webcarts.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "coinspaid": {
+          "category": "Payments Backoffice",
+          "name": "Coinspaid",
+          "description": "Coinspaid offers a white label backoffice payments solution with on-the-fly Fiat (EUR) conversion and instant transaction confirmations.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "ankerpay": {
+          "category": "eCommerce, Point-of-Sale",
+          "name": "AnkerPay",
+          "description": "AnkerPay POS is a crypto payment processor that allows merchants to accept crypto currencies and receive settlement in the local currency.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "nowpayments": {
+          "category": "eCommerce",
+          "name": "NOWPayments",
+          "description": "NOWPayments allows everyone to accept crypto payments on their websites, online stores, and social media accounts. It's a non-custodial service and supports more than 50 cryptocurrencies.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        }
+      }
+    },
+    "custodyProviders": {
+      "chip": "\"Cloud Infrastructure\" Providers Enable Direct Access to the Blockchain",
+      "title": "Custody Solutions and API Providers",
+      "cards": {
+        "bitgo": {
+          "name": "BitGo",
+          "description": "BitGo provides a simple and robust REST API and client SDK to integrate digital currency wallets with your application. InstantSend is fully supported. Features: Multi-Signature HD Wallets, Custody Solutions and Wallet Operations.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "blockcypher": {
+          "name": "BlockCypher",
+          "description": "BlockCypher is a non-custodial, REST API and client SDK for interacting with blockchains. Features: Transaction Building, Address Generation, Event Notifications, Payment Forwarding.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "lukka": {
+          "name": "Lukka",
+          "description": "Lukka's blockchain agnostic AML Platform uses proprietary algorithms to provide structured, actionable data that solves compliance and transaction risk issues for blockchain and cryptocurrencies. Features: Anti-money laundering (AML) solution, Know Your Customer (KYC) services, Blockchain Analytics, Register/ Authenticate digital assets, Track/Monitor source of crypto funds.",
+          "websiteButton": "Visit Website"
+        },
+        "cybavo": {
+          "name": "CYBAVO",
+          "description": "CYBAVO provides a turn-key, enterprise-level wallet and custody platform, offering fully customizable policies, segregated roles and multi-level approval chains. Features: Enterprise Wallets, Custody Solutions and Mobile Wallet SDK.",
+          "websiteButton": "Visit Website"
+        },
+        "nownodes": {
+          "name": "NOWNodes",
+          "description": "NOWNodes is an explorer and node API provider. It is meant for start-up entrepreneurs and crypto enthusiasts who would like to gain access to major blockchain networks without needing to establish their own nodes. Features: Explorer and Node API, WebSocket API, Powerful Servers (1GB/s), SLA, Backup Solution.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "getblock": {
+          "name": "GetBlock",
+          "description": "GetBlock offers blockchain developers fast and easy access to Dash nodes and other popular cryptocurrencies over the JSON-RPC, REST, and WebSocket protocols. Features: JSON-RPC, REST API and WebSocket APIs.",
+          "websiteButton": "Visit Website"
+        }
+      }
+    },
+    "sdks": {
+      "chip": "The Following Resources are Used to Build Custom Integrations",
+      "title": "Software Development Kits and Tools",
+      "cards": {
+        "nodejs": {
+          "name": "NodeJS",
+          "description": "Dashcore-Lib is a library for working with the Dash Protocol in client-side \"Browserified\" (JavaScript) settings as well as in server-side (NodeJS) applications. Insight API utilizes this open-source framework as part of a full-stack implementation.",
+          "docsButton": "Dashcore-Lib",
+          "githubButton": "Insight API"
+        },
+        "java": {
+          "name": "Java",
+          "description": "DashJ is a library for working with the Dash protocol in Java or JVM environment. It can be used for a variety of wallet functions including InstantSend. This library also includes an SPV implementation which allows for transaction verification in mobile applications.",
+          "docsButton": "DashJ",
+          "githubButton": "DashJ Multiplatform"
+        },
+        "dotnet": {
+          "name": ".NET",
+          "description": "NBitcoin is the most complete cryptocurrency library for the .NET platform and includes support for Dash. It implements all most relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement Proposals (DIPs) and provides low level access to Dash primitives.",
+          "docsButton": "API Documentation",
+          "githubButton": "Visit Website"
+        },
+        "python": {
+          "name": "Python",
+          "description": "PyCoin is an implementation of utility routines that are useful when working with the Dash Protocol. It is frequently used alongside Python-DashRPC and has been tested with Python 2.7, 3.6 and 3.7.",
+          "docsButton": "PyCoin",
+          "githubButton": "Python-DashRPC"
+        }
+      }
+    }
+  },
+  "contributingPage": {
+    "hero": {
+      "chip": "Contributing",
+      "title": "Contributing to Dash",
+      "subtitle": "Dash is an open source project and contributions are welcome! This page contains information on why and how to contribute, as well as technical details on where you can contribute, depending on your skills.",
+      "primaryButton": "Learn More",
+      "secondaryButton": "Dash Documentation"
+    },
+    "protocolDevelopment": {
+      "title": "Protocol Development\nGuidelines",
+      "description": "The Dash network protocol operates at two levels: a blockchain layer built on a code fork of Bitcoin, and a platform layer with data storage and retrieval features built on a code fork of Tendermint, as well as a decentralized API and data contracts to implement features such as usernames.\n\nWhile protocol repositories are managed by Dash Core Group (DCG), external bug fixes and features following the contribution guidelines are very welcome and are reflected in the permanent git commit history.",
+      "links": {
+        "chainLocks": "ChainLocks",
+        "llmq": "Long Living Masternode Quorums",
+        "evolution": "Evolution Initial Design Document"
+      },
+      "primaryButton": "Core Documentation",
+      "secondaryButton": "Platform Documentation"
+    },
+    "featuredRepos": {
+      "title": "Featured Repositories",
+      "seeAll": "See All",
+      "github": "Github.com"
+    },
+    "protocolRepos": {
+      "dashCore": "Dash Core",
+      "dashSdk": "Dash Sdk",
+      "dpp": "DPP",
+      "drive": "Drive",
+      "dapi": "DAPI",
+      "walletLib": "wallet-lib",
+      "dashcoreLib": "dashcore-lib",
+      "dashmate": "Dashmate",
+      "testSuite": "test-suite",
+      "networkDeploy": "network-deploy"
+    },
+    "platformDevelopment": {
+      "title": "Dash Platform\nDevelopment",
+      "description": "Dash Platform is a technology stack for building decentralized apps on the Dash network. Anyone can develop an app or tool to suit their own purposes based on Dash Platform, or join our vibrant community of developers and work collaboratively on larger projects.",
+      "primaryButton": "Platform Developers Portal",
+      "secondaryButton": "View Development Bounties"
+    },
+    "dashPay": {
+      "title": "DashPay",
+      "description": "DashPay is the reference Android and iOS wallet maintained by Dash Core Group. DashPay takes advantage of many of the key features of the core protocol so users can enjoy the best experience sending and receiving Dash.\n\nAlthough these apps are regularly maintained by DCG, there are many new features and improvements which we do not always have the bandwidth to do in a timely manner. We welcome volunteers and funded projects to contribute; if interested, you can create a new issue on GitHub or contribute to one that already exists according to the procedure described above."
+    },
+    "walletRepos": {
+      "iosWallet": "iOS Wallet",
+      "androidWallet": "Android Wallet"
+    }
+  },
+  "discoverPage": {
+    "hero": {
+      "chip": "Dash Docs",
+      "title": "Discover Dash",
+      "subtitle": "Learn how to implement Dash in Web3 and everyday life",
+      "primaryButton": "Learn More",
+      "secondaryButton": "Dash Documentation"
+    },
+    "core": {
+      "title": "Core",
+      "description": "Find all necessary information on Dash Core and its blockchain, along with general usage and RPC reference material.",
+      "button": "Learn More"
+    },
+    "platform": {
+      "title": "Platform",
+      "description": "Start working with Dash Platform and discover a variety of ways to implement it into your project.",
+      "button": "Learn More"
+    },
+    "users": {
+      "title": "Users",
+      "description": "What is Dash and how does it work? Find out why Digital Cash is the best crypto you can start using now.",
+      "button": "Learn More"
+    }
+  },
+  "buildPage": {
+    "hero": {
+      "chip": "Dash Developers",
+      "title": "Build Next Generation Apps",
+      "subtitle": "Dash Platform is a technology stack for building decentralized apps on the Dash network. Easily access network resources and trustlessly store app data using our decentralized API.",
+      "primaryButton": "Dash Developer Portal",
+      "secondaryButton": "Dash Core Documentation"
+    },
+    "firstSteps": {
+      "chip": "First Steps",
+      "title": "Choose Dash for your next Web3 project",
+      "cards": {
+        "identities": {
+          "title": "Identities & Names",
+          "description": "Replace public addresses with your Dash username and never worry about sending money to the wrong person again.",
+          "button": "Choose your identity"
+        },
+        "storage": {
+          "title": "Application\nData Storage",
+          "description": "Platform consensus will verify and validate any application data stored on the network.",
+          "button": "Read More"
+        },
+        "developer": {
+          "title": "Frictionless Developer Experience",
+          "description": "Use our SDKs to easily develop applications without worrying about the lower level details.",
+          "button": "Read More"
+        }
+      }
+    },
+    "clientLibraries": {
+      "title": "Client Libraries that\nSpeak Your Language",
+      "description": "SDKs are available for the languages you love and use most. Get started building apps using our easy-to-follow guides.",
+      "primaryButton": "Quick Start",
+      "secondaryButton": "JS SDK"
+    },
+    "providersTools": {
+      "title": "Providers and Tools",
+      "description": "Many software development kits and tools already work with Dash. A large ecosystem of partners also provides APIs, custody solutions or payment processing. Getting started is easy!",
+      "button": "Learn More"
+    },
+    "futureOfMoney": {
+      "chip": "Build with Dash",
+      "title": "The Future of Money",
+      "description": "Marking a major milestone in the evolution of the Dash network, start experimenting with Dash Platform by connecting to testnet, our public testing environment.",
+      "stats": {
+        "speed": {
+          "label": "Transaction speed",
+          "value": "1 sec"
+        },
+        "cost": {
+          "label": "Cost per transaction",
+          "value": "<$0.01"
+        }
+      },
+      "primaryButton": "Connect to Testnet",
+      "secondaryButton": "Learn More"
+    },
+    "roadmap": {
+      "chip": "Coming Soon",
+      "title": "So what's next\nfor Dash?",
+      "description": "Plenty of reasons to get excited just around the corner. Read and get prepared.",
+      "items": {
+        "chainlocks": "ChainLocks",
+        "llmq": "Long Living Masternode Quorums",
+        "evolution": "Evolution Initial Design Document"
+      },
+      "primaryButton": "See Full Roadmap",
+      "secondaryButton": "View release notes",
+      "timeline": {
+        "q1": {
+          "tag": "Q1 2025",
+          "title": "Dash Core v0.2",
+          "items": {
+            "backports": "Backports for Bitcoin v0.2.2",
+            "wallet": "Basic QT Wallet UI update",
+            "stress": "Post stress test enhancements"
+          }
+        },
+        "platform": {
+          "tag": "2024",
+          "completeTag": "Complete",
+          "title": "Dash Platform Rollout",
+          "items": {
+            "credit": "Credit system",
+            "identity": "Improved identity and data optimizations",
+            "stress": "Post stress test enhancements"
+          }
+        }
+      }
+    },
+    "joinCommunity": {
+      "chip": "Dash Developers",
+      "title": "Join the Community",
+      "description": "The Dash community is the best place to connect with users from across the world online or in person. Check out our upcoming meetups, proposed projects and learn from others on our forums.",
+      "primaryButton": "Check out Community",
+      "secondaryButton": "Join Discord",
+      "links": {
+        "dashpayGithub": "Dashpay",
+        "dashpayGithubSuffix": "Github",
+        "dashForum": "Dash",
+        "dashForumSuffix": "Forum",
+        "dashevoGithub": "Dashevo",
+        "dashevoGithubSuffix": "Github"
+      },
+      "continueButton": "Continue"
+    }
+  },
+  "platformPage": {
+    "hero": {
+      "chip": "Platform",
+      "title": "Dash Platform",
+      "subtitle": "Dash Platform is a technology stack for building decentralized applications on the Dash network. The two main architectural components, Drive and DAPI, turn the Dash P2P network into a cloud that developers can integrate with their applications.",
+      "primaryButton": "Dash Developer Portal",
+      "secondaryButton": "Dash Core Documentation"
+    },
+    "actionCards": {
+      "documentation": {
+        "title": "Documentation",
+        "description": "Guides and documentation to help you start working with Dash Platform as quickly as possible",
+        "button": "Read"
+      },
+      "testnet": {
+        "title": "Testnet",
+        "description": "Start experimenting with Dash Platform by connecting to testnet, our public testing environment.",
+        "button": "Learn More"
+      }
+    },
+    "paymentsInfra": {
+      "title": "Payments Infrastructure\nfor Developers",
+      "description": "Enable your application with the financial power of the Dash cryptocurrency — borderless, instantly transferrable, and supported by a decentralized cloud providing robust payments infrastructure.",
+      "button": "Learn More"
+    },
+    "whyChoose": {
+      "chip": "Learn More",
+      "title": "Why choose Dash Platform",
+      "cards": {
+        "storage": {
+          "title": "Application Data Storage",
+          "description": "Enhance your financial applications with robust user metadata. Leverage the blockchain to store data in a document-oriented database."
+        },
+        "identities": {
+          "title": "Identities & Usernames",
+          "description": "Robust, flexible user data structures that are fully decentralized and always available. Usernames make it easier than ever to transact."
+        }
+      }
+    },
+    "developerSDKs": {
+      "title": "Developer Friendly SDKs",
+      "description": "Access Dash Platform using one of the easy to use SDKs available in Javascript, Objective-C, or Java. Spend less time learning blockchain and more time developing."
+    },
+    "sdkActions": {
+      "quickstart": {
+        "title": "QuickStart",
+        "subtitle": "Connect Testnet"
+      },
+      "javascript": {
+        "title": "Javascript",
+        "subtitle": "Js-Dash-SDK"
+      },
+      "objectiveC": {
+        "title": "Objective-C",
+        "subtitle": "Dashsync-ios"
+      },
+      "java": {
+        "title": "Java",
+        "subtitle": "Dashj"
+      }
+    },
+    "verifiable": {
+      "chip": "Build with Dash",
+      "title": "Verifiable, Secure, Resilient",
+      "description": "Unlike centralized platforms, all data on Dash Platform is cryptographically verifiable. Data is distributed across the Dash network, guaranteeing availability."
+    },
+    "dashPayWallet": {
+      "title": "DashPay Wallet",
+      "description": "The first application built using Dash Platform is the DashPay wallet for Android and iOS. Learn more about the most user-friendly crypto wallet!",
+      "primaryButton": "Download",
+      "secondaryButton": "Learn More"
     },
     "bugBounty": {
       "title": "Bug Bounty Program",

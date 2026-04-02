@@ -20,7 +20,7 @@ export function NodeCard ({
       }`}
     >
       {/* Title */}
-      <Heading as='h4' weight='extrabold' className='mb-4 text-2xl leading-tight text-primary-blue! lg:mb-5 lg:text-3xl lg:leading-9'>
+      <Heading as='h4' weight='extrabold' color='blue' className='mb-4 text-2xl leading-tight lg:mb-5 lg:text-3xl lg:leading-9'>
         {title}
       </Heading>
 
@@ -30,7 +30,7 @@ export function NodeCard ({
       </Text>
 
       {/* Number */}
-      <Text weight='extrabold' className='absolute right-4 bottom-2.5 text-xl text-primary-blue! lg:right-9 lg:bottom-6 lg:text-3xl lg:leading-9'>
+      <Text weight='extrabold' color='blue' className='absolute right-4 bottom-2.5 text-xl lg:right-9 lg:bottom-6 lg:text-3xl lg:leading-9'>
         {number}
       </Text>
     </div>

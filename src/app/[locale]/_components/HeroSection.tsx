@@ -20,7 +20,7 @@ export function HeroSection (): React.ReactNode {
       <div className='relative z-10 flex flex-col items-center gap-9 px-6 py-12 lg:max-w-7xl lg:px-16'>
         <div className='flex max-w-full flex-col items-center gap-4'>
           <div className='animate-fade-in-up-1'>
-            <Badge variant='bordered' color='white' size='sm'>{t('chip')}</Badge>
+            <Badge variant='bordered' color='white' size='xl'>{t('chip')}</Badge>
           </div>
           <h1 className='max-w-full animate-fade-in-up-2 text-center text-4xl leading-tight font-extrabold tracking-tight whitespace-pre-line text-primary-white sm:text-4xl sm:leading-tight lg:text-6xl lg:whitespace-pre xl:text-7xl 2xl:text-8xl'>
             {t('title')}
@@ -31,8 +31,10 @@ export function HeroSection (): React.ReactNode {
         </div>
 
         <div className='flex animate-fade-in-up-4 flex-col items-center gap-2.5 lg:flex-row lg:gap-4'>
-          <Button variant='solid' colorScheme='brand'>{t('downloadWallet')}</Button>
-          <Button variant='outline' colorScheme='brand' className='gap-4'>
+          <Button variant='solid' colorSchemeLight='white' colorSchemeDark='brand' size='xl' rounded='full'>
+            {t('downloadWallet')}
+          </Button>
+          <Button variant='solid' colorScheme='halfWhite' size='xl' rounded='full'>
             {t('documentation')}
             <div className='flex size-11 items-center justify-center rounded-full bg-primary-white'>
               <ArrowRight className='size-4 text-primary-blue' />

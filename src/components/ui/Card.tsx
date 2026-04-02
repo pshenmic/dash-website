@@ -15,7 +15,7 @@ export function Card ({
         'overflow-hidden rounded-3xl',
         variant === 'dark' &&
           'bg-primary-dark dark:border dark:border-white/15 dark:bg-secondary-space-cadet',
-        variant === 'blue' && 'bg-primary-blue',
+        variant === 'blue' && 'bg-primary-blue dark:border dark:border-white/15 dark:bg-secondary-space-cadet',
         className
       )}
       {...props}

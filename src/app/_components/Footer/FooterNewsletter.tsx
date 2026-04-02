@@ -58,9 +58,9 @@ export function FooterNewsletter (): React.ReactNode {
         <Button
           type='submit'
           variant='solid'
-          colorScheme='lightGray'
+          colorSchemeLight='white'
+          colorSchemeDark='brand'
           size='xl'
-          className='rounded-2xl px-9 text-lg font-semibold'
         >
           {t('send')}
         </Button>

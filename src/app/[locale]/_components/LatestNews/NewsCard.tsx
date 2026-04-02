@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { cn } from '@/lib/cn'
-import { DashLogo } from 'dash-ui-kit/react'
+import { Badge, DashLogo } from 'dash-ui-kit/react'
 
 interface Tag {
   label: string
@@ -34,29 +34,24 @@ export function NewsCard ({
       {/* Dash Logo */}
       <div className='absolute top-6 left-6 z-10 lg:top-9 lg:left-8'>
         <DashLogo
-          className={cn(
-            'h-6 w-auto lg:h-8',
-            isVideo ? 'text-white' : 'text-primary-dark dark:text-white'
-          )}
+          color={isVideo ? 'white' : undefined}
+          className='h-6 w-auto lg:h-8'
         />
       </div>
 
       {/* Tags */}
       <div className='absolute top-6 right-6 z-10 flex gap-2.5 lg:top-8 lg:right-8'>
         {tags.map((tag, index) => (
-          <span
+          <Badge
             key={index}
-            className={cn(
-              'rounded-full px-6 py-2.5 text-xs font-medium lg:px-9 lg:text-xs',
-              tag.variant === 'filled'
-                ? 'bg-primary-blue text-white'
-                : isVideo
-                  ? 'border border-white text-white'
-                  : 'border border-primary-blue text-primary-blue dark:border-white dark:text-white'
-            )}
+            variant={tag.variant === 'filled' ? 'solid' : 'bordered'}
+            color={tag.variant === 'filled' ? 'blue' : isVideo ? 'white' : undefined}
+            colorLight={tag.variant === 'outline' && !isVideo ? 'blue' : undefined}
+            colorDark={tag.variant === 'outline' && !isVideo ? 'white' : undefined}
+            size='sm'
           >
             {tag.label}
-          </span>
+          </Badge>
         ))}
       </div>
 

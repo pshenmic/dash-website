@@ -1340,6 +1340,113 @@
       "title": "KYC/AML Services"
     }
   },
+  "buildPage": {
+    "hero": {
+      "chip": "Dash Developers",
+      "title": "Build Next Generation Apps",
+      "subtitle": "Dash Platform is a technology stack for building decentralized apps on the Dash network. Easily access network resources and trustlessly store app data using our decentralized API.",
+      "primaryButton": "Dash Developer Portal",
+      "secondaryButton": "Dash Core Documentation"
+    },
+    "firstSteps": {
+      "chip": "First Steps",
+      "title": "Choose Dash for your next Web3 project",
+      "cards": {
+        "identities": {
+          "title": "Identities & Names",
+          "description": "Replace public addresses with your Dash username and never worry about sending money to the wrong person again.",
+          "button": "Choose your identity"
+        },
+        "storage": {
+          "title": "Application\nData Storage",
+          "description": "Platform consensus will verify and validate any application data stored on the network.",
+          "button": "Read More"
+        },
+        "developer": {
+          "title": "Frictionless Developer Experience",
+          "description": "Use our SDKs to easily develop applications without worrying about the lower level details.",
+          "button": "Read More"
+        }
+      }
+    },
+    "clientLibraries": {
+      "title": "Client Libraries that\nSpeak Your Language",
+      "description": "SDKs are available for the languages you love and use most. Get started building apps using our easy-to-follow guides.",
+      "primaryButton": "Quick Start",
+      "secondaryButton": "JS SDK"
+    },
+    "providersTools": {
+      "title": "Providers and Tools",
+      "description": "Many software development kits and tools already work with Dash. A large ecosystem of partners also provides APIs, custody solutions or payment processing. Getting started is easy!",
+      "button": "Learn More"
+    },
+    "futureOfMoney": {
+      "chip": "Build with Dash",
+      "title": "The Future of Money",
+      "description": "Marking a major milestone in the evolution of the Dash network, start experimenting with Dash Platform by connecting to testnet, our public testing environment.",
+      "stats": {
+        "speed": {
+          "label": "Transaction speed",
+          "value": "1 sec"
+        },
+        "cost": {
+          "label": "Cost per transaction",
+          "value": "<$0.01"
+        }
+      },
+      "primaryButton": "Connect to Testnet",
+      "secondaryButton": "Learn More"
+    },
+    "roadmap": {
+      "chip": "Coming Soon",
+      "title": "So what's next\nfor Dash?",
+      "description": "Plenty of reasons to get excited just around the corner. Read and get prepared.",
+      "items": {
+        "chainlocks": "ChainLocks",
+        "llmq": "Long Living Masternode Quorums",
+        "evolution": "Evolution Initial Design Document"
+      },
+      "primaryButton": "See Full Roadmap",
+      "secondaryButton": "View release notes",
+      "timeline": {
+        "q1": {
+          "tag": "Q1 2025",
+          "title": "Dash Core v0.2",
+          "items": {
+            "backports": "Backports for Bitcoin v0.2.2",
+            "wallet": "Basic QT Wallet UI update",
+            "stress": "Post stress test enhancements"
+          }
+        },
+        "platform": {
+          "tag": "2024",
+          "completeTag": "Complete",
+          "title": "Dash Platform Rollout",
+          "items": {
+            "credit": "Credit system",
+            "identity": "Improved identity and data optimizations",
+            "stress": "Post stress test enhancements"
+          }
+        }
+      }
+    },
+    "joinCommunity": {
+      "chip": "Dash Developers",
+      "title": "Join the Community",
+      "description": "The Dash community is the best place to connect with users from across the world online or in person. Check out our upcoming meetups, proposed projects and learn from others on our forums.",
+      "primaryButton": "Check out Community",
+      "secondaryButton": "Join Discord",
+      "links": {
+        "dashpayGithub": "Dashpay",
+        "dashpayGithubSuffix": "Github",
+        "dashForum": "Dash",
+        "dashForumSuffix": "Forum",
+        "dashevoGithub": "Dashevo",
+        "dashevoGithubSuffix": "Github"
+      },
+      "continueButton": "Continue"
+    }
+  },
   "platformPage": {
     "hero": {
       "chip": "Platform",

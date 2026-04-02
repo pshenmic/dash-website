@@ -1340,6 +1340,128 @@
       "title": "KYC/AML Services"
     }
   },
+  "toolsPage": {
+    "hero": {
+      "title": "Providers and Tools",
+      "description": "The following providers offer a range of options that vary in terms of development effort required. Payment Processors provide a simple and quick way to begin accepting payments without any development skill required.\n\nCustody and API Providers enable blockchain interactions typically used by larger merchants and service providers."
+    },
+    "paymentProcessors": {
+      "chip": "Both Online and Point-of-sale Platforms",
+      "title": "Payment Processing Solutions",
+      "cards": {
+        "anypay": {
+          "category": "Point-of-Sale",
+          "name": "Anypay",
+          "description": "Anypay eCommerce, Point-of-Sale, Web & Mobile, APIs Anypay is an easy-to-use, multi-coin payment processor helping businesses accept Dash since 2016. A fully open-source suite of tools offers e-commerce plugins, POS integrations, web & mobile apps, and APIs for developers.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "btcpay": {
+          "category": "eCommerce",
+          "name": "BTCPay Server",
+          "description": "BTCPay Server is a free, self-hosted and fully open-source cryptocurrency payment processor designed with security, privacy and censorship-resistance at its core.",
+          "websiteButton": "Visit Website"
+        },
+        "coinpayments": {
+          "category": "eCommerce",
+          "name": "CoinPayments",
+          "description": "CoinPayments is an integrated payment gateway with a wide range of plugins available for popular webcarts.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "coinspaid": {
+          "category": "Payments Backoffice",
+          "name": "Coinspaid",
+          "description": "Coinspaid offers a white label backoffice payments solution with on-the-fly Fiat (EUR) conversion and instant transaction confirmations.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "ankerpay": {
+          "category": "eCommerce, Point-of-Sale",
+          "name": "AnkerPay",
+          "description": "AnkerPay POS is a crypto payment processor that allows merchants to accept crypto currencies and receive settlement in the local currency.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "nowpayments": {
+          "category": "eCommerce",
+          "name": "NOWPayments",
+          "description": "NOWPayments allows everyone to accept crypto payments on their websites, online stores, and social media accounts. It's a non-custodial service and supports more than 50 cryptocurrencies.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        }
+      }
+    },
+    "custodyProviders": {
+      "chip": "\"Cloud Infrastructure\" Providers Enable Direct Access to the Blockchain",
+      "title": "Custody Solutions and API Providers",
+      "cards": {
+        "bitgo": {
+          "name": "BitGo",
+          "description": "BitGo provides a simple and robust REST API and client SDK to integrate digital currency wallets with your application. InstantSend is fully supported. Features: Multi-Signature HD Wallets, Custody Solutions and Wallet Operations.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "blockcypher": {
+          "name": "BlockCypher",
+          "description": "BlockCypher is a non-custodial, REST API and client SDK for interacting with blockchains. Features: Transaction Building, Address Generation, Event Notifications, Payment Forwarding.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "lukka": {
+          "name": "Lukka",
+          "description": "Lukka's blockchain agnostic AML Platform uses proprietary algorithms to provide structured, actionable data that solves compliance and transaction risk issues for blockchain and cryptocurrencies. Features: Anti-money laundering (AML) solution, Know Your Customer (KYC) services, Blockchain Analytics, Register/ Authenticate digital assets, Track/Monitor source of crypto funds.",
+          "websiteButton": "Visit Website"
+        },
+        "cybavo": {
+          "name": "CYBAVO",
+          "description": "CYBAVO provides a turn-key, enterprise-level wallet and custody platform, offering fully customizable policies, segregated roles and multi-level approval chains. Features: Enterprise Wallets, Custody Solutions and Mobile Wallet SDK.",
+          "websiteButton": "Visit Website"
+        },
+        "nownodes": {
+          "name": "NOWNodes",
+          "description": "NOWNodes is an explorer and node API provider. It is meant for start-up entrepreneurs and crypto enthusiasts who would like to gain access to major blockchain networks without needing to establish their own nodes. Features: Explorer and Node API, WebSocket API, Powerful Servers (1GB/s), SLA, Backup Solution.",
+          "apiButton": "API Documentation",
+          "websiteButton": "Visit Website"
+        },
+        "getblock": {
+          "name": "GetBlock",
+          "description": "GetBlock offers blockchain developers fast and easy access to Dash nodes and other popular cryptocurrencies over the JSON-RPC, REST, and WebSocket protocols. Features: JSON-RPC, REST API and WebSocket APIs.",
+          "websiteButton": "Visit Website"
+        }
+      }
+    },
+    "sdks": {
+      "chip": "The Following Resources are Used to Build Custom Integrations",
+      "title": "Software Development Kits and Tools",
+      "cards": {
+        "nodejs": {
+          "name": "NodeJS",
+          "description": "Dashcore-Lib is a library for working with the Dash Protocol in client-side \"Browserified\" (JavaScript) settings as well as in server-side (NodeJS) applications. Insight API utilizes this open-source framework as part of a full-stack implementation.",
+          "docsButton": "Dashcore-Lib",
+          "githubButton": "Insight API"
+        },
+        "java": {
+          "name": "Java",
+          "description": "DashJ is a library for working with the Dash protocol in Java or JVM environment. It can be used for a variety of wallet functions including InstantSend. This library also includes an SPV implementation which allows for transaction verification in mobile applications.",
+          "docsButton": "DashJ",
+          "githubButton": "DashJ Multiplatform"
+        },
+        "dotnet": {
+          "name": ".NET",
+          "description": "NBitcoin is the most complete cryptocurrency library for the .NET platform and includes support for Dash. It implements all most relevant Bitcoin Improvement Proposals (BIPs) and Dash Improvement Proposals (DIPs) and provides low level access to Dash primitives.",
+          "docsButton": "API Documentation",
+          "githubButton": "Visit Website"
+        },
+        "python": {
+          "name": "Python",
+          "description": "PyCoin is an implementation of utility routines that are useful when working with the Dash Protocol. It is frequently used alongside Python-DashRPC and has been tested with Python 2.7, 3.6 and 3.7.",
+          "docsButton": "PyCoin",
+          "githubButton": "Python-DashRPC"
+        }
+      }
+    }
+  },
   "contributingPage": {
     "hero": {
       "chip": "Contributing",

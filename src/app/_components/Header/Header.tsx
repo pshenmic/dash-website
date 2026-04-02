@@ -21,6 +21,7 @@ export function Header (): React.ReactNode {
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
+
   const GET_STARTED_ROUTES = ['/get-started', '/get-started/take-control', '/downloads', '/get-started/buy-online', '/get-started/spend', '/get-started/transactions']
   const INSTITUTIONS_ROUTES = ['/institutions', '/institutions/traders', '/institutions/financial-services', '/institutions/regulatory', '/institutions/fastpass']
   const DEVELOPERS_ROUTES = ['/build', '/developers/platform', '/discover', '/developers/contributing', '/developers/tools', '/developers/roadmap']
@@ -122,14 +123,14 @@ export function Header (): React.ReactNode {
                 <NavDropdownDisabledItem>{t('documentation')}</NavDropdownDisabledItem>
               </NavDropdown>
 
-              <NavDropdown label={t('community')} isActive={false} align='right'>
+              <NavDropdown label={t('community')} isActive={pathname === '/blog'} align='right'>
                 <NavDropdownDisabledItem>{t('bugBounty')}</NavDropdownDisabledItem>
                 <NavDropdownDisabledItem>{t('learningResources')}</NavDropdownDisabledItem>
                 <NavDropdownDisabledItem>{t('connectWithUs')}</NavDropdownDisabledItem>
                 <NavDropdownDisabledItem>{t('forum')}</NavDropdownDisabledItem>
                 <NavDropdownDisabledItem>{t('masternodes')}</NavDropdownDisabledItem>
                 <NavDropdownDisabledItem>{t('mining')}</NavDropdownDisabledItem>
-                <NavDropdownDisabledItem>{t('blog')}</NavDropdownDisabledItem>
+                <NavDropdownLink href='/blog'>{t('blog')}</NavDropdownLink>
               </NavDropdown>
             </nav>
 

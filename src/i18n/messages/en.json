@@ -1445,6 +1445,79 @@
         "dashevoGithubSuffix": "Github"
       },
       "continueButton": "Continue"
+    }
+  },
+  "platformPage": {
+    "hero": {
+      "chip": "Platform",
+      "title": "Dash Platform",
+      "subtitle": "Dash Platform is a technology stack for building decentralized applications on the Dash network. The two main architectural components, Drive and DAPI, turn the Dash P2P network into a cloud that developers can integrate with their applications.",
+      "primaryButton": "Dash Developer Portal",
+      "secondaryButton": "Dash Core Documentation"
+    },
+    "actionCards": {
+      "documentation": {
+        "title": "Documentation",
+        "description": "Guides and documentation to help you start working with Dash Platform as quickly as possible",
+        "button": "Read"
+      },
+      "testnet": {
+        "title": "Testnet",
+        "description": "Start experimenting with Dash Platform by connecting to testnet, our public testing environment.",
+        "button": "Learn More"
+      }
+    },
+    "paymentsInfra": {
+      "title": "Payments Infrastructure\nfor Developers",
+      "description": "Enable your application with the financial power of the Dash cryptocurrency — borderless, instantly transferrable, and supported by a decentralized cloud providing robust payments infrastructure.",
+      "button": "Learn More"
+    },
+    "whyChoose": {
+      "chip": "Learn More",
+      "title": "Why choose Dash Platform",
+      "cards": {
+        "storage": {
+          "title": "Application Data Storage",
+          "description": "Enhance your financial applications with robust user metadata. Leverage the blockchain to store data in a document-oriented database."
+        },
+        "identities": {
+          "title": "Identities & Usernames",
+          "description": "Robust, flexible user data structures that are fully decentralized and always available. Usernames make it easier than ever to transact."
+        }
+      }
+    },
+    "developerSDKs": {
+      "title": "Developer Friendly SDKs",
+      "description": "Access Dash Platform using one of the easy to use SDKs available in Javascript, Objective-C, or Java. Spend less time learning blockchain and more time developing."
+    },
+    "sdkActions": {
+      "quickstart": {
+        "title": "QuickStart",
+        "subtitle": "Connect Testnet"
+      },
+      "javascript": {
+        "title": "Javascript",
+        "subtitle": "Js-Dash-SDK"
+      },
+      "objectiveC": {
+        "title": "Objective-C",
+        "subtitle": "Dashsync-ios"
+      },
+      "java": {
+        "title": "Java",
+        "subtitle": "Dashj"
+      }
+    },
+    "verifiable": {
+      "chip": "Build with Dash",
+      "title": "Verifiable, Secure, Resilient",
+      "description": "Unlike centralized platforms, all data on Dash Platform is cryptographically verifiable. Data is distributed across the Dash network, guaranteeing availability."
+    },
+    "dashPayWallet": {
+      "title": "DashPay Wallet",
+      "description": "The first application built using Dash Platform is the DashPay wallet for Android and iOS. Learn more about the most user-friendly crypto wallet!",
+      "primaryButton": "Download",
+      "secondaryButton": "Learn More"
     },
     "bugBounty": {
       "title": "Bug Bounty Program",

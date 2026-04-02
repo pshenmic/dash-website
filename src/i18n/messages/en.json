@@ -1340,6 +1340,57 @@
       "title": "KYC/AML Services"
     }
   },
+  "contributingPage": {
+    "hero": {
+      "chip": "Contributing",
+      "title": "Contributing to Dash",
+      "subtitle": "Dash is an open source project and contributions are welcome! This page contains information on why and how to contribute, as well as technical details on where you can contribute, depending on your skills.",
+      "primaryButton": "Learn More",
+      "secondaryButton": "Dash Documentation"
+    },
+    "protocolDevelopment": {
+      "title": "Protocol Development\nGuidelines",
+      "description": "The Dash network protocol operates at two levels: a blockchain layer built on a code fork of Bitcoin, and a platform layer with data storage and retrieval features built on a code fork of Tendermint, as well as a decentralized API and data contracts to implement features such as usernames.\n\nWhile protocol repositories are managed by Dash Core Group (DCG), external bug fixes and features following the contribution guidelines are very welcome and are reflected in the permanent git commit history.",
+      "links": {
+        "chainLocks": "ChainLocks",
+        "llmq": "Long Living Masternode Quorums",
+        "evolution": "Evolution Initial Design Document"
+      },
+      "primaryButton": "Core Documentation",
+      "secondaryButton": "Platform Documentation"
+    },
+    "featuredRepos": {
+      "title": "Featured Repositories",
+      "seeAll": "See All",
+      "github": "Github.com"
+    },
+    "protocolRepos": {
+      "dashCore": "Dash Core",
+      "dashSdk": "Dash Sdk",
+      "dpp": "DPP",
+      "drive": "Drive",
+      "dapi": "DAPI",
+      "walletLib": "wallet-lib",
+      "dashcoreLib": "dashcore-lib",
+      "dashmate": "Dashmate",
+      "testSuite": "test-suite",
+      "networkDeploy": "network-deploy"
+    },
+    "platformDevelopment": {
+      "title": "Dash Platform\nDevelopment",
+      "description": "Dash Platform is a technology stack for building decentralized apps on the Dash network. Anyone can develop an app or tool to suit their own purposes based on Dash Platform, or join our vibrant community of developers and work collaboratively on larger projects.",
+      "primaryButton": "Platform Developers Portal",
+      "secondaryButton": "View Development Bounties"
+    },
+    "dashPay": {
+      "title": "DashPay",
+      "description": "DashPay is the reference Android and iOS wallet maintained by Dash Core Group. DashPay takes advantage of many of the key features of the core protocol so users can enjoy the best experience sending and receiving Dash.\n\nAlthough these apps are regularly maintained by DCG, there are many new features and improvements which we do not always have the bandwidth to do in a timely manner. We welcome volunteers and funded projects to contribute; if interested, you can create a new issue on GitHub or contribute to one that already exists according to the procedure described above."
+    },
+    "walletRepos": {
+      "iosWallet": "iOS Wallet",
+      "androidWallet": "Android Wallet"
+    }
+  },
   "discoverPage": {
     "hero": {
       "chip": "Dash Docs",

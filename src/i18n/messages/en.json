@@ -222,10 +222,22 @@
     "titleHighlight": "better",
     "joinDiscord": "Join Discord",
     "cards": {
-      "apiSdk": { "chip": "Python, JS, Go", "title": "API & SDK" },
-      "nodes": { "chip": "Docker, CLI", "title": "Nodes" },
-      "smartContracts": { "chip": "Dash Platform", "title": "Smart-Contracts" },
-      "testnet": { "chip": "Faucet, Explorer", "title": "Testnet" }
+      "apiSdk": {
+        "chip": "Python, JS, Go",
+        "title": "API & SDK"
+      },
+      "nodes": {
+        "chip": "Docker, CLI",
+        "title": "Nodes"
+      },
+      "smartContracts": {
+        "chip": "Dash Platform",
+        "title": "Smart-Contracts"
+      },
+      "testnet": {
+        "chip": "Faucet, Explorer",
+        "title": "Testnet"
+      }
     },
     "codeExample": {
       "language": "Java"
@@ -249,11 +261,23 @@
       "description": "Get started today — download the app and begin transferring money with a secure, reliable platform you can trust.",
       "viewAll": "View All Apps",
       "apps": {
-        "desktop": { "name": "Desktop", "type": "App" },
-        "ios": { "name": "iOS", "type": "App" },
-        "android": { "name": "Android", "type": "App" }
+        "desktop": {
+          "name": "Desktop",
+          "type": "App"
+        },
+        "ios": {
+          "name": "iOS",
+          "type": "App"
+        },
+        "android": {
+          "name": "Android",
+          "type": "App"
+        }
       },
-      "other": { "title": "Other", "subtitle": "Platforms" },
+      "other": {
+        "title": "Other",
+        "subtitle": "Platforms"
+      },
       "download": "Download"
     },
     "features": {
@@ -373,20 +397,32 @@
       "comingSoon": "Coming Soon",
       "title": "So what's next\nfor Dash?",
       "description": "Plenty of reasons to get excited just around the corner. Read and get prepared.",
-      "features": ["ChainLocks", "Long Living Masternode Quorums", "Evolution Initial Design Document"],
+      "features": [
+        "ChainLocks",
+        "Long Living Masternode Quorums",
+        "Evolution Initial Design Document"
+      ],
       "seeFullRoadmap": "See Full Roadmap",
       "viewReleaseNotes": "View release notes",
       "releases": {
-        "q1_2025": {
-          "tag": "Q1 2025",
-          "title": "Dash Core v0.2",
-          "items": ["Backports for Bitcoin v0.2.2", "Basic QT Wallet UI update", "Post stress test enhancements"]
-        },
         "2024": {
           "tag": "2024",
           "complete": "Complete",
           "title": "Dash Platform Rollout",
-          "items": ["Credit system", "Improved identity and data optimizations", "Post stress test enhancements"]
+          "items": [
+            "Credit system",
+            "Improved identity and data optimizations",
+            "Post stress test enhancements"
+          ]
+        },
+        "q1_2025": {
+          "tag": "Q1 2025",
+          "title": "Dash Core v0.2",
+          "items": [
+            "Backports for Bitcoin v0.2.2",
+            "Basic QT Wallet UI update",
+            "Post stress test enhancements"
+          ]
         }
       }
     }
@@ -445,9 +481,18 @@
     "buyOnline": "Buy Online",
     "findAtm": "Find at ATM",
     "stats": {
-      "merchants": { "label": "Merchants & Services", "value": "159,000 +" },
-      "exchanges": { "label": "Exchanges and Brokers", "value": "265 +" },
-      "speed": { "label": "Transaction Speed", "value": "1 Second" }
+      "merchants": {
+        "label": "Merchants & Services",
+        "value": "159,000 +"
+      },
+      "exchanges": {
+        "label": "Exchanges and Brokers",
+        "value": "265 +"
+      },
+      "speed": {
+        "label": "Transaction Speed",
+        "value": "1 Second"
+      }
     }
   },
   "walletShowcase": {
@@ -758,16 +803,49 @@
         "speed": "Speed",
         "settlement": "Settlement",
         "cost": "Cost",
-        "dash": { "speed": "1 Sec", "settlement": "1 Sec", "cost": "≤$0.01" },
-        "bitcoin": { "name": "Bitcoin", "speed": "10 min", "settlement": "60 min", "cost": "$0.30" },
-        "paypal": { "name": "PayPal", "speed": "5 sec", "settlement": "8 days", "cost": "2.9%" },
-        "cards": { "name": "Cards", "speed": "3 sec", "settlement": "3 business days", "cost": "≤7%" },
-        "wire": { "name": "Wire", "speed": "1-5 days", "settlement": "1-5 days", "cost": "$5-$200" }
+        "dash": {
+          "speed": "1 Sec",
+          "settlement": "1 Sec",
+          "cost": "≤$0.01"
+        },
+        "bitcoin": {
+          "name": "Bitcoin",
+          "speed": "10 min",
+          "settlement": "60 min",
+          "cost": "$0.30"
+        },
+        "paypal": {
+          "name": "PayPal",
+          "speed": "5 sec",
+          "settlement": "8 days",
+          "cost": "2.9%"
+        },
+        "cards": {
+          "name": "Cards",
+          "speed": "3 sec",
+          "settlement": "3 business days",
+          "cost": "≤7%"
+        },
+        "wire": {
+          "name": "Wire",
+          "speed": "1-5 days",
+          "settlement": "1-5 days",
+          "cost": "$5-$200"
+        }
       },
       "benefits": {
-        "instant": { "title": "Instant", "description": "Transactions in less than a second" },
-        "secure": { "title": "Secure", "description": "Fully Private and Anonymous" },
-        "microFees": { "title": "Micro Fees", "description": "Very low fees for every transaction" }
+        "instant": {
+          "title": "Instant",
+          "description": "Transactions in less than a second"
+        },
+        "secure": {
+          "title": "Secure",
+          "description": "Fully Private and Anonymous"
+        },
+        "microFees": {
+          "title": "Micro Fees",
+          "description": "Very low fees for every transaction"
+        }
       }
     },
     "integrations": {
@@ -776,15 +854,27 @@
       "description": "Setup Dash in your business quickly and effectively. Leverage Dash partners to add services and expand your business to a new generation of customers.",
       "documentation": "Check Out Partners",
       "stats": {
-        "volume": { "label": "Payment Volume $", "value": "4.48 Billion+" },
-        "addresses": { "label": "Daily Active Addresses", "value": "54,300 +" },
-        "transactions": { "label": "Transactions/Day", "value": "8,220 +" }
+        "volume": {
+          "label": "Payment Volume $",
+          "value": "4.48 Billion+"
+        },
+        "addresses": {
+          "label": "Daily Active Addresses",
+          "value": "54,300 +"
+        },
+        "transactions": {
+          "label": "Transactions/Day",
+          "value": "8,220 +"
+        }
       }
     },
     "compliance": {
       "title": "Dash is KYC/AML Compliant",
       "description": "Dash's transaction rules are identical to Bitcoin, and therefore for regulatory and compliance purposes Dash can and should be treated identically to Bitcoin. BlockchainIntel and Coinfirm are KYC/AML service providers that offer services covering the Dash blockchain.",
-      "providers": ["BlockchainIntel", "Coinfirm"],
+      "providers": [
+        "BlockchainIntel",
+        "Coinfirm"
+      ],
       "button": "Transactions on Explorer"
     },
     "growBusiness": {
@@ -892,11 +982,26 @@
     "quote": "With Dash, accepting crypto payments is as <bold>easy as spending your profit.</bold>",
     "becomeButton": "Become a Merchant",
     "dashFeatures": {
-      "spending": { "label": "<bold>Crypto Spending</bold> Made Easy", "alt": "Crypto Spending Made Easy" },
-      "instant": { "label": "<bold>Instant Transactions</bold> (few seconds)", "alt": "Instant Transactions" },
-      "oldest": { "label": "One of the <bold>Oldest Cryptos Around</bold>", "alt": "Oldest Cryptos Around" },
-      "fees": { "label": "<bold>Less than $0.01 Fee</bold> Per Transaction", "alt": "Less than $0.01 Fee" },
-      "secure": { "label": "<bold>Secure Payments</bold> Give Peace of Mind", "alt": "Secure Payments" }
+      "spending": {
+        "label": "<bold>Crypto Spending</bold> Made Easy",
+        "alt": "Crypto Spending Made Easy"
+      },
+      "instant": {
+        "label": "<bold>Instant Transactions</bold> (few seconds)",
+        "alt": "Instant Transactions"
+      },
+      "oldest": {
+        "label": "One of the <bold>Oldest Cryptos Around</bold>",
+        "alt": "Oldest Cryptos Around"
+      },
+      "fees": {
+        "label": "<bold>Less than $0.01 Fee</bold> Per Transaction",
+        "alt": "Less than $0.01 Fee"
+      },
+      "secure": {
+        "label": "<bold>Secure Payments</bold> Give Peace of Mind",
+        "alt": "Secure Payments"
+      }
     },
     "whatSetsDashApart": {
       "title": "What Sets Dash Apart",
@@ -965,10 +1070,22 @@
       "tip": "<bold>Tip:</bold> Before creating an account with an exchange, verify that the cryptocurrencies you want can be traded on that exchange.",
       "additionalExchanges": "Additional Exchanges",
       "exchanges": {
-        "kraken": { "name": "Kraken", "type": "Margin Trading" },
-        "binance": { "name": "Binance", "type": "Futures" },
-        "coinbase": { "name": "Coinbase", "type": "Exchange" },
-        "uphold": { "name": "Uphold", "type": "Exchange" }
+        "kraken": {
+          "name": "Kraken",
+          "type": "Margin Trading"
+        },
+        "binance": {
+          "name": "Binance",
+          "type": "Futures"
+        },
+        "coinbase": {
+          "name": "Coinbase",
+          "type": "Exchange"
+        },
+        "uphold": {
+          "name": "Uphold",
+          "type": "Exchange"
+        }
       }
     },
     "spreadTheWord": {
@@ -1338,6 +1455,959 @@
     "kycamlPartners": {
       "chip": "Regulations",
       "title": "KYC/AML Services"
+    }
+  },
+  "roadmapPage": {
+    "hero": {
+      "title": "Dash Roadmap",
+      "description": "Dash has a long history of innovation and development, with multiple significant products and features released over the years. Launched on 18 January 2014, Dash quickly developed new features focused on speed, privacy and usability, making it ideal for use as a digital currency. Built to deliver financial freedom and shape the future of payments for people around the world, Dash has an ambitious roadmap and proven history of delivery.",
+      "button": "Jump to Latest"
+    },
+    "timeline": {
+      "eras": [
+        {
+          "year": "2014",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "X11",
+              "description": "Unique hashing algorithm combining 11 different cryptographic functions as the defining feature of Dash, providing enhanced security and ASIC resistance during the early mining phase.",
+              "tags": [
+                "Core Technology",
+                "Mining"
+              ]
+            },
+            {
+              "title": "Dark Gravity Wave",
+              "description": "Dynamic adjustment of mining difficulty on a per-block basis, solving the issues of slow difficulty adjustment that plagued other cryptocurrencies at the time.",
+              "tags": [
+                "Core Technology",
+                "Mining"
+              ]
+            },
+            {
+              "title": "Masternodes",
+              "description": "Incentivized full nodes forming the network backbone, requiring 1,000 DASH collateral. This second-layer architecture enabled advanced features like InstantSend and PrivateSend.",
+              "tags": [
+                "Infrastructure",
+                "Network"
+              ]
+            },
+            {
+              "title": "Sporks",
+              "description": "A mechanism for smooth feature releases without hard-forking the network, allowing new features to be safely activated and deactivated by the development team.",
+              "tags": [
+                "Development Tools"
+              ]
+            },
+            {
+              "title": "PrivateSend",
+              "description": "Fungible currency through transaction privacy using a mixing protocol, allowing users to make private transactions by combining multiple inputs from different users.",
+              "tags": [
+                "Privacy",
+                "Payments"
+              ]
+            },
+            {
+              "title": "Android Wallet",
+              "description": "Mobile payment capability brought to the Android platform, enabling users to send and receive Dash on the go with a user-friendly mobile interface.",
+              "tags": [
+                "Wallet",
+                "Mobile"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2015",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Code Rebase",
+              "description": "Transition from the Litecoin codebase to Bitcoin, providing a stronger and more actively maintained foundation for future Dash development.",
+              "tags": [
+                "Core Technology"
+              ]
+            },
+            {
+              "title": "iOS Wallet",
+              "description": "Apple platform support bringing Dash to iPhone users, completing mobile coverage alongside the existing Android wallet.",
+              "tags": [
+                "Wallet",
+                "Mobile"
+              ]
+            },
+            {
+              "title": "InstantSend",
+              "description": "Transaction locking via the masternode architecture, enabling near-instant transaction confirmations secured by the second-layer network.",
+              "tags": [
+                "Payments",
+                "Speed"
+              ]
+            },
+            {
+              "title": "Governance System",
+              "description": "Decentralized decision-making framework allowing masternode operators to vote on budget proposals, making Dash the first DAO (Decentralized Autonomous Organization).",
+              "tags": [
+                "Governance",
+                "DAO"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2016",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "2MB Block Vote",
+              "description": "Network consensus on capacity expansion through a decentralized governance vote, demonstrating the power of masternode-based decision making.",
+              "tags": [
+                "Scaling",
+                "Governance"
+              ]
+            },
+            {
+              "title": "FPGA and ASIC Miners",
+              "description": "Hardware mining support for the X11 algorithm, bringing professional mining infrastructure to the Dash network for improved security.",
+              "tags": [
+                "Mining",
+                "Hardware"
+              ]
+            },
+            {
+              "title": "Dashcore and Insight API",
+              "description": "Network interaction infrastructure providing developers with tools to build applications and services on top of the Dash network.",
+              "tags": [
+                "Developer Tools",
+                "API"
+              ]
+            },
+            {
+              "title": "X11 Libraries",
+              "description": "JavaScript implementation of the X11 algorithm, enabling browser-based and Node.js applications to interact with Dash's hashing functions.",
+              "tags": [
+                "Developer Tools",
+                "JavaScript"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2017",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Hardware Wallets",
+              "description": "Secure key storage devices supporting Dash, providing users with the highest level of security for their funds through offline key management.",
+              "tags": [
+                "Security",
+                "Wallet"
+              ]
+            },
+            {
+              "title": "Lower Fees",
+              "description": "Tenfold transaction cost reduction making Dash more practical for everyday payments and micropayments.",
+              "tags": [
+                "Economics",
+                "Payments"
+              ]
+            },
+            {
+              "title": "Sentinel",
+              "description": "Governance object management tool serving as an autonomous agent watchdog for the masternode network, monitoring governance proposals and superblocks.",
+              "tags": [
+                "Governance",
+                "Infrastructure"
+              ]
+            },
+            {
+              "title": "DAO Trust",
+              "description": "Irrevocable trust ownership structure establishing Dash as the first legally structured DAO, providing a framework for organizational governance.",
+              "tags": [
+                "Governance",
+                "Legal"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2018",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Named Devnets",
+              "description": "Multiple independent development networks enabling parallel testing of different features without interfering with each other.",
+              "tags": [
+                "Development",
+                "Testing"
+              ]
+            },
+            {
+              "title": "Governance Improvements",
+              "description": "Enhanced proposal validation and processing in Dash Core v0.12.3, making the governance system more robust and reliable.",
+              "tags": [
+                "Governance",
+                "Core v0.12.3"
+              ]
+            },
+            {
+              "title": "PrivateSend Enhancements",
+              "description": "Improved collateral handling and privacy features, making private transactions more efficient and user-friendly.",
+              "tags": [
+                "Privacy",
+                "Improvements"
+              ]
+            },
+            {
+              "title": "New Branding",
+              "description": "Updated visual identity across all platforms, establishing a modern and professional look for the Dash ecosystem.",
+              "tags": [
+                "Design",
+                "Branding"
+              ]
+            },
+            {
+              "title": "Uphold Integration",
+              "description": "In-app currency exchange capability on Android, allowing users to buy and sell Dash directly within the wallet application.",
+              "tags": [
+                "Integration",
+                "Android"
+              ]
+            },
+            {
+              "title": "NFC Support",
+              "description": "Tap-to-pay terminal functionality on iOS, enabling contactless Dash payments at point-of-sale terminals.",
+              "tags": [
+                "Hardware",
+                "iOS",
+                "Payments"
+              ]
+            },
+            {
+              "title": "New Localizations",
+              "description": "Multi-language and multi-currency support bringing Dash to a global audience with localized wallet experiences.",
+              "tags": [
+                "Accessibility",
+                "i18n"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2019",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Automatic InstantSend",
+              "description": "Default instant transactions for transfers with up to 4 inputs, making fast confirmations the standard experience for most Dash transactions.",
+              "tags": [
+                "Payments",
+                "Core v0.13"
+              ]
+            },
+            {
+              "date": "Q1",
+              "title": "Deterministic Masternode List",
+              "description": "Single source of truth for validator consensus, replacing the old masternode list system with on-chain registration for improved reliability.",
+              "tags": [
+                "Infrastructure",
+                "Core v0.13"
+              ]
+            },
+            {
+              "date": "Q1",
+              "title": "Special Transactions",
+              "description": "Non-financial blockchain structures enabling new types of on-chain data, laying the groundwork for Platform features.",
+              "tags": [
+                "Core Technology",
+                "Core v0.13"
+              ]
+            },
+            {
+              "date": "Q1",
+              "title": "Three Masternode Keys",
+              "description": "Separated operator, owner, and voting authorities, allowing masternode hosting services while maintaining owner control.",
+              "tags": [
+                "Security",
+                "Core v0.13"
+              ]
+            },
+            {
+              "date": "Q2",
+              "title": "ChainLocks",
+              "description": "Protection against 51% mining attacks using LLMQ-based block locking, making Dash the first cryptocurrency to solve the 51% attack problem.",
+              "tags": [
+                "Security",
+                "Core v0.14"
+              ]
+            },
+            {
+              "date": "Q2",
+              "title": "Long Living Masternode Quorums",
+              "description": "Scalable consensus mechanism enabling efficient threshold signing and voting across the masternode network.",
+              "tags": [
+                "Infrastructure",
+                "Core v0.14"
+              ]
+            },
+            {
+              "date": "Q1",
+              "title": "Fingerprint Unlock",
+              "description": "Biometric wallet authentication on Android, providing quick and secure access to the Dash wallet.",
+              "tags": [
+                "Security",
+                "Android"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "Uphold Integration (iOS)",
+              "description": "Buy and sell functionality for Apple users, bringing the same exchange capabilities previously available on Android.",
+              "tags": [
+                "Integration",
+                "iOS"
+              ]
+            },
+            {
+              "date": "Q4",
+              "title": "Dash Platform MVP",
+              "description": "Public testnet (Evonet) launch giving developers access to decentralized API, user identities, and document storage for the first time.",
+              "tags": [
+                "Platform",
+                "Testnet"
+              ]
+            },
+            {
+              "date": "Q4",
+              "title": "DAPI & Identities",
+              "description": "Decentralized API with user account system, enabling applications to interact with Platform without relying on centralized infrastructure.",
+              "tags": [
+                "Platform",
+                "DAPI"
+              ]
+            },
+            {
+              "date": "Q4",
+              "title": "Naming & DashPay Contracts",
+              "description": "Service contracts for username registration and payments deployed on testnet, previewing the future of user-friendly crypto transactions.",
+              "tags": [
+                "Platform",
+                "Contracts"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2020",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "DashPay Redesign",
+              "description": "Unified UX across iOS and Android with consistent design language, dark mode support on iOS, and streamlined home screen navigation.",
+              "tags": [
+                "Design",
+                "Mobile"
+              ]
+            },
+            {
+              "date": "Q1",
+              "title": "Dash Core v0.15",
+              "description": "Bitcoin v0.15.2 backports bringing core updates and optimizations, along with QT wallet UI modernization and stress test enhancements.",
+              "tags": [
+                "Core v0.15",
+                "Backports"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "Dash Core v0.16",
+              "description": "Block reward reallocation shifting masternode/miner ratio to 60/40, signature recovery optimization, and 650+ Bitcoin backports from v0.16-v0.17.",
+              "tags": [
+                "Core v0.16",
+                "Economics"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "Platform Protocol Versioning",
+              "description": "Safe breaking change deployment on testnet, enabling the Platform to evolve without disrupting existing applications.",
+              "tags": [
+                "Platform",
+                "Testnet"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "Document Timestamps",
+              "description": "Creation and update time recording for Platform documents, along with binary document fields and default identity names.",
+              "tags": [
+                "Platform",
+                "Data"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "State Trees",
+              "description": "Merkle tree data structures for efficient state storage and verification, along with InstantSend identity funding for fast account creation.",
+              "tags": [
+                "Platform",
+                "Storage"
+              ]
+            },
+            {
+              "date": "Q4",
+              "title": "DashPay Evonet",
+              "description": "Usernames, contacts, username-based payments, profile settings, and profile pictures became functional on testnet for the first time.",
+              "tags": [
+                "Platform",
+                "DashPay",
+                "Testnet"
+              ]
+            },
+            {
+              "date": "Q4",
+              "title": "Chain Sync Improvements",
+              "description": "Enhanced transaction synchronization, masternode list sync on iOS, recovery phrase assistance, and ChainLock support integration.",
+              "tags": [
+                "Mobile",
+                "Performance"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2021",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Dash Core v0.17",
+              "description": "Extended consensus group size to 100-member quorums, established RPC restrictions for Platform security, and integrated ~500 upstream Bitcoin Core updates.",
+              "tags": [
+                "Core v0.17",
+                "Security"
+              ]
+            },
+            {
+              "date": "Q1",
+              "title": "Tendermint Seed Nodes",
+              "description": "Network scalability nodes for Platform, along with secure state transition acknowledgement and improved error reporting.",
+              "tags": [
+                "Platform v0.18",
+                "Infrastructure"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "Validator Set Rotation",
+              "description": "Dynamic validator distribution via LLMQ enabling fair and secure rotation of Platform block producers.",
+              "tags": [
+                "Platform v0.20",
+                "Consensus"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "Cryptographic Proofs",
+              "description": "Light client verification support enabling users to verify Platform state without running a full node.",
+              "tags": [
+                "Platform v0.20",
+                "Security"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "P2P Layer Optimization",
+              "description": "99.5% bandwidth reduction in Platform's peer-to-peer layer, dramatically improving network efficiency.",
+              "tags": [
+                "Platform v0.20",
+                "Performance"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "Liquid Exchange Integration",
+              "description": "Credit card Dash purchasing on Android via Liquid Exchange, expanding fiat on-ramp options.",
+              "tags": [
+                "Integration",
+                "Android"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "DashPay Invitations",
+              "description": "Invitation system on testnet enabling frictionless user onboarding to the Dash Platform ecosystem.",
+              "tags": [
+                "Platform",
+                "Testnet",
+                "Onboarding"
+              ]
+            },
+            {
+              "date": "Q2",
+              "title": "DashMate Release",
+              "description": "Distribution package for easy masternode setup and management, along with local network development environment tooling.",
+              "tags": [
+                "DevOps",
+                "Tools"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2022",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Quorum Rotation Enhancements",
+              "description": "Improved load distribution and security for masternode quorums in Dash Core v0.18.",
+              "tags": [
+                "Core v0.18",
+                "Security"
+              ]
+            },
+            {
+              "date": "August",
+              "title": "Proposal Fee Reduction",
+              "description": "Governance proposal fees reduced from 5 DASH to 1 DASH, lowering the barrier for community participation.",
+              "tags": [
+                "Core v0.18",
+                "Governance"
+              ]
+            },
+            {
+              "date": "August",
+              "title": "Enhanced Hard Fork Framework",
+              "description": "New protocol upgrade mechanism enabling smoother network upgrades, alongside deterministic InstantSend locks.",
+              "tags": [
+                "Core v0.18",
+                "Infrastructure"
+              ]
+            },
+            {
+              "date": "Q1",
+              "title": "GroveDB",
+              "description": "Hierarchical authenticated database providing efficient and verifiable data storage for Dash Platform.",
+              "tags": [
+                "Platform v0.22",
+                "Storage"
+              ]
+            },
+            {
+              "date": "Q1",
+              "title": "Data Contract Updates",
+              "description": "Schema modification without data loss, enabling Platform applications to evolve their data models over time.",
+              "tags": [
+                "Platform v0.22",
+                "Development"
+              ]
+            },
+            {
+              "date": "Q1",
+              "title": "Masternode Identities",
+              "description": "Reward-eligible node accounts on Platform with multi-level security framework through identity key purposes.",
+              "tags": [
+                "Platform v0.22",
+                "Identity"
+              ]
+            },
+            {
+              "date": "December",
+              "title": "Storage Fee Calculations",
+              "description": "Masternode compensation model for Platform storage, along with epoch-based fee allocation and credit withdrawal mechanisms.",
+              "tags": [
+                "Platform v0.23",
+                "Economics"
+              ]
+            },
+            {
+              "date": "December",
+              "title": "Headers-First Sync",
+              "description": "SPV client implementation for Platform enabling lightweight synchronization and benchmark suite for performance measurement.",
+              "tags": [
+                "Platform v0.23",
+                "Performance"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2023",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "High Performance Masternodes",
+              "description": "Dual-chain validator nodes requiring 4,000 DASH collateral, introduced in Core v19 to support both Layer 1 and Platform operations.",
+              "tags": [
+                "Core v19",
+                "Infrastructure"
+              ]
+            },
+            {
+              "date": "April",
+              "title": "BLS v1.0",
+              "description": "Standards-aligned BLS signature scheme implementation, along with Bitcoin v0.19-v0.22 backports.",
+              "tags": [
+                "Core v19",
+                "Cryptography"
+              ]
+            },
+            {
+              "date": "July",
+              "title": "Core v19 Activation",
+              "description": "Network-wide protocol upgrade driven by masternode and miner consensus, including hard fork resolution and migration support.",
+              "tags": [
+                "Core v19",
+                "Activation"
+              ]
+            },
+            {
+              "date": "November",
+              "title": "Treasury Expansion",
+              "description": "Block reward allocation expanded from 10% to 20% in Core v20, doubling the funding available for network development.",
+              "tags": [
+                "Core v20",
+                "Governance"
+              ]
+            },
+            {
+              "date": "May",
+              "title": "Rust DPP",
+              "description": "Dash Platform Protocol ported to Rust for significant performance improvements in Platform v0.24.",
+              "tags": [
+                "Platform v0.24",
+                "Performance"
+              ]
+            },
+            {
+              "date": "May",
+              "title": "Same-Block Execution",
+              "description": "Zero-block proof confirmation achieving instant state transition finality on Platform.",
+              "tags": [
+                "Platform v0.24",
+                "Speed"
+              ]
+            },
+            {
+              "date": "May",
+              "title": "HTTPS DAPI",
+              "description": "Browser-compatible API support enabling web applications to interact directly with Dash Platform.",
+              "tags": [
+                "Platform v0.24",
+                "Developer Tools"
+              ]
+            },
+            {
+              "date": "July",
+              "title": "Platform RC1",
+              "description": "Release candidate with masternode block rewards, processing fee adjustments, NFT support, and extensive security and stress testing.",
+              "tags": [
+                "Platform",
+                "Testing"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2024",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Dash Core v21",
+              "description": "Asset lock transactions for Platform identity funding, masternode reward reallocation for credit pool payments, and Evonode two-chain incentive structure.",
+              "tags": [
+                "Core v21",
+                "Economics"
+              ]
+            },
+            {
+              "date": "July",
+              "title": "Platform v1.0 Mainnet Rollout",
+              "description": "Pre-mainnet community testing validated the system. Core v21 bundled activation initiated the mainnet rollout process.",
+              "tags": [
+                "Platform v1.0",
+                "Mainnet"
+              ]
+            },
+            {
+              "date": "August",
+              "title": "Platform v1.1 & v1.2 Rollout",
+              "description": "Evonode upgrade coordination and activation readiness preparations for mainnet launch.",
+              "tags": [
+                "Platform",
+                "Activation"
+              ]
+            },
+            {
+              "date": "September",
+              "title": "Platform Protocol Activation",
+              "description": "Community-driven genesis quorum launch activating the Platform protocol on mainnet after years of development.",
+              "tags": [
+                "Platform",
+                "Activation"
+              ]
+            },
+            {
+              "date": "September",
+              "title": "DPNS Contract",
+              "description": "Dash Platform Name Service deployed on mainnet, enabling decentralized username registration.",
+              "tags": [
+                "Platform",
+                "Usernames"
+              ]
+            },
+            {
+              "date": "September",
+              "title": "DashPay Contract",
+              "description": "Username payment service contract deployed on mainnet, enabling human-readable payment addresses.",
+              "tags": [
+                "Platform",
+                "Payments"
+              ]
+            },
+            {
+              "date": "September",
+              "title": "Dash Platform v1.3",
+              "description": "Batch identity queries enabling retrieval of multiple identity balances in a single request.",
+              "tags": [
+                "Platform v1.3",
+                "Optimization"
+              ]
+            },
+            {
+              "date": "September",
+              "title": "Dash Platform v1.4",
+              "description": "L2 credit withdrawals enabling masternode operators to convert Platform rewards back to Layer 1.",
+              "tags": [
+                "Platform v1.4",
+                "Withdrawals"
+              ]
+            },
+            {
+              "date": "October",
+              "title": "Dash Platform v1.5",
+              "description": "Dashmate improvements for node management and SDK refinements for developers.",
+              "tags": [
+                "Platform v1.5",
+                "DevOps"
+              ]
+            },
+            {
+              "date": "November",
+              "title": "Android DashPay Wallet",
+              "description": "Mobile wallet release with full username functionality, enabling sending and receiving Dash via human-readable usernames.",
+              "tags": [
+                "Wallet",
+                "Android"
+              ]
+            },
+            {
+              "date": "November",
+              "title": "Dash Platform v1.6",
+              "description": "Stability improvements, Dashmate refinements, and SDK optimization for developers.",
+              "tags": [
+                "Platform v1.6",
+                "Stability"
+              ]
+            },
+            {
+              "date": "August",
+              "title": "Core v21.1.1",
+              "description": "EHF resigning fix correcting quorum member reselection for smooth network operation.",
+              "tags": [
+                "Core",
+                "Bugfix"
+              ]
+            },
+            {
+              "date": "December",
+              "title": "Dash Platform v1.7",
+              "description": "General system reliability enhancements and stability improvements.",
+              "tags": [
+                "Platform v1.7",
+                "Stability"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "status": "complete",
+          "cards": [
+            {
+              "title": "Dash Core v22.0",
+              "description": "Compressed headers increasing batch requests to 8,000, DSQ inventory-based broadcasting, multi-quorum Platform withdrawals, and onion node support for censorship resistance.",
+              "tags": [
+                "Core v22",
+                "Performance"
+              ]
+            },
+            {
+              "date": "January",
+              "title": "Dash Platform v1.8",
+              "description": "Instant L2-to-L1 conversion replacing withdrawal queues, contested username fees allocation to Evonodes, and Rust BLS/RocksDB library updates.",
+              "tags": [
+                "Platform v1.8",
+                "Withdrawals"
+              ]
+            },
+            {
+              "date": "February",
+              "title": "BIP324 Support",
+              "description": "Encrypted peer-to-peer connections with zero overhead in Core v22.1, enhancing network privacy.",
+              "tags": [
+                "Core v22.1",
+                "Privacy"
+              ]
+            },
+            {
+              "date": "June",
+              "title": "Fungible Tokens",
+              "description": "Platform v2.0 introduces token minting, transfer, and burn capabilities with full lifecycle management.",
+              "tags": [
+                "Platform v2.0",
+                "Tokens"
+              ]
+            },
+            {
+              "date": "June",
+              "title": "Token Controls",
+              "description": "Token freezing, blacklisting, and transfer start/stop capabilities giving issuers comprehensive management tools.",
+              "tags": [
+                "Platform v2.0",
+                "Tokens"
+              ]
+            },
+            {
+              "date": "October",
+              "title": "Creator Attribution",
+              "description": "Immutable artist linkage for NFTs in Platform v2.1, along with state transition optimization and the Evolution JS SDK.",
+              "tags": [
+                "Platform v2.1",
+                "NFTs"
+              ]
+            },
+            {
+              "date": "November",
+              "title": "Dash Core v23.0",
+              "description": "X11 hashing and lock contention sync optimization, governance UI for voting, enhanced block filters, and PoSe-based Evonode banning.",
+              "tags": [
+                "Core v23",
+                "Governance"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2026",
+          "status": "in-progress",
+          "cards": [
+            {
+              "title": "Platform Addresses",
+              "description": "Simplified account creation without identities in Platform v3.0, lowering the barrier to entry for new users.",
+              "tags": [
+                "Platform v3.0",
+                "Usability"
+              ]
+            },
+            {
+              "date": "January",
+              "title": "BLAST Sync",
+              "description": "Privacy-preserving wallet synchronization in Platform v3.0, protecting user transaction history during sync.",
+              "tags": [
+                "Platform v3.0",
+                "Privacy"
+              ]
+            },
+            {
+              "title": "Shielded Balances",
+              "description": "Zcash Orchard integration with zk-SNARKs enabling fully private transactions on Dash Platform v3.1.",
+              "tags": [
+                "Platform v3.1",
+                "Privacy"
+              ],
+              "date": "March"
+            },
+            {
+              "date": "March",
+              "title": "Selective Disclosure",
+              "description": "View key-based regulatory compliance allowing users to selectively reveal transaction details while maintaining privacy.",
+              "tags": [
+                "Platform v3.1",
+                "Compliance"
+              ]
+            },
+            {
+              "date": "April",
+              "title": "iOS DashPay Wallet",
+              "description": "Apple platform release with full username functionality, completing mobile coverage for DashPay.",
+              "tags": [
+                "Wallet",
+                "iOS"
+              ]
+            },
+            {
+              "date": "Q2",
+              "title": "Dash Core v24.0",
+              "description": "Extended addresses for IPv6/Tor/multi-protocol masternodes, SegWit-adjacent Taproot support, Bech32 addressing, and GroveDB integration.",
+              "tags": [
+                "Core v24",
+                "Infrastructure"
+              ]
+            },
+            {
+              "date": "Q2",
+              "title": "Count Trees",
+              "description": "Active user enumeration via aggregation in Platform v3.2, along with referenced validation for cross-document integrity.",
+              "tags": [
+                "Platform v3.2",
+                "Storage"
+              ]
+            },
+            {
+              "date": "Q3",
+              "title": "Token Authentication",
+              "description": "Purchased capability rights transfer in Platform v3.3, with composite indices and document ownership verification.",
+              "tags": [
+                "Platform v3.3",
+                "Tokens"
+              ]
+            },
+            {
+              "date": "Q4",
+              "title": "Having Trees",
+              "description": "Aggregate filtering capabilities in Platform v3.4, enabling efficient data queries across large datasets.",
+              "tags": [
+                "Platform v3.4",
+                "Storage"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "2027",
+          "status": "in-progress",
+          "cards": [
+            {
+              "title": "Smart Contracts VM",
+              "description": "Virtual machine execution environment in Platform v4.0, enabling developers to build decentralized applications with programmable logic on Dash.",
+              "tags": [
+                "Platform v4.0",
+                "Smart Contracts"
+              ]
+            },
+            {
+              "date": "",
+              "title": "Inter-Blockchain Communication",
+              "description": "IBC protocol implementation in Platform v5.0, enabling cross-chain asset transfers and data sharing with other blockchain networks.",
+              "tags": [
+                "Platform v5.0",
+                "Interoperability"
+              ]
+            }
+          ]
+        }
+      ]
     }
   },
   "toolsPage": {
@@ -1720,6 +2790,11 @@
       "title": "Bug Bounty Program",
       "description": "The Dash Core Group Bug Bounty Program allows developers to discover and resolve bugs before the general public is aware of such bugs, preventing incidents of widespread abuse.",
       "button": "Quick Start"
-    }
+    },
+    "readAll": "Read All",
+    "complete": "Complete",
+    "inProgress": "In Progress",
+    "comingSoon": "Coming Soon...",
+    "lastUpdated": "Last updated on 27-Feb-26"
   }
 }
